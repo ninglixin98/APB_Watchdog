@@ -1,0 +1,30 @@
+register,address,reg_access,field,field_access,reset_value,bitpos_end,bitpos_start,function
+WDOGLOAD,0x000,RW,LOADVAL,RW,0xFFFFFFFF,31,0,"The WDOGLOAD Register contains the value from which the counter is to decrement. When this register is written to, the count is immediately restarted from the new value. The minimum valid value for WDOGLOAD is 1"
+WDOGVALUE,0x004,RW,CURVAL,RO,0xFFFFFFFF,31,0,The WDOGVALUE Register gives the current value of the decrementing counter
+WDOGCONTROL,0x008,RW,RESEN,RW,0x0,1,1,"Enable watchdog reset output, WDOGRES. Acts as a mask for the reset output. Set HIGH to enable the reset, or LOW to disable the reset."
+,,,INTEN,RW,0x0,0,0,"Enable the interrupt event, WDOGINT. Set HIGH to enable the counter and the interrupt, or LOW to disable the counter and interrupt. Reloads the counter from the value in WDOGLOAD when the interrupt is enabled, after previously being disabled"
+WDOGINTCLR,0x00C,WO,INTCLR,WO,0x00000000,31,0,"A write of any value to the WDOGINTCLR Register clears the watchdog interrupt, and reloads the counter from the value in WDOGLOAD"
+WDOGRIS,0x010,RO,RAWINT,RO,0x0,0,0,Raw interrupt status from the counter
+WDOGMIS,0x014,RO,INT,RO,0x0,0,0,Enabled interrupt status from the counter
+WDOGLOCK,0xC00,RW,WREN,RW,0x00000000,31,0,"0 Write access to all other registers is enabled. This is the default.
+1 Write access to all other registers is disabled"
+WDOGITCR,0xF00,RW,ITME,RW,0x0,0,0,"When set HIGH, places the watchdog into integration test mode"
+WDOGITOP,0xF04,WO,WDOGINT,WO,0x0,1,1,Value output on WDOGINT when in Integration Test Mode
+,,,WDOGRES,WO,0x0,0,0,Value output on WDOGRES when in Integration Test Mode
+WDOGPERIPHID4,0xFD0,RO,BLKCNT,RO,0x0,7,4,Block count
+,,,CCODE,RO,0x4,3,0,jep106_c_code
+WDOGPERIPHID5,0xFD4,RO,PID5,RO,0x0,7,0,Peripheral ID Register 5
+WDOGPERIPHID6,0xFD8,RO,PID6,RO,0x0,7,0,Peripheral ID Register 6
+WDOGPERIPHID7,0xFDC,RO,PID7,RO,0x0,7,0,Peripheral ID Register 7
+WDOGPERIPHID0,0xFE0,RO,NUMBER,RO,0x22,7,0,Part number[7:0]
+WDOGPERIPHID1,0xFE4,RO,ID,RO,0xB,7,4,jep106_id_3_0
+,,,NUMBER,RO,0X8,3,0,Part number[11:8]
+WDOGPERIPHID2,0xFE8,RO,REVISION,RO,0x1,7,4,Revision.
+,,,JEDEC,RO,0x1,3,3,jedec_used
+,,,ID,RO,0x3,2,0,jep106_id_6_4
+WDOGPERIPHID3,0xFEC,RO,ECONUM,RO,0x0,7,4,ECO revision number
+,,,CUSTNUM,RO,0x0,3,0,Customer modification number
+WDOGPCELLID0,0xFF0,RO,CID0,RO,0x0D,7,0,Component ID Register 0
+WDOGPCELLID1,0xFF4,RO,CID1,RO,0xF0,7,0,Component ID Register 1
+WDOGPCELLID2,0xFF8,RO,CID2,RO,0x05,7,0,Component ID Register 2
+WDOGPCELLID3,0xFFC,RO,CID3,RO,0xB1,7,0,Component ID Register 3
