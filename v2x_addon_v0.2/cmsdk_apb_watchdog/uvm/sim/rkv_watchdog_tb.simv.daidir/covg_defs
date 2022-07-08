@@ -1,0 +1,286 @@
+global coverage_group 0 apb_pkg::apb_master_monitor::apb_master_cov_trans __coverage_apb_master_monitor.apb_master_cov_trans unused_apb_master_monitor_apb_master_cov_trans_loop_label apb_pkg 0 1 0 0 0  ( 0 
+)
+ 1 2
+ 110 /home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../vip_lib/apb_pkg/apb_master_monitor.svh
+ 97 /home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../vip_lib/apb_pkg/apb_if.sv
+ 51 0 0 0 1 0 0 0 0  1
+0
+26 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+0
+0
+0
+64
+0
+ 0
+
+0
+0
+0
+0
+end_coverage_group
+global coverage_group 0 apb_if::cg_apb_command __coverage_cg_apb_command unused_cg_apb_command_loop_label apb_if 0 1 0 0 0  ( 0 
+)
+ 0 49 1 0 0 0 0 0 0 0  1
+0
+26 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+0
+0
+0
+64
+0
+ 0
+
+2
+0
+1
+0
+ 6 pwrite 50 1 0 0 0 40 cg_apb_command::apb_if_cg_apb_command_fn 40 cg_apb_command::apb_if_cg_apb_command_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 1 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 42 cg_apb_command::apb_if_cg_apb_command_fn_2
+ 0
+ 0
+ 0
+ 0
+ 0
+ 2 1 1 0 0 1 1 5 write 52 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 42 cg_apb_command::apb_if_cg_apb_command_fn_0 0 0 0 0 0 0 0
+ 1 1 0 0 1 1 4 read 53 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 42 cg_apb_command::apb_if_cg_apb_command_fn_1 0 0 0 0 0 0 0
+
+ 4 psel 56 1 0 0 0 42 cg_apb_command::apb_if_cg_apb_command_fn_3 42 cg_apb_command::apb_if_cg_apb_command_fn_3 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 1 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 42 cg_apb_command::apb_if_cg_apb_command_fn_2
+ 0
+ 0
+ 0
+ 0
+ 0
+ 2 1 1 0 0 1 1 3 sel 58 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 42 cg_apb_command::apb_if_cg_apb_command_fn_0 0 0 0 0 0 0 0
+ 1 1 0 0 1 1 5 unsel 59 1 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 42 cg_apb_command::apb_if_cg_apb_command_fn_1 0 0 0 0 0 0 0
+
+ 3 cmd 0 61 1 0 0 0 2 0 1 -1 0 0 0
+ 0
+ 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 3 1 1 0 0 -1 0 0 1 1 9 cmd_write 62 1 1 0 1 3 1 0 1 1 3 sel 0 0 0 0 0 1 0 0 1 5 write 0 0 0 0 0 0 0 0 0 0 0 0
+ 1 1 0 0 -1 0 0 1 1 8 cmd_read 63 1 1 0 1 3 1 0 1 1 3 sel 0 0 0 0 0 1 0 0 1 4 read 0 0 0 0 0 0 0 0 0 0 0 0
+ 1 1 0 0 -1 0 0 1 1 8 cmd_idle 64 1 1 0 1 1 1 0 1 1 5 unsel 0 0 0 0 0 0 0 0 0 0
+
+end_coverage_group
+global coverage_group 0 apb_if::cg_apb_trans_timing_group __coverage_cg_apb_trans_timing_group unused_cg_apb_trans_timing_group_loop_label apb_if 0 0 0 0 0  ( 0 
+)
+ 0 69 1 0 0 0 0 0 0 0  1
+0
+26 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+0
+0
+0
+64
+0
+ 0
+
+2
+0
+0
+0
+ 4 psel 70 1 0 0 0 62 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn 62 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 1 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 6 1 4 0 0 1 1 6 single 71 1 0 4 0 -1 0 0 0 0 0 0 1 4 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 7 burst_2 72 1 0 4 0 -1 0 0 0 0 0 0 1 3 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_2 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 7 burst_4 73 1 0 4 0 -1 0 0 0 0 0 0 1 3 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_3 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 7 burst_8 74 1 0 4 0 -1 0 0 0 0 0 0 1 3 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_4 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 8 burst_16 75 1 0 4 0 -1 0 0 0 0 0 0 1 3 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_5 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 8 burst_32 76 1 0 4 0 -1 0 0 0 0 0 0 1 3 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_6 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+
+ 7 penable 78 1 0 0 0 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_7 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_7 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 1 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 2 1 4 0 0 1 1 6 single 79 1 0 4 0 -1 0 0 0 0 0 0 1 4 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_8 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_9 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 5 burst 80 1 0 4 0 -1 0 0 0 0 0 0 1 4 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+
+end_coverage_group
+global coverage_group 0 apb_if::cg_apb_write_read_order_group __coverage_cg_apb_write_read_order_group unused_cg_apb_write_read_order_group_loop_label apb_if 0 0 0 0 0  ( 0 
+)
+ 0 85 1 0 0 0 0 0 0 0  1
+0
+26 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+0
+0
+0
+64
+0
+ 0
+
+1
+0
+0
+0
+ 16 write_read_order 86 1 0 0 0 70 cg_apb_write_read_order_group::apb_if_cg_apb_write_read_order_group_fn 70 cg_apb_write_read_order_group::apb_if_cg_apb_write_read_order_group_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 1 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 4 1 4 0 0 1 1 11 write_write 87 1 0 4 0 -1 0 0 0 0 0 0 1 2 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 72 cg_apb_write_read_order_group::apb_if_cg_apb_write_read_order_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 72 cg_apb_write_read_order_group::apb_if_cg_apb_write_read_order_group_fn_0 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 10 write_read 88 1 0 4 0 -1 0 0 0 0 0 0 1 2 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 72 cg_apb_write_read_order_group::apb_if_cg_apb_write_read_order_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 72 cg_apb_write_read_order_group::apb_if_cg_apb_write_read_order_group_fn_1 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 10 read_write 89 1 0 4 0 -1 0 0 0 0 0 0 1 2 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 72 cg_apb_write_read_order_group::apb_if_cg_apb_write_read_order_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 72 cg_apb_write_read_order_group::apb_if_cg_apb_write_read_order_group_fn_0 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 9 read_read 90 1 0 4 0 -1 0 0 0 0 0 0 1 2 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 72 cg_apb_write_read_order_group::apb_if_cg_apb_write_read_order_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 72 cg_apb_write_read_order_group::apb_if_cg_apb_write_read_order_group_fn_1 0 0 0 0 0 0 0
+
+end_coverage_group
