@@ -1,0 +1,12 @@
+  CREATE_STREAM @0 {NAME:this T:Transactions SCOPE:uvm_test_top.env.virt_sqr STREAM:745}
+  CREATE_STREAM @0 {NAME:this T:Transactions SCOPE:uvm_test_top.env.apb_mst.sequencer STREAM:760}
+  CREATE_STREAM @0 {NAME:this T:Transactions SCOPE:uvm_test_top.env.virt_sqr STREAM:745}
+  CREATE_STREAM @0 {NAME:this T:Transactions SCOPE:uvm_test_top.env.apb_mst.sequencer STREAM:760}
+  CREATE_STREAM @0 {NAME:this T:Transactions SCOPE:uvm_test_top.env.virt_sqr STREAM:745}
+  CREATE_STREAM @0 {NAME:this T:Transactions SCOPE:uvm_test_top.env.apb_mst.sequencer STREAM:760}
+  CREATE_STREAM @0 {NAME:this T:Transactions SCOPE:uvm_test_top.env.virt_sqr STREAM:745}
+  CREATE_STREAM @0 {NAME:this T:Transactions SCOPE:uvm_test_top.env.apb_mst.sequencer STREAM:760}
+  CREATE_STREAM @95000 {NAME:this T:Transactions SCOPE:uvm_test_top.env.virt_sqr STREAM:784}
+  CREATE_STREAM @95000 {NAME:this T:Transactions SCOPE:uvm_test_top.env.apb_mst.sequencer STREAM:799}
+  CREATE_STREAM @95000 {NAME:this T:Transactions SCOPE:uvm_test_top.env.virt_sqr STREAM:785}
+  CREATE_STREAM @95000 {NAME:this T:Transactions SCOPE:uvm_test_top.env.apb_mst.sequencer STREAM:800}
