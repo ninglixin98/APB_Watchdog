@@ -1,0 +1,53 @@
+Command: /home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/./rkv_watchdog_tb.simv -l run.log -sml +ntb_random_seed=1 +UVM_TESTNAME=rkv_watchdog_integration_test -gui -ucli -do rkv_watchdog_sim_run.do
+
+Warning-[RT_SMLWITHGUI] Smartlog with -gui
+  The '-sml' flag is ignored; Smartlog is always enabled with '-gui'.
+  The Smartlog is stored at DVEfiles/dve_gui.log.
+
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-SP2_Full64; Runtime version O-2018.09-SP2_Full64;  Apr 17 19:57 2022
+UVM_INFO /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+VCD+ Writer O-2018.09-SP2_Full64 Copyright (c) 1991-2018 by Synopsys Inc.
+
+ucli% # GUI mode or Batch mode execution branch for different purpose
+ucli% if {[info command guiIsActive]==""} {
+  run
+} else { 
+  echo "GUI mode"
+  dump -add / -depth 0
+  do ./rkv_watchdog_debug_wave.do
+}
+GUI mode
+"../vip_lib/apb_pkg/apb_if.sv", 144: rkv_watchdog_tb.apb_if_inst.unnamed$$_14, 0 attempts, 0 match
+"../vip_lib/apb_pkg/apb_if.sv", 149: rkv_watchdog_tb.apb_if_inst.unnamed$$_15, 0 attempts, 0 match
+"../vip_lib/apb_pkg/apb_if.sv", 155: rkv_watchdog_tb.apb_if_inst.unnamed$$_16, 0 attempts, 0 match
+"../vip_lib/apb_pkg/apb_if.sv", 161: rkv_watchdog_tb.apb_if_inst.unnamed$$_17, 0 attempts, 0 match
+"../vip_lib/apb_pkg/apb_if.sv", 166: rkv_watchdog_tb.apb_if_inst.unnamed$$_18, 0 attempts, 0 match
+"../vip_lib/apb_pkg/apb_if.sv", 171: rkv_watchdog_tb.apb_if_inst.unnamed$$_19, 0 attempts, 0 match
+"../vip_lib/apb_pkg/apb_if.sv", 177: rkv_watchdog_tb.apb_if_inst.unnamed$$_20, 0 attempts, 0 match
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 0 ps
+CPU Time:      0.660 seconds;       Data structure size:   8.5Mb
+Sun Apr 17 20:05:29 2022
