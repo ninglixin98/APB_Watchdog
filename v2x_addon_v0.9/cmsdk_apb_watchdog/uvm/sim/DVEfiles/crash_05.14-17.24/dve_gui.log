@@ -1,0 +1,767 @@
+
+Warning-[RT_SMLWITHGUI] Smartlog with -gui
+  The '-sml' flag is ignored; Smartlog is always enabled with '-gui'.
+  The Smartlog is stored at DVEfiles/dve_gui.log.
+
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-SP2_Full64; Runtime version O-2018.09-SP2_Full64;  May 14 16:37 2022
+UVM_INFO /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+VCD+ Writer O-2018.09-SP2_Full64 Copyright (c) 1991-2018 by Synopsys Inc.
+The design has assertions or cover properties.
+The assertion browser can be used to view them. Click on the assertion toolbar button or use the menu 'Window->Panes->Assertion' to open it.
+The file '/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/inter.vpd' was opened successfully.
+GUI mode
+dve> restart
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-SP2_Full64; Runtime version O-2018.09-SP2_Full64;  May 14 16:50 2022
+UVM_INFO /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+VCD+ Writer O-2018.09-SP2_Full64 Copyright (c) 1991-2018 by Synopsys Inc.
+The file '/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/inter.vpd' was opened successfully.
+GUI mode
+dve> run
+*** FATAL: Simulation stopped due to an error (please see above in the log for more details)
+The simulation cannot be continued. The current simulation state can be observed in DVE/UCLI.
+UVM_INFO @ 0: reporter [RNTST] Running test rkv_watchdog_countdown_test...
+Stopping new assertion attempts at time 0ps: level = 0 arg = * (from inst rkv_watchdog_tb.apb_if_inst (../vip_lib/apb_pkg/apb_if.sv:182))
+
+Error-[NOA] Null object access
+../test/rkv_watchdog_base_test.sv, 18
+  The object at dereference depth 1 is being used before it was 
+  constructed/allocated.
+  Please make sure that the object is allocated before using it. 
+  
+  #0 in \rkv_watchdog_base_test::build_phase  at 
+  ../test/rkv_watchdog_base_test.sv:18
+  #1 in \rkv_watchdog_countdown_test::build_phase  at 
+  ../test/rkv_watchdog_countdown_test.sv:13
+  #2 in \uvm_build_phase::exec_func  at 
+  /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_common_phases.svh:65
+  #3 in \uvm_topdown_phase::execute  at 
+  /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_topdown_phase.svh:111
+  #4 in \uvm_topdown_phase::traverse  at 
+  /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_topdown_phase.svh:78
+  #5 in \uvm_topdown_phase::traverse  at 
+  /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_topdown_phase.svh:95
+  #6 in \uvm_phase::execute_phase  at 
+  /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_phase.svh:1394
+  #7 in \uvm_phase::m_run_phases  at 
+  /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_phase.svh:2217
+  #8 in \uvm_root::run_test  at 
+  /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_root.svh:513
+  
+
+dve> restart
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-SP2_Full64; Runtime version O-2018.09-SP2_Full64;  May 14 16:52 2022
+UVM_INFO /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+VCD+ Writer O-2018.09-SP2_Full64 Copyright (c) 1991-2018 by Synopsys Inc.
+The file '/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/inter.vpd' was opened successfully.
+GUI mode
+dve> run
+UVM_INFO @ 0: reporter [RNTST] Running test rkv_watchdog_countdown_test...
+Stopping new assertion attempts at time 0ps: level = 0 arg = * (from inst rkv_watchdog_tb.apb_if_inst (../vip_lib/apb_pkg/apb_if.sv:182))
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 6
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGLOAD_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGLOAD_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 41
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGVALUE_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGVALUE_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 77
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGCONTROL_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGCONTROL_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 115
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGINTCLR_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGINTCLR_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 150
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGRIS_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGRIS_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 185
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGMIS_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGMIS_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 221
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGLOCK_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGLOCK_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 259
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGITCR_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGITCR_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 295
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGITOP_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGITOP_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 334
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPERIPHID4_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPERIPHID4_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 372
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPERIPHID5_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPERIPHID5_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 407
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPERIPHID6_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPERIPHID6_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 442
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPERIPHID7_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPERIPHID7_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 477
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPERIPHID0_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPERIPHID0_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 513
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPERIPHID1_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPERIPHID1_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 553
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPERIPHID2_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPERIPHID2_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 595
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPERIPHID3_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPERIPHID3_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 633
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPCELLID0_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPCELLID0_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 668
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPCELLID1_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPCELLID1_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 703
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPCELLID2_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPCELLID2_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 738
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPCELLID3_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPCELLID3_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+UVM_FATAL ../env/rkv_watchdog_subscriber.sv(39) @ 0: uvm_test_top.env.cov [GETCFG] cannot get cfg handle from config DB
+UVM_INFO /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 0: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_report_server.svh(894) @ 0: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    3
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    1
+** Report counts by id
+[GETCFG]     1
+[RNTST]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+
+$finish called from file "/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_root.svh", line 135.
+$finish at simulation time                    0
+"../vip_lib/apb_pkg/apb_if.sv", 142: rkv_watchdog_tb.apb_if_inst.unnamed$$_12, 0 attempts, 0 match
+"../vip_lib/apb_pkg/apb_if.sv", 147: rkv_watchdog_tb.apb_if_inst.unnamed$$_13, 0 attempts, 0 match
+"../vip_lib/apb_pkg/apb_if.sv", 153: rkv_watchdog_tb.apb_if_inst.unnamed$$_14, 0 attempts, 0 match
+"../vip_lib/apb_pkg/apb_if.sv", 159: rkv_watchdog_tb.apb_if_inst.unnamed$$_15, 0 attempts, 0 match
+"../vip_lib/apb_pkg/apb_if.sv", 164: rkv_watchdog_tb.apb_if_inst.unnamed$$_16, 0 attempts, 0 match
+"../vip_lib/apb_pkg/apb_if.sv", 169: rkv_watchdog_tb.apb_if_inst.unnamed$$_17, 0 attempts, 0 match
+"../vip_lib/apb_pkg/apb_if.sv", 175: rkv_watchdog_tb.apb_if_inst.unnamed$$_18, 0 attempts, 0 match
+Simulation complete, time is 0 ps.
+dve> restart
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-SP2_Full64; Runtime version O-2018.09-SP2_Full64;  May 14 17:10 2022
+UVM_INFO /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+VCD+ Writer O-2018.09-SP2_Full64 Copyright (c) 1991-2018 by Synopsys Inc.
+The file '/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/inter.vpd' was opened successfully.
+GUI mode
+dve> run
+UVM_INFO @ 0: reporter [RNTST] Running test rkv_watchdog_countdown_test...
+Stopping new assertion attempts at time 0ps: level = 0 arg = * (from inst rkv_watchdog_tb.apb_if_inst (../vip_lib/apb_pkg/apb_if.sv:182))
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 6
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGLOAD_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGLOAD_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 41
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGVALUE_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGVALUE_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 77
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGCONTROL_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGCONTROL_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 115
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGINTCLR_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGINTCLR_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 150
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGRIS_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGRIS_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 185
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGMIS_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGMIS_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 221
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGLOCK_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGLOCK_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 259
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGITCR_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGITCR_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 295
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGITOP_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGITOP_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 334
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPERIPHID4_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPERIPHID4_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 372
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPERIPHID5_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPERIPHID5_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 407
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPERIPHID6_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPERIPHID6_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 442
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPERIPHID7_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPERIPHID7_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 477
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPERIPHID0_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPERIPHID0_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 513
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPERIPHID1_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPERIPHID1_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 553
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPERIPHID2_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPERIPHID2_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 595
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPERIPHID3_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPERIPHID3_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 633
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPCELLID0_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPCELLID0_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 668
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPCELLID1_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPCELLID1_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 703
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPCELLID2_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPCELLID2_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv, 738
+rkv_watchdog_pkg, "rkv_watchdog_pkg::WDOGPCELLID3_reg::value_cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'rkv_watchdog_pkg::WDOGPCELLID3_reg::value_cg'
+  
+  Covergroup Instance: rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+  Design hierarchy: rkv_watchdog_pkg
+
+Starting assertion attempts at time 2000ps: level = 0 arg = * (from inst rkv_watchdog_tb.apb_if_inst (../vip_lib/apb_pkg/apb_if.sv:184))
+Stopping new assertion attempts at time 22000ps: level = 0 arg = * (from inst rkv_watchdog_tb.apb_if_inst (../vip_lib/apb_pkg/apb_if.sv:182))
+Starting assertion attempts at time 42000ps: level = 0 arg = * (from inst rkv_watchdog_tb.apb_if_inst (../vip_lib/apb_pkg/apb_if.sv:184))
+UVM_INFO ../seq_lib/rkv_watchdog_base_virtual_sequence.sv(31) @ 95000: uvm_test_top.env.virt_sqr@@this [body] Entered...
+UVM_INFO ../seq_lib/rkv_watchdog_base_virtual_sequence.sv(38) @ 95000: uvm_test_top.env.virt_sqr@@this [body] Exiting...
+UVM_INFO ../seq_lib/rkv_watchdog_countdown_virt_seq.sv(13) @ 95000: uvm_test_top.env.virt_sqr@@this [body] Entered...
+UVM_INFO ../seq_lib/elem_seqs/rkv_watchdog_base_element_sequence.sv(20) @ 95000: uvm_test_top.env.virt_sqr@@this.reg_enable_intr [body] Entered...
+UVM_INFO ../seq_lib/elem_seqs/rkv_watchdog_base_element_sequence.sv(27) @ 95000: uvm_test_top.env.virt_sqr@@this.reg_enable_intr [body] Exiting...
+UVM_INFO ../seq_lib/elem_seqs/rkv_watchdog_reg_enable_intr.sv(13) @ 95000: uvm_test_top.env.virt_sqr@@this.reg_enable_intr [body] Entered...
+UVM_INFO ../seq_lib/elem_seqs/rkv_watchdog_reg_enable_intr.sv(17) @ 115000: uvm_test_top.env.virt_sqr@@this.reg_enable_intr [body] Exiting...
+UVM_INFO ../seq_lib/elem_seqs/rkv_watchdog_base_element_sequence.sv(20) @ 115000: uvm_test_top.env.virt_sqr@@this.reg_loadcount [body] Entered...
+UVM_INFO ../seq_lib/elem_seqs/rkv_watchdog_base_element_sequence.sv(27) @ 115000: uvm_test_top.env.virt_sqr@@this.reg_loadcount [body] Exiting...
+UVM_INFO ../seq_lib/elem_seqs/rkv_watchdog_reg_loadcount.sv(17) @ 115000: uvm_test_top.env.virt_sqr@@this.reg_loadcount [body] Entered...
+UVM_INFO ../seq_lib/elem_seqs/rkv_watchdog_reg_loadcount.sv(20) @ 145000: uvm_test_top.env.virt_sqr@@this.reg_loadcount [body] Exiting...
+UVM_INFO ../seq_lib/elem_seqs/rkv_watchdog_base_element_sequence.sv(20) @ 145000: uvm_test_top.env.virt_sqr@@this.reg_intr_wait_clear [body] Entered...
+UVM_INFO ../seq_lib/elem_seqs/rkv_watchdog_base_element_sequence.sv(27) @ 145000: uvm_test_top.env.virt_sqr@@this.reg_intr_wait_clear [body] Exiting...
+UVM_INFO ../seq_lib/elem_seqs/rkv_watchdog_reg_intr_wait_clear.sv(19) @ 145000: uvm_test_top.env.virt_sqr@@this.reg_intr_wait_clear [body] Entered...
+UVM_INFO ../seq_lib/elem_seqs/rkv_watchdog_reg_intr_wait_clear.sv(34) @ 14895000: uvm_test_top.env.virt_sqr@@this.reg_intr_wait_clear [body] Exiting...
+UVM_INFO ../seq_lib/elem_seqs/rkv_watchdog_base_element_sequence.sv(20) @ 14895000: uvm_test_top.env.virt_sqr@@this.reg_intr_wait_clear [body] Entered...
+UVM_INFO ../seq_lib/elem_seqs/rkv_watchdog_base_element_sequence.sv(27) @ 14895000: uvm_test_top.env.virt_sqr@@this.reg_intr_wait_clear [body] Exiting...
+UVM_INFO ../seq_lib/elem_seqs/rkv_watchdog_reg_intr_wait_clear.sv(19) @ 14895000: uvm_test_top.env.virt_sqr@@this.reg_intr_wait_clear [body] Entered...
+UVM_INFO ../seq_lib/elem_seqs/rkv_watchdog_reg_intr_wait_clear.sv(34) @ 29595000: uvm_test_top.env.virt_sqr@@this.reg_intr_wait_clear [body] Exiting...
+UVM_INFO ../seq_lib/rkv_watchdog_countdown_virt_seq.sv(42) @ 29595000: uvm_test_top.env.virt_sqr@@this [body] Exiting...
+UVM_INFO /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_objection.svh(1276) @ 30595000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO ../env/rkv_watchdog_env.sv(75) @ 30595000: uvm_test_top.env [TEST_SUMMARY] 
+====================================== 
+CURRENT TEST SUMMARY 
+SEQUENCE CHECK COUNT: 0 
+SEQUENCE CHECK ERROR: 0 
+SCOREBOARD CHECK COUNT: 0 
+SCOREBOARD CHECK ERROR: 0 
+====================================== 
+
+UVM_INFO /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 30595000: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_report_server.svh(894) @ 30595000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   25
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[TEST_DONE]     1
+[TEST_SUMMARY]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[body]    20
+
+$finish called from file "/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time             30595000
+"../vip_lib/apb_pkg/apb_if.sv", 125: rkv_watchdog_tb.apb_if_inst.unnamed$$_9: started at 29595000ps not finished
+"../vip_lib/apb_pkg/apb_if.sv", 131: rkv_watchdog_tb.apb_if_inst.unnamed$$_11: started at 29595000ps not finished
+"../vip_lib/apb_pkg/apb_if.sv", 142: rkv_watchdog_tb.apb_if_inst.unnamed$$_12: started at 29595000ps not finished
+"../vip_lib/apb_pkg/apb_if.sv", 142: rkv_watchdog_tb.apb_if_inst.unnamed$$_12, 3057 attempts, 1 match
+"../vip_lib/apb_pkg/apb_if.sv", 147: rkv_watchdog_tb.apb_if_inst.unnamed$$_13, 3057 attempts, 0 match
+"../vip_lib/apb_pkg/apb_if.sv", 153: rkv_watchdog_tb.apb_if_inst.unnamed$$_14, 3057 attempts, 0 match
+"../vip_lib/apb_pkg/apb_if.sv", 159: rkv_watchdog_tb.apb_if_inst.unnamed$$_15, 3057 attempts, 0 match
+"../vip_lib/apb_pkg/apb_if.sv", 164: rkv_watchdog_tb.apb_if_inst.unnamed$$_16, 3057 attempts, 50 match
+"../vip_lib/apb_pkg/apb_if.sv", 169: rkv_watchdog_tb.apb_if_inst.unnamed$$_17, 3057 attempts, 0 match
+"../vip_lib/apb_pkg/apb_if.sv", 175: rkv_watchdog_tb.apb_if_inst.unnamed$$_18, 3057 attempts, 0 match
+Simulation complete, time is 30595000 ps.
+*** FATAL: Simulation stopped due to an error (please see above in the log for more details)
+The simulation cannot be continued. The current simulation state can be observed in DVE/UCLI.
+
+An unexpected termination has occurred in /home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/rkv_watchdog_tb.simv due to a signal: Segmentation fault
+Hostname localhost.localdomain
+
+Loading design database at or near /home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../env/rkv_watchdog_pkg.sv, 7088<slb!&*()_+>---<sls!&*()_+>loc: -1<sls!&*()_+>diagtype: crash<sls!&*()_+>verbosity: 0<sls!&*()_+>msgtype: 0<sls!&*()_+>src: /home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../env/rkv_watchdog_pkg.sv<sls!&*()_+>line: 7088<sls!&*()_+>length: 0<sls!&*()_+>...<sls!&*()_+><sle!&*()_+>
+
+During icl execution command: ="_icl_stopFLIT '/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../env/rkv_watchdog_scoreboard.sv' '28' '""' '' 'watch' '1' '' '' '' '""' '' ''" <slb!&*()_+>---<sls!&*()_+>loc: -1<sls!&*()_+>diagtype: crash<sls!&*()_+>verbosity: 0<sls!&*()_+>msgtype: 0<sls!&*()_+>length: 0<sls!&*()_+>...<sls!&*()_+><sle!&*()_+>
+
+
+Command line: /home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/rkv_watchdog_tb.simv -ucligui +ntb_random_seed=1 +UVM_TESTNAME=rkv_watchdog_countdown_test -ucli2Proc -uclimode
+
+--- Stack trace follows:
+
+Dumping VCS Annotated Stack:
+#0  0x00007fffed80e46c in waitpid () from /lib64/libc.so.6
+#1  0x00007fffed78bf62 in do_system () from /lib64/libc.so.6
+#2  0x00007ffff62511fc in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313e639d2928478c79b3f673f99203bcf8be64600612100082236bffb2007f1e0ef9 () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/liberrorinf.so
+#3  0x00007ffff6252d3e in SNPSle_10ee25eff68cd8461c9146fa1d0b35e87067f3c8015b313efba706aab251478fa49e66610e453774633a6c152e7ef778f2202cda681f3d4e () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/liberrorinf.so
+#4  0x00007ffff624b6e3 in SNPSle_d35ca1ff70d465c2b9b1a72eee90a506fdd009d3de3db1de () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/liberrorinf.so
+#5  0x00007ffff2aa6abf in SNPSle_64133461705005bb725549e2e6fa1b3f () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsnew.so
+#6  0x00007ffff28ecc89 in SNPSle_82244d58c54c18c70d63edc9becab634 () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsnew.so
+#8  0x0000000000000000 in ?? ()
+#9  0x00007ffff21980bf in SNPSle_2682f38d27af696577d04cf20e7ec3fc3146c42c03b370246ab2f854178c3abbed14ea9221956c1f2bdda2bb373bcb4f () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsnew.so
+#10 0x00007ffff2194ad8 in SNPSle_b4b71d32637ee44a0913b4eedd4f1862235ea93b3f119a2cb60e40a625f865643d9acb9c448d9802 () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsnew.so
+#11 0x00007ffff2195be5 in SNPSle_d900f832df9f0e64ab586f11020fdc442c5f0fd8dfd940d19099c435aebf359e2955c03b80fe367d () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsnew.so
+#12 0x00007ffff2194ad8 in SNPSle_b4b71d32637ee44a0913b4eedd4f1862235ea93b3f119a2cb60e40a625f865643d9acb9c448d9802 () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsnew.so
+#13 0x00007ffff2194cbe in SNPSle_af0726458e3a2dc10b42f6d896054fcea191e213a670281d7e55c3d52f6df47c7f3dcd748aa6e24376380b4088eacd54 () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsnew.so
+#14 0x00007ffff1ff248d in SNPSle_61aa484b062b38946ad2cfe16c974bad8fac8007a551090ac665c027428ff8d81329cc26c23fd0b7 () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsnew.so
+#15 0x00007ffff230740a in SNPSle_7da61a1f27dc7bb2a4aaf6421285ba82e0bc4fe8ccb10465182e3ff7bc8c5d1f393fcb01a56d46f2 () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsnew.so
+#16 0x00007ffff230fe4c in SNPSle_61aa484b062b3894e9f449cd2561b4eb3185bfa6f9a7edf6f02564bd55407c55 () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsnew.so
+#17 0x00007ffff2314a82 in SNPSle_302b69097910ded631847b4dba8e0517c11cbc09e7ea75997c780bd948309e55 () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsnew.so
+#18 0x00007ffff1fe39ae in SNPSle_42108f134ad8a164d640d77e9c33c105def176f69c15f1dd57be203def9e0e87ee6df404439dc4dd20c79f92ea80f8a558d35a3db31fe689 () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsnew.so
+#19 0x00007ffff1edad7d in SNPSle_e31c9b5bd25c3275d2c22daf89c3a9e04c76cbf8c7c3c9b6fdcaf619e084092a () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsnew.so
+#20 0x00007ffff1edcf2a in SNPSle_4fb847591abea1015e8d697f002df9dd8ed92d478ca8ce7a () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsnew.so
+#21 0x00007ffff1edd429 in SNPSle_4fb847591abea1015e8d697f002df9ddb364d13833a2c91133f113feec3e41c5 () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsnew.so
+#22 0x00007fffee5e7c1c in SNPSle_cf358019059299fcc990abd6a32541fc1eaee755a40e8d82f529c8d9f249150c0179ffadda5c1b0c9cb1b5bf381bc6a8c2a1600200043c9e () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsucli.so
+#23 0x00007fffee5e6be4 in SNPSle_cf358019059299fcc990abd6a32541fcb65686d866fd36d47f60f71eb5e4cc91bb647060ba4beb98fff16368be3912643f1c01b941dc8a4f () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsucli.so
+#24 0x00007fffee60ab81 in SNPSle_c8f6c81890bd37d4c0aa54d20fa658ed94591ceb60f9660d () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsucli.so
+#25 0x00007fffee67ab56 in SNPSle_838674a6355ff28e49f236c2ab1774847d4918ef0586e0b3dbcea7671bfc3c9f57ba878862d7cd3f4326ab2e803e6e1b () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsucli.so
+#26 0x00007fffee67af44 in SNPSle_838674a6355ff28e49f236c2ab1774843a1c6ea61eabac55b020098ebf01651adc8c2586f27d2af79ec193bb48c341d34db04a762ab972eddb2d29023fcc93ef80464b064dc42f89 () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsucli.so
+#27 0x00007fffee67b6ec in SNPSle_838674a6355ff28e49f236c2ab1774849df4b34fd61080ad3c4e5075e41d9f96 () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsucli.so
+#28 0x00007fffee674724 in SNPSle_2cc823f6d13da52d1dc1e3d6fe90249b () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsucli.so
+#29 0x00007fffee64a21b in SNPSle_94e9fbb8d738ab46cfd414ee54f1de5383273f4fb394e5b165dad2557df34756 () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsucli.so
+#30 0x00007fffee64e0b5 in SNPSle_2a3444dc9f162b5f2f5a5d2157b272d6 () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsucli.so
+#31 0x00007fffee64fc64 in SNPSle_30dae699370996f3da9bf5e0c538400ffbd500289c735301 () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsucli.so
+#32 0x00007fffee64e349 in SNPSle_74e8e69f94d6825e49dd10c040695a4d5f6d533d7f5c326c () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsucli.so
+#33 0x00007fffee64bf6d in SNPSle_f3b6ab49e509e8f4f22acac1c6007a146d0d976c22056390 () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsucli.so
+#34 0x00007fffee64ee02 in SNPSle_a09b4dc4f52ce1609672f8676eb959a4b083a1d380f86bf4 () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsucli.so
+#35 0x00007ffff2ab980b in SNPSle_052c17d30057e23d366f55cc68680735 () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsnew.so
+#36 0x00007ffff2aba6d4 in SNPSle_85eeb05ebf66d014 () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsnew.so
+#37 0x00007ffff2afdaa8 in SNPSle_6356bcd0e6271283c8e2bcef36528d43 () from /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/linux64/lib/libvcsnew.so
+#38 0x00007ffff736aca9 in ?? ()
+#39 0x00007fffe83e88b0 in ?? ()
+#40 0x00007fffffffc738 in ?? ()
+#41 0x0000000000000000 in ?? ()
+
+Process VmPeak: 382200 kb, VmSize: 382192 kb
+System Free Memory: 109340 kb, System Free Swap: 1430524 kb
+
+Completed context dump phase data location*
+Internal error: could not unlock message library mutex (No such file or directory)
+
+---------------------------------------------
+
+Simulation has just terminated due to a severe internal error:
+
+
+Release = 'O-2018.09-SP2_Full64'  Architecture = 'linux64'  Program = 'DVE'
+
+'34147489 34183471 32623966 32633579 32516717 32518042 32414815 32458736 32462237 41396456 43276127 43281794 43282639 41393724 36887497 36864128 36902232 36894430 36895057 34197166 18576456 19484219 34204312 22949190 22952690 22527988 44667720 44170741 44171686 34661378 34464339 43869505 43863680 43922034 18480790 44238697 44238570 18479284 18207262 14523285 140737292825941'
+
+---------------------------------------------
+===============================DVE Context================================
+Tcl="gui_sim_watch  -file  $::env(PWD)/../env/rkv_watchdog_scoreboard.sv  -line  28   " 
+Command line: /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/gui/dve/linux64/bin/dve.exe -full64 -ucliplatform=linux64 -toolargs "-ucligui -toolexe ./rkv_watchdog_tb.simv -a run.log +ntb_random_seed=1 +UVM_TESTNAME=rkv_watchdog_countdown_test -do rkv_watchdog_sim_run.do  -pid 26760" -toolin /tmp/vcs_20220514083749_26755_verifier..stdin -toolout /tmp/vcs_20220514083749_26755_verifier..stdout
+==========================================================================

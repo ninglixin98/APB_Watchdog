@@ -1,0 +1,398 @@
+19:12:52    16 -->                                                             [tcl] ucliGUI::connect -toolargs -ucligui -toolexe ./rkv_watchdog_tb.simv -a run.log +ntb_random_seed=1 +UVM_TESTNAME=rkv_watchdog_resen_test -do rkv_watchdog_sim_run.do -pid 97518 -toolin /tmp/vcs_20220515111243_97512_verifier..stdin -toolout /tmp/vcs_20220515111243_97512_verifier..stdout  
+19:12:52    17 -->                                                                 [tcl] set ucliGUI::state
+19:12:52    18 -->                                                                     [tcl] set dveMisc::dve_log_file 1
+19:12:52    19 -->                                                                         [tcl] gui_update_simulator_buttons
+19:12:55    20 -->                                                                             [tcl] set ucliGUI::state
+19:12:55    21 -->                                                                                 [tcl] ucliCore::getToolPID
+19:12:55    22 -->                                                                                     [tcl] synopsys::env hasTB
+19:12:55    23 -->                                                                                         [tcl] trigger_hier_stack_context_switch 0
+19:12:55    24 -->                                                                                             [tcl] synopsys::xml set_array_limit <data limit="50" />
+19:12:55    25 --> ...  [tcl] gui_update_simulator_buttons
+19:12:55    26 --> ...      [tcl] synopsys::xml set_depth_limit <data limit="100" />
+19:12:55    27 --> ...          [tcl] synopsys::xml set_string_limit <data limit="1000" />
+19:12:55    28 --> ...              [tcl] synopsys::xml set_only_active_frame <data value="1" />
+19:12:55    29 --> ...                  [tcl] synopsys::xml set_variable_frame_id <data value="1" />
+19:12:55    30 --> ...                      [tcl] synUtils::setDVEInitPhase 1
+19:12:55    31 --> ...                          [tcl] gui_get_env SIMSETUP::SIMVPD
+19:12:55    32 --> ...                              [tcl] synopsys::dump -type VPD -file /home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/inter.vpd -locking
+19:12:55    33 --> ...                                  [tcl] synopsys::dump -autoflush on -fid VPD0
+19:12:55    34 --> ...                                      [tcl] set ::dve_fid VPD0
+19:12:55    35 --> ...                                          [tcl] synUtils::setDVEInitPhase 0
+19:12:55    36 --> ...                                              [tcl] ucliCore::getToolPID
+19:12:55    37 --> ...                                                  [tcl] synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpqVpFOs
+19:12:55    38 --> ...                                                      [tcl] synUtils::sendTool -active {_icl_start_rpc -version "O-2018.09-SP2_Full64" -sync_file /tmp/vcs_dve_rpc.verifier.97518}
+19:12:56    39 --> ...                                                          [tcl] synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.verifier.97518}
+19:12:56    40 --> ...                                                              [tcl] dveMisc::vbusExpand uvm_pkg
+19:12:56    41 --> ...                                                                  [tcl] dveMisc::vbusExpand uvm_custom_install_recording
+19:12:56    42 --> ...                                                                      [tcl] dveMisc::vbusExpand _vcs_unit__3820934895
+19:12:56    43 --> ...                                                                          [tcl] config endofsim noexit
+19:12:56    44 --> ...                                                                              [tcl] config onfail enable all
+19:12:56    45 --> ...                                                                                  [tcl] config syscaddplainmembers
+19:12:56    46 --> ...                                                                                      [tcl] config syscaddsourcenames
+19:12:56    47 --> ...                                                                                          [tcl] config syscaddstructtypes
+19:12:56    48 --> ...                                                                                              [tcl] synopsys::listing -disable
+19:12:57    49 --> ...                                                                                                  [tcl] if {[info command guiIsActive]==""} {   run } else {    echo "GUI mode"   dump -add / -depth 0   do ./rkv_watchdog_debug_wave.do }
+19:12:57    50 --> ...  [tcl] gui_set_time_units 1ps
+19:12:57    51 --> ...      [tcl] gui_set_time_units 1ps
+19:12:57    52 --> ...          [tcl] set _wave_session_group_1 Group1
+19:12:57    53 --> ...              [tcl] if {[gui_sg_is_group -name "$_wave_session_group_1"]} {     set _wave_session_group_1 [gui_sg_generate_new_name] }
+19:12:57    54 --> ...                  [tcl] set Group1 "$_wave_session_group_1"
+19:12:57    55 --> ...                      [tcl] gui_sg_addsignal -group "$_wave_session_group_1" { {Sim:rkv_watchdog_tb.dut.PCLK} {Sim:rkv_watchdog_tb.dut.PRESETn} {Sim:rkv_watchdog_tb.dut.PENABLE} {Sim:rkv_watchdog_tb.dut.PSEL} {Sim:rkv_watchdog_tb.apb_if_inst.paddr} {Sim:rkv_watchdog_tb.dut.PWRITE} {Sim:rkv_watchdog_tb.dut.PWDATA} {Sim:rkv_watchdog_tb.dut.PRDATA} {Sim:rkv_watchdog_tb.dut.PADDR} }
+19:12:57    56 --> ...                          [tcl] synopsys::dump -add {rkv_watchdog_tb.apb_if_inst rkv_watchdog_tb.wdg_if_inst } -aggregates  -fid VPD0
+19:12:57    57 --> ...                              [tcl] dveMisc::vbusExpand rkv_watchdog_tb
+19:12:57    58 --> ...                                  [tcl] set _wave_session_group_2 Group2
+19:12:57    59 --> ...                                      [tcl] if {[gui_sg_is_group -name "$_wave_session_group_2"]} {     set _wave_session_group_2 [gui_sg_generate_new_name] }
+19:12:57    60 --> ...                                          [tcl] set Group2 "$_wave_session_group_2"
+19:12:57    61 --> ...                                              [tcl] gui_sg_addsignal -group "$_wave_session_group_2" { {Sim:rkv_watchdog_tb.dut.WDOGCLK} {Sim:rkv_watchdog_tb.dut.WDOGCLKEN} {Sim:rkv_watchdog_tb.dut.WDOGRESn} {Sim:rkv_watchdog_tb.dut.WDOGINT} {Sim:rkv_watchdog_tb.dut.WDOGRES} {Sim:rkv_watchdog_tb.dut.ECOREVNUM} }
+19:12:57    62 --> ...                                                  [tcl] set _wave_session_group_3 Group4
+19:12:57    63 --> ...                                                      [tcl] if {[gui_sg_is_group -name "$_wave_session_group_3"]} {     set _wave_session_group_3 [gui_sg_generate_new_name] }
+19:12:57    64 --> ...                                                          [tcl] set Group3 "$_wave_session_group_3"
+19:12:57    65 --> ...                                                              [tcl] gui_sg_addsignal -group "$_wave_session_group_3" { {Sim:rkv_watchdog_tb.dut.u_apb_watchdog_frc.reg_count} }
+19:12:57    66 --> ...                                                                  [tcl] if {![info exists useOldWindow]} {  	set useOldWindow true }
+19:12:57    67 --> ...                                                                      [tcl] if {$useOldWindow && [string first "Wave" [gui_get_current_window -view]]==0} {  	set Wave.1 [gui_get_current_window -view]  } else { 	set Wave.1 [lindex [gui_get_window_ids -type Wave] 0] if {[string first "Wave" ${Wave.1}]!=0} { gui_open_window Wave set Wave.1 [ gui_get_current_window -view ] } }
+19:12:58    68 --> ...                                                                          [tcl] set groupExD [gui_get_pref_value -category Wave -key exclusiveSG]
+19:13:04    69 --> ...                                                                              [tcl] gui_set_pref_value -category Wave -key exclusiveSG -value {false}
+19:13:04    70 --> ...                                                                                  [tcl] set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
+19:13:04    71 --> ...                                                                                      [tcl] gui_list_set_height -id Wave -height 25
+19:13:04    72 --> ...                                                                                          [tcl] set origGroupCreationState [gui_list_create_group_when_add -wave]
+19:13:05    73 --> ...                                                                                              [tcl] gui_list_create_group_when_add -wave -disable
+19:13:05    74 --> ...                                                                                                  [tcl] gui_marker_set_ref -id ${Wave.1}  C1
+19:13:05    75 --> ...  [tcl] gui_wv_zoom_timerange -id ${Wave.1} 0 10000
+19:13:05    76 --> ...      [tcl] gui_list_add_group -id ${Wave.1} -after {New Group} [list ${Group1}]
+19:13:05    77 --> ...          [tcl] gui_list_add_group -id ${Wave.1} -after {New Group} [list ${Group2}]
+19:13:05    78 --> ...              [tcl] gui_list_add_group -id ${Wave.1} -after {New Group} [list ${Group3}]
+19:13:05    79 --> ...                  [tcl] gui_seek_criteria -id ${Wave.1} {Any Edge}
+19:13:05    80 --> ...                      [tcl] gui_set_pref_value -category Wave -key exclusiveSG -value $groupExD
+19:13:05    81 --> ...                          [tcl] gui_list_set_height -id Wave -height $origWaveHeight
+19:13:05    82 --> ...                              [tcl] if {$origGroupCreationState} { 	gui_list_create_group_when_add -wave -enable }
+19:13:05    83 --> ...                                  [tcl] if { $groupExD } {  gui_msg_report -code DVWW028 }
+19:13:05    84 --> ...                                      [tcl] gui_list_set_filter -id ${Wave.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
+19:13:05    85 --> ...                                          [tcl] gui_list_set_filter -id ${Wave.1} -text {*}
+19:13:05    86 --> ...                                              [tcl] gui_list_set_insertion_bar  -id ${Wave.1} -group ${Group3}  -position in
+19:13:05    87 --> ...                                                  [tcl] gui_marker_move -id ${Wave.1} {C1} 1999837
+19:13:05    88 --> ...                                                      [tcl] gui_view_scroll -id ${Wave.1} -vertical -set 0
+19:13:05    89 --> ...                                                          [tcl] gui_show_grid -id ${Wave.1} -enable false
+19:14:18    90 --> ...                                                              [tcl] synopsys::watch  -file  $::env(PWD)/../env/rkv_watchdog_scoreboard.sv  -line  86
+19:14:18    91 --> ...                                                                  [tcl] synopsys::watch -raw
+19:14:18    92 --> ...                                                                      [tcl] gui_postwatch -bpid 1  -line 86 -file /home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../env/rkv_watchdog_scoreboard.sv
+19:14:22    93 --> ...                                                                          [tcl] synopsys::watch  -file  $::env(PWD)/../env/rkv_watchdog_scoreboard.sv  -line  87
+19:14:22    94 --> ...                                                                              [tcl] synopsys::watch -raw
+19:14:22    95 --> ...                                                                                  [tcl] gui_postwatch -bpid 2  -line 87 -file /home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../env/rkv_watchdog_scoreboard.sv
+19:14:56    96 --> ...                                                                                      [tcl] synopsys::watch  -file  $::env(PWD)/../env/rkv_watchdog_scoreboard.sv  -line  96
+19:14:56    97 --> ...                                                                                          [tcl] synopsys::watch -raw
+19:14:56    98 --> ...                                                                                              [tcl] gui_postwatch -bpid 3  -line 96 -file /home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../env/rkv_watchdog_scoreboard.sv
+19:14:58    99 --> ...                                                                                                  [tcl] synopsys::watch  -file  $::env(PWD)/../env/rkv_watchdog_scoreboard.sv  -line  97
+19:14:58    100 --> ...  [tcl] synopsys::watch -raw
+19:14:58    101 --> ...      [tcl] gui_postwatch -bpid 4  -line 97 -file /home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../env/rkv_watchdog_scoreboard.sv
+19:14:59    102 --> ...          [tcl] synopsys::watch  -file  $::env(PWD)/../env/rkv_watchdog_scoreboard.sv  -line  98
+19:14:59    103 --> ...              [tcl] synopsys::watch -raw
+19:14:59    104 --> ...                  [tcl] gui_postwatch -bpid 5  -line 98 -file /home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../env/rkv_watchdog_scoreboard.sv
+19:15:15    105 --> ...                      [tcl] synopsys::watch  -file  $::env(PWD)/../env/rkv_watchdog_scoreboard.sv  -line  104
+19:15:16    106 --> ...                          [tcl] synopsys::watch  -file  $::env(PWD)/../env/rkv_watchdog_scoreboard.sv  -line  104
+19:15:18    107 --> ...                              [tcl] synopsys::watch  -file  $::env(PWD)/../env/rkv_watchdog_scoreboard.sv  -line  105
+19:15:18    108 --> ...                                  [tcl] synopsys::watch -raw
+19:15:18    109 --> ...                                      [tcl] gui_postwatch -bpid 6  -line 105 -file /home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../env/rkv_watchdog_scoreboard.sv
+19:15:19    110 --> ...                                          [tcl] synopsys::watch  -file  $::env(PWD)/../env/rkv_watchdog_scoreboard.sv  -line  104
+19:15:20    111 --> ...                                              [tcl] synopsys::watch  -file  $::env(PWD)/../env/rkv_watchdog_scoreboard.sv  -line  104
+19:15:31    112 --> ...                                                  [tcl] synopsys::watch  -file  $::env(PWD)/../env/rkv_watchdog_scoreboard.sv  -line  111
+19:15:31    113 --> ...                                                      [tcl] synopsys::watch -raw
+19:15:31    114 --> ...                                                          [tcl] gui_postwatch -bpid 7  -line 111 -file /home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../env/rkv_watchdog_scoreboard.sv
+19:15:35    115 --> ...                                                              [tcl] synopsys::watch  -file  $::env(PWD)/../env/rkv_watchdog_scoreboard.sv  -line  106
+19:15:35    116 --> ...                                                                  [tcl] synopsys::watch -raw
+19:15:35    117 --> ...                                                                      [tcl] gui_postwatch -bpid 8  -line 106 -file /home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../env/rkv_watchdog_scoreboard.sv
+19:15:37    118 --> ...                                                                          [tcl] synopsys::watch  -file  $::env(PWD)/../env/rkv_watchdog_scoreboard.sv  -line  99
+19:15:37    119 --> ...                                                                              [tcl] synopsys::watch -raw
+19:15:37    120 --> ...                                                                                  [tcl] gui_postwatch -bpid 9  -line 99 -file /home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../env/rkv_watchdog_scoreboard.sv
+19:15:41    121 --> ...                                                                                      [tcl] synopsys::run
+19:15:41    122 --> ...                                                                                          [tcl] set ucliGUI::state
+19:15:41    123 --> ...                                                                                              [tcl] gui_update_simulator_buttons
+19:15:41    124 --> ...                                                                                                  [tcl] set ucliGUI::state
+19:15:41    125 --> ...  [tcl] gui_update_simulator_buttons
+19:15:42    126 --> ...      [tcl] set ucliGUI::state
+19:15:42    127 --> ...          [tcl] set ucliGUI::state
+19:15:42    128 --> ...              [tcl] set ucliGUI::state
+19:15:42    129 --> ...                  [tcl] catch {senv activeDomain} dveMisc::result 
+19:15:42    130 --> ...                      [tcl] set dveMisc::result
+19:15:42    131 --> ...                          [tcl] gui_update_simulator_buttons
+19:15:42    132 --> ...                              [tcl] synopsys::xml get_stop_data
+19:15:42    133 --> ...                                  [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" />}
+19:15:42    134 --> ...                                      [tcl] dveMisc::vbusExpand {uvm_pkg.\uvm_phase::m_run_phases }
+19:15:42    135 --> ...                                          [tcl] dveMisc::vbusExpand {uvm_pkg.\uvm_phase::execute_phase }
+19:15:42    136 --> ...                                              [tcl] dveMisc::vbusExpand {uvm_pkg.\uvm_task_phase::execute }
+19:15:42    137 --> ...                                                  [tcl] dveMisc::vbusExpand rkv_watchdog_pkg
+19:15:42    138 --> ...                                                      [tcl] dveMisc::vbusExpand {rkv_watchdog_pkg.\rkv_watchdog_scoreboard::do_countdown_check }
+19:15:42    139 --> ...                                                          [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(104:5:471)" viewId="Local.1" />}
+19:15:42    140 --> ...                                                              [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134493616" frame_id="frame(104:5:471)" viewId="Hidden 1" > <item separator="." expr="this" open="1" name="this" depth="1" /></data>}
+19:15:43    141 --> ...                                                                  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135348272" frame_id="frame(104:5:471)" viewId="Hidden 2" > <item separator="." expr="this.super" open="1" name="super" depth="1" /></data>}
+19:15:43    142 --> ...                                                                      [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135356816" frame_id="frame(104:5:471)" viewId="Hidden 3" > <item separator="." expr="this.super.rgm" open="1" name="rgm" depth="1" /></data>}
+19:15:43    143 --> ...                                                                          [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135366304" frame_id="frame(104:5:471)" viewId="Hidden 4" > <item separator="." expr="this.super.rgm.WDOGLOAD" open="1" name="WDOGLOAD" depth="1" /></data>}
+19:15:43    144 --> ...                                                                              [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135493456" frame_id="frame(104:5:471)" viewId="Hidden 5" > <item separator="." expr="this.super.rgm.WDOGLOAD.LOADVAL" open="1" name="LOADVAL" depth="1" /></data>}
+19:15:43    145 --> ...                                                                                  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135717408" frame_id="frame(104:5:471)" viewId="Hidden 6" > <item separator="." expr="this.super.rgm.WDOGLOAD.LOADVAL.super" open="1" name="super" depth="1" /></data>}
+19:15:43    146 --> ...                                                                                      [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134525696" frame_id="frame(104:5:471)" viewId="Hidden 7" > <item separator="." expr="this.super.rgm.WDOGLOAD.super" open="1" name="super" depth="1" /></data>}
+19:15:43    147 --> ...                                                                                          [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135665664" frame_id="frame(104:5:471)" viewId="Hidden 8" > <item separator="." expr="this.super.rgm.WDOGLOAD.super.super" open="1" name="super" depth="1" /></data>}
+19:15:43    148 --> ...                                                                                              [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135291264" frame_id="frame(104:5:471)" viewId="Hidden 9" > <item separator="." expr="this.super.rgm.super" open="1" name="super" depth="1" /></data>}
+19:15:43    149 --> ...                                                                                                  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135812848" frame_id="frame(104:5:471)" viewId="Hidden 10" > <item separator="." expr="this.super.rgm.super.super" open="1" name="super" depth="1" /></data>}
+19:15:43    150 --> ...  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134490416" frame_id="frame(104:5:471)" viewId="Hidden 11" > <item separator="." expr="this.super.super" open="1" name="super" depth="1" /></data>}
+19:15:43    151 --> ...      [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135992912" frame_id="frame(104:5:471)" viewId="Hidden 12" > <item separator="." expr="this.super.super.super" open="1" name="super" depth="1" /></data>}
+19:15:43    152 --> ...          [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135864848" frame_id="frame(104:5:471)" viewId="Hidden 13" > <item separator="." expr="this.super.super.super.super" open="1" name="super" depth="1" /></data>}
+19:15:43    153 --> ...              [tcl] trigger_hier_stack_context_switch 1
+19:17:42    154 --> ...                  [tcl] synopsys::run
+19:17:42    155 --> ...                      [tcl] set ucliGUI::state
+19:17:42    156 --> ...                          [tcl] gui_update_simulator_buttons
+19:17:42    157 --> ...                              [tcl] set ucliGUI::state
+19:17:42    158 --> ...                                  [tcl] set ucliGUI::state
+19:17:42    159 --> ...                                      [tcl] set ucliGUI::state
+19:17:42    160 --> ...                                          [tcl] set ucliGUI::state
+19:17:42    161 --> ...                                              [tcl] catch {senv activeDomain} dveMisc::result 
+19:17:42    162 --> ...                                                  [tcl] set dveMisc::result
+19:17:42    163 --> ...                                                      [tcl] gui_update_simulator_buttons
+19:17:42    164 --> ...                                                          [tcl] synopsys::xml get_stop_data
+19:17:42    165 --> ...                                                              [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(104:4:470)" /> <item frame_id="frame(104:0:469)" /> <item frame_id="frame(76:18:467)" /> <item frame_id="frame(76:17:466)" /> <item frame_id="frame(76:9:457)" /> <item frame_id="frame(76:8:3088)" /> <item frame_id="frame(76:0:1236)" /> <item frame_id="frame(49:260:1235)" /> <item frame_id="frame(49:259:1234)" /> <item frame_id="frame(49:0:3070)" /> <item frame_id="frame(47:555:3069)" /> <item frame_id="frame(47:1:3059)" /> <item frame_id="frame(47:0:3058)" /> <item frame_id="frame(40:20:3057)" /> <item frame_id="frame(40:19:3056)" /> <item frame_id="frame(40:4:3054)" /> <item frame_id="frame(40:0:3125)" /> <item frame_id="frame(34:521:3124)" /> <item frame_id="frame(34:245:3120)" /> <item frame_id="frame(34:241:3031)" /> <item frame_id="frame(34:0:6)" /> <item frame_id="frame(rkv_watchdog_tb)" /></data>}
+19:17:42    166 --> ...                                                                  [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(104:5:471)" viewId="Local.1" />}
+19:17:42    167 --> ...                                                                      [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134493616" frame_id="frame(104:5:471)" viewId="Hidden 14" > <item separator="." expr="this" open="1" name="this" depth="1" /></data>}
+19:17:45    168 --> ...                                                                          [tcl] synopsys::run
+19:17:45    169 --> ...                                                                              [tcl] set ucliGUI::state
+19:17:45    170 --> ...                                                                                  [tcl] gui_update_simulator_buttons
+19:17:45    171 --> ...                                                                                      [tcl] set ucliGUI::state
+19:17:45    172 --> ...                                                                                          [tcl] set ucliGUI::state
+19:17:45    173 --> ...                                                                                              [tcl] set ucliGUI::state
+19:17:45    174 --> ...                                                                                                  [tcl] set ucliGUI::state
+19:17:45    175 --> ...  [tcl] catch {senv activeDomain} dveMisc::result 
+19:17:45    176 --> ...      [tcl] set dveMisc::result
+19:17:45    177 --> ...          [tcl] gui_update_simulator_buttons
+19:17:45    178 --> ...              [tcl] synopsys::xml get_stop_data
+19:17:45    179 --> ...                  [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(104:4:470)" /> <item frame_id="frame(104:0:469)" /> <item frame_id="frame(76:18:467)" /> <item frame_id="frame(76:17:466)" /> <item frame_id="frame(76:9:457)" /> <item frame_id="frame(76:8:3088)" /> <item frame_id="frame(76:0:1236)" /> <item frame_id="frame(49:260:1235)" /> <item frame_id="frame(49:259:1234)" /> <item frame_id="frame(49:0:3070)" /> <item frame_id="frame(47:555:3069)" /> <item frame_id="frame(47:1:3059)" /> <item frame_id="frame(47:0:3058)" /> <item frame_id="frame(40:20:3057)" /> <item frame_id="frame(40:19:3056)" /> <item frame_id="frame(40:4:3054)" /> <item frame_id="frame(40:0:3125)" /> <item frame_id="frame(34:521:3124)" /> <item frame_id="frame(34:245:3120)" /> <item frame_id="frame(34:241:3031)" /> <item frame_id="frame(34:0:6)" /> <item frame_id="frame(rkv_watchdog_tb)" /></data>}
+19:17:45    180 --> ...                      [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(104:5:471)" viewId="Local.1" />}
+19:17:45    181 --> ...                          [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134493616" frame_id="frame(104:5:471)" viewId="Hidden 15" > <item separator="." expr="this" open="1" name="this" depth="1" /></data>}
+19:17:53    182 --> ...                              [tcl] synopsys::run
+19:17:53    183 --> ...                                  [tcl] set ucliGUI::state
+19:17:53    184 --> ...                                      [tcl] gui_update_simulator_buttons
+19:17:53    185 --> ...                                          [tcl] set ucliGUI::state
+19:17:53    186 --> ...                                              [tcl] set ucliGUI::state
+19:17:53    187 --> ...                                                  [tcl] set ucliGUI::state
+19:17:53    188 --> ...                                                      [tcl] set ucliGUI::state
+19:17:53    189 --> ...                                                          [tcl] catch {senv activeDomain} dveMisc::result 
+19:17:53    190 --> ...                                                              [tcl] set dveMisc::result
+19:17:53    191 --> ...                                                                  [tcl] gui_update_simulator_buttons
+19:17:53    192 --> ...                                                                      [tcl] synopsys::xml get_stop_data
+19:17:53    193 --> ...                                                                          [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(104:4:470)" /> <item frame_id="frame(104:0:469)" /> <item frame_id="frame(76:18:467)" /> <item frame_id="frame(76:17:466)" /> <item frame_id="frame(76:9:457)" /> <item frame_id="frame(76:8:3088)" /> <item frame_id="frame(76:0:1236)" /> <item frame_id="frame(49:260:1235)" /> <item frame_id="frame(49:259:1234)" /> <item frame_id="frame(49:0:3070)" /> <item frame_id="frame(47:555:3069)" /> <item frame_id="frame(47:1:3059)" /> <item frame_id="frame(47:0:3058)" /> <item frame_id="frame(40:20:3057)" /> <item frame_id="frame(40:19:3056)" /> <item frame_id="frame(40:4:3054)" /> <item frame_id="frame(40:0:3125)" /> <item frame_id="frame(34:521:3124)" /> <item frame_id="frame(34:245:3120)" /> <item frame_id="frame(34:241:3031)" /> <item frame_id="frame(34:0:6)" /> <item frame_id="frame(rkv_watchdog_tb)" /></data>}
+19:17:53    194 --> ...                                                                              [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(104:5:471)" viewId="Local.1" />}
+19:17:53    195 --> ...                                                                                  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134493616" frame_id="frame(104:5:471)" viewId="Hidden 16" > <item separator="." expr="this" open="1" name="this" depth="1" /></data>}
+19:18:12    196 --> ...                                                                                      [tcl] synopsys::run
+19:18:12    197 --> ...                                                                                          [tcl] set ucliGUI::state
+19:18:12    198 --> ...                                                                                              [tcl] gui_update_simulator_buttons
+19:18:12    199 --> ...                                                                                                  [tcl] set ucliGUI::state
+19:18:12    200 --> ...  [tcl] set ucliGUI::state
+19:18:12    201 --> ...      [tcl] set ucliGUI::state
+19:18:12    202 --> ...          [tcl] set ucliGUI::state
+19:18:12    203 --> ...              [tcl] catch {senv activeDomain} dveMisc::result 
+19:18:12    204 --> ...                  [tcl] set dveMisc::result
+19:18:12    205 --> ...                      [tcl] gui_update_simulator_buttons
+19:18:12    206 --> ...                          [tcl] synopsys::xml get_stop_data
+19:18:12    207 --> ...                              [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(104:4:470)" /> <item frame_id="frame(104:0:469)" /> <item frame_id="frame(76:18:467)" /> <item frame_id="frame(76:17:466)" /> <item frame_id="frame(76:9:457)" /> <item frame_id="frame(76:8:3088)" /> <item frame_id="frame(76:0:1236)" /> <item frame_id="frame(49:260:1235)" /> <item frame_id="frame(49:259:1234)" /> <item frame_id="frame(49:0:3070)" /> <item frame_id="frame(47:555:3069)" /> <item frame_id="frame(47:1:3059)" /> <item frame_id="frame(47:0:3058)" /> <item frame_id="frame(40:20:3057)" /> <item frame_id="frame(40:19:3056)" /> <item frame_id="frame(40:4:3054)" /> <item frame_id="frame(40:0:3125)" /> <item frame_id="frame(34:521:3124)" /> <item frame_id="frame(34:245:3120)" /> <item frame_id="frame(34:241:3031)" /> <item frame_id="frame(34:0:6)" /> <item frame_id="frame(rkv_watchdog_tb)" /></data>}
+19:18:12    208 --> ...                                  [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(104:5:471)" viewId="Local.1" />}
+19:18:12    209 --> ...                                      [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134493616" frame_id="frame(104:5:471)" viewId="Hidden 17" > <item separator="." expr="this" open="1" name="this" depth="1" /></data>}
+19:18:12    210 --> ...                                          [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135358512" frame_id="frame(104:5:471)" viewId="Hidden 18" > <item separator="." expr="this.super.vif" open="1" name="vif" depth="1" /></data>}
+19:18:30    211 --> ...                                              [tcl] synopsys::run
+19:18:30    212 --> ...                                                  [tcl] set ucliGUI::state
+19:18:30    213 --> ...                                                      [tcl] gui_update_simulator_buttons
+19:18:30    214 --> ...                                                          [tcl] set ucliGUI::state
+19:18:30    215 --> ...                                                              [tcl] set ucliGUI::state
+19:18:30    216 --> ...                                                                  [tcl] set ucliGUI::state
+19:18:30    217 --> ...                                                                      [tcl] set ucliGUI::state
+19:18:30    218 --> ...                                                                          [tcl] catch {senv activeDomain} dveMisc::result 
+19:18:30    219 --> ...                                                                              [tcl] set dveMisc::result
+19:18:30    220 --> ...                                                                                  [tcl] gui_update_simulator_buttons
+19:18:30    221 --> ...                                                                                      [tcl] synopsys::xml get_stop_data
+19:18:30    222 --> ...                                                                                          [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(104:4:470)" /> <item frame_id="frame(104:0:469)" /> <item frame_id="frame(76:18:467)" /> <item frame_id="frame(76:17:466)" /> <item frame_id="frame(76:9:457)" /> <item frame_id="frame(76:8:3088)" /> <item frame_id="frame(76:0:1236)" /> <item frame_id="frame(49:260:1235)" /> <item frame_id="frame(49:259:1234)" /> <item frame_id="frame(49:0:3070)" /> <item frame_id="frame(47:555:3069)" /> <item frame_id="frame(47:1:3059)" /> <item frame_id="frame(47:0:3058)" /> <item frame_id="frame(40:20:3057)" /> <item frame_id="frame(40:19:3056)" /> <item frame_id="frame(40:4:3054)" /> <item frame_id="frame(40:0:3125)" /> <item frame_id="frame(34:521:3124)" /> <item frame_id="frame(34:245:3120)" /> <item frame_id="frame(34:241:3031)" /> <item frame_id="frame(34:0:6)" /> <item frame_id="frame(rkv_watchdog_tb)" /></data>}
+19:18:30    223 --> ...                                                                                              [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(104:5:471)" viewId="Local.1" />}
+19:18:30    224 --> ...                                                                                                  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134493616" frame_id="frame(104:5:471)" viewId="Hidden 19" > <item separator="." expr="this" open="1" name="this" depth="1" /></data>}
+19:18:30    225 --> ...  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135322112" frame_id="frame(104:5:471)" viewId="Hidden 20" > <item separator="." expr="this.super.cfg" open="1" name="cfg" depth="1" /></data>}
+19:19:12    226 --> ...      [tcl] synopsys::run
+19:19:12    227 --> ...          [tcl] set ucliGUI::state
+19:19:12    228 --> ...              [tcl] gui_update_simulator_buttons
+19:19:12    229 --> ...                  [tcl] set ucliGUI::state
+19:19:12    230 --> ...                      [tcl] gui_update_simulator_buttons
+19:19:13    231 --> ...                          [tcl] set ucliGUI::state
+19:19:13    232 --> ...                              [tcl] set ucliGUI::state
+19:19:13    233 --> ...                                  [tcl] set ucliGUI::state
+19:19:13    234 --> ...                                      [tcl] catch {senv activeDomain} dveMisc::result 
+19:19:13    235 --> ...                                          [tcl] set dveMisc::result
+19:19:13    236 --> ...                                              [tcl] gui_update_simulator_buttons
+19:19:13    237 --> ...                                                  [tcl] synopsys::xml get_stop_data
+19:19:13    238 --> ...                                                      [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(104:4:470)" /> <item frame_id="frame(104:0:469)" /> <item frame_id="frame(76:18:467)" /> <item frame_id="frame(76:17:466)" /> <item frame_id="frame(76:9:457)" /> <item frame_id="frame(76:8:3088)" /> <item frame_id="frame(76:0:1236)" /> <item frame_id="frame(49:260:1235)" /> <item frame_id="frame(49:259:1234)" /> <item frame_id="frame(49:0:3070)" /> <item frame_id="frame(47:555:3069)" /> <item frame_id="frame(47:1:3059)" /> <item frame_id="frame(47:0:3058)" /> <item frame_id="frame(40:20:3057)" /> <item frame_id="frame(40:19:3056)" /> <item frame_id="frame(40:4:3054)" /> <item frame_id="frame(40:0:3125)" /> <item frame_id="frame(34:521:3124)" /> <item frame_id="frame(34:245:3120)" /> <item frame_id="frame(34:241:3031)" /> <item frame_id="frame(34:0:6)" /> <item frame_id="frame(rkv_watchdog_tb)" /></data>}
+19:19:13    239 --> ...                                                          [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(104:5:471)" viewId="Local.1" />}
+19:19:13    240 --> ...                                                              [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134493616" frame_id="frame(104:5:471)" viewId="Hidden 21" > <item separator="." expr="this" open="1" name="this" depth="1" /></data>}
+19:19:13    241 --> ...                                                                  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135493456" frame_id="frame(104:5:471)" viewId="Hidden 22" > <item separator="." expr="this.super.rgm.WDOGLOAD.LOADVAL" open="1" name="LOADVAL" depth="1" /></data>}
+19:19:13    242 --> ...                                                                      [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135717408" frame_id="frame(104:5:471)" viewId="Hidden 23" > <item separator="." expr="this.super.rgm.WDOGLOAD.LOADVAL.super" open="1" name="super" depth="1" /></data>}
+19:19:13    243 --> ...                                                                          [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135366304" frame_id="frame(104:5:471)" viewId="Hidden 24" > <item separator="." expr="this.super.rgm.WDOGLOAD" open="1" name="WDOGLOAD" depth="1" /></data>}
+19:19:13    244 --> ...                                                                              [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134525696" frame_id="frame(104:5:471)" viewId="Hidden 25" > <item separator="." expr="this.super.rgm.WDOGLOAD.super" open="1" name="super" depth="1" /></data>}
+19:19:13    245 --> ...                                                                                  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135665664" frame_id="frame(104:5:471)" viewId="Hidden 26" > <item separator="." expr="this.super.rgm.WDOGLOAD.super.super" open="1" name="super" depth="1" /></data>}
+19:19:13    246 --> ...                                                                                      [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135356816" frame_id="frame(104:5:471)" viewId="Hidden 27" > <item separator="." expr="this.super.rgm" open="1" name="rgm" depth="1" /></data>}
+19:19:13    247 --> ...                                                                                          [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135291264" frame_id="frame(104:5:471)" viewId="Hidden 28" > <item separator="." expr="this.super.rgm.super" open="1" name="super" depth="1" /></data>}
+19:19:13    248 --> ...                                                                                              [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135812848" frame_id="frame(104:5:471)" viewId="Hidden 29" > <item separator="." expr="this.super.rgm.super.super" open="1" name="super" depth="1" /></data>}
+19:19:13    249 --> ...                                                                                                  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135348272" frame_id="frame(104:5:471)" viewId="Hidden 30" > <item separator="." expr="this.super" open="1" name="super" depth="1" /></data>}
+19:19:13    250 --> ...  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134490416" frame_id="frame(104:5:471)" viewId="Hidden 31" > <item separator="." expr="this.super.super" open="1" name="super" depth="1" /></data>}
+19:19:13    251 --> ...      [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135992912" frame_id="frame(104:5:471)" viewId="Hidden 32" > <item separator="." expr="this.super.super.super" open="1" name="super" depth="1" /></data>}
+19:19:13    252 --> ...          [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135864848" frame_id="frame(104:5:471)" viewId="Hidden 33" > <item separator="." expr="this.super.super.super.super" open="1" name="super" depth="1" /></data>}
+19:19:27    253 --> ...              [tcl] synopsys::run
+19:19:27    254 --> ...                  [tcl] set ucliGUI::state
+19:19:27    255 --> ...                      [tcl] gui_update_simulator_buttons
+19:19:27    256 --> ...                          [tcl] set ucliGUI::state
+19:19:27    257 --> ...                              [tcl] set ucliGUI::state
+19:19:27    258 --> ...                                  [tcl] set ucliGUI::state
+19:19:27    259 --> ...                                      [tcl] set ucliGUI::state
+19:19:27    260 --> ...                                          [tcl] catch {senv activeDomain} dveMisc::result 
+19:19:27    261 --> ...                                              [tcl] set dveMisc::result
+19:19:27    262 --> ...                                                  [tcl] gui_update_simulator_buttons
+19:19:27    263 --> ...                                                      [tcl] synopsys::xml get_stop_data
+19:19:27    264 --> ...                                                          [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(104:4:470)" /> <item frame_id="frame(104:0:469)" /> <item frame_id="frame(76:18:467)" /> <item frame_id="frame(76:17:466)" /> <item frame_id="frame(76:9:457)" /> <item frame_id="frame(76:8:3088)" /> <item frame_id="frame(76:0:1236)" /> <item frame_id="frame(49:260:1235)" /> <item frame_id="frame(49:259:1234)" /> <item frame_id="frame(49:0:3070)" /> <item frame_id="frame(47:555:3069)" /> <item frame_id="frame(47:1:3059)" /> <item frame_id="frame(47:0:3058)" /> <item frame_id="frame(40:20:3057)" /> <item frame_id="frame(40:19:3056)" /> <item frame_id="frame(40:4:3054)" /> <item frame_id="frame(40:0:3125)" /> <item frame_id="frame(34:521:3124)" /> <item frame_id="frame(34:245:3120)" /> <item frame_id="frame(34:241:3031)" /> <item frame_id="frame(34:0:6)" /> <item frame_id="frame(rkv_watchdog_tb)" /></data>}
+19:19:27    265 --> ...                                                              [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(104:5:471)" viewId="Local.1" />}
+19:19:27    266 --> ...                                                                  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134493616" frame_id="frame(104:5:471)" viewId="Hidden 34" > <item separator="." expr="this" open="1" name="this" depth="1" /></data>}
+19:19:28    267 --> ...                                                                      [tcl] synopsys::run
+19:19:28    268 --> ...                                                                          [tcl] set ucliGUI::state
+19:19:28    269 --> ...                                                                              [tcl] gui_update_simulator_buttons
+19:19:28    270 --> ...                                                                                  [tcl] set ucliGUI::state
+19:19:28    271 --> ...                                                                                      [tcl] set ucliGUI::state
+19:19:28    272 --> ...                                                                                          [tcl] set ucliGUI::state
+19:19:28    273 --> ...                                                                                              [tcl] set ucliGUI::state
+19:19:28    274 --> ...                                                                                                  [tcl] catch {senv activeDomain} dveMisc::result 
+19:19:28    275 --> ...  [tcl] set dveMisc::result
+19:19:28    276 --> ...      [tcl] gui_update_simulator_buttons
+19:19:28    277 --> ...          [tcl] synopsys::xml get_stop_data
+19:19:28    278 --> ...              [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(104:4:470)" /> <item frame_id="frame(104:0:469)" /> <item frame_id="frame(76:18:467)" /> <item frame_id="frame(76:17:466)" /> <item frame_id="frame(76:9:457)" /> <item frame_id="frame(76:8:3088)" /> <item frame_id="frame(76:0:1236)" /> <item frame_id="frame(49:260:1235)" /> <item frame_id="frame(49:259:1234)" /> <item frame_id="frame(49:0:3070)" /> <item frame_id="frame(47:555:3069)" /> <item frame_id="frame(47:1:3059)" /> <item frame_id="frame(47:0:3058)" /> <item frame_id="frame(40:20:3057)" /> <item frame_id="frame(40:19:3056)" /> <item frame_id="frame(40:4:3054)" /> <item frame_id="frame(40:0:3125)" /> <item frame_id="frame(34:521:3124)" /> <item frame_id="frame(34:245:3120)" /> <item frame_id="frame(34:241:3031)" /> <item frame_id="frame(34:0:6)" /> <item frame_id="frame(rkv_watchdog_tb)" /></data>}
+19:19:28    279 --> ...                  [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(104:5:471)" viewId="Local.1" />}
+19:19:28    280 --> ...                      [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134493616" frame_id="frame(104:5:471)" viewId="Hidden 35" > <item separator="." expr="this" open="1" name="this" depth="1" /></data>}
+19:19:30    281 --> ...                          [tcl] synopsys::run
+19:19:30    282 --> ...                              [tcl] set ucliGUI::state
+19:19:30    283 --> ...                                  [tcl] gui_update_simulator_buttons
+19:19:30    284 --> ...                                      [tcl] set ucliGUI::state
+19:19:30    285 --> ...                                          [tcl] set ucliGUI::state
+19:19:30    286 --> ...                                              [tcl] set ucliGUI::state
+19:19:30    287 --> ...                                                  [tcl] set ucliGUI::state
+19:19:30    288 --> ...                                                      [tcl] catch {senv activeDomain} dveMisc::result 
+19:19:30    289 --> ...                                                          [tcl] set dveMisc::result
+19:19:30    290 --> ...                                                              [tcl] gui_update_simulator_buttons
+19:19:30    291 --> ...                                                                  [tcl] synopsys::xml get_stop_data
+19:19:30    292 --> ...                                                                      [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(104:4:470)" /> <item frame_id="frame(104:0:469)" /> <item frame_id="frame(76:18:467)" /> <item frame_id="frame(76:17:466)" /> <item frame_id="frame(76:9:457)" /> <item frame_id="frame(76:8:3088)" /> <item frame_id="frame(76:0:1236)" /> <item frame_id="frame(49:260:1235)" /> <item frame_id="frame(49:259:1234)" /> <item frame_id="frame(49:0:3070)" /> <item frame_id="frame(47:555:3069)" /> <item frame_id="frame(47:1:3059)" /> <item frame_id="frame(47:0:3058)" /> <item frame_id="frame(40:20:3057)" /> <item frame_id="frame(40:19:3056)" /> <item frame_id="frame(40:4:3054)" /> <item frame_id="frame(40:0:3125)" /> <item frame_id="frame(34:521:3124)" /> <item frame_id="frame(34:245:3120)" /> <item frame_id="frame(34:241:3031)" /> <item frame_id="frame(34:0:6)" /> <item frame_id="frame(rkv_watchdog_tb)" /></data>}
+19:19:30    293 --> ...                                                                          [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(104:5:471)" viewId="Local.1" />}
+19:19:30    294 --> ...                                                                              [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134493616" frame_id="frame(104:5:471)" viewId="Hidden 36" > <item separator="." expr="this" open="1" name="this" depth="1" /></data>}
+19:19:33    295 --> ...                                                                                  [tcl] synopsys::run
+19:19:33    296 --> ...                                                                                      [tcl] set ucliGUI::state
+19:19:33    297 --> ...                                                                                          [tcl] gui_update_simulator_buttons
+19:19:33    298 --> ...                                                                                              [tcl] set ucliGUI::state
+19:19:33    299 --> ...                                                                                                  [tcl] set ucliGUI::state
+19:19:33    300 --> ...  [tcl] set ucliGUI::state
+19:19:33    301 --> ...      [tcl] set ucliGUI::state
+19:19:33    302 --> ...          [tcl] catch {senv activeDomain} dveMisc::result 
+19:19:33    303 --> ...              [tcl] set dveMisc::result
+19:19:33    304 --> ...                  [tcl] gui_update_simulator_buttons
+19:19:33    305 --> ...                      [tcl] synopsys::xml get_stop_data
+19:19:33    306 --> ...                          [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(104:4:470)" /> <item frame_id="frame(104:0:469)" /> <item frame_id="frame(76:18:467)" /> <item frame_id="frame(76:17:466)" /> <item frame_id="frame(76:9:457)" /> <item frame_id="frame(76:8:3088)" /> <item frame_id="frame(76:0:1236)" /> <item frame_id="frame(49:260:1235)" /> <item frame_id="frame(49:259:1234)" /> <item frame_id="frame(49:0:3070)" /> <item frame_id="frame(47:555:3069)" /> <item frame_id="frame(47:1:3059)" /> <item frame_id="frame(47:0:3058)" /> <item frame_id="frame(40:20:3057)" /> <item frame_id="frame(40:19:3056)" /> <item frame_id="frame(40:4:3054)" /> <item frame_id="frame(40:0:3125)" /> <item frame_id="frame(34:521:3124)" /> <item frame_id="frame(34:245:3120)" /> <item frame_id="frame(34:241:3031)" /> <item frame_id="frame(34:0:6)" /> <item frame_id="frame(rkv_watchdog_tb)" /></data>}
+19:19:33    307 --> ...                              [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(104:5:471)" viewId="Local.1" />}
+19:19:33    308 --> ...                                  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134493616" frame_id="frame(104:5:471)" viewId="Hidden 37" > <item separator="." expr="this" open="1" name="this" depth="1" /></data>}
+19:19:38    309 --> ...                                      [tcl] synopsys::run
+19:19:38    310 --> ...                                          [tcl] set ucliGUI::state
+19:19:38    311 --> ...                                              [tcl] gui_update_simulator_buttons
+19:19:38    312 --> ...                                                  [tcl] set ucliGUI::state
+19:19:38    313 --> ...                                                      [tcl] set ucliGUI::state
+19:19:38    314 --> ...                                                          [tcl] set ucliGUI::state
+19:19:38    315 --> ...                                                              [tcl] set ucliGUI::state
+19:19:38    316 --> ...                                                                  [tcl] catch {senv activeDomain} dveMisc::result 
+19:19:38    317 --> ...                                                                      [tcl] set dveMisc::result
+19:19:38    318 --> ...                                                                          [tcl] gui_update_simulator_buttons
+19:19:38    319 --> ...                                                                              [tcl] synopsys::xml get_stop_data
+19:19:38    320 --> ...                                                                                  [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(104:4:470)" /> <item frame_id="frame(104:0:469)" /> <item frame_id="frame(76:18:467)" /> <item frame_id="frame(76:17:466)" /> <item frame_id="frame(76:9:457)" /> <item frame_id="frame(76:8:3088)" /> <item frame_id="frame(76:0:1236)" /> <item frame_id="frame(49:260:1235)" /> <item frame_id="frame(49:259:1234)" /> <item frame_id="frame(49:0:3070)" /> <item frame_id="frame(47:555:3069)" /> <item frame_id="frame(47:1:3059)" /> <item frame_id="frame(47:0:3058)" /> <item frame_id="frame(40:20:3057)" /> <item frame_id="frame(40:19:3056)" /> <item frame_id="frame(40:4:3054)" /> <item frame_id="frame(40:0:3125)" /> <item frame_id="frame(34:521:3124)" /> <item frame_id="frame(34:245:3120)" /> <item frame_id="frame(34:241:3031)" /> <item frame_id="frame(34:0:6)" /> <item frame_id="frame(rkv_watchdog_tb)" /></data>}
+19:19:38    321 --> ...                                                                                      [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(104:5:471)" viewId="Local.1" />}
+19:19:38    322 --> ...                                                                                          [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134493616" frame_id="frame(104:5:471)" viewId="Hidden 38" > <item separator="." expr="this" open="1" name="this" depth="1" /></data>}
+19:19:39    323 --> ...                                                                                              [tcl] synopsys::run
+19:19:39    324 --> ...                                                                                                  [tcl] set ucliGUI::state
+19:19:39    325 --> ...  [tcl] gui_update_simulator_buttons
+19:19:39    326 --> ...      [tcl] set ucliGUI::state
+19:19:39    327 --> ...          [tcl] set ucliGUI::state
+19:19:39    328 --> ...              [tcl] set ucliGUI::state
+19:19:39    329 --> ...                  [tcl] set ucliGUI::state
+19:19:39    330 --> ...                      [tcl] catch {senv activeDomain} dveMisc::result 
+19:19:39    331 --> ...                          [tcl] set dveMisc::result
+19:19:39    332 --> ...                              [tcl] gui_update_simulator_buttons
+19:19:39    333 --> ...                                  [tcl] synopsys::xml get_stop_data
+19:19:39    334 --> ...                                      [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(104:4:470)" /> <item frame_id="frame(104:0:469)" /> <item frame_id="frame(76:18:467)" /> <item frame_id="frame(76:17:466)" /> <item frame_id="frame(76:9:457)" /> <item frame_id="frame(76:8:3088)" /> <item frame_id="frame(76:0:1236)" /> <item frame_id="frame(49:260:1235)" /> <item frame_id="frame(49:259:1234)" /> <item frame_id="frame(49:0:3070)" /> <item frame_id="frame(47:555:3069)" /> <item frame_id="frame(47:1:3059)" /> <item frame_id="frame(47:0:3058)" /> <item frame_id="frame(40:20:3057)" /> <item frame_id="frame(40:19:3056)" /> <item frame_id="frame(40:4:3054)" /> <item frame_id="frame(40:0:3125)" /> <item frame_id="frame(34:521:3124)" /> <item frame_id="frame(34:245:3120)" /> <item frame_id="frame(34:241:3031)" /> <item frame_id="frame(34:0:6)" /> <item frame_id="frame(rkv_watchdog_tb)" /></data>}
+19:19:39    335 --> ...                                          [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(104:5:471)" viewId="Local.1" />}
+19:19:39    336 --> ...                                              [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134493616" frame_id="frame(104:5:471)" viewId="Hidden 39" > <item separator="." expr="this" open="1" name="this" depth="1" /></data>}
+19:19:39    337 --> ...                                                  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135493456" frame_id="frame(104:5:471)" viewId="Hidden 40" > <item separator="." expr="this.super.rgm.WDOGLOAD.LOADVAL" open="1" name="LOADVAL" depth="1" /></data>}
+19:19:39    338 --> ...                                                      [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135717408" frame_id="frame(104:5:471)" viewId="Hidden 41" > <item separator="." expr="this.super.rgm.WDOGLOAD.LOADVAL.super" open="1" name="super" depth="1" /></data>}
+19:19:40    339 --> ...                                                          [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135366304" frame_id="frame(104:5:471)" viewId="Hidden 42" > <item separator="." expr="this.super.rgm.WDOGLOAD" open="1" name="WDOGLOAD" depth="1" /></data>}
+19:19:40    340 --> ...                                                              [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134525696" frame_id="frame(104:5:471)" viewId="Hidden 43" > <item separator="." expr="this.super.rgm.WDOGLOAD.super" open="1" name="super" depth="1" /></data>}
+19:19:40    341 --> ...                                                                  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135665664" frame_id="frame(104:5:471)" viewId="Hidden 44" > <item separator="." expr="this.super.rgm.WDOGLOAD.super.super" open="1" name="super" depth="1" /></data>}
+19:19:40    342 --> ...                                                                      [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135356816" frame_id="frame(104:5:471)" viewId="Hidden 45" > <item separator="." expr="this.super.rgm" open="1" name="rgm" depth="1" /></data>}
+19:19:40    343 --> ...                                                                          [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135291264" frame_id="frame(104:5:471)" viewId="Hidden 46" > <item separator="." expr="this.super.rgm.super" open="1" name="super" depth="1" /></data>}
+19:19:40    344 --> ...                                                                              [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135812848" frame_id="frame(104:5:471)" viewId="Hidden 47" > <item separator="." expr="this.super.rgm.super.super" open="1" name="super" depth="1" /></data>}
+19:19:40    345 --> ...                                                                                  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135348272" frame_id="frame(104:5:471)" viewId="Hidden 48" > <item separator="." expr="this.super" open="1" name="super" depth="1" /></data>}
+19:19:40    346 --> ...                                                                                      [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134490416" frame_id="frame(104:5:471)" viewId="Hidden 49" > <item separator="." expr="this.super.super" open="1" name="super" depth="1" /></data>}
+19:19:40    347 --> ...                                                                                          [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135992912" frame_id="frame(104:5:471)" viewId="Hidden 50" > <item separator="." expr="this.super.super.super" open="1" name="super" depth="1" /></data>}
+19:19:40    348 --> ...                                                                                              [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135864848" frame_id="frame(104:5:471)" viewId="Hidden 51" > <item separator="." expr="this.super.super.super.super" open="1" name="super" depth="1" /></data>}
+19:19:42    349 --> ...                                                                                                  [tcl] synopsys::run
+19:19:42    350 --> ...  [tcl] set ucliGUI::state
+19:19:42    351 --> ...      [tcl] gui_update_simulator_buttons
+19:19:42    352 --> ...          [tcl] set ucliGUI::state
+19:19:42    353 --> ...              [tcl] set ucliGUI::state
+19:19:42    354 --> ...                  [tcl] set ucliGUI::state
+19:19:42    355 --> ...                      [tcl] set ucliGUI::state
+19:19:42    356 --> ...                          [tcl] catch {senv activeDomain} dveMisc::result 
+19:19:42    357 --> ...                              [tcl] set dveMisc::result
+19:19:42    358 --> ...                                  [tcl] gui_update_simulator_buttons
+19:19:42    359 --> ...                                      [tcl] synopsys::xml get_stop_data
+19:19:42    360 --> ...                                          [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(104:4:470)" /> <item frame_id="frame(104:0:469)" /> <item frame_id="frame(76:18:467)" /> <item frame_id="frame(76:17:466)" /> <item frame_id="frame(76:9:457)" /> <item frame_id="frame(76:8:3088)" /> <item frame_id="frame(76:0:1236)" /> <item frame_id="frame(49:260:1235)" /> <item frame_id="frame(49:259:1234)" /> <item frame_id="frame(49:0:3070)" /> <item frame_id="frame(47:555:3069)" /> <item frame_id="frame(47:1:3059)" /> <item frame_id="frame(47:0:3058)" /> <item frame_id="frame(40:20:3057)" /> <item frame_id="frame(40:19:3056)" /> <item frame_id="frame(40:4:3054)" /> <item frame_id="frame(40:0:3125)" /> <item frame_id="frame(34:521:3124)" /> <item frame_id="frame(34:245:3120)" /> <item frame_id="frame(34:241:3031)" /> <item frame_id="frame(34:0:6)" /> <item frame_id="frame(rkv_watchdog_tb)" /></data>}
+19:19:42    361 --> ...                                              [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(104:5:471)" viewId="Local.1" />}
+19:19:42    362 --> ...                                                  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134493616" frame_id="frame(104:5:471)" viewId="Hidden 52" > <item separator="." expr="this" open="1" name="this" depth="1" /></data>}
+19:19:43    363 --> ...                                                      [tcl] synopsys::run
+19:19:43    364 --> ...                                                          [tcl] set ucliGUI::state
+19:19:43    365 --> ...                                                              [tcl] gui_update_simulator_buttons
+19:19:43    366 --> ...                                                                  [tcl] set ucliGUI::state
+19:19:43    367 --> ...                                                                      [tcl] set ucliGUI::state
+19:19:43    368 --> ...                                                                          [tcl] set ucliGUI::state
+19:19:43    369 --> ...                                                                              [tcl] set ucliGUI::state
+19:19:43    370 --> ...                                                                                  [tcl] catch {senv activeDomain} dveMisc::result 
+19:19:43    371 --> ...                                                                                      [tcl] set dveMisc::result
+19:19:43    372 --> ...                                                                                          [tcl] gui_update_simulator_buttons
+19:19:43    373 --> ...                                                                                              [tcl] synopsys::xml get_stop_data
+19:19:43    374 --> ...                                                                                                  [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(104:4:470)" /> <item frame_id="frame(104:0:469)" /> <item frame_id="frame(76:18:467)" /> <item frame_id="frame(76:17:466)" /> <item frame_id="frame(76:9:457)" /> <item frame_id="frame(76:8:3088)" /> <item frame_id="frame(76:0:1236)" /> <item frame_id="frame(49:260:1235)" /> <item frame_id="frame(49:259:1234)" /> <item frame_id="frame(49:0:3070)" /> <item frame_id="frame(47:555:3069)" /> <item frame_id="frame(47:1:3059)" /> <item frame_id="frame(47:0:3058)" /> <item frame_id="frame(40:20:3057)" /> <item frame_id="frame(40:19:3056)" /> <item frame_id="frame(40:4:3054)" /> <item frame_id="frame(40:0:3125)" /> <item frame_id="frame(34:521:3124)" /> <item frame_id="frame(34:245:3120)" /> <item frame_id="frame(34:241:3031)" /> <item frame_id="frame(34:0:6)" /> <item frame_id="frame(rkv_watchdog_tb)" /></data>}
+19:19:43    375 --> ...  [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(104:5:471)" viewId="Local.1" />}
+19:19:43    376 --> ...      [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134493616" frame_id="frame(104:5:471)" viewId="Hidden 53" > <item separator="." expr="this" open="1" name="this" depth="1" /></data>}
+19:19:46    377 --> ...          [tcl] synopsys::run
+19:19:46    378 --> ...              [tcl] set ucliGUI::state
+19:19:46    379 --> ...                  [tcl] gui_update_simulator_buttons
+19:19:46    380 --> ...                      [tcl] set ucliGUI::state
+19:19:46    381 --> ...                          [tcl] set ucliGUI::state
+19:19:46    382 --> ...                              [tcl] set ucliGUI::state
+19:19:46    383 --> ...                                  [tcl] set ucliGUI::state
+19:19:46    384 --> ...                                      [tcl] catch {senv activeDomain} dveMisc::result 
+19:19:46    385 --> ...                                          [tcl] set dveMisc::result
+19:19:46    386 --> ...                                              [tcl] gui_update_simulator_buttons
+19:19:46    387 --> ...                                                  [tcl] synopsys::xml get_stop_data
+19:19:46    388 --> ...                                                      [tcl] synopsys::xml {frames <data updateType="preserve" itemId="none" viewId="Stack.1" > <item frame_id="frame(104:4:470)" /> <item frame_id="frame(104:0:469)" /> <item frame_id="frame(76:18:467)" /> <item frame_id="frame(76:17:466)" /> <item frame_id="frame(76:9:457)" /> <item frame_id="frame(76:8:3088)" /> <item frame_id="frame(76:0:1236)" /> <item frame_id="frame(49:260:1235)" /> <item frame_id="frame(49:259:1234)" /> <item frame_id="frame(49:0:3070)" /> <item frame_id="frame(47:555:3069)" /> <item frame_id="frame(47:1:3059)" /> <item frame_id="frame(47:0:3058)" /> <item frame_id="frame(40:20:3057)" /> <item frame_id="frame(40:19:3056)" /> <item frame_id="frame(40:4:3054)" /> <item frame_id="frame(40:0:3125)" /> <item frame_id="frame(34:521:3124)" /> <item frame_id="frame(34:245:3120)" /> <item frame_id="frame(34:241:3031)" /> <item frame_id="frame(34:0:6)" /> <item frame_id="frame(rkv_watchdog_tb)" /></data>}
+19:19:46    389 --> ...                                                          [tcl] synopsys::xml {locals <data updateType="preserve" itemId="none" frame_id="frame(104:5:471)" viewId="Local.1" />}
+19:19:46    390 --> ...                                                              [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134493616" frame_id="frame(104:5:471)" viewId="Hidden 54" > <item separator="." expr="this" open="1" name="this" depth="1" /></data>}
+19:19:46    391 --> ...                                                                  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135493456" frame_id="frame(104:5:471)" viewId="Hidden 55" > <item separator="." expr="this.super.rgm.WDOGLOAD.LOADVAL" open="1" name="LOADVAL" depth="1" /></data>}
+19:19:46    392 --> ...                                                                      [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135717408" frame_id="frame(104:5:471)" viewId="Hidden 56" > <item separator="." expr="this.super.rgm.WDOGLOAD.LOADVAL.super" open="1" name="super" depth="1" /></data>}
+19:19:46    393 --> ...                                                                          [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135366304" frame_id="frame(104:5:471)" viewId="Hidden 57" > <item separator="." expr="this.super.rgm.WDOGLOAD" open="1" name="WDOGLOAD" depth="1" /></data>}
+19:19:46    394 --> ...                                                                              [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134525696" frame_id="frame(104:5:471)" viewId="Hidden 58" > <item separator="." expr="this.super.rgm.WDOGLOAD.super" open="1" name="super" depth="1" /></data>}
+19:19:46    395 --> ...                                                                                  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135665664" frame_id="frame(104:5:471)" viewId="Hidden 59" > <item separator="." expr="this.super.rgm.WDOGLOAD.super.super" open="1" name="super" depth="1" /></data>}
+19:19:46    396 --> ...                                                                                      [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135356816" frame_id="frame(104:5:471)" viewId="Hidden 60" > <item separator="." expr="this.super.rgm" open="1" name="rgm" depth="1" /></data>}
+19:19:46    397 --> ...                                                                                          [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135291264" frame_id="frame(104:5:471)" viewId="Hidden 61" > <item separator="." expr="this.super.rgm.super" open="1" name="super" depth="1" /></data>}
+19:19:46    398 --> ...                                                                                              [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135812848" frame_id="frame(104:5:471)" viewId="Hidden 62" > <item separator="." expr="this.super.rgm.super.super" open="1" name="super" depth="1" /></data>}
+19:19:46    399 --> ...                                                                                                  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135348272" frame_id="frame(104:5:471)" viewId="Hidden 63" > <item separator="." expr="this.super" open="1" name="super" depth="1" /></data>}
+19:19:46    400 --> ...  [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="134490416" frame_id="frame(104:5:471)" viewId="Hidden 64" > <item separator="." expr="this.super.super" open="1" name="super" depth="1" /></data>}
+19:19:46    401 --> ...      [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135992912" frame_id="frame(104:5:471)" viewId="Hidden 65" > <item separator="." expr="this.super.super.super" open="1" name="super" depth="1" /></data>}
+19:19:47    402 --> ...          [tcl] synopsys::xml {evaluate <data updateType="increment" itemId="135864848" frame_id="frame(104:5:471)" viewId="Hidden 66" > <item separator="." expr="this.super.super.super.super" open="1" name="super" depth="1" /></data>}
+21:19:05    403 --> ...              [tcl] if [catch {gui_sim_terminate}] {gui_sim_terminate -kill}
+21:19:05    404 --> ...                  [tcl] synopsys::finish
+21:19:05    405 --> ...                      [tcl] set ucliGUI::state
+21:19:05    406 --> ...                          [tcl] gui_update_simulator_buttons
+21:19:06    407 --> ...                              [tcl] set ucliGUI::state
+21:19:06    408 --> ...                                  [tcl] catch {senv activeDomain} dveMisc::result 
+21:19:06    409 --> ...                                      [tcl] set dveMisc::result
+21:19:06    410 --> ...                                          [tcl] gui_update_simulator_buttons
+21:19:06    411 --> ...                                              [tcl] catch {senv activeDomain} dveMisc::result 
+21:19:06    412 --> ...                                                  [tcl] set dveMisc::result
+21:19:06    413 --> ...                                                      [tcl] ucli_exit
