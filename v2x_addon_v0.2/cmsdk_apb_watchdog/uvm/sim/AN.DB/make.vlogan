@@ -1,0 +1,47 @@
+
+VLOGAN	= vlogan
+VLOGAN_OPT	= -l comp.log -full64 -ntb_opts uvm-1.2 +incdir+/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm/vcs/wrap +incdir+/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2 -sverilog -timescale=1ps/1ps +incdir+../../verilog +incdir+../vip_lib/apb_pkg +incdir+../cfg +incdir+../cov +incdir+../env +incdir+../reg +incdir+../seq_lib +incdir+../test -sverilog +define+UVM_DIRECTC_OPTS -full64
+
+all :		_VCSgd_R4kEp_1.db \
+	_VCSgd_CvpK5_1.db \
+	_VCSgd_Sm0yIc_1.db \
+	_VCSgd_hpU5vb_1.db \
+	_VCSgd_1TsTye_1.db \
+	_VCSgd_hMPcAb_1.db \
+	_VCSgd_lbgumd_1.db \
+	_VCSgd_z6bCod_1.db \
+
+
+
+_VCSgd_R4kEp_1.db :	/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/uvm_pkg.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/uvm_pkg.sv
+
+
+_VCSgd_CvpK5_1.db :	../vip_lib/apb_pkg/apb_pkg.sv 
+		${VLOGAN}  ${VLOGAN_OPT} ../vip_lib/apb_pkg/apb_pkg.sv
+
+
+_VCSgd_Sm0yIc_1.db :	../env/rkv_watchdog_pkg.sv 
+		${VLOGAN}  ${VLOGAN_OPT} ../env/rkv_watchdog_pkg.sv
+
+
+_VCSgd_hpU5vb_1.db :	../../verilog/cmsdk_apb_watchdog.v 
+		${VLOGAN}  ${VLOGAN_OPT} ../../verilog/cmsdk_apb_watchdog.v
+
+
+_VCSgd_1TsTye_1.db :	../../verilog/cmsdk_apb_watchdog_frc.v 
+		${VLOGAN}  ${VLOGAN_OPT} ../../verilog/cmsdk_apb_watchdog_frc.v
+
+
+_VCSgd_hMPcAb_1.db :	../vip_lib/apb_pkg/apb_if.sv 
+		${VLOGAN}  ${VLOGAN_OPT} ../vip_lib/apb_pkg/apb_if.sv
+
+
+_VCSgd_lbgumd_1.db :	../tb/rkv_watchdog_tb.sv 
+		${VLOGAN}  ${VLOGAN_OPT} ../tb/rkv_watchdog_tb.sv
+
+
+_VCSgd_z6bCod_1.db :	../tb/rkv_watchdog_if.sv 
+		${VLOGAN}  ${VLOGAN_OPT} ../tb/rkv_watchdog_if.sv
+
+
