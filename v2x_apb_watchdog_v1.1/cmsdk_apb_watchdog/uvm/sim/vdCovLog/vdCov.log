@@ -1,0 +1,36 @@
+[DVCDT136] 
+Failed to load tests. Details are as the following:
+Load Failed: 
+Warning-[UCAPI-SNF] Shape Not Found
+  'Fsm' coverage shape is not there in the vdb 'out/cov.vdb'. Coverage of this
+  metric will not be reported.
+  Please check if proper -cm option was used at compile time.
+The design 'out/cov.vdb' was loaded successfully.
+The following tests are merged/loaded from "out/cov.vdb",
+    out/cov/rkv_watchdog_countdown_disable_test_1
+    out/cov/rkv_watchdog_countdown_test_1
+    out/cov/rkv_watchdog_countdown_test_100
+    out/cov/rkv_watchdog_illegal_apbacc_test_1
+    out/cov/rkv_watchdog_integration_test_1
+    out/cov/rkv_watchdog_lock_test_1
+    out/cov/rkv_watchdog_regacc_test_1
+    out/cov/rkv_watchdog_reload_test_1
+    out/cov/rkv_watchdog_resen_test_1
+[DVCDT136] 
+Failed to load tests. Details are as the following:
+Load Failed: 
+Warning-[UCAPI-SNF] Shape Not Found
+  'Fsm' coverage shape is not there in the vdb 'out/cov.vdb'. Coverage of this
+  metric will not be reported.
+  Please check if proper -cm option was used at compile time.
+The design 'out/cov.vdb' was loaded successfully.
+The following tests are merged/loaded from "out/cov.vdb",
+    out/cov/rkv_watchdog_countdown_disable_test_1
+    out/cov/rkv_watchdog_countdown_test_1
+    out/cov/rkv_watchdog_countdown_test_100
+    out/cov/rkv_watchdog_illegal_apbacc_test_1
+    out/cov/rkv_watchdog_integration_test_1
+    out/cov/rkv_watchdog_lock_test_1
+    out/cov/rkv_watchdog_regacc_test_1
+    out/cov/rkv_watchdog_reload_test_1
+    out/cov/rkv_watchdog_resen_test_1

@@ -1,0 +1,19 @@
+Design Module List
+
+Total Module Definition Coverage Summary 
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 55.62  27.27  80.95  64.14 --      55.74  50.00 
+
+
+Total modules in report: 8
+-------------------------------------------------------------------------------
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME                               
+  0.00 --     --     --     --     --       0.00 uvm_pkg                            
+  8.26   5.21 --       0.00 --      19.57 --     uvm_custom_install_verdi_recording 
+ 30.91  31.82 --     --     --      30.00 --     uvm_custom_install_recording       
+ 50.00 --     --      50.00 --     --     --     rkv_watchdog_if                    
+ 60.54  59.46  57.14  73.28 --      52.27 --     cmsdk_apb_watchdog                 
+ 64.41 100.00 --      46.12 --      50.00  61.54 apb_if                             
+ 83.65  94.94  92.86  65.31 --      81.48 --     cmsdk_apb_watchdog_frc             
+100.00 100.00 --     100.00 --     --     --     rkv_watchdog_tb                    
+

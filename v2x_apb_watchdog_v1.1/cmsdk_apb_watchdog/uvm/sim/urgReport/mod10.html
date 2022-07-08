@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: cmsdk_apb_watchdog</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_cmsdk_apb_watchdog'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_cmsdk_apb_watchdog')">cmsdk_apb_watchdog</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s6 cl rt"> 60.54</td>
+<td class="s5 cl rt"><a href="mod10.html#Line" > 59.46</a></td>
+<td class="s5 cl rt"><a href="mod10.html#Cond" > 57.14</a></td>
+<td class="s7 cl rt"><a href="mod10.html#Toggle" > 73.28</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod10.html#Branch" > 52.27</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../../verilog/cmsdk_apb_watchdog.v')">/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../../verilog/cmsdk_apb_watchdog.v</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod10.html#inst_tag_10"  onclick="showContent('inst_tag_10')">rkv_watchdog_tb.dut</a></td>
+<td class="s6 cl rt"> 60.54</td>
+<td class="s5 cl rt"><a href="mod10.html#Line" > 59.46</a></td>
+<td class="s5 cl rt"><a href="mod10.html#Cond" > 57.14</a></td>
+<td class="s7 cl rt"><a href="mod10.html#Toggle" > 73.28</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod10.html#Branch" > 52.27</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_cmsdk_apb_watchdog'>
+<hr>
+<a name="inst_tag_10"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_10" >rkv_watchdog_tb.dut</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s6 cl rt"> 60.54</td>
+<td class="s5 cl rt"><a href="mod10.html#Line" > 59.46</a></td>
+<td class="s5 cl rt"><a href="mod10.html#Cond" > 57.14</a></td>
+<td class="s7 cl rt"><a href="mod10.html#Toggle" > 73.28</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod10.html#Branch" > 52.27</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s7 cl rt"> 76.05</td>
+<td class="s8 cl rt"> 83.62</td>
+<td class="s8 cl rt"> 80.95</td>
+<td class="s6 cl rt"> 68.42</td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"> 71.20</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td><a href="mod2.html#inst_tag_2" >rkv_watchdog_tb</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod5.html#inst_tag_5" id="tag_urg_inst_5">u_apb_watchdog_frc</a></td>
+<td class="s8 cl rt"> 83.65</td>
+<td class="s9 cl rt"> 94.94</td>
+<td class="s9 cl rt"> 92.86</td>
+<td class="s6 cl rt"> 65.31</td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"> 81.48</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_cmsdk_apb_watchdog'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod10.html" >cmsdk_apb_watchdog</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s5"><td class="lf">TOTAL</td><td></td><td>37</td><td>22</td><td>59.46</td></tr>
+<tr class="s7"><td class="lf">ALWAYS</td><td>196</td><td>4</td><td>3</td><td>75.00</td></tr>
+<tr class="s7"><td class="lf">ALWAYS</td><td>217</td><td>4</td><td>3</td><td>75.00</td></tr>
+<tr class="s7"><td class="lf">ALWAYS</td><td>229</td><td>4</td><td>3</td><td>75.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>249</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s3"><td class="lf">ALWAYS</td><td>270</td><td>18</td><td>6</td><td>33.33</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>301</td><td>3</td><td>3</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+195                           // process p_LockSeq
+196        1/1                if (PRESETn == 1'b0)
+197                             // asynchronous reset (active low)
+198        1/1                  wdog_lock &lt;= 1'b0;
+199                           else
+200                             // rising clock edge
+201        1/1                  if (wdog_lock_wr_en)
+202        <font color = "red">0/1     ==>            wdog_lock &lt;= wdog_lock_wr_val;</font>
+                        MISSING_ELSE
+203                         end
+204                     
+205                       //----------------------------------------------------------------------------
+206                       // Integration Test Registers
+207                       //----------------------------------------------------------------------------
+208                       assign wdog_itcr_wr_en = (PADDR == {`ARM_WDOGIA,`ARM_WDOGTCRA}) ?
+209                                             (PSEL &amp; PWRITE &amp; (~PENABLE) &amp; (~wdog_lock)) : 1'b0;
+210                     
+211                       assign wdog_itop_wr_en = (PADDR == {`ARM_WDOGIA,`ARM_WDOGTOPA}) ?
+212                                             (PSEL &amp; PWRITE &amp; (~PENABLE) &amp; (~wdog_lock)) : 1'b0;
+213                     
+214                       always @ (posedge PCLK or negedge PRESETn)
+215                         begin : p_tcr_seq
+216                           // process p_TcrSeq
+217        1/1                if (PRESETn == 1'b0)
+218                             // asynchronous reset (active low)
+219        1/1                  wdog_itcr &lt;= 1'b0;
+220                           else
+221                             // rising clock edge
+222        1/1                  if (wdog_itcr_wr_en)
+223        <font color = "red">0/1     ==>            wdog_itcr &lt;= PWDATA[0];</font>
+                        MISSING_ELSE
+224                         end
+225                     
+226                       always @ (posedge PCLK or negedge PRESETn)
+227                         begin : p_top_seq
+228                           // process p_TopSeq
+229        1/1                if (PRESETn == 1'b0)
+230                             // asynchronous reset (active low)
+231        1/1                  wdog_itop &lt;= 2'b00;
+232                           else
+233                             // rising clock edge
+234        1/1                    if (wdog_itop_wr_en)
+235        <font color = "red">0/1     ==>              wdog_itop &lt;= PWDATA[1:0];</font>
+                        MISSING_ELSE
+236                         end
+237                     
+238                       //----------------------------------------------------------------------------
+239                       // Output data generation
+240                       //----------------------------------------------------------------------------
+241                     
+242                       // Address decoding for register reads.
+243                       assign prdata_next_en = PSEL &amp; (~PWRITE) &amp; (~PENABLE);
+244                     
+245                       // Selects output data from address bus.
+246                       always @ (prdata_next_en or PADDR or frc_data or wdog_pdata or wdog_lock
+247                                 or wdog_itcr)
+248                         begin : p_prdata_next_comb
+249        1/1                case (prdata_next_en)
+250                            1'b1:
+251        1/1                   prdata_next =
+252                                  ((PADDR[11:5]==`ARM_WDOG1A)? frc_data : {32{1'b0}})|
+253                                  ((PADDR[11:5]==`ARM_WDOGLA)? {{31{1'b0}},wdog_lock}: {32{1'b0}})|
+254                                  ((PADDR[11:5]==`ARM_WDOGIA)? {{31{1'b0}},wdog_itcr}: {32{1'b0}})|
+255                                  (((PADDR[11:5]==`ARM_WDOGPA1)|
+256                                  (PADDR[11:5]==`ARM_WDOGPA2))?  {{24{1'b0}}, wdog_pdata} : {32{1'b0}});
+257                            1'b0:
+258        1/1                   prdata_next = {32{1'b0}};
+259                            default:
+260        1/1                   prdata_next = {32{1'bx}};
+261                            endcase
+262                         end
+263                     
+264                       // Selection of read data from Peripheral and PrimeCell ID
+265                       // registers is separated from the prdata_next mux to reduce the
+266                       // depth of mux needed for Frc register data
+267                       always @ (prdata_next_en or PADDR or
+268                                 ECOREVNUM )
+269                         begin : p_wdog_pdata_comb
+270        1/1                case (prdata_next_en)
+271                            1'b1: begin
+272        1/1                   case (PADDR[5:2])
+273        <font color = "red">0/1     ==>            `ARM_WPERIPHID4A:   wdog_pdata = WDOG_PERIPH_ID4;</font>
+274        1/1                    `ARM_WPERIPHID5A:   wdog_pdata = WDOG_PERIPH_ID5;
+275        <font color = "red">0/1     ==>            `ARM_WPERIPHID6A:   wdog_pdata = WDOG_PERIPH_ID6;</font>
+276        <font color = "red">0/1     ==>            `ARM_WPERIPHID7A:   wdog_pdata = WDOG_PERIPH_ID7;</font>
+277        <font color = "red">0/1     ==>            `ARM_WPERIPHID0A:   wdog_pdata = WDOG_PERIPH_ID0;</font>
+278        <font color = "red">0/1     ==>            `ARM_WPERIPHID1A:   wdog_pdata = WDOG_PERIPH_ID1;</font>
+279        <font color = "red">0/1     ==>            `ARM_WPERIPHID2A:   wdog_pdata = WDOG_PERIPH_ID2;</font>
+280        <font color = "red">0/1     ==>            `ARM_WPERIPHID3A:   wdog_pdata = {ECOREVNUM,WDOG_PERIPH_ID3} ;</font>
+281        <font color = "red">0/1     ==>            `ARM_WPCELLID0A :   wdog_pdata = WDOG_PCELL_ID0;</font>
+282        <font color = "red">0/1     ==>            `ARM_WPCELLID1A :   wdog_pdata = WDOG_PCELL_ID1;</font>
+283        <font color = "red">0/1     ==>            `ARM_WPCELLID2A :   wdog_pdata = WDOG_PCELL_ID2;</font>
+284        <font color = "red">0/1     ==>            `ARM_WPCELLID3A :   wdog_pdata = WDOG_PCELL_ID3;</font>
+285        1/1                    4'h0, 4'h1,4'h2,4'h3: wdog_pdata = {8{1'b0}};
+286        <font color = "red">0/1     ==>            default:  wdog_pdata = {8{1'bx}};</font>
+287                              endcase
+288                            end
+289                            1'b0: begin
+290        1/1                   wdog_pdata = {8{1'b0}};
+291                            end
+292                            default: begin
+293        1/1                   wdog_pdata = {8{1'bx}};
+294                            end
+295                           endcase
+296                         end // block: p_wdog_pdata_comb
+297                     
+298                       // Register used to reduce output delay during reads.
+299                       always @ (negedge PRESETn or posedge PCLK)
+300                         begin : p_i_prdata_seq
+301        1/1                if (PRESETn == 1'b0)
+302        1/1                  i_prdata &lt;= {32{1'b0}};
+303                           else
+304        1/1                  i_prdata &lt;= prdata_next;
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod10.html" >cmsdk_apb_watchdog</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s5"><td class="lf">Conditions</td><td>14</td><td>8</td><td>57.14</td></tr>
+<tr class="s5"><td class="lf">Logical</td><td>14</td><td>8</td><td>57.14</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       178
+ EXPRESSION (((PSEL &amp; (PADDR[11:5] == 7'b0))) ? 1'b1 : 1'b0)
+             ----------------1---------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       184
+ EXPRESSION ((PADDR == {7'b1100000, 3'b0}) ? (((PSEL &amp; PWRITE) &amp; (~PENABLE))) : 1'b0)
+             --------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       187
+ EXPRESSION ((PWDATA == 32'h1acce551) ? 1'b0 : 1'b1)
+             ------------1-----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       208
+ EXPRESSION ((PADDR == {7'b1111000, 3'b0}) ? ((((PSEL &amp; PWRITE) &amp; (~PENABLE)) &amp; (~wdog_lock))) : 1'b0)
+             --------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       211
+ EXPRESSION ((PADDR == {7'b1111000, 3'b1}) ? ((((PSEL &amp; PWRITE) &amp; (~PENABLE)) &amp; (~wdog_lock))) : 1'b0)
+             --------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       331
+ EXPRESSION ((wdog_itcr == 1'b0) ? i_wdogint : wdog_itop[1])
+             ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       332
+ EXPRESSION ((wdog_itcr == 1'b0) ? i_wdogres : wdog_itop[0])
+             ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod10.html" >cmsdk_apb_watchdog</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Totals</td>
+<td class="rt">29</td>
+<td class="rt">15</td>
+<td class="rt">51.72 </td>
+</tr><tr class="s7">
+<td>Total Bits</td>
+<td class="rt">408</td>
+<td class="rt">299</td>
+<td class="rt">73.28 </td>
+</tr><tr class="s7">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">204</td>
+<td class="rt">150</td>
+<td class="rt">73.53 </td>
+</tr><tr class="s7">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">204</td>
+<td class="rt">149</td>
+<td class="rt">73.04 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s6">
+<td>Ports</td>
+<td class="rt">14</td>
+<td class="rt">9</td>
+<td class="rt">64.29 </td>
+</tr><tr class="s5">
+<td>Port Bits</td>
+<td class="rt">176</td>
+<td class="rt">101</td>
+<td class="rt">57.39 </td>
+</tr><tr class="s5">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">88</td>
+<td class="rt">51</td>
+<td class="rt">57.95 </td>
+</tr><tr class="s5">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">88</td>
+<td class="rt">50</td>
+<td class="rt">56.82 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s4">
+<td>Signals</td>
+<td class="rt">15</td>
+<td class="rt">6</td>
+<td class="rt">40.00 </td>
+</tr><tr class="s8">
+<td>Signal Bits</td>
+<td class="rt">232</td>
+<td class="rt">198</td>
+<td class="rt">85.34 </td>
+</tr><tr class="s8">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">116</td>
+<td class="rt">99</td>
+<td class="rt">85.34 </td>
+</tr><tr class="s8">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">116</td>
+<td class="rt">99</td>
+<td class="rt">85.34 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>PCLK</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PRESETn</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PENABLE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PSEL</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PADDR[2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PADDR[4:3]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PADDR[11:5]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PWRITE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PWDATA[7:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PWDATA[31:8]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>WDOGCLK</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>WDOGCLKEN</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>WDOGRESn</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ECOREVNUM[3:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PRDATA[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>WDOGINT</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>WDOGRES</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>frc_sel</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>frc_data[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wdog_pdata[7:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>prdata_next[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i_prdata[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>prdata_next_en</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wdog_itcr_wr_en</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>wdog_itcr</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>wdog_itop_wr_en</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>wdog_itop[1:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>wdog_lock_wr_en</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>wdog_lock_wr_val</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>wdog_lock</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>i_wdogint</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i_wdogres</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr></table><br clear=all>
+<hr>
+<a name="Branch"></a>
+Branch Coverage for Module : <a href="mod10.html" >cmsdk_apb_watchdog</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Branches</td>
+<td></td>
+<td class="rt">44</td>
+<td class="rt">23</td>
+<td class="rt">52.27 </td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">178</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s5">
+<td>TERNARY</td>
+<td class="rt">184</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>TERNARY</td>
+<td class="rt">187</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>TERNARY</td>
+<td class="rt">208</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>TERNARY</td>
+<td class="rt">211</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>TERNARY</td>
+<td class="rt">331</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s5">
+<td>TERNARY</td>
+<td class="rt">332</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s6">
+<td>IF</td>
+<td class="rt">196</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s6">
+<td>IF</td>
+<td class="rt">217</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s6">
+<td>IF</td>
+<td class="rt">229</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s10">
+<td>CASE</td>
+<td class="rt">249</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s2">
+<td>CASE</td>
+<td class="rt">270</td>
+<td class="rt">16</td>
+<td class="rt">4</td>
+<td class="rt">25.00 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">301</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+178          assign frc_sel  = (PSEL & (PADDR [11:5] == `ARM_WDOG1A)) ? 1'b1 : 1'b0;
+                                                                      <font color = "green">-1-</font>  
+                                                                      <font color = "green">==></font>  
+                                                                      <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+184          assign wdog_lock_wr_en = (PADDR == {`ARM_WDOGLA,`ARM_WDOGLOCKA}) ?
+                                                                              <font color = "red">-1-</font>  
+                                                                              <font color = "red">==></font>  
+                                                                              <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+187          assign wdog_lock_wr_val =
+                                      
+188          // 0x1ACCE551 - unlock
+                                   
+189                 (PWDATA == 32'h1ACCE551) ? 1'b0 :
+                                             <font color = "red">-1-</font>  
+                                             <font color = "red">==></font>  
+                                             <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+208          assign wdog_itcr_wr_en = (PADDR == {`ARM_WDOGIA,`ARM_WDOGTCRA}) ?
+                                                                             <font color = "red">-1-</font>  
+                                                                             <font color = "red">==></font>  
+                                                                             <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+211          assign wdog_itop_wr_en = (PADDR == {`ARM_WDOGIA,`ARM_WDOGTOPA}) ?
+                                                                             <font color = "red">-1-</font>  
+                                                                             <font color = "red">==></font>  
+                                                                             <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+331          assign WDOGINT = (wdog_itcr == 1'b0) ? i_wdogint : wdog_itop[1];
+                                                  <font color = "red">-1-</font>  
+                                                  <font color = "green">==></font>  
+                                                  <font color = "red">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td>Not Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+332          assign WDOGRES = (wdog_itcr == 1'b0) ? i_wdogres : wdog_itop[0];
+                                                  <font color = "red">-1-</font>  
+                                                  <font color = "green">==></font>  
+                                                  <font color = "red">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td>Not Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+196              if (PRESETn == 1'b0)
+                 <font color = "green">-1-</font>  
+197                // asynchronous reset (active low)
+198                wdog_lock <= 1'b0;
+           <font color = "green">        ==></font>
+199              else
+200                // rising clock edge
+201                if (wdog_lock_wr_en)
+                   <font color = "red">-2-</font>  
+202                  wdog_lock <= wdog_lock_wr_val;
+           <font color = "red">          ==></font>
+                     MISSING_ELSE
+           <font color = "green">          ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+217              if (PRESETn == 1'b0)
+                 <font color = "green">-1-</font>  
+218                // asynchronous reset (active low)
+219                wdog_itcr <= 1'b0;
+           <font color = "green">        ==></font>
+220              else
+221                // rising clock edge
+222                if (wdog_itcr_wr_en)
+                   <font color = "red">-2-</font>  
+223                  wdog_itcr <= PWDATA[0];
+           <font color = "red">          ==></font>
+                     MISSING_ELSE
+           <font color = "green">          ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+229              if (PRESETn == 1'b0)
+                 <font color = "green">-1-</font>  
+230                // asynchronous reset (active low)
+231                wdog_itop <= 2'b00;
+           <font color = "green">        ==></font>
+232              else
+233                // rising clock edge
+234                  if (wdog_itop_wr_en)
+                     <font color = "red">-2-</font>  
+235                    wdog_itop <= PWDATA[1:0];
+           <font color = "red">            ==></font>
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+249              case (prdata_next_en)
+                 <font color = "green">-1-</font>  
+250               1'b1:
+251                 prdata_next =
+           <font color = "green">         ==></font>
+252                     ((PADDR[11:5]==`ARM_WDOG1A)? frc_data : {32{1'b0}})|
+253                     ((PADDR[11:5]==`ARM_WDOGLA)? {{31{1'b0}},wdog_lock}: {32{1'b0}})|
+254                     ((PADDR[11:5]==`ARM_WDOGIA)? {{31{1'b0}},wdog_itcr}: {32{1'b0}})|
+255                     (((PADDR[11:5]==`ARM_WDOGPA1)|
+256                     (PADDR[11:5]==`ARM_WDOGPA2))?  {{24{1'b0}}, wdog_pdata} : {32{1'b0}});
+257               1'b0:
+258                 prdata_next = {32{1'b0}};
+           <font color = "green">         ==></font>
+259               default:
+260                 prdata_next = {32{1'bx}};
+           <font color = "green">         ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1'b1 </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>1'b0 </td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>default</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+270              case (prdata_next_en)
+                 <font color = "green">-1-</font>  
+271               1'b1: begin
+272                 case (PADDR[5:2])
+                    <font color = "red">-2-</font>  
+273                  `ARM_WPERIPHID4A:   wdog_pdata = WDOG_PERIPH_ID4;
+           <font color = "red">          ==></font>
+274                  `ARM_WPERIPHID5A:   wdog_pdata = WDOG_PERIPH_ID5;
+           <font color = "green">          ==></font>
+275                  `ARM_WPERIPHID6A:   wdog_pdata = WDOG_PERIPH_ID6;
+           <font color = "red">          ==></font>
+276                  `ARM_WPERIPHID7A:   wdog_pdata = WDOG_PERIPH_ID7;
+           <font color = "red">          ==></font>
+277                  `ARM_WPERIPHID0A:   wdog_pdata = WDOG_PERIPH_ID0;
+           <font color = "red">          ==></font>
+278                  `ARM_WPERIPHID1A:   wdog_pdata = WDOG_PERIPH_ID1;
+           <font color = "red">          ==></font>
+279                  `ARM_WPERIPHID2A:   wdog_pdata = WDOG_PERIPH_ID2;
+           <font color = "red">          ==></font>
+280                  `ARM_WPERIPHID3A:   wdog_pdata = {ECOREVNUM,WDOG_PERIPH_ID3} ;
+           <font color = "red">          ==></font>
+281                  `ARM_WPCELLID0A :   wdog_pdata = WDOG_PCELL_ID0;
+           <font color = "red">          ==></font>
+282                  `ARM_WPCELLID1A :   wdog_pdata = WDOG_PCELL_ID1;
+           <font color = "red">          ==></font>
+283                  `ARM_WPCELLID2A :   wdog_pdata = WDOG_PCELL_ID2;
+           <font color = "red">          ==></font>
+284                  `ARM_WPCELLID3A :   wdog_pdata = WDOG_PCELL_ID3;
+           <font color = "red">          ==></font>
+285                  4'h0, 4'h1,4'h2,4'h3: wdog_pdata = {8{1'b0}};
+           <font color = "green">          ==></font>
+286                  default:  wdog_pdata = {8{1'bx}};
+           <font color = "red">          ==></font>
+287                 endcase
+288               end
+289               1'b0: begin
+290                 wdog_pdata = {8{1'b0}};
+           <font color = "green">         ==></font>
+291               end
+292               default: begin
+293                 wdog_pdata = {8{1'bx}};
+           <font color = "green">         ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1'b1 </td>
+<td align=center>4'b0100 </td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>1'b1 </td>
+<td align=center>4'b0101 </td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>1'b1 </td>
+<td align=center>4'b0110 </td>
+<td>Not Covered</td>
+</tr><tr class="uRed">
+<td align=center>1'b1 </td>
+<td align=center>4'b0111 </td>
+<td>Not Covered</td>
+</tr><tr class="uRed">
+<td align=center>1'b1 </td>
+<td align=center>4'b1000 </td>
+<td>Not Covered</td>
+</tr><tr class="uRed">
+<td align=center>1'b1 </td>
+<td align=center>4'b1001 </td>
+<td>Not Covered</td>
+</tr><tr class="uRed">
+<td align=center>1'b1 </td>
+<td align=center>4'b1010 </td>
+<td>Not Covered</td>
+</tr><tr class="uRed">
+<td align=center>1'b1 </td>
+<td align=center>4'b1011 </td>
+<td>Not Covered</td>
+</tr><tr class="uRed">
+<td align=center>1'b1 </td>
+<td align=center>4'b1100 </td>
+<td>Not Covered</td>
+</tr><tr class="uRed">
+<td align=center>1'b1 </td>
+<td align=center>4'b1101 </td>
+<td>Not Covered</td>
+</tr><tr class="uRed">
+<td align=center>1'b1 </td>
+<td align=center>4'b1110 </td>
+<td>Not Covered</td>
+</tr><tr class="uRed">
+<td align=center>1'b1 </td>
+<td align=center>4'b1111 </td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>1'b1 </td>
+<td align=center>4'b0 4'b1 4'h2 4'h3 </td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>1'b1 </td>
+<td align=center>default</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>1'b0 </td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>default</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+301              if (PRESETn == 1'b0)
+                 <font color = "green">-1-</font>  
+302                i_prdata <= {32{1'b0}};
+           <font color = "green">        ==></font>
+303              else
+304                i_prdata <= prdata_next;
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_10">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+  <ul name="tag_cmsdk_apb_watchdog">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

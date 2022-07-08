@@ -1,0 +1,143 @@
+<session version="1.1" release="O-2018.09-SP2" timestp="2022-06-03 08:45:06 GMT">
+  <info>
+    <attr name="datetime" value="Fri Jun  3 16:45:10 2022
+"/>
+    <attr name="command" value="urg -format both -full64 -dir out/cov.vdb"/>
+    <attr name="top_instance" value="rkv_watchdog_tb,uvm_custom_install_recording,uvm_custom_install_verdi_recording"/>
+  </info>
+  <hvp>
+    <datadef>
+      <metdef name="Line" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Cond" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Toggle" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="FSM" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Branch" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Assert" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Group" type="percent" aggregator="average" builtin="1" />
+    </datadef>
+  </hvp>
+  <old_coverage>
+  <scope type="top" name="top">
+    <metric name="Line" value="156/572" />
+    <metric name="Cond" value="34/42" />
+    <metric name="Toggle" value="830/1294" />
+    <metric name="Branch" value="102/183" />
+    <metric name="Assert" value="8/13" />
+    <metric name="Group" value="50.9766%" />
+  </scope>
+  <scope type="instance" name="top">
+  </scope>
+  <scope type="group" name="top">
+    <scope type="group" name="rkv_watchdog_pkg::WDOGPERIPHID7_reg::value_cg">
+      <metric name="Group" value="0%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::WDOGPERIPHID6_reg::value_cg">
+      <metric name="Group" value="0%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::WDOGPERIPHID5_reg::value_cg">
+      <metric name="Group" value="0%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::WDOGPCELLID3_reg::value_cg">
+      <metric name="Group" value="0%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::WDOGPCELLID2_reg::value_cg">
+      <metric name="Group" value="0%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::WDOGPCELLID0_reg::value_cg">
+      <metric name="Group" value="0%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::WDOGPCELLID1_reg::value_cg">
+      <metric name="Group" value="0%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::WDOGLOAD_reg::value_cg">
+      <metric name="Group" value="1.5625%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::WDOGVALUE_reg::value_cg">
+      <metric name="Group" value="1.5625%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::WDOGPERIPHID0_reg::value_cg">
+      <metric name="Group" value="1.5625%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::WDOGPERIPHID3_reg::value_cg">
+      <metric name="Group" value="6.25%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::WDOGPERIPHID1_reg::value_cg">
+      <metric name="Group" value="6.25%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::WDOGPERIPHID4_reg::value_cg">
+      <metric name="Group" value="6.25%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::WDOGPERIPHID2_reg::value_cg">
+      <metric name="Group" value="22.9167%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_tb.apb_if_inst::cg_apb_trans_timing_group">
+      <metric name="Group" value="33.3333%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::WDOGRIS_reg::value_cg">
+      <metric name="Group" value="50%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::WDOGLOCK_reg::value_cg">
+      <metric name="Group" value="51.5625%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::WDOGITOP_reg::value_cg">
+      <metric name="Group" value="75%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::WDOGCONTROL_reg::value_cg">
+      <metric name="Group" value="75%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_tb.apb_if_inst::cg_apb_command">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_tb.apb_if_inst::cg_apb_write_read_order_group">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::WDOGITCR_reg::value_cg">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t7_lock_unlock_cg">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t1_overall_control_cg">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t1_overall_control_cg">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t6_integration_test_cg">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t2_load_reload_cg">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t3_intr_clr_cg">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::WDOGMIS_reg::value_cg">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::WDOGINTCLR_reg::value_cg">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t4_regacc_cg">
+      <metric name="Group" value="100%" />
+    </scope>
+    <scope type="group" name="rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t5_integration_cg">
+      <metric name="Group" value="100%" />
+    </scope>
+  </scope>
+  <scope type="assert" name="Statistics">
+    <scorelist type="total" name="Design Hierarchy Assert">
+      <score name="Assert" value="8/13" />
+      <score name="Score" value="61.54" />
+    </scorelist>
+    <scorelist type="total" name="Module List Assert">
+      <score name="Assert" value="8/16" />
+      <score name="Score" value="50.00" />
+    </scorelist>
+    <scorelist type="total" name="Assertion">
+      <score name="Assert" value="9/16" />
+      <score name="Score" value="56.25" />
+    </scorelist>
+  </scope>
+  </old_coverage>
+</session>

@@ -1,0 +1,4 @@
+Command Line: /opt/synopsys/verdi/verdi/Verdi_O-2018.09-SP2/platform/LINUXAMD64/bin/vdCov -covdir out/cov.vdb
+uname(Linux localhost.localdomain 3.10.0-1160.el7.x86_64 #1 SMP Mon Oct 19 16:18:59 UTC 2020 x86_64)
+Disabled AskUser2 Message (Response 0): Close all windows and exit Verdi Coverage?
+au time 546.808310 4.078945 1.953531 delta 0 0 total 0 0

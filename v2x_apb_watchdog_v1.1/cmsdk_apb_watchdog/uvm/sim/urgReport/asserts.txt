@@ -1,0 +1,86 @@
+Assertions
+
+
+Assertions by Category
+           ASSERT PROPERTIES SEQUENCES
+Total           9          7         0
+Category 0      9          7         0
+
+-------------------------------------------------------------------------------
+
+Assertions by Severity
+           ASSERT PROPERTIES SEQUENCES
+Total           9          7         0
+Severity 0      9          7         0
+
+-------------------------------------------------------------------------------
+
+Summary for Assertions
+                 NUMBER PERCENT
+Total Number          9  100.00
+Uncovered             2   22.22
+Success               7   77.78
+Failure               1   11.11
+Incomplete            3   33.33
+Without Attempts      2   22.22
+
+-------------------------------------------------------------------------------
+
+Summary for Cover Properties
+             NUMBER PERCENT
+Total Number      7  100.00
+Uncovered         5   71.43
+Matches           2   28.57
+
+-------------------------------------------------------------------------------
+
+Detail Report for Assertions
+
+Assertions Uncovered:
+                          ASSERTIONS                          CATEGORY SEVERITY ATTEMPTS REAL SUCCESSES FAILURES INCOMPLETE
+uvm_pkg.\uvm_component_name_check_visitor::visit .unnamed$$_0        0        0        0              0        0          0
+uvm_pkg.\uvm_reg_map::do_read .unnamed$$_0.unnamed$$_1               0        0        0              0        0          0
+
+Assertions Success:
+                       ASSERTIONS                       CATEGORY SEVERITY ATTEMPTS REAL SUCCESSES FAILURES INCOMPLETE
+rkv_watchdog_tb.apb_if_inst.unnamed$$_1                        0        0     2768            112        0          0
+rkv_watchdog_tb.apb_if_inst.unnamed$$_11                       0        0     2768             55        0          1
+rkv_watchdog_tb.apb_if_inst.unnamed$$_3                        0        0     2768             56        0          0
+rkv_watchdog_tb.apb_if_inst.unnamed$$_5                        0        0     2768             56        0          0
+rkv_watchdog_tb.apb_if_inst.unnamed$$_7                        0        0     2768             56        0          0
+rkv_watchdog_tb.apb_if_inst.unnamed$$_9                        0        0     2768             55        0          1
+uvm_pkg.\uvm_reg_map::do_write .unnamed$$_0.unnamed$$_1        0        0       -1             -1       -1         -1
+
+Assertions Failure:
+                       ASSERTIONS                       CATEGORY SEVERITY ATTEMPTS REAL SUCCESSES FAILURES INCOMPLETE
+uvm_pkg.\uvm_reg_map::do_write .unnamed$$_0.unnamed$$_1        0        0       -1             -1       -1         -1
+
+Assertions Incomplete:
+                       ASSERTIONS                       CATEGORY SEVERITY ATTEMPTS REAL SUCCESSES FAILURES INCOMPLETE
+rkv_watchdog_tb.apb_if_inst.unnamed$$_11                       0        0     2768             55        0          1
+rkv_watchdog_tb.apb_if_inst.unnamed$$_9                        0        0     2768             55        0          1
+uvm_pkg.\uvm_reg_map::do_write .unnamed$$_0.unnamed$$_1        0        0       -1             -1       -1         -1
+
+Assertions Without Attempts:
+                          ASSERTIONS                          CATEGORY SEVERITY ATTEMPTS REAL SUCCESSES FAILURES INCOMPLETE
+uvm_pkg.\uvm_component_name_check_visitor::visit .unnamed$$_0        0        0        0              0        0          0
+uvm_pkg.\uvm_reg_map::do_read .unnamed$$_0.unnamed$$_1               0        0        0              0        0          0
+
+-------------------------------------------------------------------------------
+
+Detail Report for Cover Properties
+
+Cover Properties Uncovered:
+            COVER PROPERTIES             CATEGORY SEVERITY ATTEMPTS MATCHES INCOMPLETE
+rkv_watchdog_tb.apb_if_inst.unnamed$$_13        0        0  3697034       0          0
+rkv_watchdog_tb.apb_if_inst.unnamed$$_14        0        0  3697034       0          0
+rkv_watchdog_tb.apb_if_inst.unnamed$$_15        0        0  3697034       0          0
+rkv_watchdog_tb.apb_if_inst.unnamed$$_17        0        0  3697034       0          0
+rkv_watchdog_tb.apb_if_inst.unnamed$$_18        0        0  3697034       0          0
+
+Cover Properties Matches:
+            COVER PROPERTIES             CATEGORY SEVERITY ATTEMPTS MATCHES INCOMPLETE
+rkv_watchdog_tb.apb_if_inst.unnamed$$_12        0        0  3697034       6          5
+rkv_watchdog_tb.apb_if_inst.unnamed$$_16        0        0  3697034     189          4
+
+

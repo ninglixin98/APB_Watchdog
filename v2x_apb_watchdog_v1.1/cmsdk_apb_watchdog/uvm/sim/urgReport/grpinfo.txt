@@ -1,0 +1,3501 @@
+Group : rkv_watchdog_pkg::WDOGPERIPHID7_reg::value_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::WDOGPERIPHID7_reg::value_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+  0.00   0.00    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                                            
+  0.00 1      100    1        64           64            rkv_watchdog_tb.vif_assign.me.obj.value_cg_(12) 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::WDOGPERIPHID7_reg::value_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 64       64        0       0.00    
+
+
+Variables for Group  rkv_watchdog_pkg::WDOGPERIPHID7_reg::value_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+PID7     64       64        0       0.00    100  1      1        64                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable PID7
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 64       64        0       0.00    
+
+
+Automatically Generated Bins for PID7
+
+
+Uncovered bins
+
+NAME                        COUNT AT LEAST NUMBER 
+[auto[0:3] - auto[252:255]] --    --       64     
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : rkv_watchdog_tb.vif_assign.me.obj.value_cg_(12)
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+  0.00 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                          
+  0.00   0.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPERIPHID7_reg::value_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   rkv_watchdog_tb.vif_assign.me.obj.value_cg_(12)
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 64       64        0       0.00    
+
+
+Variables for Group Instance  rkv_watchdog_tb.vif_assign.me.obj.value_cg_(12)
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+PID7     64       64        0       0.00    100  1      1        64                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable PID7
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 64       64        0       0.00    
+
+
+Automatically Generated Bins for PID7
+
+
+Uncovered bins
+
+NAME                        COUNT AT LEAST NUMBER 
+[auto[0:3] - auto[252:255]] --    --       64     
+
+
+Group : rkv_watchdog_pkg::WDOGPERIPHID6_reg::value_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::WDOGPERIPHID6_reg::value_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+  0.00   0.00    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                                            
+  0.00 1      100    1        64           64            rkv_watchdog_tb.vif_assign.me.obj.value_cg_(11) 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::WDOGPERIPHID6_reg::value_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 64       64        0       0.00    
+
+
+Variables for Group  rkv_watchdog_pkg::WDOGPERIPHID6_reg::value_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+PID6     64       64        0       0.00    100  1      1        64                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable PID6
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 64       64        0       0.00    
+
+
+Automatically Generated Bins for PID6
+
+
+Uncovered bins
+
+NAME                        COUNT AT LEAST NUMBER 
+[auto[0:3] - auto[252:255]] --    --       64     
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : rkv_watchdog_tb.vif_assign.me.obj.value_cg_(11)
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+  0.00 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                          
+  0.00   0.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPERIPHID6_reg::value_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   rkv_watchdog_tb.vif_assign.me.obj.value_cg_(11)
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 64       64        0       0.00    
+
+
+Variables for Group Instance  rkv_watchdog_tb.vif_assign.me.obj.value_cg_(11)
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+PID6     64       64        0       0.00    100  1      1        64                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable PID6
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 64       64        0       0.00    
+
+
+Automatically Generated Bins for PID6
+
+
+Uncovered bins
+
+NAME                        COUNT AT LEAST NUMBER 
+[auto[0:3] - auto[252:255]] --    --       64     
+
+
+Group : rkv_watchdog_pkg::WDOGPERIPHID5_reg::value_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::WDOGPERIPHID5_reg::value_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+  0.00   0.00    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                                            
+  0.00 1      100    1        64           64            rkv_watchdog_tb.vif_assign.me.obj.value_cg_(10) 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::WDOGPERIPHID5_reg::value_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 64       64        0       0.00    
+
+
+Variables for Group  rkv_watchdog_pkg::WDOGPERIPHID5_reg::value_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+PID5     64       64        0       0.00    100  1      1        64                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable PID5
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 64       64        0       0.00    
+
+
+Automatically Generated Bins for PID5
+
+
+Uncovered bins
+
+NAME                        COUNT AT LEAST NUMBER 
+[auto[0:3] - auto[252:255]] --    --       64     
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : rkv_watchdog_tb.vif_assign.me.obj.value_cg_(10)
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+  0.00 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                          
+  0.00   0.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPERIPHID5_reg::value_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   rkv_watchdog_tb.vif_assign.me.obj.value_cg_(10)
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 64       64        0       0.00    
+
+
+Variables for Group Instance  rkv_watchdog_tb.vif_assign.me.obj.value_cg_(10)
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+PID5     64       64        0       0.00    100  1      1        64                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable PID5
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 64       64        0       0.00    
+
+
+Automatically Generated Bins for PID5
+
+
+Uncovered bins
+
+NAME                        COUNT AT LEAST NUMBER 
+[auto[0:3] - auto[252:255]] --    --       64     
+
+
+Group : rkv_watchdog_pkg::WDOGPCELLID3_reg::value_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::WDOGPCELLID3_reg::value_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+  0.00   0.00    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                                            
+  0.00 1      100    1        64           64            rkv_watchdog_tb.vif_assign.me.obj.value_cg_(20) 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::WDOGPCELLID3_reg::value_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 64       64        0       0.00    
+
+
+Variables for Group  rkv_watchdog_pkg::WDOGPCELLID3_reg::value_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+CID3     64       64        0       0.00    100  1      1        64                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable CID3
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 64       64        0       0.00    
+
+
+Automatically Generated Bins for CID3
+
+
+Uncovered bins
+
+NAME                        COUNT AT LEAST NUMBER 
+[auto[0:3] - auto[252:255]] --    --       64     
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : rkv_watchdog_tb.vif_assign.me.obj.value_cg_(20)
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+  0.00 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                         
+  0.00   0.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPCELLID3_reg::value_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   rkv_watchdog_tb.vif_assign.me.obj.value_cg_(20)
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 64       64        0       0.00    
+
+
+Variables for Group Instance  rkv_watchdog_tb.vif_assign.me.obj.value_cg_(20)
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+CID3     64       64        0       0.00    100  1      1        64                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable CID3
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 64       64        0       0.00    
+
+
+Automatically Generated Bins for CID3
+
+
+Uncovered bins
+
+NAME                        COUNT AT LEAST NUMBER 
+[auto[0:3] - auto[252:255]] --    --       64     
+
+
+Group : rkv_watchdog_pkg::WDOGPCELLID2_reg::value_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::WDOGPCELLID2_reg::value_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+  0.00   0.00    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                                            
+  0.00 1      100    1        64           64            rkv_watchdog_tb.vif_assign.me.obj.value_cg_(19) 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::WDOGPCELLID2_reg::value_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 64       64        0       0.00    
+
+
+Variables for Group  rkv_watchdog_pkg::WDOGPCELLID2_reg::value_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+CID2     64       64        0       0.00    100  1      1        64                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable CID2
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 64       64        0       0.00    
+
+
+Automatically Generated Bins for CID2
+
+
+Uncovered bins
+
+NAME                        COUNT AT LEAST NUMBER 
+[auto[0:3] - auto[252:255]] --    --       64     
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : rkv_watchdog_tb.vif_assign.me.obj.value_cg_(19)
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+  0.00 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                         
+  0.00   0.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPCELLID2_reg::value_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   rkv_watchdog_tb.vif_assign.me.obj.value_cg_(19)
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 64       64        0       0.00    
+
+
+Variables for Group Instance  rkv_watchdog_tb.vif_assign.me.obj.value_cg_(19)
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+CID2     64       64        0       0.00    100  1      1        64                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable CID2
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 64       64        0       0.00    
+
+
+Automatically Generated Bins for CID2
+
+
+Uncovered bins
+
+NAME                        COUNT AT LEAST NUMBER 
+[auto[0:3] - auto[252:255]] --    --       64     
+
+
+Group : rkv_watchdog_pkg::WDOGPCELLID0_reg::value_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::WDOGPCELLID0_reg::value_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+  0.00   0.00    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                                            
+  0.00 1      100    1        64           64            rkv_watchdog_tb.vif_assign.me.obj.value_cg_(17) 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::WDOGPCELLID0_reg::value_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 64       64        0       0.00    
+
+
+Variables for Group  rkv_watchdog_pkg::WDOGPCELLID0_reg::value_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+CID0     64       64        0       0.00    100  1      1        64                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable CID0
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 64       64        0       0.00    
+
+
+Automatically Generated Bins for CID0
+
+
+Uncovered bins
+
+NAME                        COUNT AT LEAST NUMBER 
+[auto[0:3] - auto[252:255]] --    --       64     
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : rkv_watchdog_tb.vif_assign.me.obj.value_cg_(17)
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+  0.00 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                         
+  0.00   0.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPCELLID0_reg::value_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   rkv_watchdog_tb.vif_assign.me.obj.value_cg_(17)
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 64       64        0       0.00    
+
+
+Variables for Group Instance  rkv_watchdog_tb.vif_assign.me.obj.value_cg_(17)
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+CID0     64       64        0       0.00    100  1      1        64                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable CID0
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 64       64        0       0.00    
+
+
+Automatically Generated Bins for CID0
+
+
+Uncovered bins
+
+NAME                        COUNT AT LEAST NUMBER 
+[auto[0:3] - auto[252:255]] --    --       64     
+
+
+Group : rkv_watchdog_pkg::WDOGPCELLID1_reg::value_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::WDOGPCELLID1_reg::value_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+  0.00   0.00    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                                            
+  0.00 1      100    1        64           64            rkv_watchdog_tb.vif_assign.me.obj.value_cg_(18) 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::WDOGPCELLID1_reg::value_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 64       64        0       0.00    
+
+
+Variables for Group  rkv_watchdog_pkg::WDOGPCELLID1_reg::value_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+CID1     64       64        0       0.00    100  1      1        64                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable CID1
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 64       64        0       0.00    
+
+
+Automatically Generated Bins for CID1
+
+
+Uncovered bins
+
+NAME                        COUNT AT LEAST NUMBER 
+[auto[0:3] - auto[252:255]] --    --       64     
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : rkv_watchdog_tb.vif_assign.me.obj.value_cg_(18)
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+  0.00 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                         
+  0.00   0.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPCELLID1_reg::value_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   rkv_watchdog_tb.vif_assign.me.obj.value_cg_(18)
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 64       64        0       0.00    
+
+
+Variables for Group Instance  rkv_watchdog_tb.vif_assign.me.obj.value_cg_(18)
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+CID1     64       64        0       0.00    100  1      1        64                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable CID1
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 64       64        0       0.00    
+
+
+Automatically Generated Bins for CID1
+
+
+Uncovered bins
+
+NAME                        COUNT AT LEAST NUMBER 
+[auto[0:3] - auto[252:255]] --    --       64     
+
+
+Group : rkv_watchdog_pkg::WDOGLOAD_reg::value_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::WDOGLOAD_reg::value_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+  1.56   1.56    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                                       
+  1.56 1      100    1        64           64            rkv_watchdog_tb.vif_assign.me.obj.value_cg 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::WDOGLOAD_reg::value_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 64       63        1       1.56    
+
+
+Variables for Group  rkv_watchdog_pkg::WDOGLOAD_reg::value_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+LOADVAL  64       63        1       1.56    100  1      1        64                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable LOADVAL
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 64       63        1       1.56    
+
+
+Automatically Generated Bins for LOADVAL
+
+
+Uncovered bins
+
+NAME                                                     COUNT AT LEAST NUMBER 
+[auto[67108864:134217727] - auto[4227858432:4294967295]] --    --       63     
+
+
+Covered bins
+
+NAME             COUNT AT LEAST 
+auto[0:67108863] 19    1        
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : rkv_watchdog_tb.vif_assign.me.obj.value_cg
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+  1.56 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                     
+  1.56   1.56    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGLOAD_reg::value_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   rkv_watchdog_tb.vif_assign.me.obj.value_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 64       63        1       1.56    
+
+
+Variables for Group Instance  rkv_watchdog_tb.vif_assign.me.obj.value_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+LOADVAL  64       63        1       1.56    100  1      1        64                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable LOADVAL
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 64       63        1       1.56    
+
+
+Automatically Generated Bins for LOADVAL
+
+
+Uncovered bins
+
+NAME                                                     COUNT AT LEAST NUMBER 
+[auto[67108864:134217727] - auto[4227858432:4294967295]] --    --       63     
+
+
+Covered bins
+
+NAME             COUNT AT LEAST 
+auto[0:67108863] 19    1        
+
+
+Group : rkv_watchdog_pkg::WDOGVALUE_reg::value_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::WDOGVALUE_reg::value_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+  1.56   1.56    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                                           
+  1.56 1      100    1        64           64            rkv_watchdog_tb.vif_assign.me.obj.value_cg_(1) 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::WDOGVALUE_reg::value_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 64       63        1       1.56    
+
+
+Variables for Group  rkv_watchdog_pkg::WDOGVALUE_reg::value_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+CURVAL   64       63        1       1.56    100  1      1        64                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable CURVAL
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 64       63        1       1.56    
+
+
+Automatically Generated Bins for CURVAL
+
+
+Uncovered bins
+
+NAME                                                     COUNT AT LEAST NUMBER 
+[auto[67108864:134217727] - auto[4227858432:4294967295]] --    --       63     
+
+
+Covered bins
+
+NAME             COUNT AT LEAST 
+auto[0:67108863] 3     1        
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : rkv_watchdog_tb.vif_assign.me.obj.value_cg_(1)
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+  1.56 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                      
+  1.56   1.56    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGVALUE_reg::value_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   rkv_watchdog_tb.vif_assign.me.obj.value_cg_(1)
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 64       63        1       1.56    
+
+
+Variables for Group Instance  rkv_watchdog_tb.vif_assign.me.obj.value_cg_(1)
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+CURVAL   64       63        1       1.56    100  1      1        64                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable CURVAL
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 64       63        1       1.56    
+
+
+Automatically Generated Bins for CURVAL
+
+
+Uncovered bins
+
+NAME                                                     COUNT AT LEAST NUMBER 
+[auto[67108864:134217727] - auto[4227858432:4294967295]] --    --       63     
+
+
+Covered bins
+
+NAME             COUNT AT LEAST 
+auto[0:67108863] 3     1        
+
+
+Group : rkv_watchdog_pkg::WDOGPERIPHID0_reg::value_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::WDOGPERIPHID0_reg::value_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+  1.56   1.56    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                                            
+  1.56 1      100    1        64           64            rkv_watchdog_tb.vif_assign.me.obj.value_cg_(13) 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::WDOGPERIPHID0_reg::value_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 64       63        1       1.56    
+
+
+Variables for Group  rkv_watchdog_pkg::WDOGPERIPHID0_reg::value_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+NUMBER   64       63        1       1.56    100  1      1        64                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable NUMBER
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 64       63        1       1.56    
+
+
+Automatically Generated Bins for NUMBER
+
+
+Uncovered bins
+
+NAME                        COUNT AT LEAST NUMBER 
+[auto[4:7] - auto[252:255]] --    --       63     
+
+
+Covered bins
+
+NAME      COUNT AT LEAST 
+auto[0:3] 3     1        
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : rkv_watchdog_tb.vif_assign.me.obj.value_cg_(13)
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+  1.56 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                          
+  1.56   1.56    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPERIPHID0_reg::value_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   rkv_watchdog_tb.vif_assign.me.obj.value_cg_(13)
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 64       63        1       1.56    
+
+
+Variables for Group Instance  rkv_watchdog_tb.vif_assign.me.obj.value_cg_(13)
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+NUMBER   64       63        1       1.56    100  1      1        64                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable NUMBER
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 64       63        1       1.56    
+
+
+Automatically Generated Bins for NUMBER
+
+
+Uncovered bins
+
+NAME                        COUNT AT LEAST NUMBER 
+[auto[4:7] - auto[252:255]] --    --       63     
+
+
+Covered bins
+
+NAME      COUNT AT LEAST 
+auto[0:3] 3     1        
+
+
+Group : rkv_watchdog_pkg::WDOGPERIPHID3_reg::value_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::WDOGPERIPHID3_reg::value_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+  6.25   6.25    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                                            
+  6.25 1      100    1        64           64            rkv_watchdog_tb.vif_assign.me.obj.value_cg_(16) 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::WDOGPERIPHID3_reg::value_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 32       30        2       6.25    
+
+
+Variables for Group  rkv_watchdog_pkg::WDOGPERIPHID3_reg::value_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+ECONUM   16       15        1       6.25    100  1      1        16                   
+CUSTNUM  16       15        1       6.25    100  1      1        16                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable ECONUM
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 16       15        1       6.25    
+
+
+Automatically Generated Bins for ECONUM
+
+
+Uncovered bins
+
+NAME                 COUNT AT LEAST NUMBER 
+[auto[1] - auto[15]] --    --       15     
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 3     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable CUSTNUM
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 16       15        1       6.25    
+
+
+Automatically Generated Bins for CUSTNUM
+
+
+Uncovered bins
+
+NAME                 COUNT AT LEAST NUMBER 
+[auto[1] - auto[15]] --    --       15     
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 3     1        
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : rkv_watchdog_tb.vif_assign.me.obj.value_cg_(16)
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+  6.25 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                          
+  6.25   6.25    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPERIPHID3_reg::value_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   rkv_watchdog_tb.vif_assign.me.obj.value_cg_(16)
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 32       30        2       6.25    
+
+
+Variables for Group Instance  rkv_watchdog_tb.vif_assign.me.obj.value_cg_(16)
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+ECONUM   16       15        1       6.25    100  1      1        16                   
+CUSTNUM  16       15        1       6.25    100  1      1        16                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable ECONUM
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 16       15        1       6.25    
+
+
+Automatically Generated Bins for ECONUM
+
+
+Uncovered bins
+
+NAME                 COUNT AT LEAST NUMBER 
+[auto[1] - auto[15]] --    --       15     
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 3     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable CUSTNUM
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 16       15        1       6.25    
+
+
+Automatically Generated Bins for CUSTNUM
+
+
+Uncovered bins
+
+NAME                 COUNT AT LEAST NUMBER 
+[auto[1] - auto[15]] --    --       15     
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 3     1        
+
+
+Group : rkv_watchdog_pkg::WDOGPERIPHID1_reg::value_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::WDOGPERIPHID1_reg::value_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+  6.25   6.25    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                                            
+  6.25 1      100    1        64           64            rkv_watchdog_tb.vif_assign.me.obj.value_cg_(14) 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::WDOGPERIPHID1_reg::value_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 32       30        2       6.25    
+
+
+Variables for Group  rkv_watchdog_pkg::WDOGPERIPHID1_reg::value_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+ID       16       15        1       6.25    100  1      1        16                   
+NUMBER   16       15        1       6.25    100  1      1        16                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable ID
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 16       15        1       6.25    
+
+
+Automatically Generated Bins for ID
+
+
+Uncovered bins
+
+NAME                 COUNT AT LEAST NUMBER 
+[auto[1] - auto[15]] --    --       15     
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 3     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable NUMBER
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 16       15        1       6.25    
+
+
+Automatically Generated Bins for NUMBER
+
+
+Uncovered bins
+
+NAME                 COUNT AT LEAST NUMBER 
+[auto[1] - auto[15]] --    --       15     
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 3     1        
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : rkv_watchdog_tb.vif_assign.me.obj.value_cg_(14)
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+  6.25 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                          
+  6.25   6.25    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPERIPHID1_reg::value_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   rkv_watchdog_tb.vif_assign.me.obj.value_cg_(14)
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 32       30        2       6.25    
+
+
+Variables for Group Instance  rkv_watchdog_tb.vif_assign.me.obj.value_cg_(14)
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+ID       16       15        1       6.25    100  1      1        16                   
+NUMBER   16       15        1       6.25    100  1      1        16                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable ID
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 16       15        1       6.25    
+
+
+Automatically Generated Bins for ID
+
+
+Uncovered bins
+
+NAME                 COUNT AT LEAST NUMBER 
+[auto[1] - auto[15]] --    --       15     
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 3     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable NUMBER
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 16       15        1       6.25    
+
+
+Automatically Generated Bins for NUMBER
+
+
+Uncovered bins
+
+NAME                 COUNT AT LEAST NUMBER 
+[auto[1] - auto[15]] --    --       15     
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 3     1        
+
+
+Group : rkv_watchdog_pkg::WDOGPERIPHID4_reg::value_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::WDOGPERIPHID4_reg::value_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+  6.25   6.25    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                                           
+  6.25 1      100    1        64           64            rkv_watchdog_tb.vif_assign.me.obj.value_cg_(9) 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::WDOGPERIPHID4_reg::value_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 32       30        2       6.25    
+
+
+Variables for Group  rkv_watchdog_pkg::WDOGPERIPHID4_reg::value_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+BLKCNT   16       15        1       6.25    100  1      1        16                   
+CCODE    16       15        1       6.25    100  1      1        16                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable BLKCNT
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 16       15        1       6.25    
+
+
+Automatically Generated Bins for BLKCNT
+
+
+Uncovered bins
+
+NAME                 COUNT AT LEAST NUMBER 
+[auto[1] - auto[15]] --    --       15     
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 3     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable CCODE
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 16       15        1       6.25    
+
+
+Automatically Generated Bins for CCODE
+
+
+Uncovered bins
+
+NAME                 COUNT AT LEAST NUMBER 
+[auto[1] - auto[15]] --    --       15     
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 3     1        
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : rkv_watchdog_tb.vif_assign.me.obj.value_cg_(9)
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+  6.25 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                          
+  6.25   6.25    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPERIPHID4_reg::value_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   rkv_watchdog_tb.vif_assign.me.obj.value_cg_(9)
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 32       30        2       6.25    
+
+
+Variables for Group Instance  rkv_watchdog_tb.vif_assign.me.obj.value_cg_(9)
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+BLKCNT   16       15        1       6.25    100  1      1        16                   
+CCODE    16       15        1       6.25    100  1      1        16                   
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable BLKCNT
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 16       15        1       6.25    
+
+
+Automatically Generated Bins for BLKCNT
+
+
+Uncovered bins
+
+NAME                 COUNT AT LEAST NUMBER 
+[auto[1] - auto[15]] --    --       15     
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 3     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable CCODE
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 16       15        1       6.25    
+
+
+Automatically Generated Bins for CCODE
+
+
+Uncovered bins
+
+NAME                 COUNT AT LEAST NUMBER 
+[auto[1] - auto[15]] --    --       15     
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 3     1        
+
+
+Group : rkv_watchdog_pkg::WDOGPERIPHID2_reg::value_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::WDOGPERIPHID2_reg::value_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+ 22.92  22.92    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                                            
+ 22.92 1      100    1        64           64            rkv_watchdog_tb.vif_assign.me.obj.value_cg_(15) 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::WDOGPERIPHID2_reg::value_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 26       23        3       22.92   
+
+
+Variables for Group  rkv_watchdog_pkg::WDOGPERIPHID2_reg::value_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+REVISION 16       15        1       6.25    100  1      1        16                   
+JEDEC    2        1         1       50.00   100  1      1        2                    
+ID       8        7         1       12.50   100  1      1        8                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable REVISION
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 16       15        1       6.25    
+
+
+Automatically Generated Bins for REVISION
+
+
+Uncovered bins
+
+NAME                 COUNT AT LEAST NUMBER 
+[auto[1] - auto[15]] --    --       15     
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 3     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable JEDEC
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 2        1         1       50.00   
+
+
+Automatically Generated Bins for JEDEC
+
+
+Uncovered bins
+
+NAME      COUNT AT LEAST NUMBER 
+[auto[1]] 0     1        1      
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 3     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable ID
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 8        7         1       12.50   
+
+
+Automatically Generated Bins for ID
+
+
+Uncovered bins
+
+NAME                COUNT AT LEAST NUMBER 
+[auto[1] - auto[7]] --    --       7      
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 3     1        
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : rkv_watchdog_tb.vif_assign.me.obj.value_cg_(15)
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+ 22.92 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                          
+ 22.92  22.92    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPERIPHID2_reg::value_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   rkv_watchdog_tb.vif_assign.me.obj.value_cg_(15)
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 26       23        3       22.92   
+
+
+Variables for Group Instance  rkv_watchdog_tb.vif_assign.me.obj.value_cg_(15)
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+REVISION 16       15        1       6.25    100  1      1        16                   
+JEDEC    2        1         1       50.00   100  1      1        2                    
+ID       8        7         1       12.50   100  1      1        8                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable REVISION
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 16       15        1       6.25    
+
+
+Automatically Generated Bins for REVISION
+
+
+Uncovered bins
+
+NAME                 COUNT AT LEAST NUMBER 
+[auto[1] - auto[15]] --    --       15     
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 3     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable JEDEC
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 2        1         1       50.00   
+
+
+Automatically Generated Bins for JEDEC
+
+
+Uncovered bins
+
+NAME      COUNT AT LEAST NUMBER 
+[auto[1]] 0     1        1      
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 3     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable ID
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 8        7         1       12.50   
+
+
+Automatically Generated Bins for ID
+
+
+Uncovered bins
+
+NAME                COUNT AT LEAST NUMBER 
+[auto[1] - auto[7]] --    --       7      
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 3     1        
+
+
+Group : rkv_watchdog_tb.apb_if_inst::cg_apb_trans_timing_group
+
+===============================================================================
+Group : rkv_watchdog_tb.apb_if_inst::cg_apb_trans_timing_group
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+ 33.33 1      100    1        64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../vip_lib/apb_pkg/apb_if.sv
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_tb.apb_if_inst::cg_apb_trans_timing_group
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 8        6         2       33.33   
+
+
+Variables for Group  rkv_watchdog_tb.apb_if_inst::cg_apb_trans_timing_group
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+psel     6        5         1       16.67   100  1      1        0                    
+penable  2        1         1       50.00   100  1      1        0                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable psel
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 6        5         1       16.67   
+
+
+User Defined Bins for psel
+
+
+Uncovered bins
+
+NAME     COUNT AT LEAST NUMBER 
+burst_32 0     1        1      
+burst_16 0     1        1      
+burst_8  0     1        1      
+burst_4  0     1        1      
+burst_2  0     1        1      
+
+
+Covered bins
+
+NAME   COUNT AT LEAST 
+single 272   1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable penable
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        1         1       50.00   
+
+
+User Defined Bins for penable
+
+
+Uncovered bins
+
+NAME  COUNT AT LEAST NUMBER 
+burst 0     1        1      
+
+
+Covered bins
+
+NAME   COUNT AT LEAST 
+single 79    1        
+
+
+Group : rkv_watchdog_pkg::WDOGRIS_reg::value_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::WDOGRIS_reg::value_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+ 50.00  50.00    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                                           
+ 50.00 1      100    1        64           64            rkv_watchdog_tb.vif_assign.me.obj.value_cg_(4) 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::WDOGRIS_reg::value_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 2        1         1       50.00   
+
+
+Variables for Group  rkv_watchdog_pkg::WDOGRIS_reg::value_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+RAWINT   2        1         1       50.00   100  1      1        2                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable RAWINT
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 2        1         1       50.00   
+
+
+Automatically Generated Bins for RAWINT
+
+
+Uncovered bins
+
+NAME      COUNT AT LEAST NUMBER 
+[auto[1]] 0     1        1      
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 3     1        
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : rkv_watchdog_tb.vif_assign.me.obj.value_cg_(4)
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+ 50.00 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                    
+ 50.00  50.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGRIS_reg::value_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   rkv_watchdog_tb.vif_assign.me.obj.value_cg_(4)
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 2        1         1       50.00   
+
+
+Variables for Group Instance  rkv_watchdog_tb.vif_assign.me.obj.value_cg_(4)
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+RAWINT   2        1         1       50.00   100  1      1        2                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable RAWINT
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 2        1         1       50.00   
+
+
+Automatically Generated Bins for RAWINT
+
+
+Uncovered bins
+
+NAME      COUNT AT LEAST NUMBER 
+[auto[1]] 0     1        1      
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 3     1        
+
+
+Group : rkv_watchdog_pkg::WDOGLOCK_reg::value_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::WDOGLOCK_reg::value_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+ 51.56  51.56    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                                           
+ 51.56 1      100    1        64           64            rkv_watchdog_tb.vif_assign.me.obj.value_cg_(6) 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::WDOGLOCK_reg::value_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 66       62        4       51.56   
+
+
+Variables for Group  rkv_watchdog_pkg::WDOGLOCK_reg::value_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+WREN     64       62        2       3.12    100  1      1        64                   
+WRACC    2        0         2       100.00  100  1      1        2                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable WREN
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 64       62        2       3.12    
+
+
+Automatically Generated Bins for WREN
+
+
+Uncovered bins
+
+NAME                                                      COUNT AT LEAST NUMBER 
+[auto[33554432:67108863] - auto[67108864:100663295]]      --    --       2      
+[auto[134217728:167772159] - auto[2113929216:2147483647]] --    --       60     
+
+
+Covered bins
+
+NAME                      COUNT AT LEAST 
+auto[0:33554431]          3     1        
+auto[100663296:134217727] 2     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable WRACC
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 2        0         2       100.00  
+
+
+Automatically Generated Bins for WRACC
+
+
+Bins
+
+NAME    COUNT AT LEAST 
+auto[0] 3     1        
+auto[1] 2     1        
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : rkv_watchdog_tb.vif_assign.me.obj.value_cg_(6)
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+ 51.56 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                     
+ 51.56  51.56    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGLOCK_reg::value_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   rkv_watchdog_tb.vif_assign.me.obj.value_cg_(6)
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 66       62        4       51.56   
+
+
+Variables for Group Instance  rkv_watchdog_tb.vif_assign.me.obj.value_cg_(6)
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+WREN     64       62        2       3.12    100  1      1        64                   
+WRACC    2        0         2       100.00  100  1      1        2                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable WREN
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 64       62        2       3.12    
+
+
+Automatically Generated Bins for WREN
+
+
+Uncovered bins
+
+NAME                                                      COUNT AT LEAST NUMBER 
+[auto[33554432:67108863] - auto[67108864:100663295]]      --    --       2      
+[auto[134217728:167772159] - auto[2113929216:2147483647]] --    --       60     
+
+
+Covered bins
+
+NAME                      COUNT AT LEAST 
+auto[0:33554431]          3     1        
+auto[100663296:134217727] 2     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable WRACC
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 2        0         2       100.00  
+
+
+Automatically Generated Bins for WRACC
+
+
+Bins
+
+NAME    COUNT AT LEAST 
+auto[0] 3     1        
+auto[1] 2     1        
+
+
+Group : rkv_watchdog_pkg::WDOGITOP_reg::value_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::WDOGITOP_reg::value_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+ 75.00  75.00    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                                           
+ 75.00 1      100    1        64           64            rkv_watchdog_tb.vif_assign.me.obj.value_cg_(8) 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::WDOGITOP_reg::value_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 4        1         3       75.00   
+
+
+Variables for Group  rkv_watchdog_pkg::WDOGITOP_reg::value_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+WDOGINT  2        1         1       50.00   100  1      1        2                    
+WDOGRES  2        0         2       100.00  100  1      1        2                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable WDOGINT
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 2        1         1       50.00   
+
+
+Automatically Generated Bins for WDOGINT
+
+
+Uncovered bins
+
+NAME      COUNT AT LEAST NUMBER 
+[auto[1]] 0     1        1      
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 4     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable WDOGRES
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 2        0         2       100.00  
+
+
+Automatically Generated Bins for WDOGRES
+
+
+Bins
+
+NAME    COUNT AT LEAST 
+auto[0] 2     1        
+auto[1] 2     1        
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : rkv_watchdog_tb.vif_assign.me.obj.value_cg_(8)
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+ 75.00 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                     
+ 75.00  75.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGITOP_reg::value_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   rkv_watchdog_tb.vif_assign.me.obj.value_cg_(8)
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 4        1         3       75.00   
+
+
+Variables for Group Instance  rkv_watchdog_tb.vif_assign.me.obj.value_cg_(8)
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+WDOGINT  2        1         1       50.00   100  1      1        2                    
+WDOGRES  2        0         2       100.00  100  1      1        2                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable WDOGINT
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 2        1         1       50.00   
+
+
+Automatically Generated Bins for WDOGINT
+
+
+Uncovered bins
+
+NAME      COUNT AT LEAST NUMBER 
+[auto[1]] 0     1        1      
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 4     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable WDOGRES
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 2        0         2       100.00  
+
+
+Automatically Generated Bins for WDOGRES
+
+
+Bins
+
+NAME    COUNT AT LEAST 
+auto[0] 2     1        
+auto[1] 2     1        
+
+
+Group : rkv_watchdog_pkg::WDOGCONTROL_reg::value_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::WDOGCONTROL_reg::value_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+ 75.00  75.00    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                                           
+ 75.00 1      100    1        64           64            rkv_watchdog_tb.vif_assign.me.obj.value_cg_(2) 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::WDOGCONTROL_reg::value_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 4        1         3       75.00   
+
+
+Variables for Group  rkv_watchdog_pkg::WDOGCONTROL_reg::value_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+RESEN    2        1         1       50.00   100  1      1        2                    
+INTEN    2        0         2       100.00  100  1      1        2                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable RESEN
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 2        1         1       50.00   
+
+
+Automatically Generated Bins for RESEN
+
+
+Uncovered bins
+
+NAME      COUNT AT LEAST NUMBER 
+[auto[1]] 0     1        1      
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 27    1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable INTEN
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 2        0         2       100.00  
+
+
+Automatically Generated Bins for INTEN
+
+
+Bins
+
+NAME    COUNT AT LEAST 
+auto[0] 13    1        
+auto[1] 14    1        
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : rkv_watchdog_tb.vif_assign.me.obj.value_cg_(2)
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+ 75.00 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                        
+ 75.00  75.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGCONTROL_reg::value_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   rkv_watchdog_tb.vif_assign.me.obj.value_cg_(2)
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 4        1         3       75.00   
+
+
+Variables for Group Instance  rkv_watchdog_tb.vif_assign.me.obj.value_cg_(2)
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+RESEN    2        1         1       50.00   100  1      1        2                    
+INTEN    2        0         2       100.00  100  1      1        2                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable RESEN
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 2        1         1       50.00   
+
+
+Automatically Generated Bins for RESEN
+
+
+Uncovered bins
+
+NAME      COUNT AT LEAST NUMBER 
+[auto[1]] 0     1        1      
+
+
+Covered bins
+
+NAME    COUNT AT LEAST 
+auto[0] 27    1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable INTEN
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 2        0         2       100.00  
+
+
+Automatically Generated Bins for INTEN
+
+
+Bins
+
+NAME    COUNT AT LEAST 
+auto[0] 13    1        
+auto[1] 14    1        
+
+
+Group : rkv_watchdog_tb.apb_if_inst::cg_apb_command
+
+===============================================================================
+Group : rkv_watchdog_tb.apb_if_inst::cg_apb_command
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+100.00 1      100    1        64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../vip_lib/apb_pkg/apb_if.sv
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_tb.apb_if_inst::cg_apb_command
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 4        0         4       100.00  
+Crosses   3        0         3       100.00  
+
+
+Variables for Group  rkv_watchdog_tb.apb_if_inst::cg_apb_command
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+pwrite   2        0         2       100.00  100  0      1        0                    
+psel     2        0         2       100.00  100  0      1        0                    
+
+
+Crosses for Group  rkv_watchdog_tb.apb_if_inst::cg_apb_command
+
+
+CROSS EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST PRINT MISSING COMMENT 
+cmd   3        0         3       100.00  100  1      1        0                     
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable pwrite
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for pwrite
+
+
+Bins
+
+NAME  COUNT   AT LEAST 
+read  10611   1        
+write 3686412 1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable psel
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for psel
+
+
+Bins
+
+NAME  COUNT   AT LEAST 
+unsel 3696479 1        
+sel   544     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Cross cmd
+
+
+Samples crossed: pwrite psel
+CATEGORY                EXPECTED UNCOVERED COVERED PERCENT MISSING 
+User Defined Cross Bins 3        0         3       100.00          
+
+
+User Defined Cross Bins for cmd
+
+
+Bins
+
+NAME      COUNT   AT LEAST 
+cmd_write 88      1        
+cmd_read  456     1        
+cmd_idle  3696479 1        
+
+
+Group : rkv_watchdog_tb.apb_if_inst::cg_apb_write_read_order_group
+
+===============================================================================
+Group : rkv_watchdog_tb.apb_if_inst::cg_apb_write_read_order_group
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+100.00 1      100    1        64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../vip_lib/apb_pkg/apb_if.sv
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_tb.apb_if_inst::cg_apb_write_read_order_group
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 4        0         4       100.00  
+
+
+Variables for Group  rkv_watchdog_tb.apb_if_inst::cg_apb_write_read_order_group
+
+
+VARIABLE         EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+write_read_order 4        0         4       100.00  100  1      1        0                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable write_read_order
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 4        0         4       100.00  
+
+
+User Defined Bins for write_read_order
+
+
+Bins
+
+NAME        COUNT AT LEAST 
+read_read   189   1        
+read_write  35    1        
+write_read  33    1        
+write_write 6     1        
+
+
+Group : rkv_watchdog_pkg::WDOGITCR_reg::value_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::WDOGITCR_reg::value_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+100.00 100.00    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                                           
+100.00 1      100    1        64           64            rkv_watchdog_tb.vif_assign.me.obj.value_cg_(7) 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::WDOGITCR_reg::value_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 2        0         2       100.00  
+
+
+Variables for Group  rkv_watchdog_pkg::WDOGITCR_reg::value_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+ITME     2        0         2       100.00  100  1      1        2                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable ITME
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 2        0         2       100.00  
+
+
+Automatically Generated Bins for ITME
+
+
+Bins
+
+NAME    COUNT AT LEAST 
+auto[0] 2     1        
+auto[1] 1     1        
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : rkv_watchdog_tb.vif_assign.me.obj.value_cg_(7)
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+100.00 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                     
+100.00 100.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGITCR_reg::value_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   rkv_watchdog_tb.vif_assign.me.obj.value_cg_(7)
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 2        0         2       100.00  
+
+
+Variables for Group Instance  rkv_watchdog_tb.vif_assign.me.obj.value_cg_(7)
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+ITME     2        0         2       100.00  100  1      1        2                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable ITME
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 2        0         2       100.00  
+
+
+Automatically Generated Bins for ITME
+
+
+Bins
+
+NAME    COUNT AT LEAST 
+auto[0] 2     1        
+auto[1] 1     1        
+
+
+Group : rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t7_lock_unlock_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t7_lock_unlock_cg
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+100.00 1      100    1        64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../cov/rkv_watchdog_cov.sv
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t7_lock_unlock_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 2        0         2       100.00  
+
+
+Variables for Group  rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t7_lock_unlock_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+val      2        0         2       100.00  100  1      1        0                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable val
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for val
+
+
+Bins
+
+NAME       COUNT AT LEAST 
+reg_unlock 3     1        
+reg_lock   2     1        
+
+
+Group : rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t1_overall_control_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t1_overall_control_cg
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+100.00 1      100    1        64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../cov/rkv_watchdog_cov.sv
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t1_overall_control_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 4        0         4       100.00  
+
+
+Variables for Group  rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t1_overall_control_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+INTEN    2        0         2       100.00  100  1      1        0                    
+RESEN    2        0         2       100.00  100  1      1        0                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable INTEN
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for INTEN
+
+
+Bins
+
+NAME           COUNT AT LEAST 
+disable_status 5     1        
+enable_status  5     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable RESEN
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for RESEN
+
+
+Bins
+
+NAME           COUNT AT LEAST 
+disable_status 8     1        
+enable_status  2     1        
+
+
+Group : rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t1_overall_control_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t1_overall_control_cg
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+100.00 1      100    1        64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../cov/rkv_watchdog_cov.sv
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t1_overall_control_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 4        0         4       100.00  
+
+
+Variables for Group  rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t1_overall_control_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+INTEN    2        0         2       100.00  100  1      1        0                    
+RESEN    2        0         2       100.00  100  1      1        0                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable INTEN
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for INTEN
+
+
+Bins
+
+NAME           COUNT AT LEAST 
+disable_status 11    1        
+enable_status  6     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable RESEN
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for RESEN
+
+
+Bins
+
+NAME           COUNT AT LEAST 
+disable_status 15    1        
+enable_status  2     1        
+
+
+Group : rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t6_integration_test_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t6_integration_test_cg
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+100.00 1      100    1        64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../cov/rkv_watchdog_cov.sv
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t6_integration_test_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 4        0         4       100.00  
+
+
+Variables for Group  rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t6_integration_test_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+WDOGRES  2        0         2       100.00  100  1      1        0                    
+WDOGINT  2        0         2       100.00  100  1      1        0                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable WDOGRES
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for WDOGRES
+
+
+Bins
+
+NAME           COUNT AT LEAST 
+set_reset2low  2     1        
+set_reset2high 2     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable WDOGINT
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for WDOGINT
+
+
+Bins
+
+NAME         COUNT AT LEAST 
+set_int2low  2     1        
+set_int2high 2     1        
+
+
+Group : rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t2_load_reload_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t2_load_reload_cg
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+100.00 1      100    1        64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../cov/rkv_watchdog_cov.sv
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t2_load_reload_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 5        0         5       100.00  
+
+
+Variables for Group  rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t2_load_reload_cg
+
+
+VARIABLE  EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+INILOAD   1        0         1       100.00  100  1      1        0                    
+RELOAD    1        0         1       100.00  100  1      1        0                    
+LOADRANGE 3        0         3       100.00  100  1      1        0                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable INILOAD
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 1        0         1       100.00  
+
+
+User Defined Bins for INILOAD
+
+
+Bins
+
+NAME    COUNT AT LEAST 
+iniload 1     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable RELOAD
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 1        0         1       100.00  
+
+
+User Defined Bins for RELOAD
+
+
+Bins
+
+NAME   COUNT AT LEAST 
+reload 13    1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable LOADRANGE
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 3        0         3       100.00  
+
+
+User Defined Bins for LOADRANGE
+
+
+Bins
+
+NAME   COUNT AT LEAST 
+others 10    1        
+max    6     1        
+min    3     1        
+
+
+Group : rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t3_intr_clr_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t3_intr_clr_cg
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+100.00 1      100    1        64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../cov/rkv_watchdog_cov.sv
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t3_intr_clr_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 2        0         2       100.00  
+
+
+Variables for Group  rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t3_intr_clr_cg
+
+
+VARIABLE              EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+rgm.WDOGMIS.INT.get() 2        0         2       100.00  100  1      1        0                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable rgm.WDOGMIS.INT.get()
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for rgm.WDOGMIS.INT.get()
+
+
+Bins
+
+NAME                 COUNT  AT LEAST 
+interrupt_not_assert 736554 1        
+interrupt_assert     2859   1        
+
+
+Group : rkv_watchdog_pkg::WDOGMIS_reg::value_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::WDOGMIS_reg::value_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+100.00 100.00    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                                           
+100.00 1      100    1        64           64            rkv_watchdog_tb.vif_assign.me.obj.value_cg_(5) 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::WDOGMIS_reg::value_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 2        0         2       100.00  
+
+
+Variables for Group  rkv_watchdog_pkg::WDOGMIS_reg::value_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+INT      2        0         2       100.00  100  1      1        2                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable INT
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 2        0         2       100.00  
+
+
+Automatically Generated Bins for INT
+
+
+Bins
+
+NAME    COUNT AT LEAST 
+auto[0] 182   1        
+auto[1] 4     1        
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : rkv_watchdog_tb.vif_assign.me.obj.value_cg_(5)
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+100.00 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                    
+100.00 100.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGMIS_reg::value_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   rkv_watchdog_tb.vif_assign.me.obj.value_cg_(5)
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 2        0         2       100.00  
+
+
+Variables for Group Instance  rkv_watchdog_tb.vif_assign.me.obj.value_cg_(5)
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+INT      2        0         2       100.00  100  1      1        2                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable INT
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 2        0         2       100.00  
+
+
+Automatically Generated Bins for INT
+
+
+Bins
+
+NAME    COUNT AT LEAST 
+auto[0] 182   1        
+auto[1] 4     1        
+
+
+Group : rkv_watchdog_pkg::WDOGINTCLR_reg::value_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::WDOGINTCLR_reg::value_cg
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+100.00 100.00    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                                           
+100.00 1      100    1        64           64            rkv_watchdog_tb.vif_assign.me.obj.value_cg_(3) 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::WDOGINTCLR_reg::value_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 2        0         2       100.00  
+
+
+Variables for Group  rkv_watchdog_pkg::WDOGINTCLR_reg::value_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+INTCLR   2        0         2       100.00  100  1      1        2                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable INTCLR
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 2        0         2       100.00  
+
+
+Automatically Generated Bins for INTCLR
+
+
+Bins
+
+NAME    COUNT AT LEAST 
+auto[0] 1     1        
+auto[1] 6     1        
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : rkv_watchdog_tb.vif_assign.me.obj.value_cg_(3)
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+100.00 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                       
+100.00 100.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGINTCLR_reg::value_cg 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   rkv_watchdog_tb.vif_assign.me.obj.value_cg_(3)
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 2        0         2       100.00  
+
+
+Variables for Group Instance  rkv_watchdog_tb.vif_assign.me.obj.value_cg_(3)
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+INTCLR   2        0         2       100.00  100  1      1        2                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable INTCLR
+
+
+CATEGORY                     EXPECTED UNCOVERED COVERED PERCENT 
+Automatically Generated Bins 2        0         2       100.00  
+
+
+Automatically Generated Bins for INTCLR
+
+
+Bins
+
+NAME    COUNT AT LEAST 
+auto[0] 1     1        
+auto[1] 6     1        
+
+
+Group : rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t4_regacc_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t4_regacc_cg
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+100.00 1      100    1        64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../cov/rkv_watchdog_cov.sv
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t4_regacc_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 14       0         14      100.00  
+
+
+Variables for Group  rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t4_regacc_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+tr.addr  14       0         14      100.00  100  1      1        0                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable tr.addr
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 14       0         14      100.00  
+
+
+User Defined Bins for tr.addr
+
+
+Excluded/Illegal bins
+
+NAME      COUNT STATUS   
+erroraddr 0     Excluded 
+
+
+Covered bins
+
+NAME          COUNT AT LEAST 
+wdogperiphid3 3     1        
+wdogperiphid2 3     1        
+wdogperiphid1 3     1        
+wdogperiphid0 3     1        
+wdogperiphid4 3     1        
+wdogitop      4     1        
+wdogitcr      3     1        
+wdoglock      5     1        
+wdogmis       135   1        
+wdogris       3     1        
+wdogintclr    6     1        
+wdogcontrol   22    1        
+wdogvalue     3     1        
+wdogload      15    1        
+
+
+Group : rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t5_integration_cg
+
+===============================================================================
+Group : rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t5_integration_cg
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+100.00 1      100    1        64           64            
+
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../cov/rkv_watchdog_cov.sv
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t5_integration_cg
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 2        0         2       100.00  
+
+
+Variables for Group  rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t5_integration_cg
+
+
+VARIABLE EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+val      2        0         2       100.00  100  1      1        0                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable val
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for val
+
+
+Bins
+
+NAME            COUNT AT LEAST 
+integration_off 2     1        
+integration_on  1     1        
+
+

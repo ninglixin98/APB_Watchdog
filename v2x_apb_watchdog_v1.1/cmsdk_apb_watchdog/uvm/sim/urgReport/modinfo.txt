@@ -1,0 +1,4168 @@
+===============================================================================
+Module : uvm_pkg
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+  0.00 --     --     --     --     --       0.00 
+
+Source File(s) : 
+
+/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/uvm_pkg.sv
+
+Module self-instances :
+
+SCORE LINE COND TOGGLE FSM BRANCH ASSERT NAME 
+
+
+
+-------------------------------------------------------------------------------
+Assert Coverage for Module : uvm_pkg
+                 Total Attempted Percent Succeeded/Matched Percent 
+Assertions       3     0         0.00    0                 0.00    
+Cover properties 0     0                 0                         
+Cover sequences  0     0                 0                         
+Total            3     0         0.00    0                 0.00    
+
+
+
+-------------------------------------------------------------------------------
+
+Assertion Details
+
+Name                                                  Attempts Real Successes Failures Incomplete 
+\uvm_component_name_check_visitor::visit .unnamed$$_0 0        0              0        0          
+\uvm_reg_map::do_read .unnamed$$_0.unnamed$$_1        0        0              0        0          
+\uvm_reg_map::do_write .unnamed$$_0.unnamed$$_1       -1       -1             -1       -1         
+
+
+===============================================================================
+Module : uvm_custom_install_verdi_recording
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+  8.26   5.21 --       0.00 --      19.57 --     
+
+Source File(s) : 
+
+/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/verdi/uvm_custom_install_verdi_recorder.sv
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME                               
+  8.26   5.21 --       0.00 --      19.57 --     uvm_custom_install_verdi_recording 
+
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Module : uvm_custom_install_verdi_recording
+
+             Line No.   Total   Covered  Percent
+TOTAL                      403       21     5.21
+ROUTINE           103        1        0     0.00
+INITIAL           124       77       21    27.27
+ROUTINE            50        9        0     0.00
+ROUTINE            67        9        0     0.00
+ROUTINE            37        1        0     0.00
+ROUTINE            38        1        0     0.00
+ROUTINE            39        1        0     0.00
+ROUTINE            41        1        0     0.00
+ROUTINE            19        5        0     0.00
+ROUTINE            34        8        0     0.00
+ROUTINE            98        4        0     0.00
+ROUTINE           110       14        0     0.00
+ROUTINE           139        1        0     0.00
+ROUTINE           147        1        0     0.00
+ROUTINE           157        1        0     0.00
+ROUTINE           173        1        0     0.00
+ROUTINE           350       36        0     0.00
+ROUTINE           433       67        0     0.00
+ROUTINE           564       88        0     0.00
+ROUTINE           723       30        0     0.00
+ROUTINE           786       47        0     0.00
+
+102                     `ifdef VCS
+103        0/1     ==>  import "DPI-C" function string getenv(input string env_name);
+104                     `endif
+105                        `include "uvm_verdi_pli.svh" //Hide dumper tasks inside this module
+106                        static uvm_cmdline_processor clp;
+107                        string tr_args[$];
+108                        uvm_coreservice_t cs;
+109                        uvm_verdi_tr_database verdi_db;
+110                        uvm_factory factory;
+111                     `ifndef UVM_VERDI_NO_FACTORY_RECORDING
+112                        uvm_verdi_factory verdi_factory;
+113                     `endif
+114                        process p;
+115                        string rand_state;
+116                     `ifdef VCS
+117                        string env_str,vc_env_str="",sanity_file_name="";
+118                        int file_handle=0, is_sanity_exist=0, is_vpd_record = 0;
+119                        string env_vcs_home = "", env_vcs_uvm_home ="";
+120                        int is_vcs_home_exist = 0, is_vcs_uvm_home_exist = 0;
+121                     `endif 
+122                     
+123                        initial begin
+124        1/1               p = process::self();
+125        1/1               if (p != null)
+126        1/1                   rand_state = p.get_randstate();
+                   ==>  MISSING_ELSE
+127        1/1               verdi_clp = verdi_cmdline_processor::get_inst();
+128        1/1               clp = uvm_cmdline_processor::get_inst();
+129        1/1               pli_inst = uvm_verdi_pli::get_inst();
+130        1/1               cs = uvm_coreservice_t::get();
+131                     `ifdef VCS
+132        1/1               env_vcs_home = getenv("VCS_HOME");
+133        1/1               if (env_vcs_home!="")
+134        1/1                   is_vcs_home_exist = 1;
+                   ==>  MISSING_ELSE
+135        1/1               env_vcs_uvm_home = getenv("VCS_UVM_HOME");
+136        1/1               if (env_vcs_uvm_home!="")
+137        0/1     ==>           is_vcs_uvm_home_exist = 1;
+                        MISSING_ELSE
+138        1/1               if (clp.get_arg_matches("+UVM_VPD_RECORD", tr_args))
+139        0/1     ==>           is_vpd_record = 1;
+                        MISSING_ELSE
+140        1/1               env_str = getenv("SNPS_SIM_DEFAULT_GUI");
+141        1/1               vc_env_str = getenv("VC_HOME");
+142        1/1               if (vc_env_str!="")begin
+143        0/1     ==>           sanity_file_name = {vc_env_str,"/etc/.sanity"};
+144        0/1     ==>           file_handle = $fopen(sanity_file_name,"r");
+145        0/1     ==>           if (file_handle!=0) begin
+146        0/1     ==>               if (is_vpd_record)
+147        0/1     ==>                   is_sanity_exist = 0;
+148                                  else
+149        0/1     ==>                   is_sanity_exist = 1;
+150        0/1     ==>               $fclose(file_handle);
+151                              end
+                   ==>  MISSING_ELSE
+152                          end
+                        MISSING_ELSE
+153                     `endif 
+154                     
+155                     `ifndef UVM_NO_VERDI_RECORD
+156        1/1               if (verdi_clp.is_verdi_trace_ral()) begin
+157                              uvm_root r_obj;
+158                              // 9001338477
+159                              string verb_settings[$];
+160                              string verb_string;
+161                              int verb_count;
+162                              //
+163                     
+164                              // 9001338477
+165        0/1     ==>           verb_count = clp.get_arg_values("+UVM_VERBOSITY=",verb_settings);
+166        0/1     ==>           if (verb_count > 0) begin
+167        0/1     ==>               verb_string = verb_settings[0];
+168        0/1     ==>               case(verb_string)
+169        0/1     ==>                "UVM_NONE"    : user_verbosity = UVM_NONE;
+170        0/1     ==>                "NONE"        : user_verbosity = UVM_NONE;
+171        0/1     ==>                "UVM_LOW"     : user_verbosity = UVM_LOW;
+172        0/1     ==>                "LOW"         : user_verbosity = UVM_LOW;
+173        0/1     ==>                "UVM_MEDIUM"  : user_verbosity = UVM_MEDIUM;
+174        0/1     ==>                "MEDIUM"      : user_verbosity = UVM_MEDIUM;
+175        0/1     ==>                "UVM_HIGH"    : user_verbosity = UVM_HIGH;
+176        0/1     ==>                "HIGH"        : user_verbosity = UVM_HIGH;
+177        0/1     ==>                "UVM_FULL"    : user_verbosity = UVM_FULL;
+178        0/1     ==>                "FULL"        : user_verbosity = UVM_FULL;
+179        0/1     ==>                "UVM_DEBUG"   : user_verbosity = UVM_DEBUG;
+180        0/1     ==>                "DEBUG"       : user_verbosity = UVM_DEBUG;
+181                                   default       : begin
+182        0/1     ==>                  user_verbosity = verb_string.atoi();
+183        0/1     ==>                  if(user_verbosity > 0)
+184        0/1     ==>                     uvm_report_info("NSTVERB", $sformatf("Non-standard verbosity value, using provided '%0d'.", user_verbosity), UVM_NONE);
+                   ==>  MISSING_ELSE
+185        0/1     ==>                  if(user_verbosity == 0) begin
+186        0/1     ==>                     user_verbosity = UVM_MEDIUM;
+187        0/1     ==>                     uvm_report_warning("ILLVERB", "Illegal verbosity value, using default of UVM_MEDIUM.", UVM_NONE);
+188                                     end
+                   ==>  MISSING_ELSE
+189                                   end
+190                                 endcase
+191                              end
+                   ==>  MISSING_ELSE
+192                              //
+193        0/1     ==>           r_obj = uvm_root::get();
+194        0/1     ==>           r_obj.set_report_id_verbosity("RegModel", UVM_HIGH);
+195        0/1     ==>           r_obj.set_report_id_verbosity("uvm_reg_map", UVM_FULL);
+196                          end
+                        MISSING_ELSE
+197                     `endif
+198                     
+199                          // Register the verdi_catcher to dump messages into FSDB
+200                     `ifdef VCS
+201        1/1               if ((clp.get_arg_matches("+UVM_LOG_RECORD", tr_args)&&clp.get_arg_matches("+UVM_VERDI_TRACE", tr_args))
+202                              ||(clp.get_arg_matches("+UVM_LOG_RECORD", tr_args)&&(env_str=="verdi"))
+203                              ||verdi_clp.is_verdi_trace_fac()||verdi_clp.is_verdi_trace_msg()||verdi_clp.is_verdi_trace_uvm_aware()
+204                              ||verdi_clp.is_verdi_trace_ral()||verdi_clp.is_verdi_trace_dht()
+205                              ||(clp.get_arg_matches("+UVM_LOG_RECORD", tr_args) && verdi_clp.is_minus_gui_verdi())
+206                              ||(clp.get_arg_matches("+UVM_LOG_RECORD", tr_args)&&is_sanity_exist)
+207                              ||verdi_clp.is_verdi_trace_ralwave()||verdi_clp.is_verdi_trace_compwave())
+208                          begin
+209                     `else
+210                          if ((clp.get_arg_matches("+UVM_LOG_RECORD", tr_args)&&clp.get_arg_matches("+UVM_VERDI_TRACE", tr_args))
+211                              ||verdi_clp.is_verdi_trace_fac()||verdi_clp.is_verdi_trace_msg()
+212                              ||verdi_clp.is_verdi_trace_uvm_aware()||verdi_clp.is_verdi_trace_ral()
+213                              ||verdi_clp.is_verdi_trace_dht())
+214                          begin
+215                     `endif
+216                            static verdi_report_catcher _verdi_catcher;
+217                     
+218        0/1     ==>         _verdi_catcher = new();
+219        0/1     ==>         uvm_report_cb::add(null,_verdi_catcher);
+220        0/1     ==>         if (verdi_clp.is_verdi_trace_compwave()||verdi_clp.is_verdi_trace_dht()
+221                                ||verdi_clp.is_verdi_trace_uvm_aware()||verdi_clp.is_verdi_trace_ral()) begin
+222                                uvm_dhier_component dhier_comp;
+223                     
+224        0/1     ==>             dhier_comp = new("DHIER_COMP", uvm_root::get());
+225                            end
+                   ==>  MISSING_ELSE
+226                     `ifdef UVM_VERDI_RALWAVE
+227                            if (verdi_clp.is_verdi_trace_ralwave()) begin
+228                                if (is_vcs_uvm_home_exist)
+229                                    pli_inst.dump_class_object_by_file("${VCS_UVM_HOME}/verdi/register.config");
+230                                else if (is_vcs_home_exist)
+231                                    pli_inst.dump_class_object_by_file("${VCS_HOME}/etc/uvm-1.2/verdi/register.config");
+232                            end
+233                     `endif
+234                     `ifndef UVM_VERDI_NO_COMPWAVE
+235                     `ifdef VCS
+236        0/1     ==>         if (verdi_clp.is_verdi_trace_compwave()) begin
+237        0/1     ==>             if (is_vcs_uvm_home_exist)
+238        0/1     ==>                 pli_inst.dump_comp_object_by_file("${VCS_UVM_HOME}/verdi/component.config");
+239        0/1     ==>             else if (is_vcs_home_exist)
+240        0/1     ==>                 pli_inst.dump_comp_object_by_file("${VCS_HOME}/etc/uvm-1.2/verdi/component.config");
+                   ==>  MISSING_ELSE
+241                            end
+                   ==>  MISSING_ELSE
+242                     `endif
+243                     `endif
+244        0/1     ==>         if (verdi_clp.is_verdi_trace_uvm_aware()||verdi_clp.is_verdi_trace_fac()) begin
+245        0/1     ==>             factory = cs.get_factory();
+246                     `ifndef UVM_VERDI_NO_FACTORY_RECORDING
+247                                // create new factory
+248        0/1     ==>             verdi_factory = new();
+249                                // set the delegate
+250        0/1     ==>             verdi_factory.delegate=factory;
+251                                // enable new factory
+252        0/1     ==>             cs.set_factory(verdi_factory);
+253                     `endif
+254                            end
+                   ==>  MISSING_ELSE
+255                          end
+                        MISSING_ELSE
+256                     
+257                          // Register the uvm_verdi_recorder to record transactions into FSDB
+258                     `ifdef VCS
+259        1/1               if ((clp.get_arg_matches("+UVM_TR_RECORD", tr_args)&&clp.get_arg_matches("+UVM_VERDI_TRACE", tr_args))
+260                              ||(clp.get_arg_matches("+UVM_TR_RECORD", tr_args)&&(env_str=="verdi"))
+261                              ||verdi_clp.is_verdi_trace_tlm()
+262                              ||(clp.get_arg_matches("+UVM_TR_RECORD", tr_args)&&verdi_clp.is_minus_gui_verdi())
+263                              ||(clp.get_arg_matches("+UVM_TR_RECORD", tr_args)&&is_sanity_exist))
+264                          begin
+265                     `else
+266                          if ((clp.get_arg_matches("+UVM_TR_RECORD", tr_args)&&clp.get_arg_matches("+UVM_VERDI_TRACE", tr_args))
+267                              ||verdi_clp.is_verdi_trace_tlm())
+268                          begin
+269                     `endif
+270        0/1     ==>           verdi_db = new();
+271        0/1     ==>           cs.set_default_tr_database(verdi_db);
+272        0/1     ==>           if (clp.get_arg_matches("+UVM_DISABLE_AUTO_COMPONENT", tr_args)) begin
+273        0/2     ==>               `uvm_info("VERDI_TR_AUTO", "+UVM_DISABLE_AUTO_COMPONENT enabled but transaction recording enabled, usage model requires user to explicitly set recording_detail on components", UVM_MEDIUM)
+uvm_info("VERDI_TR_AUTO", "+UVM_DISABLE_AUTO_COMPONENT enabled but transaction recording enabled, usage model requires user to explicitly set recording_detail on components", UVM_MEDIUM):
+273.1                   `ifdef ZEMI4UVM 
+273.2                         (* zemi4_uvm_attribute=1 *) 
+273.3                      `endif 
+273.4                      begin 
+273.5                        if (uvm_report_enabled(UVM_MEDIUM,UVM_INFO,"VERDI_TR_AUTO")) 
+273.6      0/1     ==>         uvm_report_info ("VERDI_TR_AUTO", "+UVM_DISABLE_AUTO_COMPONENT enabled but transaction recording enabled, usage model requires user to explicitly set recording_detail on components", UVM_MEDIUM, "/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/verdi/uvm_custom_install_verdi_recorder.sv", 273, "", 1); 
+273.7                      end
+                   ==>  MISSING_ELSE
+274                              end
+275                              else begin
+276        0/2     ==>               `uvm_info("VERDI_TR_AUTO", "+UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly", UVM_MEDIUM)
+uvm_info("VERDI_TR_AUTO", "+UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly", UVM_MEDIUM):
+276.1                   `ifdef ZEMI4UVM 
+276.2                         (* zemi4_uvm_attribute=1 *) 
+276.3                      `endif 
+276.4                      begin 
+276.5                        if (uvm_report_enabled(UVM_MEDIUM,UVM_INFO,"VERDI_TR_AUTO")) 
+276.6      0/1     ==>         uvm_report_info ("VERDI_TR_AUTO", "+UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly", UVM_MEDIUM, "/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/verdi/uvm_custom_install_verdi_recorder.sv", 276, "", 1); 
+276.7                      end
+                   ==>  MISSING_ELSE
+277        0/1     ==>               uvm_config_db#(uvm_bitstream_t)::set(uvm_root::get(), "*", "recording_detail", UVM_FULL);
+278                              end
+279                          end
+                        MISSING_ELSE
+280        1/1               if (p != null)
+281        1/1                   p.set_randstate(rand_state);
+                   ==>  MISSING_ELSE
+
+  FILE: /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/verdi/uvm_verdi_tr_database.svh
+50         0/1     ==>      if (!plusargs_tested) begin
+51         0/1     ==>          if (verdi_clp.is_verdi_trace_tlm()) begin
+52         0/1     ==>              enable_port_recording = 1;
+53         0/1     ==>              if (verdi_clp.is_verdi_trace_imp())
+54         0/1     ==>                  enable_imp_port_recording = 1 ;
+                   ==>  MISSING_ELSE
+55                              end
+                   ==>  MISSING_ELSE
+56         0/1     ==>          if (clp.get_arg_matches("+verdi_recorder_debug",trace_args))
+57         0/1     ==>              enable_verdi_debug = 1;
+                   ==>  MISSING_ELSE
+58         0/1     ==>          plusargs_tested = 1;
+59                          end
+                   ==>  MISSING_ELSE
+60         0/1     ==>      return plusargs_tested;
+61                      endfunction
+62                      
+63                      function bit test_tlm2_port_plusargs ();
+64                          static verdi_cmdline_processor verdi_clp = verdi_cmdline_processor::get_inst();
+65                          static uvm_cmdline_processor clp = uvm_cmdline_processor::get_inst();
+66                          string trace_args[$];
+67         0/1     ==>      if (!plusargs_tested) begin
+68         0/1     ==>          if (verdi_clp.is_verdi_trace_tlm2()) begin
+69         0/1     ==>              enable_tlm2_port_recording = 1;
+70         0/1     ==>              if (verdi_clp.is_verdi_trace_imp())
+71         0/1     ==>                  enable_imp_port_recording = 1 ;
+                   ==>  MISSING_ELSE
+72                              end
+                   ==>  MISSING_ELSE
+73         0/1     ==>          if (clp.get_arg_matches("+verdi_recorder_debug",trace_args))
+74         0/1     ==>              enable_verdi_debug = 1;
+                   ==>  MISSING_ELSE
+75         0/1     ==>          plusargs_tested = 1;
+76                          end
+                   ==>  MISSING_ELSE
+77         0/1     ==>      return plusargs_tested;
+
+  FILE: /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/verdi/./dpi/uvm_verdi_dpi.svh
+37         0/1     ==>     import "DPI-C" context function void retrieve_reg_def_class(input string var_name, input int _handle, input int is_objid_only=0);
+38         0/1     ==>     import "DPI-C" context function string retrieve_def_class(input string var_name, output int objid);
+39         0/1     ==>     import "DPI-C" context function int record_reg_decl_name(input int handle, input string parent_var_name, input string var_name, input string obj_name);
+40                         import "DPI-C" context function int check_is_sequencer();
+41         0/1     ==>     import "DPI-C" context function string remove_array_index(input string name_w_ary_idx, output chandle name_c_ptr);
+
+  FILE: /opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/verdi/uvm_verdi_reg_recording.sv
+19         0/1     ==>     new_reg_name = remove_array_index(reg_name, _ptr);
+20                      
+21         0/1     ==>     if(g_visited_regname.exists(parent_handle) &&
+22                            g_visited_regname[parent_handle].exists(new_reg_name))
+23         0/1     ==>        return;
+                   ==>  MISSING_ELSE
+24                       
+25         0/1     ==>     g_visited_regname[parent_handle][new_reg_name] = 1'b1;
+26                      
+27         0/1     ==>     g_refclass_id[class_name][new_reg_name] = id; 
+28                      endfunction
+29                      
+30                      function automatic int find_refclass_id(input uvm_object parent_handle, input string class_name, input string reg_name);
+31                         string _reg_name_wo_range;
+32                         chandle _ptr;
+33                      
+34         0/1     ==>     _reg_name_wo_range = remove_array_index(reg_name, _ptr);
+35                      
+36         0/1     ==>     if(g_visited_regname.exists(parent_handle) &&
+37                            g_visited_regname[parent_handle].exists(_reg_name_wo_range)) begin
+38                      
+39         0/1     ==>        if(g_refclass_id.exists(class_name) &&
+40                               g_refclass_id[class_name].exists(_reg_name_wo_range))
+41         0/1     ==>           g_refclass_id[class_name].delete(_reg_name_wo_range);
+                   ==>  MISSING_ELSE
+42                      
+43         0/1     ==>        return 0;
+44                         end
+                   ==>  MISSING_ELSE
+45                      
+46                      
+47         0/1     ==>     if(g_refclass_id.exists(class_name) && g_refclass_id[class_name].exists(_reg_name_wo_range)) begin
+48         0/1     ==>        return g_refclass_id[class_name][_reg_name_wo_range];
+49                         end
+                   ==>  MISSING_ELSE
+50                      
+51         0/1     ==>     return 0;
+52                      endfunction
+53                      
+54                      function automatic uvm_reg_map_info retrieve_mem_map_info(uvm_reg_map _map, uvm_mem _mem);
+55                         uvm_reg_map _parent_map;
+56                         uvm_reg_map_info _map_info;
+57                      
+58                         _map_info = null;
+59                         _parent_map = _map.get_parent_map();
+60                      
+61                         while(_parent_map!= null) begin
+62                            _map = _parent_map;
+63                            _map_info = _map.get_mem_map_info(_mem, 0);
+64                      
+65                            if(_map_info)
+66                               return _map_info;
+67                      
+68                            _parent_map = _map.get_parent_map();
+69                         end
+70                         
+71                         return null;
+72                      endfunction
+73                      
+74                      function automatic uvm_reg_map_info retrieve_reg_map_info(uvm_reg_map _map, uvm_reg _reg);
+75                         uvm_reg_map _parent_map;
+76                         uvm_reg_map_info _map_info;
+77                      
+78                         _map_info = null;
+79                         _parent_map = _map.get_parent_map();
+80                      
+81                         while(_parent_map!= null) begin
+82                            _map = _parent_map;
+83                            _map_info = _map.get_reg_map_info(_reg, 0);
+84                      
+85                            if(_map_info)
+86                               return _map_info;
+87                      
+88                            _parent_map = _map.get_parent_map();
+89                         end
+90                         
+91                         return null;
+92                      endfunction
+93                      
+94                      
+95                      function automatic bit has_blk_hdl_path(uvm_reg_block _blk);
+96                         uvm_reg_block _parent_blk;
+97                      
+98         0/1     ==>     _parent_blk = _blk.get_parent();
+99                      
+100        0/1     ==>     if(_parent_blk == null)
+101        0/1     ==>        return _blk.has_hdl_path();
+102                        else
+103        0/1     ==>        return has_blk_hdl_path(_parent_blk) & _blk.has_hdl_path();
+104                     endfunction
+105                     
+106                     function int pli_reghier_begin_event(input string streamN);
+107                        string comp_stream, des_str;
+108                        longint unsigned streamId, handle; 
+109                     
+110        0/1     ==>     streamId = 0;
+111        0/1     ==>     handle = 0;
+112        0/1     ==>     $sformat(comp_stream, "UVM.REG_HIER.%0s", streamN);
+113                     
+114        0/1     ==>     if (!streamArrByName.exists(comp_stream)) begin
+115                     // 9001353389
+116                     `ifdef VERDI_REPLACE_DPI_WITH_PLI
+117                            des_str = "+description+type=register";
+118                     `else
+119        0/1     ==>         des_str = "type=register";
+120                     `endif
+121        0/1     ==>         streamId = pli_inst.create_stream_begin(comp_stream,des_str);
+122        0/1     ==>         streamArrByName[comp_stream] = streamId;
+123        0/1     ==>         pli_inst.create_stream_end(streamId);
+124                        end else begin
+125        0/1     ==>         streamId = streamArrByName[comp_stream];
+126                        end
+127                     
+128        0/1     ==>     handle = pli_inst.begin_tr(streamId,"+type+message");
+129                     
+130        0/1     ==>     if (handle==0) begin
+131        0/1     ==>         $display("Failed to create transaction!\n");
+132        0/1     ==>         return 0;
+133                        end
+                   ==>  MISSING_ELSE
+134                     
+135        0/1     ==>     return handle;
+136                     endfunction
+137                     
+138                     function void pli_reghier_set_label(input int handle, input string label);
+139        0/1     ==>     pli_inst.set_label(handle, label);
+140                     endfunction
+141                     
+142                     function void pli_reghier_add_attribute_string(input int handle, input string attrName, input string valName);
+143                     // 6000025017
+144                     `ifdef VERDI_REPLACE_DPI_WITH_PLI
+145                        pli_inst.add_attribute_string(handle, $sformatf("%0s", valName), $sformatf("+name+%0s", attrName), "+numbit+0");
+146                     `else
+147        0/1     ==>     pli_inst.add_attribute_string(handle, $sformatf("%0s", valName), $sformatf("%0s", attrName), "");
+148                     `endif
+149                     //
+150                     endfunction
+151                     
+152                     function void pli_reghier_add_attribute_int(input int handle, input string attr_name, input int attr_value);
+153                     // 6000025017
+154                     `ifdef VERDI_REPLACE_DPI_WITH_PLI
+155                        pli_inst.add_attribute_int(handle, attr_value, $sformatf("+name+%0s", attr_name));
+156                     `else
+157        0/1     ==>     pli_inst.add_attribute_int(handle, attr_value, $sformatf("%0s", attr_name));
+158                     `endif
+159                     //
+160                     endfunction
+161                     
+162                     function void pli_reghier_add_attribute_logic(input int handle, input string attr_name, input logic [1023:0] attr_value, input string radix, input integer numbits=1024);
+163                     // 6000025017
+164                     `ifdef VERDI_REPLACE_DPI_WITH_PLI
+165                        pli_inst.add_attribute_logic(handle, attr_value, $sformatf("+name+%0s", attr_name), radix, $sformatf("+numbit+%0d", numbits));
+166                     `else
+167                        pli_inst.add_attribute_logic(handle, attr_value, $sformatf("%0s", attr_name), radix, $sformatf("%0d", numbits));
+168                     `endif
+169                     // 
+170                     endfunction
+171                     
+172                     function void pli_reghier_end_event(input int handle); 
+173        0/1     ==>     pli_inst.end_tr(handle);
+174                     
+175                     endfunction
+176                     
+177                     function automatic void record_reghier_map(uvm_reg_map _map); begin
+178                        uvm_reg _regs[$], _reg;
+179                        uvm_reg_field _fields[$], _field;
+180                        uvm_mem _mems[$], _mem;
+181                        int _handle;
+182                        string _full_name, _address, _regid, _label_name;
+183                        uvm_sequencer_base _sequencer;
+184                        uvm_reg_map _parent_map;
+185                        uvm_reg_block _parent_blk;
+186                        uvm_reg_addr_t _base_addr;
+187                        int _decl;
+188                        bit _need_end_event;
+189                        int g_policy_id[string]; 
+190                     
+191                        _need_end_event = 1'b0;
+192                        _decl = 0;
+193                        _full_name = _map.get_full_name();
+194                        _handle = pli_reghier_begin_event(_full_name);
+195                     
+196                        _parent_map = _map.get_parent_map();
+197                        _parent_blk = _map.get_parent();
+198                     
+199                        if(_parent_blk) 
+200                           $sformat(_label_name, "MAP_%0d_%0d", _map.get_inst_id(), _parent_blk.get_inst_id());
+201                        else
+202                           $sformat(_label_name, "MAP_%0d_", _map.get_inst_id());
+203                     
+204                        pli_reghier_set_label(_handle, _label_name);
+205                     
+206                        pli_reghier_add_attribute_string(_handle, "name", _full_name);
+207                        if(_parent_blk) begin
+208                           if (!verdi_clp.is_verdi_trace_no_decl())
+209                               _decl = record_reg_decl_name(_handle, "_parent_blk", "_map", _map.get_name());
+210                        end
+211                     
+212                        if(_parent_map) begin
+213                           pli_reghier_add_attribute_int(_handle, "parent_map_id", _parent_map.get_inst_id());
+214                        end
+215                     
+216                        retrieve_reg_def_class("_map", _handle);
+217                     
+218                        pli_reghier_add_attribute_int(_handle, "bus_width_in_bytes", _map.get_n_bytes());
+219                     
+220                        _base_addr = _map.get_base_addr();
+221                        pli_reghier_add_attribute_logic(_handle, "base_address",  _base_addr, "+radix+hex", $size(_base_addr));
+222                     
+223                        _sequencer = _map.get_sequencer();
+224                     
+225                        if(_sequencer !=null)
+226                           pli_reghier_add_attribute_string(_handle, "sequencer", _sequencer.get_full_name());
+227                     
+228                        pli_reghier_end_event(_handle);
+229                        
+230                        _map.get_registers(_regs, UVM_NO_HIER);
+231                     
+232                        _need_end_event = 1'b0;
+233                        if(_regs.size()>0) begin
+234                           _need_end_event = 1'b1;
+235                           _handle = pli_reghier_begin_event(_full_name);
+236                           pli_reghier_set_label(_handle, _label_name);
+237                           //pli_reghier_add_attribute_int(_handle, "inst_id", _map.get_inst_id());
+238                        end
+239                       
+240                        while(_regs.size() > 0) begin
+241                           uvm_reg_addr_t _addr, _offset;
+242                           uvm_reg_map_info _map_info;
+243                           string _right;
+244                           uvm_map_access_recorder _inst;
+245                     
+246                           _reg = _regs.pop_front();
+247                     
+248                           if(_map) 
+249                              _map_info = _map.get_reg_map_info(_reg, 0); 
+250                           
+251                           if(_map_info==null) 
+252                              _map_info = retrieve_reg_map_info(_map, _reg);
+253                     
+254                           if(_map_info!=null && !_map_info.unmapped) begin
+255                     
+256                              _right = _reg.get_rights(_map);
+257                     
+258                              if(!g_policy_id.exists(_right)) begin
+259                                 int _policy_size;
+260                     
+261                                 _policy_size = g_policy_id.size();
+262                                 pli_reghier_add_attribute_string(_handle, $sformatf("policy_%0d", (_policy_size+1)), _right);
+263                                 g_policy_id[_right] = _policy_size+1;
+264                              end
+265                              pli_reghier_add_attribute_int(_handle, $sformatf("reg_%0d_access_policy_id", _reg.get_inst_id()), g_policy_id[_right]);
+266                     
+267                              _addr = _reg.get_address(_map);
+268                              _inst = uvm_map_access_recorder::get_inst();
+269                              _inst.insert_register(_addr, _map.get_full_name(), _reg);
+270                     
+271                              pli_reghier_add_attribute_logic(_handle, $sformatf("reg_%0d_address", _reg.get_inst_id()),  _addr, "+radix+hex", $size(_addr));
+272                     
+273                              _offset = _reg.get_offset(_map);
+274                              pli_reghier_add_attribute_logic(_handle, $sformatf("reg_%0d_offset", _reg.get_inst_id()), _offset, "+radix+hex", $size(_offset));
+275                     
+276                              _reg.get_fields(_fields);
+277                              while(_fields.size() > 0) begin
+278                           
+279                                 _field = _fields.pop_front(); 
+280                                 _right = _field.get_access(_map);
+281                      
+282                                 if(!g_policy_id.exists(_right)) begin
+283                                    int _policy_size;
+284                     
+285                                    _policy_size = g_policy_id.size();
+286                                    pli_reghier_add_attribute_string(_handle, $sformatf("policy_%0d", (_policy_size+1)), _right);
+287                                    g_policy_id[_right] = _policy_size+1;
+288                                 end
+289                                 pli_reghier_add_attribute_int(_handle, $sformatf("field_%0d_access_policy_id", _field.get_inst_id()), g_policy_id[_right]);
+290                           
+291                              end
+292                           end
+293                        end
+294                        
+295                        if(_need_end_event==1'b1)
+296                           pli_reghier_end_event(_handle);
+297                        
+298                        _map.get_memories(_mems, UVM_NO_HIER);
+299                        _need_end_event =1'b0;
+300                        if(_mems.size() > 0) begin
+301                           _need_end_event =1'b1;
+302                           _handle = pli_reghier_begin_event(_full_name);
+303                           pli_reghier_set_label(_handle, _label_name);
+304                           //pli_reghier_add_attribute_int(_handle, "inst_id", _map.get_inst_id());
+305                        end
+306                     
+307                        while(_mems.size() > 0) begin
+308                           uvm_reg_addr_t _addr, _offset;
+309                           uvm_reg_map_info _map_info;
+310                           uvm_map_access_recorder _inst;
+311                     
+312                           _mem = _mems.pop_front(); 
+313                     
+314                           if(_map)
+315                              _map_info = _map.get_mem_map_info(_mem, 0);
+316                     
+317                           if(_map_info==null)
+318                              _map_info = retrieve_mem_map_info(_map, _mem);
+319                     
+320                           if(_map_info!=null && !_map_info.unmapped) begin
+321                              $sformat(_regid, "mem_%0d_access_policy", _mem.get_inst_id()); 
+322                              pli_reghier_add_attribute_string(_handle, _regid, _mem.get_access(_map));
+323                     
+324                              _addr = _mem.get_address(0, _map); // base address
+325                              _inst = uvm_map_access_recorder::get_inst();
+326                              _inst.insert_register(_addr, _map.get_full_name(), _mem);
+327                      
+328                              $sformat(_regid, "mem_%0d_address", _mem.get_inst_id()); 
+329                              pli_reghier_add_attribute_logic(_handle, _regid,  _addr, "+radix+hex", $size(_addr));
+330                        
+331                        
+332                              _offset = _mem.get_offset(0, _map); // base offset 
+333                              $sformat(_regid, "mem_%0d_offset", _mem.get_inst_id()); 
+334                              pli_reghier_add_attribute_logic(_handle, _regid,  _offset, "+radix+hex", $size(_offset));
+335                           end
+336                        end
+337                     
+338                        if(_need_end_event==1'b1)
+339                           pli_reghier_end_event(_handle);
+340                     
+341                     end
+342                     endfunction
+343                     
+344                     function automatic void record_reghier_field(uvm_reg_field _field, string _stream_name, int refId); begin
+345                        int _handle, _objid;
+346                        uvm_reg _parent_reg;
+347                        uvm_reg_block _parent_blk;
+348                        uvm_reg_file _parent_regfile;
+349                     
+350        0/1     ==>     int _decl, _classRefId=0;
+351                        string _field_class_name;
+352                        uvm_reg_field _cur_field;
+353                        static verdi_cmdline_processor verdi_clp = verdi_cmdline_processor::get_inst();
+354                        static int g_fieldclass_bit_lsb[string][int][int];
+355                     
+356        0/1     ==>     _handle = pli_reghier_begin_event(_stream_name);
+357                     
+358        0/1     ==>     _parent_reg = _field.get_parent();
+359                     
+360        0/1     ==>     _decl = 0;
+361        0/1     ==>     if(refId!=0) begin
+362        0/1     ==>        _decl= 1;
+363                        end
+                   ==>  MISSING_ELSE
+364                       
+365        0/1     ==>     if((_parent_reg!=null) && refId==0) begin
+366        0/1     ==>        if (!verdi_clp.is_verdi_trace_no_decl())
+367        0/1     ==>            _decl = record_reg_decl_name(_handle, "_parent_reg", "_field", _field.get_name());
+                   ==>  MISSING_ELSE
+368                        end
+                   ==>  MISSING_ELSE
+369                     
+370        0/1     ==>     if(_parent_reg)
+371        0/1     ==>        pli_reghier_set_label(_handle, $sformatf("FIELD_%0d_%0d", _field.get_inst_id(), _parent_reg.get_inst_id()));
+372                        else
+373        0/1     ==>        pli_reghier_set_label(_handle, $sformatf("FIELD_%0d_", _field.get_inst_id()));
+374                     
+375        0/1     ==>     _cur_field = _field;
+376        0/1     ==>     _field_class_name = retrieve_def_class("_cur_field", _objid);
+377                     
+378        0/1     ==>     if(_field_class_name.len()>0 && 
+379                           g_fieldclass_bit_lsb.exists(_field_class_name) &&
+380                           g_fieldclass_bit_lsb[_field_class_name].exists(_field.get_n_bits()) &&
+381                           g_fieldclass_bit_lsb[_field_class_name][_field.get_n_bits()].exists(_field.get_lsb_pos())) begin
+382                     
+383        0/1     ==>        _classRefId = g_fieldclass_bit_lsb[_field_class_name][_field.get_n_bits()][_field.get_lsb_pos()];
+384                     
+385                        end else begin
+386        0/1     ==>        g_fieldclass_bit_lsb[_field_class_name][_field.get_n_bits()][_field.get_lsb_pos()] = _field.get_inst_id();
+387                        end 
+388                     
+389        0/1     ==>     if(refId!=0 && refId!=_classRefId) 
+390        0/1     ==>        pli_reghier_add_attribute_int(_handle, "reference_declaration_inst_id", refId);
+                   ==>  MISSING_ELSE
+391        0/1     ==>     if(_classRefId!=0 && _classRefId!=refId)
+392        0/1     ==>        pli_reghier_add_attribute_int(_handle, "reference_class_inst_id", _classRefId);
+                   ==>  MISSING_ELSE
+393        0/1     ==>     if(refId!=0 && refId==_classRefId)
+394        0/1     ==>        pli_reghier_add_attribute_int(_handle, "reference_class_declaration_inst_id", _classRefId);
+                   ==>  MISSING_ELSE
+395                       
+396                     
+397        0/1     ==>     if(_classRefId==0) begin
+398        0/1     ==>        pli_reghier_add_attribute_int(_handle, "num_bits", _field.get_n_bits());
+399        0/1     ==>        pli_reghier_add_attribute_int(_handle, "lsb_pos", _field.get_lsb_pos());
+400                        end
+                   ==>  MISSING_ELSE
+401                     
+402        0/1     ==>     pli_reghier_add_attribute_string(_handle, "name", $sformatf("%s.%s.%s", _stream_name, _parent_reg.get_name(), _field.get_name()));
+403                     
+404        0/1     ==>     if(_decl==0 && _parent_reg!=null) begin
+405        0/1     ==>        _parent_blk = _parent_reg.get_parent();
+406        0/1     ==>        if (!verdi_clp.is_verdi_trace_no_decl())
+407        0/1     ==>           _decl = record_reg_decl_name(_handle, "_parent_blk", "_field", _field.get_name());
+                   ==>  MISSING_ELSE
+408                        end
+                   ==>  MISSING_ELSE
+409                     
+410        0/1     ==>     if(_classRefId==0)
+411        0/1     ==>        retrieve_reg_def_class("_field", _handle);
+412                     `ifdef VCS
+413        0/1     ==>     else if(_objid!=0)
+414        0/1     ==>        pli_reghier_add_attribute_string(_handle, "snps_object_id", $sformatf("\\%s @%0d", _field_class_name, _objid));
+                   ==>  MISSING_ELSE
+415                     `endif
+416                     
+417        0/1     ==>     pli_reghier_end_event(_handle);
+418                     
+419                     end
+420                     endfunction
+421                     
+422                     function automatic string record_reghier_regfile(uvm_reg_file _regfile); begin
+423                        uvm_reg_block _top_blk;
+424                        uvm_reg_file _parent_regfile;
+425                        int _handle, _num_hdl;
+426                        string _full_name;
+427                        string _hdl_paths[$], _hdl, _hdl_attr, _blk_class_name, _regfile_class_name, _cur_regfile_class_name;
+428                        int _decl, _refId, _objid;
+429                        uvm_reg_file _cur_regfile;
+430                        static verdi_cmdline_processor verdi_clp = verdi_cmdline_processor::get_inst();
+431                        static int g_regfile_class[string];
+432                     
+433        0/1     ==>     _decl = 0;   
+434        0/1     ==>     _num_hdl = 0;
+435        0/1     ==>     _regfile_class_name = "";
+436                     
+437        0/1     ==>     if(g_visited_regfile.exists(_regfile)) begin
+438        0/1     ==>        return g_visited_regfile[_regfile];
+439                        end
+                   ==>  MISSING_ELSE
+440                     
+441        0/1     ==>     _parent_regfile = _regfile.get_regfile();
+442        0/1     ==>     _top_blk = _regfile.get_parent();
+443                     
+444                        
+445        0/1     ==>     _refId = 0;
+446        0/1     ==>     if(_parent_regfile!=null && g_regfile_handle_class_name.exists(_parent_regfile)) begin
+447        0/1     ==>        _regfile_class_name = g_regfile_handle_class_name[_parent_regfile];
+448                        end
+                   ==>  MISSING_ELSE
+449                     
+450        0/1     ==>     if(_parent_regfile!=null && _regfile_class_name.len()==0) begin
+451        0/1     ==>        _regfile_class_name = retrieve_def_class("_parent_regfile", _objid);
+452        0/1     ==>        if(_regfile_class_name.len() > 0)
+453        0/1     ==>           g_regfile_handle_class_name[_parent_regfile] = _regfile_class_name;
+                   ==>  MISSING_ELSE
+454                        end
+                   ==>  MISSING_ELSE
+455                     
+456        0/1     ==>     if(_regfile_class_name.len() > 0)
+457        0/1     ==>        _refId = find_refclass_id(uvm_object'(_parent_regfile), _regfile_class_name, _regfile.get_name());
+                   ==>  MISSING_ELSE
+458                     
+459        0/1     ==>     _blk_class_name = "";
+460        0/1     ==>     if(_refId==0) begin
+461        0/1     ==>        _blk_class_name = retrieve_def_class("_top_blk", _objid);
+462        0/1     ==>        _refId = find_refclass_id(uvm_object'(_top_blk), _blk_class_name, _regfile.get_name());
+463                        end
+                   ==>  MISSING_ELSE
+464                     
+465        0/1     ==>     if(_parent_regfile) begin
+466                     
+467        0/1     ==>        _full_name = record_reghier_regfile(_parent_regfile);
+468        0/1     ==>        _full_name = {_full_name, ".", _regfile.get_name()};
+469                     
+470        0/1     ==>        g_visited_regfile[_regfile] = _full_name;
+471        0/1     ==>        _handle = pli_reghier_begin_event(_full_name);
+472                     
+473        0/1     ==>        if (!verdi_clp.is_verdi_trace_no_decl() && _refId==0) begin
+474        0/1     ==>            _decl = record_reg_decl_name(_handle, "_parent_regfile", "_regfile", _regfile.get_name());
+475        0/1     ==>            if(_decl) 
+476        0/1     ==>               insert_refclass_id(uvm_object'(_parent_regfile), _regfile_class_name, _regfile.get_name(), _regfile.get_inst_id());
+                   ==>  MISSING_ELSE
+477                               
+478        0/1     ==>            if(_decl==0 && _top_blk!=null) begin
+479        0/1     ==>               _decl = record_reg_decl_name(_handle, "_top_blk", "_regfile", _regfile.get_name());
+480        0/1     ==>               if(_decl)
+481        0/1     ==>                  insert_refclass_id(uvm_object'(_top_blk), _blk_class_name, _regfile.get_name(), _regfile.get_inst_id());
+                   ==>  MISSING_ELSE
+482                               end
+                   ==>  MISSING_ELSE
+483                     
+484                           end
+                   ==>  MISSING_ELSE
+485                        end else begin
+486        0/1     ==>        _full_name = _regfile.get_full_name();
+487        0/1     ==>        g_visited_regfile[_regfile] = _full_name;
+488        0/1     ==>        _handle = pli_reghier_begin_event(_full_name);
+489                     
+490        0/1     ==>        if(_top_blk) begin
+491        0/1     ==>           if (!verdi_clp.is_verdi_trace_no_decl() && _refId==0) begin
+492        0/1     ==>               _decl = record_reg_decl_name(_handle, "_top_blk", "_regfile", _regfile.get_name());
+493        0/1     ==>               if(_decl)
+494        0/1     ==>                  insert_refclass_id(uvm_object'(_top_blk), _blk_class_name, _regfile.get_name(), _regfile.get_inst_id());
+                   ==>  MISSING_ELSE
+495                              end
+                   ==>  MISSING_ELSE
+496                           end
+                   ==>  MISSING_ELSE
+497                        end
+498                        
+499        0/1     ==>     if(_parent_regfile) begin
+500        0/1     ==>        pli_reghier_set_label(_handle, $sformatf("REGFILE_%0d_%0d", _regfile.get_inst_id(), _parent_regfile.get_inst_id()));
+501        0/1     ==>     end else if(_top_blk) begin
+502        0/1     ==>        pli_reghier_set_label(_handle, $sformatf("REGFILE_%0d_%0d", _regfile.get_inst_id(), _top_blk.get_inst_id()));
+503                        end else begin
+504        0/1     ==>        pli_reghier_set_label(_handle, $sformatf("REGFILE_%0d_", _regfile.get_inst_id()));
+505                        end
+506                     
+507        0/1     ==>     pli_reghier_add_attribute_string(_handle, "name", _full_name);
+508                     
+509        0/1     ==>     _objid = 0;
+510        0/1     ==>     if(_refId!=0) begin
+511        0/1     ==>        pli_reghier_add_attribute_int(_handle, "reference_class_declaration_inst_id", _refId);
+512        0/1     ==>        retrieve_reg_def_class("_regfile", _handle, 1);
+513                        end else begin
+514                     
+515        0/1     ==>        _cur_regfile = _regfile;
+516        0/1     ==>        _cur_regfile_class_name = retrieve_def_class("_cur_regfile", _objid); 
+517                     
+518        0/1     ==>        if(_cur_regfile_class_name.len()>0 && g_regfile_class.exists(_cur_regfile_class_name)) begin
+519                     
+520        0/1     ==>           pli_reghier_add_attribute_int(_handle, "reference_class_inst_id", g_regfile_class[_cur_regfile_class_name]);
+521        0/1     ==>           pli_reghier_add_attribute_string(_handle, "snps_object_id", $sformatf("\\%s @%0d", _cur_regfile_class_name, _objid));
+522                     
+523                           end else begin
+524                     
+525        0/1     ==>           g_regfile_class[_cur_regfile_class_name] = _regfile.get_inst_id();
+526        0/1     ==>           retrieve_reg_def_class("_regfile", _handle);
+527                     
+528                           end
+529                        end
+530                     
+531        0/1     ==>     if (_regfile.has_hdl_path())
+532        0/1     ==>         _regfile.get_hdl_path(_hdl_paths);
+                   ==>  MISSING_ELSE
+533                     
+534        0/1     ==>     while(_hdl_paths.size() > 0 ) begin
+535        0/1     ==>        _hdl = _hdl_paths.pop_front();
+536        0/1     ==>        if(_hdl.len()>0) begin
+537        0/1     ==>           $sformat(_hdl_attr, "hdl_path_%0d", _num_hdl++);
+538        0/1     ==>           pli_reghier_add_attribute_string(_handle, _hdl_attr, _hdl);
+539                           end
+                   ==>  MISSING_ELSE
+540                        end
+                   ==>  WHILE_FALSE
+541        0/1     ==>     pli_reghier_end_event(_handle);
+542                     
+543        0/1     ==>     return _full_name;
+544                     end
+545                     endfunction
+546                     
+547                     function automatic void record_reghier_reg(uvm_reg _reg); begin
+548                        uvm_reg _cur_reg;
+549                        uvm_reg_file _parent_regfile;
+550                        uvm_reg_block _parent_blk;
+551                        string _stream_name, _reg_name, _label_name, _class_name;
+552                        uvm_reg_field _fields[$], _field;
+553                        uvm_reg_map _default_map;
+554                     
+555                        uvm_hdl_path_concat _hdl_paths[$], _hdl_path;
+556                        uvm_hdl_path_slice _hdl_slice;
+557                        string _hdl, _hdl_attr_name, _reg_class_name, _blk_class_name, _regfile_class_name;
+558                        int _hdl_offset, _hdl_size, _hdl_idx, _slice_idx;
+559                        int _handle, _inst_id;
+560                        int _decl, _refId, _classRefId, _objid;
+561                        static verdi_cmdline_processor verdi_clp = verdi_cmdline_processor::get_inst();
+562                        static int g_regclass_bits[string][int];
+563                     
+564        0/1     ==>     _hdl_idx = 0;
+565        0/1     ==>     _slice_idx = 0;
+566        0/1     ==>     _decl = 0;
+567        0/1     ==>     _regfile_class_name = "";
+568        0/1     ==>     _blk_class_name = "";
+569                     
+570                        // Handle regfiles
+571        0/1     ==>     _parent_regfile = _reg.get_regfile();
+572        0/1     ==>     _parent_blk = _reg.get_parent();
+573                     
+574        0/1     ==>     _refId = 0;
+575        0/1     ==>     _inst_id = _reg.get_inst_id(); 
+576                     
+577        0/1     ==>     if(_parent_regfile!=null && g_regfile_handle_class_name.exists(_parent_regfile)) begin
+578        0/1     ==>        _regfile_class_name = g_regfile_handle_class_name[_parent_regfile];
+579                        end
+                   ==>  MISSING_ELSE
+580                     
+581        0/1     ==>     if(_parent_regfile!=null && _regfile_class_name.len()==0) begin
+582        0/1     ==>        _regfile_class_name = retrieve_def_class("_parent_regfile", _objid);
+583        0/1     ==>        g_regfile_handle_class_name[_parent_regfile] = _regfile_class_name;
+584                        end
+                   ==>  MISSING_ELSE
+585                     
+586        0/1     ==>     if(_regfile_class_name.len() > 0) 
+587        0/1     ==>        _refId = find_refclass_id(uvm_object'(_parent_regfile), _regfile_class_name, _reg.get_name());
+                   ==>  MISSING_ELSE
+588                     
+589        0/1     ==>     if(_refId==0 && (_parent_blk!=null)) begin
+590        0/1     ==>        if(g_regblk_handle_class_name.exists(_parent_blk)) begin
+591        0/1     ==>           _blk_class_name = g_regblk_handle_class_name[_parent_blk];
+592                           end else begin
+593        0/1     ==>           _blk_class_name = retrieve_def_class("_parent_blk", _objid);
+594        0/1     ==>           g_regblk_handle_class_name[_parent_blk] = _blk_class_name;
+595                           end
+596        0/1     ==>        _refId = find_refclass_id(uvm_object'(_parent_blk), _blk_class_name, _reg.get_name());
+597                        end
+                   ==>  MISSING_ELSE
+598                     
+599        0/1     ==>     if(_parent_regfile) begin
+600                     
+601        0/1     ==>        _stream_name = record_reghier_regfile(_parent_regfile);
+602        0/1     ==>        _handle = pli_reghier_begin_event(_stream_name);
+603                     
+604        0/1     ==>        if (!verdi_clp.is_verdi_trace_no_decl() && _refId==0) begin
+605        0/1     ==>            _decl = record_reg_decl_name(_handle, "_parent_regfile", "_reg", _reg.get_name());
+606        0/1     ==>            if(_decl)
+607        0/1     ==>               insert_refclass_id(uvm_object'(_parent_regfile), _regfile_class_name, _reg.get_name(), _inst_id);
+                   ==>  MISSING_ELSE
+608                           end 
+                   ==>  MISSING_ELSE
+609                     
+610                        end else begin
+611        0/1     ==>        _stream_name = _parent_blk.get_full_name();
+612        0/1     ==>        _handle = pli_reghier_begin_event(_stream_name);
+613                        end
+614                     
+615                     
+616        0/1     ==>     if(_parent_blk!=null && _decl==0 && _refId==0) begin
+617        0/1     ==>        if (!verdi_clp.is_verdi_trace_no_decl()) begin
+618        0/1     ==>            _decl = record_reg_decl_name(_handle, "_parent_blk", "_reg", _reg.get_name());
+619        0/1     ==>            if(_decl)
+620        0/1     ==>               insert_refclass_id(uvm_object'(_parent_blk), _blk_class_name, _reg.get_name(), _inst_id);
+                   ==>  MISSING_ELSE
+621                           end
+                   ==>  MISSING_ELSE
+622                        end
+                   ==>  MISSING_ELSE
+623                     
+624        0/1     ==>     _cur_reg = _reg;
+625        0/1     ==>     _reg_class_name = retrieve_def_class("_cur_reg", _objid);
+626                     
+627        0/1     ==>     _classRefId = 0;
+628        0/1     ==>     if(_reg_class_name.len()>0 && g_regclass_bits.exists(_reg_class_name) && g_regclass_bits[_reg_class_name].exists(_reg.get_n_bits())) begin
+629        0/1     ==>        _classRefId = g_regclass_bits[_reg_class_name][_reg.get_n_bits()];
+630                        end else begin
+631        0/1     ==>        g_regclass_bits[_reg_class_name][_reg.get_n_bits()] = _inst_id;
+632                        end
+633                     
+634        0/1     ==>     if(_refId!=0 && _classRefId!=_refId)
+635        0/1     ==>        pli_reghier_add_attribute_int(_handle, "reference_declaration_inst_id", _refId);
+                   ==>  MISSING_ELSE
+636        0/1     ==>     if(_classRefId!=0 && _classRefId!=_refId)
+637        0/1     ==>        pli_reghier_add_attribute_int(_handle, "reference_class_inst_id", _classRefId);
+                   ==>  MISSING_ELSE
+638        0/1     ==>     if(_refId!=0 && _classRefId==_refId)
+639        0/1     ==>        pli_reghier_add_attribute_int(_handle, "reference_class_declaration_inst_id", _classRefId);
+                   ==>  MISSING_ELSE
+640                     
+641        0/1     ==>     _default_map = _reg.get_default_map();
+642                     
+643        0/1     ==>     if(_parent_regfile) begin
+644        0/1     ==>        $sformat(_label_name, "REG_%0d_%0d_%0d", _inst_id, _parent_regfile.get_inst_id(), _default_map.get_inst_id());
+645        0/1     ==>     end else if(_parent_blk) begin
+646        0/1     ==>        if (_default_map)
+647        0/1     ==>            $sformat(_label_name, "REG_%0d_%0d_%0d", _inst_id, _parent_blk.get_inst_id(), _default_map.get_inst_id());
+648                           else
+649        0/1     ==>            $sformat(_label_name, "REG_%0d_%0d", _inst_id, _parent_blk.get_inst_id());
+650                        end else begin
+651        0/1     ==>        if (_default_map)
+652        0/1     ==>            $sformat(_label_name, "REG_%0d__%0d", _inst_id, _default_map.get_inst_id());
+653                           else
+654        0/1     ==>            $sformat(_label_name, "REG_%0d", _inst_id);
+655                        end
+656                     
+657        0/1     ==>     pli_reghier_set_label(_handle, _label_name);
+658                     
+659        0/1     ==>     if(_classRefId==0)
+660        0/1     ==>        pli_reghier_add_attribute_int(_handle, "num_bits", _reg.get_n_bits());
+                   ==>  MISSING_ELSE
+661                     
+662        0/1     ==>     $sformat(_reg_name, "%s.%s", _stream_name, _reg.get_name());
+663        0/1     ==>     pli_reghier_add_attribute_string(_handle, "name", _reg_name);
+664                     
+665                     
+666        0/1     ==>     if(_classRefId==0)
+667        0/1     ==>        retrieve_reg_def_class("_reg", _handle);
+668                     `ifdef VCS
+669        0/1     ==>     else if(_objid!=0)
+670        0/1     ==>        pli_reghier_add_attribute_string(_handle, "snps_object_id", $sformatf("\\%s @%0d", _reg_class_name, _objid));
+                   ==>  MISSING_ELSE
+671                     `endif
+672                     
+673        0/1     ==>     if (_reg.has_hdl_path())
+674        0/1     ==>         _reg.get_hdl_path(_hdl_paths);
+                   ==>  MISSING_ELSE
+675                     
+676        0/1     ==>     while(_hdl_paths.size() > 0) begin
+677        0/1     ==>        _hdl_path = _hdl_paths.pop_front();
+678        0/1     ==>        for(_slice_idx=0; _slice_idx < _hdl_path.slices.size(); _slice_idx++) begin
+679        0/1     ==>           $sformat(_hdl_attr_name, "hdl_slice_path_%0d_%0d", _hdl_idx, _slice_idx);
+680        0/1     ==>           pli_reghier_add_attribute_string(_handle, _hdl_attr_name, _hdl_path.slices[_slice_idx].path);
+681        0/1     ==>           $sformat(_hdl_attr_name, "hdl_slice_offset_%0d_%0d", _hdl_idx, _slice_idx);
+682        0/1     ==>           pli_reghier_add_attribute_int(_handle, _hdl_attr_name, _hdl_path.slices[_slice_idx].offset);
+683        0/1     ==>           $sformat(_hdl_attr_name, "hdl_slice_size_%0d_%0d", _hdl_idx, _slice_idx);
+684        0/1     ==>           pli_reghier_add_attribute_int(_handle, _hdl_attr_name, _hdl_path.slices[_slice_idx].size);
+685                           end
+686        0/1     ==>        _hdl_idx++;
+687                        end
+                   ==>  WHILE_FALSE
+688                     
+689        0/1     ==>     pli_reghier_end_event(_handle);
+690                     
+691                     
+692                        // Iterate reg fields
+693        0/1     ==>     _refId = 0;
+694                     
+695        0/1     ==>     _reg.get_fields(_fields);
+696                     
+697        0/1     ==>     while(_fields.size() > 0) begin
+698        0/1     ==>        _field = _fields.pop_front(); 
+699                     
+700        0/1     ==>        _refId = find_refclass_id(uvm_object'(_reg), _reg_class_name, _field.get_name());
+701        0/1     ==>        if(_refId==0)
+702        0/1     ==>           insert_refclass_id(uvm_object'(_reg), _reg_class_name, _field.get_name(), _field.get_inst_id());
+                   ==>  MISSING_ELSE
+703        0/1     ==>        record_reghier_field(_field, _stream_name, _refId);
+704                        end
+705                     
+706                       
+707                     end
+708                     endfunction
+709                     
+710                     function automatic void record_reghier_mem(uvm_mem _mem); begin
+711                        string _mem_name, _blk_name;
+712                        int _handle;
+713                        uvm_reg_block _parent_blk;
+714                        uvm_reg_map _default_map;
+715                     
+716                        uvm_hdl_path_concat _hdl_paths[$], _hdl_path;
+717                        uvm_hdl_path_slice _hdl_slice;
+718                        string _hdl, _hdl_attr_name;
+719                        int _hdl_offset, _hdl_size, _hdl_idx, _slice_idx;
+720                        int _decl;
+721                        static verdi_cmdline_processor verdi_clp = verdi_cmdline_processor::get_inst(); 
+722                     
+723        0/1     ==>     _hdl_idx = 0;
+724        0/1     ==>     _slice_idx = 0;
+725        0/1     ==>     _mem_name = _mem.get_full_name();
+726        0/1     ==>     _parent_blk = _mem.get_parent();
+727        0/1     ==>     _blk_name = _parent_blk.get_full_name();
+728        0/1     ==>     _decl = 0;
+729                     
+730        0/1     ==>     _handle = pli_reghier_begin_event(_mem_name);
+731                     
+732        0/1     ==>     if (!verdi_clp.is_verdi_trace_no_decl())
+733        0/1     ==>         _decl = record_reg_decl_name(_handle, "_parent_blk", "_mem", _mem.get_name());
+                   ==>  MISSING_ELSE
+734                       
+735        0/1     ==>     _default_map = _mem.get_default_map();
+736                     
+737        0/1     ==>     if(_parent_blk) begin
+738        0/1     ==>        pli_reghier_set_label(_handle, $sformatf("MEM_%0d_%0d_%0d", _mem.get_inst_id(), _parent_blk.get_inst_id(), _default_map.get_inst_id()));
+739                        end else begin
+740        0/1     ==>        pli_reghier_set_label(_handle, $sformatf("MEM_%0d__%0d", _mem.get_inst_id(), _default_map.get_inst_id()));
+741                        end
+742                     
+743        0/1     ==>     pli_reghier_add_attribute_string(_handle, "name", _mem_name);
+744        0/1     ==>     pli_reghier_add_attribute_int(_handle, "width_in_bits", _mem.get_n_bits());
+745        0/1     ==>     pli_reghier_add_attribute_int(_handle, "memory_size", _mem.get_size());
+746                     
+747        0/1     ==>     retrieve_reg_def_class("_mem", _handle);
+748                     
+749                     
+750        0/1     ==>     if (_mem.has_hdl_path()) 
+751        0/1     ==>         _mem.get_hdl_path(_hdl_paths);
+                   ==>  MISSING_ELSE
+752                     
+753        0/1     ==>     while(_hdl_paths.size() > 0) begin
+754        0/1     ==>        _hdl_path = _hdl_paths.pop_front();
+755        0/1     ==>        for(_slice_idx=0; _slice_idx < _hdl_path.slices.size(); _slice_idx++) begin
+756        0/1     ==>           $sformat(_hdl_attr_name, "hdl_slice_path_%0d_%0d", _hdl_idx, _slice_idx);
+757        0/1     ==>           pli_reghier_add_attribute_string(_handle, _hdl_attr_name, _hdl_path.slices[_slice_idx].path);
+758        0/1     ==>           $sformat(_hdl_attr_name, "hdl_slice_offset_%0d_%0d", _hdl_idx, _slice_idx);
+759        0/1     ==>           pli_reghier_add_attribute_int(_handle, _hdl_attr_name, _hdl_path.slices[_slice_idx].offset);
+760        0/1     ==>           $sformat(_hdl_attr_name, "hdl_slice_size_%0d_%0d", _hdl_idx, _slice_idx);
+761        0/1     ==>           pli_reghier_add_attribute_int(_handle, _hdl_attr_name, _hdl_path.slices[_slice_idx].size);
+762                           end
+763        0/1     ==>        _hdl_idx++;
+764                        end
+                   ==>  WHILE_FALSE
+765                     
+766        0/1     ==>     pli_reghier_end_event(_handle);
+767                      
+768                     end
+769                     endfunction
+770                     
+771                     function automatic void record_reghier_blk(uvm_reg_block _blk); begin
+772                        uvm_reg _regs[$], _reg;
+773                        //uvm_reg_map _maps[$], _map;
+774                        uvm_reg_block  _blks[$], _parent_blk, _sub_blk;
+775                        uvm_mem _mems[$], _mem;
+776                        int _handle, _num_hdl;
+777                        string _hdl_path, _block_name;
+778                        uvm_reg_map _default_map;
+779                        string _hdl_paths[$], _hdl, _hdl_attr;
+780                        int _decl;
+781                        static int max_reg_dump_limit = 5000;
+782                        static int max_reg_dump_limit_check = 0;
+783                        static int dumped_reg_num=0;
+784                        static int is_limit_message_recorded=0;
+785                     
+786        0/1     ==>     _num_hdl = 0;
+787        0/1     ==>     _decl = 0;
+788                     
+789                        // Record Block Attributes
+790        0/1     ==>     _block_name = _blk.get_full_name();
+791        0/1     ==>     _handle = pli_reghier_begin_event(_block_name);
+792                     
+793        0/1     ==>     _default_map = _blk.get_default_map();
+794                     
+795        0/1     ==>     _parent_blk = _blk.get_parent();
+796        0/1     ==>     if(_parent_blk) begin
+797        0/1     ==>        pli_reghier_set_label(_handle, $sformatf("BLOCK_%0d_%0d_%0d", _blk.get_inst_id(), _parent_blk.get_inst_id(), _default_map.get_inst_id()));
+798                        end else begin
+799        0/1     ==>        pli_reghier_set_label(_handle, $sformatf("BLOCK_%0d__%0d", _blk.get_inst_id(), _default_map.get_inst_id()));
+800                        end
+801                     
+802        0/1     ==>     pli_reghier_add_attribute_string(_handle, "name", _block_name);
+803                     
+804        0/1     ==>     _parent_blk = _blk.get_parent();
+805        0/1     ==>     if(_parent_blk) begin
+806                     
+807        0/1     ==>        if (!verdi_clp.is_verdi_trace_no_decl())
+808        0/1     ==>            _decl = record_reg_decl_name(_handle, "_parent_blk", "_blk", _blk.get_name());
+                   ==>  MISSING_ELSE
+809                     
+810                        end
+                   ==>  MISSING_ELSE
+811                     
+812                     
+813        0/1     ==>     retrieve_reg_def_class("_blk", _handle);
+814                     
+815                     
+816        0/1     ==>     if (_blk.is_hdl_path_root() || has_blk_hdl_path(_blk))
+817        0/1     ==>         _blk.get_full_hdl_path(_hdl_paths);
+                   ==>  MISSING_ELSE
+818        0/1     ==>     while(_hdl_paths.size() > 0 ) begin
+819        0/1     ==>        _hdl = _hdl_paths.pop_front();
+820        0/1     ==>        if(_hdl.len()>0) begin 
+821        0/1     ==>           $sformat(_hdl_attr, "hdl_path_%0d", _num_hdl++);
+822        0/1     ==>           pli_reghier_add_attribute_string(_handle, _hdl_attr, _hdl);
+823                           end
+                   ==>  MISSING_ELSE
+824                        end
+                   ==>  WHILE_FALSE
+825                     
+826        0/1     ==>     pli_reghier_end_event(_handle);
+827                     
+828        0/1     ==>     _hdl_path = "";
+829                       
+830                        // Iterate registers
+831        0/1     ==>     if(max_reg_dump_limit_check==0) begin
+832                           uvm_cmdline_processor clp;
+833                           string val_str;
+834                     
+835        0/1     ==>        val_str = "";
+836        0/1     ==>        max_reg_dump_limit_check = 1;
+837        0/1     ==>        clp = uvm_cmdline_processor::get_inst();
+838        0/1     ==>        if (clp.get_arg_value("+UVM_REG_DUMP_LIMIT=", val_str))
+839        0/1     ==>            max_reg_dump_limit = val_str.atoi();
+                   ==>  MISSING_ELSE
+840                     
+841                        end
+                   ==>  MISSING_ELSE
+842                     
+843        0/1     ==>     if(verdi_clp.is_verdi_trace_ral() && (dumped_reg_num < max_reg_dump_limit||max_reg_dump_limit==0)) 
+844        0/1     ==>        _blk.get_registers(_regs, UVM_NO_HIER);
+                   ==>  MISSING_ELSE
+845                     
+846                     
+847        0/1     ==>     while(_regs.size() > 0) begin
+848        0/1     ==>        int _refId=0;
+849                     
+850        0/1     ==>        _reg = _regs.pop_front();
+851                        
+852        0/1     ==>        if(verdi_clp.is_verdi_trace_ral() && (dumped_reg_num < max_reg_dump_limit||max_reg_dump_limit==0)) begin
+853        0/1     ==>           record_reghier_reg(_reg);
+854        0/1     ==>           dumped_reg_num++;
+855        0/1     ==>        end else if(is_limit_message_recorded==0) begin
+856        0/1     ==>           _handle = pli_reghier_begin_event("max_reg_recorded");
+857        0/1     ==>           is_limit_message_recorded = 1;
+858        0/1     ==>          pli_reghier_set_label(_handle, $sformatf("MAX_%0d_REG_RECORDED", max_reg_dump_limit));
+859        0/1     ==>          pli_reghier_end_event(_handle);
+860                              
+861                           end
+                   ==>  MISSING_ELSE
+862                        end
+                   ==>  WHILE_FALSE
+863                     
+864        0/1     ==>     _blk.get_memories(_mems, UVM_NO_HIER);
+865        0/1     ==>     while(_mems.size() > 0) begin
+866        0/1     ==>        _mem = _mems.pop_front();
+867        0/1     ==>        record_reghier_mem(_mem);
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : uvm_custom_install_verdi_recording
+                Total Covered Percent 
+Totals          6     0       0.00    
+Total Bits      12    0       0.00    
+Total Bits 0->1 6     0       0.00    
+Total Bits 1->0 6     0       0.00    
+
+                             
+Signals          6  0 0.00   
+Signal Bits      12 0 0.00   
+Signal Bits 0->1 6  0 0.00   
+Signal Bits 1->0 6  0 0.00   
+
+Signal Details
+                           Toggle Toggle 1->0 Toggle 0->1 
+hooks_version_flag         No     No          No          
+plusargs_tested            No     No          No          
+enable_verdi_debug         No     No          No          
+enable_port_recording      No     No          No          
+enable_tlm2_port_recording No     No          No          
+enable_imp_port_recording  No     No          No          
+
+
+-------------------------------------------------------------------------------
+Branch Coverage for Module : uvm_custom_install_verdi_recording
+         Line No. Total Covered Percent 
+Branches          46    9       19.57   
+IF       125      2     1       50.00   
+IF       133      2     1       50.00   
+IF       136      2     1       50.00   
+IF       138      2     1       50.00   
+IF       142      4     1       25.00   
+IF       156      18    1       5.56    
+IF       201      9     1       11.11   
+IF       259      5     1       20.00   
+IF       280      2     1       50.00   
+
+
+125             if (p != null)
+                -1-  
+126                 rand_state = p.get_randstate();
+                    ==>
+                    MISSING_ELSE
+                    ==>
+
+Branches:
+
+-1- Status      
+1   Covered     
+0   Not Covered 
+
+
+133             if (env_vcs_home!="")
+                -1-  
+134                 is_vcs_home_exist = 1;
+                    ==>
+                    MISSING_ELSE
+                    ==>
+
+Branches:
+
+-1- Status      
+1   Covered     
+0   Not Covered 
+
+
+136             if (env_vcs_uvm_home!="")
+                -1-  
+137                 is_vcs_uvm_home_exist = 1;
+                    ==>
+                    MISSING_ELSE
+                    ==>
+
+Branches:
+
+-1- Status      
+1   Not Covered 
+0   Covered     
+
+
+138             if (clp.get_arg_matches("+UVM_VPD_RECORD", tr_args))
+                -1-  
+139                 is_vpd_record = 1;
+                    ==>
+                    MISSING_ELSE
+                    ==>
+
+Branches:
+
+-1- Status      
+1   Not Covered 
+0   Covered     
+
+
+142             if (vc_env_str!="")begin
+                -1-  
+143                 sanity_file_name = {vc_env_str,"/etc/.sanity"};
+144                 file_handle = $fopen(sanity_file_name,"r");
+145                 if (file_handle!=0) begin
+                    -2-  
+146                     if (is_vpd_record)
+                        -3-  
+147                         is_sanity_exist = 0;
+                            ==>
+148                     else
+149                         is_sanity_exist = 1;
+                            ==>
+150                     $fclose(file_handle);
+151                 end
+                    MISSING_ELSE
+                    ==>
+152             end
+                MISSING_ELSE
+                ==>
+
+Branches:
+
+-1- -2- -3- Status      
+1   1   1   Not Covered 
+1   1   0   Not Covered 
+1   0   -   Not Covered 
+0   -   -   Covered     
+
+
+156             if (verdi_clp.is_verdi_trace_ral()) begin
+                -1-  
+157                 uvm_root r_obj;
+158                 // 9001338477
+159                 string verb_settings[$];
+160                 string verb_string;
+161                 int verb_count;
+162                 //
+163        
+164                 // 9001338477
+165                 verb_count = clp.get_arg_values("+UVM_VERBOSITY=",verb_settings);
+166                 if (verb_count > 0) begin
+                    -2-  
+167                     verb_string = verb_settings[0];
+168                     case(verb_string)
+                        -3-  
+169                      "UVM_NONE"    : user_verbosity = UVM_NONE;
+                         ==>
+170                      "NONE"        : user_verbosity = UVM_NONE;
+                         ==>
+171                      "UVM_LOW"     : user_verbosity = UVM_LOW;
+                         ==>
+172                      "LOW"         : user_verbosity = UVM_LOW;
+                         ==>
+173                      "UVM_MEDIUM"  : user_verbosity = UVM_MEDIUM;
+                         ==>
+174                      "MEDIUM"      : user_verbosity = UVM_MEDIUM;
+                         ==>
+175                      "UVM_HIGH"    : user_verbosity = UVM_HIGH;
+                         ==>
+176                      "HIGH"        : user_verbosity = UVM_HIGH;
+                         ==>
+177                      "UVM_FULL"    : user_verbosity = UVM_FULL;
+                         ==>
+178                      "FULL"        : user_verbosity = UVM_FULL;
+                         ==>
+179                      "UVM_DEBUG"   : user_verbosity = UVM_DEBUG;
+                         ==>
+180                      "DEBUG"       : user_verbosity = UVM_DEBUG;
+                         ==>
+181                      default       : begin
+182                        user_verbosity = verb_string.atoi();
+183                        if(user_verbosity > 0)
+                           -4-  
+184                           uvm_report_info("NSTVERB", $sformatf("Non-standard verbosity value, using provided '%0d'.", user_verbosity), UVM_NONE);
+                              ==>
+                              MISSING_ELSE
+                              ==>
+185                        if(user_verbosity == 0) begin
+                           -5-  
+186                           user_verbosity = UVM_MEDIUM;
+                              ==>
+187                           uvm_report_warning("ILLVERB", "Illegal verbosity value, using default of UVM_MEDIUM.", UVM_NONE);
+188                        end
+                           MISSING_ELSE
+                           ==>
+189                      end
+190                    endcase
+191                 end
+                    MISSING_ELSE
+                    ==>
+192                 //
+193                 r_obj = uvm_root::get();
+194                 r_obj.set_report_id_verbosity("RegModel", UVM_HIGH);
+195                 r_obj.set_report_id_verbosity("uvm_reg_map", UVM_FULL);
+196             end
+                MISSING_ELSE
+                ==>
+
+Branches:
+
+-1- -2- -3-           -4- -5- Status      
+1   1   "UVM_NONE"    -   -   Not Covered 
+1   1   "NONE"        -   -   Not Covered 
+1   1   "UVM_LOW"     -   -   Not Covered 
+1   1   "LOW"         -   -   Not Covered 
+1   1   "UVM_MEDIUM"  -   -   Not Covered 
+1   1   "MEDIUM"      -   -   Not Covered 
+1   1   "UVM_HIGH"    -   -   Not Covered 
+1   1   "HIGH"        -   -   Not Covered 
+1   1   "UVM_FULL"    -   -   Not Covered 
+1   1   "FULL"        -   -   Not Covered 
+1   1   "UVM_DEBUG"   -   -   Not Covered 
+1   1   "DEBUG"       -   -   Not Covered 
+1   1   default       1   -   Not Covered 
+1   1   default       0   -   Not Covered 
+1   1   default       -   1   Not Covered 
+1   1   default       -   0   Not Covered 
+1   0   -             -   -   Not Covered 
+0   -   -             -   -   Covered     
+
+
+201             if ((clp.get_arg_matches("+UVM_LOG_RECORD", tr_args)&&clp.get_arg_matches("+UVM_VERDI_TRACE", tr_args))
+                -1-  
+202                 ||(clp.get_arg_matches("+UVM_LOG_RECORD", tr_args)&&(env_str=="verdi"))
+203                 ||verdi_clp.is_verdi_trace_fac()||verdi_clp.is_verdi_trace_msg()||verdi_clp.is_verdi_trace_uvm_aware()
+204                 ||verdi_clp.is_verdi_trace_ral()||verdi_clp.is_verdi_trace_dht()
+205                 ||(clp.get_arg_matches("+UVM_LOG_RECORD", tr_args) && verdi_clp.is_minus_gui_verdi())
+206                 ||(clp.get_arg_matches("+UVM_LOG_RECORD", tr_args)&&is_sanity_exist)
+207                 ||verdi_clp.is_verdi_trace_ralwave()||verdi_clp.is_verdi_trace_compwave())
+208             begin
+209        `else
+210             if ((clp.get_arg_matches("+UVM_LOG_RECORD", tr_args)&&clp.get_arg_matches("+UVM_VERDI_TRACE", tr_args))
+211                 ||verdi_clp.is_verdi_trace_fac()||verdi_clp.is_verdi_trace_msg()
+212                 ||verdi_clp.is_verdi_trace_uvm_aware()||verdi_clp.is_verdi_trace_ral()
+213                 ||verdi_clp.is_verdi_trace_dht())
+214             begin
+215        `endif
+216               static verdi_report_catcher _verdi_catcher;
+217        
+218               _verdi_catcher = new();
+219               uvm_report_cb::add(null,_verdi_catcher);
+220               if (verdi_clp.is_verdi_trace_compwave()||verdi_clp.is_verdi_trace_dht()
+                  -2-  
+221                   ||verdi_clp.is_verdi_trace_uvm_aware()||verdi_clp.is_verdi_trace_ral()) begin
+222                   uvm_dhier_component dhier_comp;
+223        
+224                   dhier_comp = new("DHIER_COMP", uvm_root::get());
+                      ==>
+225               end
+                  MISSING_ELSE
+                  ==>
+226        `ifdef UVM_VERDI_RALWAVE
+227               if (verdi_clp.is_verdi_trace_ralwave()) begin
+228                   if (is_vcs_uvm_home_exist)
+229                       pli_inst.dump_class_object_by_file("${VCS_UVM_HOME}/verdi/register.config");
+230                   else if (is_vcs_home_exist)
+231                       pli_inst.dump_class_object_by_file("${VCS_HOME}/etc/uvm-1.2/verdi/register.config");
+232               end
+233        `endif
+234        `ifndef UVM_VERDI_NO_COMPWAVE
+235        `ifdef VCS
+236               if (verdi_clp.is_verdi_trace_compwave()) begin
+                  -3-  
+237                   if (is_vcs_uvm_home_exist)
+                      -4-  
+238                       pli_inst.dump_comp_object_by_file("${VCS_UVM_HOME}/verdi/component.config");
+                          ==>
+239                   else if (is_vcs_home_exist)
+                           -5-  
+240                       pli_inst.dump_comp_object_by_file("${VCS_HOME}/etc/uvm-1.2/verdi/component.config");
+                          ==>
+                          MISSING_ELSE
+                          ==>
+241               end
+                  MISSING_ELSE
+                  ==>
+242        `endif
+243        `endif
+244               if (verdi_clp.is_verdi_trace_uvm_aware()||verdi_clp.is_verdi_trace_fac()) begin
+                  -6-  
+245                   factory = cs.get_factory();
+                      ==>
+246        `ifndef UVM_VERDI_NO_FACTORY_RECORDING
+247                   // create new factory
+248                   verdi_factory = new();
+249                   // set the delegate
+250                   verdi_factory.delegate=factory;
+251                   // enable new factory
+252                   cs.set_factory(verdi_factory);
+253        `endif
+254               end
+                  MISSING_ELSE
+                  ==>
+255             end
+                MISSING_ELSE
+                ==>
+
+Branches:
+
+-1- -2- -3- -4- -5- -6- Status      
+1   1   -   -   -   -   Not Covered 
+1   0   -   -   -   -   Not Covered 
+1   -   1   1   -   -   Not Covered 
+1   -   1   0   1   -   Not Covered 
+1   -   1   0   0   -   Not Covered 
+1   -   0   -   -   -   Not Covered 
+1   -   -   -   -   1   Not Covered 
+1   -   -   -   -   0   Not Covered 
+0   -   -   -   -   -   Covered     
+
+
+259             if ((clp.get_arg_matches("+UVM_TR_RECORD", tr_args)&&clp.get_arg_matches("+UVM_VERDI_TRACE", tr_args))
+                -1-  
+260                 ||(clp.get_arg_matches("+UVM_TR_RECORD", tr_args)&&(env_str=="verdi"))
+261                 ||verdi_clp.is_verdi_trace_tlm()
+262                 ||(clp.get_arg_matches("+UVM_TR_RECORD", tr_args)&&verdi_clp.is_minus_gui_verdi())
+263                 ||(clp.get_arg_matches("+UVM_TR_RECORD", tr_args)&&is_sanity_exist))
+264             begin
+265        `else
+266             if ((clp.get_arg_matches("+UVM_TR_RECORD", tr_args)&&clp.get_arg_matches("+UVM_VERDI_TRACE", tr_args))
+267                 ||verdi_clp.is_verdi_trace_tlm())
+268             begin
+269        `endif
+270                 verdi_db = new();
+271                 cs.set_default_tr_database(verdi_db);
+272                 if (clp.get_arg_matches("+UVM_DISABLE_AUTO_COMPONENT", tr_args)) begin
+                    -2-  
+273                     `uvm_info("VERDI_TR_AUTO", "+UVM_DISABLE_AUTO_COMPONENT enabled but transaction recording enabled, usage model requires user to explicitly set recording_detail on components", UVM_MEDIUM)
+                        -3-                                                                                                                                                                                           
+                        ==>
+                        MISSING_ELSE
+                        ==>
+274                 end
+275                 else begin
+276                     `uvm_info("VERDI_TR_AUTO", "+UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly", UVM_MEDIUM)
+                        -4-                                                                                                                                                                                                                                     
+                        ==>
+                        MISSING_ELSE
+                        ==>
+277                     uvm_config_db#(uvm_bitstream_t)::set(uvm_root::get(), "*", "recording_detail", UVM_FULL);
+278                 end
+279             end
+                MISSING_ELSE
+                ==>
+
+Branches:
+
+-1- -2- -3- -4- Status      
+1   1   1   -   Not Covered 
+1   1   0   -   Not Covered 
+1   0   -   1   Not Covered 
+1   0   -   0   Not Covered 
+0   -   -   -   Covered     
+
+
+280             if (p != null)
+                -1-  
+281                 p.set_randstate(rand_state);
+                    ==>
+                    MISSING_ELSE
+                    ==>
+
+Branches:
+
+-1- Status      
+1   Covered     
+0   Not Covered 
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : uvm_custom_install_verdi_recording
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+  8.26   5.21 --       0.00 --      19.57 --     
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+  8.26   5.21 --       0.00 --      19.57 --     
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME                               
+  8.26   5.21 --       0.00 --      19.57 --     uvm_custom_install_verdi_recording 
+
+
+Parent : 
+
+none
+----------------
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : uvm_custom_install_recording
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 30.91  31.82 --     --     --      30.00 --     
+
+Source File(s) : 
+
+/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/vcs/uvm_custom_install_vcs_recorder.sv
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME                         
+ 30.91  31.82 --     --     --      30.00 --     uvm_custom_install_recording 
+
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Module : uvm_custom_install_recording
+
+             Line No.   Total   Covered  Percent
+TOTAL                       22        7    31.82
+ROUTINE            41        1        0     0.00
+INITIAL            56       21        7    33.33
+
+40                      
+41         0/1     ==>   import "DPI-C" function string getenv(input string env_name);
+42                      
+43                       `include "uvm_vcs_recorder.svh"
+44                       `include "uvm_vcs_record_interface.sv"
+45                      `endif
+46                      
+47                         uvm_cmdline_processor clp;
+48                         string tr_args[$];
+49                         uvm_coreservice_t cs;
+50                         uvm_vcs_tr_database vcs_db;
+51                         string env_str,vc_env_str="",sanity_file_name="";
+52                         int file_handle=0, is_sanity_exist=0;
+53                           
+54                         initial begin
+55                      
+56         1/1               clp = uvm_cmdline_processor::get_inst();
+57         1/1               cs = uvm_coreservice_t::get();
+58         1/1               env_str = getenv("SNPS_SIM_DEFAULT_GUI");
+59         1/1               vc_env_str = getenv("VC_HOME");
+60         1/1               if (vc_env_str!="")begin
+61         0/1     ==>           sanity_file_name = {vc_env_str,"/etc/.sanity"};
+62         0/1     ==>           file_handle = $fopen(sanity_file_name,"r");
+63         0/1     ==>           if (file_handle!=0) begin
+64         0/1     ==>               is_sanity_exist = 1;
+65         0/1     ==>               $fclose(file_handle);
+66                               end
+                   ==>  MISSING_ELSE
+67                           end
+                        MISSING_ELSE
+68                      
+69                           // Register the vcs_smartlog_catcher to dump messages into VPD
+70         1/1               if (clp.get_arg_matches("+UVM_LOG_RECORD", tr_args) && (!clp.get_arg_matches("+UVM_VERDI_TRACE", tr_args) 
+71                                                                                  && (env_str != "verdi") && !is_sanity_exist)) begin
+72                             static vcs_smartlog_catcher _vcs_catcher = new();
+73         0/1     ==>         uvm_report_cb::add(null,_vcs_catcher);
+74                           end
+                        MISSING_ELSE
+75                      
+76                           // Register the uvm_vcs_recorder to record transactions into VPD
+77         1/1               if (clp.get_arg_matches("+UVM_TR_RECORD", tr_args) && (!clp.get_arg_matches("+UVM_VERDI_TRACE", tr_args)
+78                                                                                  && (env_str != "verdi")&& !is_sanity_exist)) begin
+79         0/1     ==>        vcs_db = new();
+80         0/1     ==>        cs.set_default_tr_database(vcs_db);
+81         0/1     ==>        if (clp.get_arg_matches("+UVM_DISABLE_AUTO_COMPONENT", tr_args)) begin
+82         0/2     ==>  	 `uvm_info("VCS_TR_AUTO", "+UVM_DISABLE_AUTO_COMPONENT enabled but transaction recording enabled, usage model requires user to explicitly set recording_detail on components", UVM_MEDIUM)
+uvm_info("VCS_TR_AUTO", "+UVM_DISABLE_AUTO_COMPONENT enabled but transaction recording enabled, usage model requires user to explicitly set recording_detail on components", UVM_MEDIUM):
+82.1                    `ifdef ZEMI4UVM 
+82.2                          (* zemi4_uvm_attribute=1 *) 
+82.3                       `endif 
+82.4                       begin 
+82.5                         if (uvm_report_enabled(UVM_MEDIUM,UVM_INFO,"VCS_TR_AUTO")) 
+82.6       0/1     ==>         uvm_report_info ("VCS_TR_AUTO", "+UVM_DISABLE_AUTO_COMPONENT enabled but transaction recording enabled, usage model requires user to explicitly set recording_detail on components", UVM_MEDIUM, "/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/vcs/uvm_custom_install_vcs_recorder.sv", 82, "", 1); 
+82.7                       end
+                   ==>  MISSING_ELSE
+83                            end
+84                            else begin
+85         0/2     ==>  	 `uvm_info("VCS_TR_AUTO", "+UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly", UVM_MEDIUM)
+uvm_info("VCS_TR_AUTO", "+UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly", UVM_MEDIUM):
+85.1                    `ifdef ZEMI4UVM 
+85.2                          (* zemi4_uvm_attribute=1 *) 
+85.3                       `endif 
+85.4                       begin 
+85.5                         if (uvm_report_enabled(UVM_MEDIUM,UVM_INFO,"VCS_TR_AUTO")) 
+85.6       0/1     ==>         uvm_report_info ("VCS_TR_AUTO", "+UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly", UVM_MEDIUM, "/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/etc/uvm-1.2/vcs/uvm_custom_install_vcs_recorder.sv", 85, "", 1); 
+85.7                       end
+                   ==>  MISSING_ELSE
+86         0/1     ==>  	  uvm_config_db#(uvm_bitstream_t)::set(uvm_root::get(), "*", "recording_detail", UVM_FULL);
+87                            end
+88                           end
+                        MISSING_ELSE
+
+-------------------------------------------------------------------------------
+Branch Coverage for Module : uvm_custom_install_recording
+         Line No. Total Covered Percent 
+Branches          10    3       30.00   
+IF       60       3     1       33.33   
+IF       70       2     1       50.00   
+IF       77       5     1       20.00   
+
+
+60              if (vc_env_str!="")begin
+                -1-  
+61                  sanity_file_name = {vc_env_str,"/etc/.sanity"};
+62                  file_handle = $fopen(sanity_file_name,"r");
+63                  if (file_handle!=0) begin
+                    -2-  
+64                      is_sanity_exist = 1;
+                        ==>
+65                      $fclose(file_handle);
+66                  end
+                    MISSING_ELSE
+                    ==>
+67              end
+                MISSING_ELSE
+                ==>
+
+Branches:
+
+-1- -2- Status      
+1   1   Not Covered 
+1   0   Not Covered 
+0   -   Covered     
+
+
+70              if (clp.get_arg_matches("+UVM_LOG_RECORD", tr_args) && (!clp.get_arg_matches("+UVM_VERDI_TRACE", tr_args) 
+                -1-  
+71                                                                     && (env_str != "verdi") && !is_sanity_exist)) begin
+72                static vcs_smartlog_catcher _vcs_catcher = new();
+73                uvm_report_cb::add(null,_vcs_catcher);
+                  ==>
+74              end
+                MISSING_ELSE
+                ==>
+
+Branches:
+
+-1- Status      
+1   Not Covered 
+0   Covered     
+
+
+77              if (clp.get_arg_matches("+UVM_TR_RECORD", tr_args) && (!clp.get_arg_matches("+UVM_VERDI_TRACE", tr_args)
+                -1-  
+78                                                                     && (env_str != "verdi")&& !is_sanity_exist)) begin
+79               vcs_db = new();
+80               cs.set_default_tr_database(vcs_db);
+81               if (clp.get_arg_matches("+UVM_DISABLE_AUTO_COMPONENT", tr_args)) begin
+                 -2-  
+82         	 `uvm_info("VCS_TR_AUTO", "+UVM_DISABLE_AUTO_COMPONENT enabled but transaction recording enabled, usage model requires user to explicitly set recording_detail on components", UVM_MEDIUM)
+           	 -3-                                                                                                                                                                                         
+           	 ==>
+           	 MISSING_ELSE
+           	 ==>
+83               end
+84               else begin
+85         	 `uvm_info("VCS_TR_AUTO", "+UVM_TR_RECORD implicitly enables recording_details to UVM_FULL for all components. For explicit control use +UVM_DISABLE_AUTO_COMPONENT and set recording_detail on components accordingly", UVM_MEDIUM)
+           	 -4-                                                                                                                                                                                                                                   
+           	 ==>
+           	 MISSING_ELSE
+           	 ==>
+86         	  uvm_config_db#(uvm_bitstream_t)::set(uvm_root::get(), "*", "recording_detail", UVM_FULL);
+87               end
+88              end
+                MISSING_ELSE
+                ==>
+
+Branches:
+
+-1- -2- -3- -4- Status      
+1   1   1   -   Not Covered 
+1   1   0   -   Not Covered 
+1   0   -   1   Not Covered 
+1   0   -   0   Not Covered 
+0   -   -   -   Covered     
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : uvm_custom_install_recording
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 30.91  31.82 --     --     --      30.00 --     
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 30.91  31.82 --     --     --      30.00 --     
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME                         
+ 30.91  31.82 --     --     --      30.00 --     uvm_custom_install_recording 
+
+
+Parent : 
+
+none
+----------------
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : rkv_watchdog_if
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 50.00 --     --      50.00 --     --     --     
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../tb/rkv_watchdog_if.sv
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME                        
+ 50.00 --     --      50.00 --     --     --     rkv_watchdog_tb.wdg_if_inst 
+
+
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : rkv_watchdog_if
+                Total Covered Percent 
+Totals          7     5       71.43   
+Total Bits      20    10      50.00   
+Total Bits 0->1 10    5       50.00   
+Total Bits 1->0 10    5       50.00   
+
+                              
+Signals          7  5  71.43  
+Signal Bits      20 10 50.00  
+Signal Bits 0->1 10 5  50.00  
+Signal Bits 1->0 10 5  50.00  
+
+Signal Details
+               Toggle Toggle 1->0 Toggle 0->1 
+ecorevnum[3:0] No     No          No          
+wdogint        Yes    Yes         Yes         
+wdogres        No     No          No          
+apb_clk        Yes    Yes         Yes         
+apb_rstn       Yes    Yes         Yes         
+wdg_clk        Yes    Yes         Yes         
+wdg_rstn       Yes    Yes         Yes         
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : rkv_watchdog_tb.wdg_if_inst
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 50.00 --     --      50.00 --     --     --     
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 50.00 --     --      50.00 --     --     --     
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME            
+ 50.00 --     --      50.00 --     --     --     rkv_watchdog_if 
+
+
+Parent : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME            
+100.00 100.00 --     100.00 --     --     --     rkv_watchdog_tb 
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : cmsdk_apb_watchdog
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 60.54  59.46  57.14  73.28 --      52.27 --     
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../../verilog/cmsdk_apb_watchdog.v
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME                
+ 60.54  59.46  57.14  73.28 --      52.27 --     rkv_watchdog_tb.dut 
+
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Module : cmsdk_apb_watchdog
+
+             Line No.   Total   Covered  Percent
+TOTAL                       37       22    59.46
+ALWAYS            196        4        3    75.00
+ALWAYS            217        4        3    75.00
+ALWAYS            229        4        3    75.00
+ALWAYS            249        4        4   100.00
+ALWAYS            270       18        6    33.33
+ALWAYS            301        3        3   100.00
+
+195                           // process p_LockSeq
+196        1/1                if (PRESETn == 1'b0)
+197                             // asynchronous reset (active low)
+198        1/1                  wdog_lock <= 1'b0;
+199                           else
+200                             // rising clock edge
+201        1/1                  if (wdog_lock_wr_en)
+202        0/1     ==>            wdog_lock <= wdog_lock_wr_val;
+                        MISSING_ELSE
+203                         end
+204                     
+205                       //----------------------------------------------------------------------------
+206                       // Integration Test Registers
+207                       //----------------------------------------------------------------------------
+208                       assign wdog_itcr_wr_en = (PADDR == {`ARM_WDOGIA,`ARM_WDOGTCRA}) ?
+209                                             (PSEL & PWRITE & (~PENABLE) & (~wdog_lock)) : 1'b0;
+210                     
+211                       assign wdog_itop_wr_en = (PADDR == {`ARM_WDOGIA,`ARM_WDOGTOPA}) ?
+212                                             (PSEL & PWRITE & (~PENABLE) & (~wdog_lock)) : 1'b0;
+213                     
+214                       always @ (posedge PCLK or negedge PRESETn)
+215                         begin : p_tcr_seq
+216                           // process p_TcrSeq
+217        1/1                if (PRESETn == 1'b0)
+218                             // asynchronous reset (active low)
+219        1/1                  wdog_itcr <= 1'b0;
+220                           else
+221                             // rising clock edge
+222        1/1                  if (wdog_itcr_wr_en)
+223        0/1     ==>            wdog_itcr <= PWDATA[0];
+                        MISSING_ELSE
+224                         end
+225                     
+226                       always @ (posedge PCLK or negedge PRESETn)
+227                         begin : p_top_seq
+228                           // process p_TopSeq
+229        1/1                if (PRESETn == 1'b0)
+230                             // asynchronous reset (active low)
+231        1/1                  wdog_itop <= 2'b00;
+232                           else
+233                             // rising clock edge
+234        1/1                    if (wdog_itop_wr_en)
+235        0/1     ==>              wdog_itop <= PWDATA[1:0];
+                        MISSING_ELSE
+236                         end
+237                     
+238                       //----------------------------------------------------------------------------
+239                       // Output data generation
+240                       //----------------------------------------------------------------------------
+241                     
+242                       // Address decoding for register reads.
+243                       assign prdata_next_en = PSEL & (~PWRITE) & (~PENABLE);
+244                     
+245                       // Selects output data from address bus.
+246                       always @ (prdata_next_en or PADDR or frc_data or wdog_pdata or wdog_lock
+247                                 or wdog_itcr)
+248                         begin : p_prdata_next_comb
+249        1/1                case (prdata_next_en)
+250                            1'b1:
+251        1/1                   prdata_next =
+252                                  ((PADDR[11:5]==`ARM_WDOG1A)? frc_data : {32{1'b0}})|
+253                                  ((PADDR[11:5]==`ARM_WDOGLA)? {{31{1'b0}},wdog_lock}: {32{1'b0}})|
+254                                  ((PADDR[11:5]==`ARM_WDOGIA)? {{31{1'b0}},wdog_itcr}: {32{1'b0}})|
+255                                  (((PADDR[11:5]==`ARM_WDOGPA1)|
+256                                  (PADDR[11:5]==`ARM_WDOGPA2))?  {{24{1'b0}}, wdog_pdata} : {32{1'b0}});
+257                            1'b0:
+258        1/1                   prdata_next = {32{1'b0}};
+259                            default:
+260        1/1                   prdata_next = {32{1'bx}};
+261                            endcase
+262                         end
+263                     
+264                       // Selection of read data from Peripheral and PrimeCell ID
+265                       // registers is separated from the prdata_next mux to reduce the
+266                       // depth of mux needed for Frc register data
+267                       always @ (prdata_next_en or PADDR or
+268                                 ECOREVNUM )
+269                         begin : p_wdog_pdata_comb
+270        1/1                case (prdata_next_en)
+271                            1'b1: begin
+272        1/1                   case (PADDR[5:2])
+273        0/1     ==>            `ARM_WPERIPHID4A:   wdog_pdata = WDOG_PERIPH_ID4;
+274        1/1                    `ARM_WPERIPHID5A:   wdog_pdata = WDOG_PERIPH_ID5;
+275        0/1     ==>            `ARM_WPERIPHID6A:   wdog_pdata = WDOG_PERIPH_ID6;
+276        0/1     ==>            `ARM_WPERIPHID7A:   wdog_pdata = WDOG_PERIPH_ID7;
+277        0/1     ==>            `ARM_WPERIPHID0A:   wdog_pdata = WDOG_PERIPH_ID0;
+278        0/1     ==>            `ARM_WPERIPHID1A:   wdog_pdata = WDOG_PERIPH_ID1;
+279        0/1     ==>            `ARM_WPERIPHID2A:   wdog_pdata = WDOG_PERIPH_ID2;
+280        0/1     ==>            `ARM_WPERIPHID3A:   wdog_pdata = {ECOREVNUM,WDOG_PERIPH_ID3} ;
+281        0/1     ==>            `ARM_WPCELLID0A :   wdog_pdata = WDOG_PCELL_ID0;
+282        0/1     ==>            `ARM_WPCELLID1A :   wdog_pdata = WDOG_PCELL_ID1;
+283        0/1     ==>            `ARM_WPCELLID2A :   wdog_pdata = WDOG_PCELL_ID2;
+284        0/1     ==>            `ARM_WPCELLID3A :   wdog_pdata = WDOG_PCELL_ID3;
+285        1/1                    4'h0, 4'h1,4'h2,4'h3: wdog_pdata = {8{1'b0}};
+286        0/1     ==>            default:  wdog_pdata = {8{1'bx}};
+287                              endcase
+288                            end
+289                            1'b0: begin
+290        1/1                   wdog_pdata = {8{1'b0}};
+291                            end
+292                            default: begin
+293        1/1                   wdog_pdata = {8{1'bx}};
+294                            end
+295                           endcase
+296                         end // block: p_wdog_pdata_comb
+297                     
+298                       // Register used to reduce output delay during reads.
+299                       always @ (negedge PRESETn or posedge PCLK)
+300                         begin : p_i_prdata_seq
+301        1/1                if (PRESETn == 1'b0)
+302        1/1                  i_prdata <= {32{1'b0}};
+303                           else
+304        1/1                  i_prdata <= prdata_next;
+
+-------------------------------------------------------------------------------
+Cond Coverage for Module : cmsdk_apb_watchdog
+
+               Total   Covered  Percent
+Conditions         14        8    57.14
+Logical            14        8    57.14
+Non-Logical         0        0
+Event               0        0
+
+ LINE       178
+ EXPRESSION (((PSEL & (PADDR[11:5] == 7'b0))) ? 1'b1 : 1'b0)
+             ----------------1---------------
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       184
+ EXPRESSION ((PADDR == {7'b1100000, 3'b0}) ? (((PSEL & PWRITE) & (~PENABLE))) : 1'b0)
+             --------------1--------------
+
+-1- Status
+ 0  Covered
+ 1  Not Covered
+
+ LINE       187
+ EXPRESSION ((PWDATA == 32'h1acce551) ? 1'b0 : 1'b1)
+             ------------1-----------
+
+-1- Status
+ 0  Covered
+ 1  Not Covered
+
+ LINE       208
+ EXPRESSION ((PADDR == {7'b1111000, 3'b0}) ? ((((PSEL & PWRITE) & (~PENABLE)) & (~wdog_lock))) : 1'b0)
+             --------------1--------------
+
+-1- Status
+ 0  Covered
+ 1  Not Covered
+
+ LINE       211
+ EXPRESSION ((PADDR == {7'b1111000, 3'b1}) ? ((((PSEL & PWRITE) & (~PENABLE)) & (~wdog_lock))) : 1'b0)
+             --------------1--------------
+
+-1- Status
+ 0  Covered
+ 1  Not Covered
+
+ LINE       331
+ EXPRESSION ((wdog_itcr == 1'b0) ? i_wdogint : wdog_itop[1])
+             ---------1---------
+
+-1- Status
+ 0  Not Covered
+ 1  Covered
+
+ LINE       332
+ EXPRESSION ((wdog_itcr == 1'b0) ? i_wdogres : wdog_itop[0])
+             ---------1---------
+
+-1- Status
+ 0  Not Covered
+ 1  Covered
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : cmsdk_apb_watchdog
+                Total Covered Percent 
+Totals          29    15      51.72   
+Total Bits      408   299     73.28   
+Total Bits 0->1 204   150     73.53   
+Total Bits 1->0 204   149     73.04   
+
+                              
+Ports          14  9   64.29  
+Port Bits      176 101 57.39  
+Port Bits 0->1 88  51  57.95  
+Port Bits 1->0 88  50  56.82  
+
+                                
+Signals          15  6   40.00  
+Signal Bits      232 198 85.34  
+Signal Bits 0->1 116 99  85.34  
+Signal Bits 1->0 116 99  85.34  
+
+Port Details
+               Toggle Toggle 1->0 Toggle 0->1 Direction 
+PCLK           Yes    Yes         Yes         INPUT     
+PRESETn        Yes    Yes         Yes         INPUT     
+PENABLE        Yes    Yes         Yes         INPUT     
+PSEL           Yes    Yes         Yes         INPUT     
+PADDR[2]       No     No          Yes         INPUT     
+PADDR[4:3]     Yes    Yes         Yes         INPUT     
+PADDR[11:5]    No     No          No          INPUT     
+PWRITE         Yes    Yes         Yes         INPUT     
+PWDATA[7:0]    Yes    Yes         Yes         INPUT     
+PWDATA[31:8]   No     No          No          INPUT     
+WDOGCLK        Yes    Yes         Yes         INPUT     
+WDOGCLKEN      No     No          No          INPUT     
+WDOGRESn       Yes    Yes         Yes         INPUT     
+ECOREVNUM[3:0] No     No          No          INPUT     
+PRDATA[31:0]   Yes    Yes         Yes         OUTPUT    
+WDOGINT        Yes    Yes         Yes         OUTPUT    
+WDOGRES        No     No          No          OUTPUT    
+
+Signal Details
+                  Toggle Toggle 1->0 Toggle 0->1 
+frc_sel           Yes    Yes         Yes         
+frc_data[31:0]    Yes    Yes         Yes         
+wdog_pdata[7:0]   No     No          No          
+prdata_next[31:0] Yes    Yes         Yes         
+i_prdata[31:0]    Yes    Yes         Yes         
+prdata_next_en    Yes    Yes         Yes         
+wdog_itcr_wr_en   No     No          No          
+wdog_itcr         No     No          No          
+wdog_itop_wr_en   No     No          No          
+wdog_itop[1:0]    No     No          No          
+wdog_lock_wr_en   No     No          No          
+wdog_lock_wr_val  No     No          No          
+wdog_lock         No     No          No          
+i_wdogint         Yes    Yes         Yes         
+i_wdogres         No     No          No          
+
+
+-------------------------------------------------------------------------------
+Branch Coverage for Module : cmsdk_apb_watchdog
+         Line No. Total Covered Percent 
+Branches          44    23      52.27   
+TERNARY  178      2     2       100.00  
+TERNARY  184      2     1       50.00   
+TERNARY  187      2     1       50.00   
+TERNARY  208      2     1       50.00   
+TERNARY  211      2     1       50.00   
+TERNARY  331      2     1       50.00   
+TERNARY  332      2     1       50.00   
+IF       196      3     2       66.67   
+IF       217      3     2       66.67   
+IF       229      3     2       66.67   
+CASE     249      3     3       100.00  
+CASE     270      16    4       25.00   
+IF       301      2     2       100.00  
+
+
+178          assign frc_sel  = (PSEL & (PADDR [11:5] == `ARM_WDOG1A)) ? 1'b1 : 1'b0;
+                                                                      -1-  
+                                                                      ==>  
+                                                                      ==>  
+
+Branches:
+
+-1- Status  
+1   Covered 
+0   Covered 
+
+
+184          assign wdog_lock_wr_en = (PADDR == {`ARM_WDOGLA,`ARM_WDOGLOCKA}) ?
+                                                                              -1-  
+                                                                              ==>  
+                                                                              ==>  
+
+Branches:
+
+-1- Status      
+1   Not Covered 
+0   Covered     
+
+
+187          assign wdog_lock_wr_val =
+                                      
+188          // 0x1ACCE551 - unlock
+                                   
+189                 (PWDATA == 32'h1ACCE551) ? 1'b0 :
+                                             -1-  
+                                             ==>  
+                                             ==>  
+
+Branches:
+
+-1- Status      
+1   Not Covered 
+0   Covered     
+
+
+208          assign wdog_itcr_wr_en = (PADDR == {`ARM_WDOGIA,`ARM_WDOGTCRA}) ?
+                                                                             -1-  
+                                                                             ==>  
+                                                                             ==>  
+
+Branches:
+
+-1- Status      
+1   Not Covered 
+0   Covered     
+
+
+211          assign wdog_itop_wr_en = (PADDR == {`ARM_WDOGIA,`ARM_WDOGTOPA}) ?
+                                                                             -1-  
+                                                                             ==>  
+                                                                             ==>  
+
+Branches:
+
+-1- Status      
+1   Not Covered 
+0   Covered     
+
+
+331          assign WDOGINT = (wdog_itcr == 1'b0) ? i_wdogint : wdog_itop[1];
+                                                  -1-  
+                                                  ==>  
+                                                  ==>  
+
+Branches:
+
+-1- Status      
+1   Covered     
+0   Not Covered 
+
+
+332          assign WDOGRES = (wdog_itcr == 1'b0) ? i_wdogres : wdog_itop[0];
+                                                  -1-  
+                                                  ==>  
+                                                  ==>  
+
+Branches:
+
+-1- Status      
+1   Covered     
+0   Not Covered 
+
+
+196              if (PRESETn == 1'b0)
+                 -1-  
+197                // asynchronous reset (active low)
+198                wdog_lock <= 1'b0;
+                   ==>
+199              else
+200                // rising clock edge
+201                if (wdog_lock_wr_en)
+                   -2-  
+202                  wdog_lock <= wdog_lock_wr_val;
+                     ==>
+                     MISSING_ELSE
+                     ==>
+
+Branches:
+
+-1- -2- Status      
+1   -   Covered     
+0   1   Not Covered 
+0   0   Covered     
+
+
+217              if (PRESETn == 1'b0)
+                 -1-  
+218                // asynchronous reset (active low)
+219                wdog_itcr <= 1'b0;
+                   ==>
+220              else
+221                // rising clock edge
+222                if (wdog_itcr_wr_en)
+                   -2-  
+223                  wdog_itcr <= PWDATA[0];
+                     ==>
+                     MISSING_ELSE
+                     ==>
+
+Branches:
+
+-1- -2- Status      
+1   -   Covered     
+0   1   Not Covered 
+0   0   Covered     
+
+
+229              if (PRESETn == 1'b0)
+                 -1-  
+230                // asynchronous reset (active low)
+231                wdog_itop <= 2'b00;
+                   ==>
+232              else
+233                // rising clock edge
+234                  if (wdog_itop_wr_en)
+                     -2-  
+235                    wdog_itop <= PWDATA[1:0];
+                       ==>
+                       MISSING_ELSE
+                       ==>
+
+Branches:
+
+-1- -2- Status      
+1   -   Covered     
+0   1   Not Covered 
+0   0   Covered     
+
+
+249              case (prdata_next_en)
+                 -1-  
+250               1'b1:
+251                 prdata_next =
+                    ==>
+252                     ((PADDR[11:5]==`ARM_WDOG1A)? frc_data : {32{1'b0}})|
+253                     ((PADDR[11:5]==`ARM_WDOGLA)? {{31{1'b0}},wdog_lock}: {32{1'b0}})|
+254                     ((PADDR[11:5]==`ARM_WDOGIA)? {{31{1'b0}},wdog_itcr}: {32{1'b0}})|
+255                     (((PADDR[11:5]==`ARM_WDOGPA1)|
+256                     (PADDR[11:5]==`ARM_WDOGPA2))?  {{24{1'b0}}, wdog_pdata} : {32{1'b0}});
+257               1'b0:
+258                 prdata_next = {32{1'b0}};
+                    ==>
+259               default:
+260                 prdata_next = {32{1'bx}};
+                    ==>
+
+Branches:
+
+-1-     Status  
+1'b1    Covered 
+1'b0    Covered 
+default Covered 
+
+
+270              case (prdata_next_en)
+                 -1-  
+271               1'b1: begin
+272                 case (PADDR[5:2])
+                    -2-  
+273                  `ARM_WPERIPHID4A:   wdog_pdata = WDOG_PERIPH_ID4;
+                     ==>
+274                  `ARM_WPERIPHID5A:   wdog_pdata = WDOG_PERIPH_ID5;
+                     ==>
+275                  `ARM_WPERIPHID6A:   wdog_pdata = WDOG_PERIPH_ID6;
+                     ==>
+276                  `ARM_WPERIPHID7A:   wdog_pdata = WDOG_PERIPH_ID7;
+                     ==>
+277                  `ARM_WPERIPHID0A:   wdog_pdata = WDOG_PERIPH_ID0;
+                     ==>
+278                  `ARM_WPERIPHID1A:   wdog_pdata = WDOG_PERIPH_ID1;
+                     ==>
+279                  `ARM_WPERIPHID2A:   wdog_pdata = WDOG_PERIPH_ID2;
+                     ==>
+280                  `ARM_WPERIPHID3A:   wdog_pdata = {ECOREVNUM,WDOG_PERIPH_ID3} ;
+                     ==>
+281                  `ARM_WPCELLID0A :   wdog_pdata = WDOG_PCELL_ID0;
+                     ==>
+282                  `ARM_WPCELLID1A :   wdog_pdata = WDOG_PCELL_ID1;
+                     ==>
+283                  `ARM_WPCELLID2A :   wdog_pdata = WDOG_PCELL_ID2;
+                     ==>
+284                  `ARM_WPCELLID3A :   wdog_pdata = WDOG_PCELL_ID3;
+                     ==>
+285                  4'h0, 4'h1,4'h2,4'h3: wdog_pdata = {8{1'b0}};
+                     ==>
+286                  default:  wdog_pdata = {8{1'bx}};
+                     ==>
+287                 endcase
+288               end
+289               1'b0: begin
+290                 wdog_pdata = {8{1'b0}};
+                    ==>
+291               end
+292               default: begin
+293                 wdog_pdata = {8{1'bx}};
+                    ==>
+
+Branches:
+
+-1-     -2-                  Status      
+1'b1    4'b0100              Not Covered 
+1'b1    4'b0101              Covered     
+1'b1    4'b0110              Not Covered 
+1'b1    4'b0111              Not Covered 
+1'b1    4'b1000              Not Covered 
+1'b1    4'b1001              Not Covered 
+1'b1    4'b1010              Not Covered 
+1'b1    4'b1011              Not Covered 
+1'b1    4'b1100              Not Covered 
+1'b1    4'b1101              Not Covered 
+1'b1    4'b1110              Not Covered 
+1'b1    4'b1111              Not Covered 
+1'b1    4'b0 4'b1 4'h2 4'h3  Covered     
+1'b1    default              Not Covered 
+1'b0    -                    Covered     
+default -                    Covered     
+
+
+301              if (PRESETn == 1'b0)
+                 -1-  
+302                i_prdata <= {32{1'b0}};
+                   ==>
+303              else
+304                i_prdata <= prdata_next;
+                   ==>
+
+Branches:
+
+-1- Status  
+1   Covered 
+0   Covered 
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : rkv_watchdog_tb.dut
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 60.54  59.46  57.14  73.28 --      52.27 --     
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 76.05  83.62  80.95  68.42 --      71.20 --     
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME               
+ 60.54  59.46  57.14  73.28 --      52.27 --     cmsdk_apb_watchdog 
+
+
+Parent : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME            
+100.00 100.00 --     100.00 --     --     --     rkv_watchdog_tb 
+
+
+Subtrees :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME               
+ 83.65  94.94  92.86  65.31 --      81.48 --     u_apb_watchdog_frc 
+
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : apb_if
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 64.41 100.00 --      46.12 --      50.00  61.54 
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../vip_lib/apb_pkg/apb_if.sv
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME                        
+ 64.41 100.00 --      46.12 --      50.00  61.54 rkv_watchdog_tb.apb_if_inst 
+
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Module : apb_if
+
+             Line No.   Total   Covered  Percent
+TOTAL                       11       11   100.00
+INITIAL            93        4        4   100.00
+INITIAL           179        7        7   100.00
+
+92                        initial begin : coverage_control
+93         1/1              if(has_coverage) begin
+94         1/1                automatic cg_apb_command cg0 = new();
+95         1/1                automatic cg_apb_trans_timing_group cg1 = new();
+96         1/1                automatic cg_apb_write_read_order_group cg2 = new();
+97                          end
+                   ==>  MISSING_ELSE
+98                        end
+99                      
+100                       // PROPERY ASSERTION
+101                       property p_paddr_no_x;
+102                         @(posedge clk) psel |-> !$isunknown(paddr);
+103                       endproperty: p_paddr_no_x
+104                       assert property(p_paddr_no_x) else `uvm_error("ASSERT", "PADDR is unknown when PSEL is high")
+105                     
+106                       property p_psel_rose_next_cycle_penable_rise;
+107                         @(posedge clk) $rose(psel) |=> $rose(penable);
+108                       endproperty: p_psel_rose_next_cycle_penable_rise
+109                       assert property(p_psel_rose_next_cycle_penable_rise) else `uvm_error("ASSERT", "PENABLE not rose after 1 cycle PSEL rose")
+110                     
+111                       property p_penable_rose_next_cycle_fall;
+112                         @(posedge clk) $rose(penable) |=> $fell(penable);
+113                       endproperty: p_penable_rose_next_cycle_fall
+114                       assert property(p_penable_rose_next_cycle_fall) else `uvm_error("ASSERT", "PENABLE not fall after 1 cycle PENABLE rose")
+115                     
+116                       property p_pwdata_stable_during_trans_phase;
+117                         @(posedge clk) ((psel && !penable) ##1 (psel && penable)) |-> $stable(pwdata);
+118                       endproperty: p_pwdata_stable_during_trans_phase
+119                       assert property(p_pwdata_stable_during_trans_phase) else `uvm_error("ASSERT", "PWDATA not stable during transaction phase")
+120                     
+121                       property p_paddr_stable_until_next_trans;
+122                         logic[31:0] addr1, addr2;
+123                         @(posedge clk) first_match(($rose(penable),addr1=paddr) ##1 ((psel && !penable)[=1],addr2=$past(paddr))) |-> addr1 == addr2;
+124                       endproperty: p_paddr_stable_until_next_trans
+125                       assert property(p_paddr_stable_until_next_trans) else `uvm_error("ASSERT", "PADDR not stable until next transaction start")
+126                     
+127                       property p_pwrite_stable_until_next_trans;
+128                         logic pwrite1, pwrite2;
+129                         @(posedge clk) first_match(($rose(penable),pwrite1=pwrite) ##1 ((psel && !penable)[=1],pwrite2=$past(pwrite))) |-> pwrite1 == pwrite2;
+130                       endproperty: p_pwrite_stable_until_next_trans
+131                       assert property(p_pwrite_stable_until_next_trans) else `uvm_error("ASSERT", "PWRITE not stable until next transaction start")
+132                     
+133                       property p_prdata_available_once_penable_rose;
+134                         @(posedge clk) $rose(penable) && !pwrite |-> !$stable(prdata);
+135                       endproperty: p_prdata_available_once_penable_rose
+136                       //assert property(p_prdata_available_once_penable_rose) else `uvm_error("ASSERT", "PRDATA not available once PENABLE rose")
+137                     
+138                       // PROPERTY COVERAGE
+139                       property p_write_during_nonburst_trans;
+140                         @(posedge clk) $rose(penable) |-> pwrite throughout (##1 (!penable)[*2] ##1 penable[=1]);
+141                       endproperty: p_write_during_nonburst_trans
+142                       cover property(p_write_during_nonburst_trans);
+143                     
+144                       property p_write_during_burst_trans;
+145                         @(posedge clk) $rose(penable) |-> pwrite throughout (##2 penable);
+146                       endproperty: p_write_during_burst_trans
+147                       cover property(p_write_during_burst_trans);
+148                     
+149                       property p_write_read_burst_trans;
+150                         logic[31:0] addr;
+151                         @(posedge clk) ($rose(penable) && pwrite, addr=paddr) |-> (##2 ($rose(penable) && !pwrite && addr==paddr)); 
+152                       endproperty: p_write_read_burst_trans
+153                       cover property(p_write_read_burst_trans);
+154                     
+155                       property p_write_twice_read_burst_trans;
+156                         logic[31:0] addr;
+157                         @(posedge clk) ($rose(penable) && pwrite, addr=paddr) |-> (##2 ($rose(penable) && pwrite && addr==paddr) ##2 ($rose(penable) && !pwrite && addr==paddr) );
+158                       endproperty: p_write_twice_read_burst_trans
+159                       cover property(p_write_twice_read_burst_trans);
+160                     
+161                       property p_read_during_nonburst_trans;
+162                         @(posedge clk) $rose(penable) |-> !pwrite throughout (##1 (!penable)[*2] ##1 penable[=1]);
+163                       endproperty: p_read_during_nonburst_trans
+164                       cover property(p_read_during_nonburst_trans);
+165                     
+166                       property p_read_during_burst_trans;
+167                         @(posedge clk) $rose(penable) |-> !pwrite throughout (##2 penable);
+168                       endproperty: p_read_during_burst_trans
+169                       cover property(p_read_during_burst_trans);
+170                     
+171                       property p_read_write_read_burst_trans;
+172                         logic[31:0] addr;
+173                     	@(posedge clk) ($rose(penable) && !pwrite, addr=paddr) |-> (##2 ($rose(penable) && pwrite && addr==paddr) ##2 ($rose(penable) && !pwrite && addr==paddr) );
+174                       endproperty: p_read_write_read_burst_trans
+175                       cover property(p_read_write_read_burst_trans);
+176                     
+177                     
+178                       initial begin: assertion_control
+179                         fork
+180        1/1                forever begin
+181        2/2                  wait(rstn == 0);
+182        1/1                  $assertoff();
+183        2/2                  wait(rstn == 1);
+184        1/1                  $asserton();
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : apb_if
+                Total Covered Percent 
+Totals          10    6       60.00   
+Total Bits      206   95      46.12   
+Total Bits 0->1 103   48      46.60   
+Total Bits 1->0 103   47      45.63   
+
+                          
+Ports          2 2 100.00 
+Port Bits      4 4 100.00 
+Port Bits 0->1 2 2 100.00 
+Port Bits 1->0 2 2 100.00 
+
+                               
+Signals          8   4  50.00  
+Signal Bits      202 91 45.05  
+Signal Bits 0->1 101 46 45.54  
+Signal Bits 1->0 101 45 44.55  
+
+Port Details
+     Toggle Toggle 1->0 Toggle 0->1 Direction 
+clk  Yes    Yes         Yes         INPUT     
+rstn Yes    Yes         Yes         INPUT     
+
+Signal Details
+             Toggle Toggle 1->0 Toggle 0->1 
+paddr[1:0]   No     No          No          
+paddr[2]     No     No          Yes         
+paddr[4:3]   Yes    Yes         Yes         
+paddr[31:5]  No     No          No          
+pwrite       Yes    Yes         Yes         
+psel         Yes    Yes         Yes         
+penable      Yes    Yes         Yes         
+pwdata[7:0]  Yes    Yes         Yes         
+pwdata[31:8] No     No          No          
+prdata[31:0] Yes    Yes         Yes         
+has_checks   No     No          No          
+has_coverage No     No          No          
+
+
+-------------------------------------------------------------------------------
+Branch Coverage for Module : apb_if
+         Line No. Total Covered Percent 
+Branches          2     1       50.00   
+IF       93       2     1       50.00   
+
+
+93             if(has_coverage) begin
+               -1-  
+94               automatic cg_apb_command cg0 = new();
+                 ==>
+95               automatic cg_apb_trans_timing_group cg1 = new();
+96               automatic cg_apb_write_read_order_group cg2 = new();
+97             end
+               MISSING_ELSE
+               ==>
+
+Branches:
+
+-1- Status      
+1   Covered     
+0   Not Covered 
+
+
+-------------------------------------------------------------------------------
+Assert Coverage for Module : apb_if
+                 Total Attempted Percent Succeeded/Matched Percent 
+Assertions       6     6         100.00  6                 100.00  
+Cover properties 7     7         100.00  2                 28.57   
+Cover sequences  0     0                 0                         
+Total            13    13        100.00  8                 61.54   
+
+
+
+-------------------------------------------------------------------------------
+
+Assertion Details
+
+Name         Attempts Real Successes Failures Incomplete 
+unnamed$$_1  2768     112            0        0          
+unnamed$$_11 2768     55             0        1          
+unnamed$$_3  2768     56             0        0          
+unnamed$$_5  2768     56             0        0          
+unnamed$$_7  2768     56             0        0          
+unnamed$$_9  2768     55             0        1          
+
+
+-------------------------------------------------------------------------------
+
+Cover Directives for Properties: Details
+
+Name         Attempts Matches Incomplete 
+unnamed$$_12 3697034  6       5          
+unnamed$$_13 3697034  0       0          
+unnamed$$_14 3697034  0       0          
+unnamed$$_15 3697034  0       0          
+unnamed$$_16 3697034  189     4          
+unnamed$$_17 3697034  0       0          
+unnamed$$_18 3697034  0       0          
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : rkv_watchdog_tb.apb_if_inst
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 64.41 100.00 --      46.12 --      50.00  61.54 
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 64.41 100.00 --      46.12 --      50.00  61.54 
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME   
+ 64.41 100.00 --      46.12 --      50.00  61.54 apb_if 
+
+
+Parent : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME            
+100.00 100.00 --     100.00 --     --     --     rkv_watchdog_tb 
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : cmsdk_apb_watchdog_frc
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 83.65  94.94  92.86  65.31 --      81.48 --     
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../../verilog/cmsdk_apb_watchdog_frc.v
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME                                   
+ 83.65  94.94  92.86  65.31 --      81.48 --     rkv_watchdog_tb.dut.u_apb_watchdog_frc 
+
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Module : cmsdk_apb_watchdog_frc
+
+             Line No.   Total   Covered  Percent
+TOTAL                       79       75    94.94
+ALWAYS            155        4        4   100.00
+ALWAYS            172        4        4   100.00
+ALWAYS            194        3        3   100.00
+ALWAYS            203        4        4   100.00
+ALWAYS            224        4        4   100.00
+ALWAYS            234        4        4   100.00
+ALWAYS            256        1        1   100.00
+ALWAYS            263        7        6    85.71
+ALWAYS            277        3        3   100.00
+ALWAYS            289        3        3   100.00
+ALWAYS            306        4        4   100.00
+ALWAYS            347        4        4   100.00
+ALWAYS            360        4        4   100.00
+ALWAYS            393        4        4   100.00
+ALWAYS            403        4        4   100.00
+ALWAYS            426        4        4   100.00
+ALWAYS            445        4        4   100.00
+ALWAYS            480        4        4   100.00
+ALWAYS            499       10        7    70.00
+
+154                         begin : p_ctrl_seq
+155        1/1                if (~PRESETn)
+156        1/1                  wdog_control[1:0] <= 2'b00;
+157                           else
+158        1/1                  if (wdog_ctrl_en)
+159        1/1                    wdog_control[1:0] <= PWDATA[1:0];
+                        MISSING_ELSE
+160                         end
+161                     
+162                       assign wdog_res_en = wdog_control[1];
+163                       assign wdog_int_en = wdog_control[0];
+164                     
+165                       // The counter (in the WDOGCLK domain) needs to be reset to wdog_load
+166                       // when the interrupt is re-enabled.  wdog_int_en_rise will assert for
+167                       // one WDOGCLK cycle after a rising edge on wdog_int_en and is
+168                       // factored into the counter reset
+169                     
+170                       always @ (negedge WDOGRESn or posedge WDOGCLK)
+171                         begin : p_wdog_int_en_reg_seq
+172        1/1                if (~WDOGRESn)
+173        1/1                  wdog_int_en_reg <= 1'b0;
+174                           else
+175        1/1                  if (WDOGCLKEN)
+176        1/1                    wdog_int_en_reg <= wdog_int_en;
+                   ==>  MISSING_ELSE
+177                         end
+178                     
+179                       assign wdog_int_en_rise = wdog_int_en & (~wdog_int_en_reg);
+180                     
+181                     //------------------------------------------------------------------------------
+182                     // wdog_load Register
+183                     //------------------------------------------------------------------------------
+184                     // wdog_load value for Watchdog - when this register is written to,
+185                     // the counter will be loaded with this value before carrying on counting.
+186                     
+187                       // Decode a Watchdog Load write transaction
+188                       assign load_en = (PADDR == `ARM_WDOGLOADA) ?
+189                                        (PWRITE & frc_sel & (~PENABLE) & (~wdog_lock)) : 1'b0;
+190                     
+191                       // Register load_en so it is aligned with the data in the Load register
+192                       always @(negedge PRESETn or posedge PCLK)
+193                       begin : p_load_en_seq
+194        1/1              if (~PRESETn)
+195        1/1                load_en_reg <= 1'b0;
+196                         else
+197        1/1                load_en_reg <= load_en;
+198                       end
+199                     
+200                       // wdog_load register implementation
+201                       always @ (negedge PRESETn or posedge PCLK)
+202                         begin : p_load_seq
+203        1/1                if (~PRESETn)
+204        1/1                  wdog_load <= {32{1'b1}};
+205                           else
+206        1/1                  if (load_en)
+207        1/1                    wdog_load <= PWDATA;
+                        MISSING_ELSE
+208                         end
+209                     
+210                     //------------------------------------------------------------------------------
+211                     // Load enable register
+212                     //------------------------------------------------------------------------------
+213                     // The load_en pulse needs to be sampled into the WDOGCLK domain even if PCLK
+214                     // is subsequently disabled.
+215                     
+216                       // load_req_tog_p is toggled if a new load request is received and there are no
+217                       //  pending load requests. This prevents multiple toggles before the next
+218                       //  WDOGCLK edge.
+219                       assign load_tog_en = load_en_reg & (~load_req_w); // New load request and none pending
+220                     
+221                       // load_tog_en high toggles LoadReqTog on next PCLK
+222                       always @ (negedge PRESETn or posedge PCLK)
+223                         begin : p_load_req_tog_p_seq
+224        1/1                if (~PRESETn)
+225        1/1                  load_req_tog_p <= 1'b0;
+226                           else
+227        1/1                  if (load_tog_en)
+228        1/1                    load_req_tog_p <= (~load_req_tog_p);
+                        MISSING_ELSE
+229                         end
+230                     
+231                       // Register LoadReqTog into WDOGCLK domain
+232                       always @(negedge WDOGRESn or posedge WDOGCLK)
+233                       begin : p_load_req_tog_w_seq
+234        1/1              if (~WDOGRESn)
+235        1/1                load_req_tog_w <= 1'b0;
+236                         else
+237        1/1                if (WDOGCLKEN)
+238        1/1                  load_req_tog_w <= load_req_tog_p;
+                   ==>  MISSING_ELSE
+239                       end
+240                     
+241                       // load_req_w goes high on the PCLK edge after load_tog_en and low on the next
+242                       //  valid WDOGCLK edge
+243                       assign load_req_w = load_req_tog_p ^ load_req_tog_w;
+244                     
+245                     //------------------------------------------------------------------------------
+246                     // 32-bit count down with load.
+247                     //------------------------------------------------------------------------------
+248                     // nxt_count is set to Count when reg_carry = 0 so that loads also change the
+249                     //  value of nxt_count.
+250                     // 32 bit counter is implemented as two 16 bit counters to improve FPGA
+251                     //  implementation.
+252                     
+253                       // Halfword 0, bits 15:0
+254                       always @ (reg_count)
+255                         begin : p_dec0comb
+256        1/1                nxt_count_low[15:0] = (reg_count[15:0] - 1'b1);
+257                         end
+258                     
+259                       always @ (load_req_w or carry_msb or wdog_load or wdog_int_en_rise or
+260                                 int_clr_w or reg_count)
+261                         begin : p_nxt_carry_0_comb
+262                           // Select the value source to be evaluated for the lower half-word
+263        1/1                if (load_req_w | carry_msb | wdog_int_en_rise | int_clr_w)
+264        1/1                  if (wdog_load[15:0] == 16'h0000)
+265        0/1     ==>            nxt_carry_0 = 1'b1;
+266                             else
+267        1/1                    nxt_carry_0 = 1'b0;
+268        1/1                else if (reg_count[15:0] == 16'h0001)
+269        1/1                  nxt_carry_0 = 1'b1;
+270                           else
+271        1/1                  nxt_carry_0 = 1'b0;
+272                         end
+273                     
+274                       // Halfword 1, bits 31:16
+275                       always @ (reg_count or reg_carry)
+276                         begin : p_dec1comb
+277        1/1                if (reg_carry[0])
+278        1/1                  nxt_count_high[15:0] = (reg_count[31:16] - 1'b1);
+279                           else
+280        1/1                  nxt_count_high[15:0] = reg_count[31:16];
+281                         end
+282                     
+283                     // Select the value source to be evaluated for the upper half-word
+284                       assign high_count = (load_req_w | carry_msb | wdog_int_en_rise | int_clr_w) ?
+285                                           wdog_load[31:16] : reg_count[31:16];
+286                     
+287                       always @ (high_count or nxt_carry_0 or carry_msb)
+288                         begin : p_nxt_carry_1_comb
+289        1/1                if ((high_count == 16'h0000) & nxt_carry_0 & (~carry_msb))
+290        1/1                  nxt_carry_1 = 1'b1;
+291                           else
+292        1/1                  nxt_carry_1 = 1'b0;
+293                         end
+294                     
+295                       // Only change reg_carry when counter is enabled (as per setting of
+296                       // count_mux2 below)
+297                       assign nxt_carry_mux = ((wdog_int_en & (~count_stop)) |
+298                                             load_req_w) ? {nxt_carry_1, nxt_carry_0} :
+299                                            reg_carry;
+300                     
+301                       // Registered carry bits to improve timing, enabled by the same
+302                       //  terms as the reg_count register
+303                     
+304                       always @ (negedge WDOGRESn or posedge WDOGCLK)
+305                       begin : p_reg_carry_seq
+306        1/1              if (~WDOGRESn)
+307        1/1                reg_carry <= 2'b00;
+308                         else
+309        1/1                if (WDOGCLKEN)
+310        1/1                  reg_carry <= nxt_carry_mux;
+                   ==>  MISSING_ELSE
+311                       end
+312                     
+313                     
+314                       // The most significant reg_carry bit changes when in 16 or 32-bit counter modes.
+315                       assign carry_msb = reg_carry[1];
+316                     
+317                     //------------------------------------------------------------------------------
+318                     // Counter register
+319                     //------------------------------------------------------------------------------
+320                     // Reloads from Load when carry_msb is set.
+321                     
+322                       // Load the counter with the value from wdog_load when:
+323                       assign count_mux1 = (load_req_w |            // New value written
+324                                           carry_msb |              // Count reaches zero
+325                                           wdog_int_en_rise |         // IRQ output enabled
+326                                           int_clr_w) ? wdog_load :   // IRQ output cleared
+327                                           {nxt_count_high, nxt_count_low}; // Otherwise decrement the counter
+328                     
+329                       // The counter only changes on a valid WDOGCLKEN, when either:
+330                       //   1. The watchdog is enabled, and the counter is not stopped.
+331                       //   2. A new value is loaded.
+332                       assign count_mux2 = ((wdog_int_en & (~count_stop)) |
+333                                           load_req_w) ? count_mux1 :
+334                     
+335                                          reg_count;
+336                     
+337                       // The counter needs to be disabled after the Watchdog has generated a reset.
+338                       // It is re-enabled when a new value is written to the Load register.
+339                       assign count_stop = (i_wdog_res ? 1'b1 :
+340                     
+341                                           load_req_w ? 1'b0 :
+342                     
+343                                           count_stop_reg);
+344                     
+345                       always @ (negedge WDOGRESn or posedge WDOGCLK)
+346                         begin : p_count_stop_seq
+347        1/1                if (~WDOGRESn)
+348        1/1                  count_stop_reg <= 1'b0;
+349                           else
+350        1/1                  if (WDOGCLKEN)
+351        1/1                    count_stop_reg <= count_stop;
+                   ==>  MISSING_ELSE
+352                         end
+353                     
+354                       // Counter registers using rising edge of WDOGCLK.
+355                       // WDOGCLKEN is used to enable the counter.
+356                       // Reset sets all outputs HIGH to avoid interrupt generation at
+357                       //  start.
+358                       always @ (negedge WDOGRESn or posedge WDOGCLK)
+359                         begin : p_count_seq
+360        1/1                if (~WDOGRESn)
+361        1/1                  reg_count <= {32{1'b1}};
+362                           else
+363        1/1                  if (WDOGCLKEN)
+364        1/1                    reg_count <= count_mux2;
+                   ==>  MISSING_ELSE
+365                         end
+366                     
+367                       // count_read is set to the value of wdog_load so that when this
+368                       // register is written to, and then immediately followed by a read
+369                       // from the Count register, the newly loaded value is read back even
+370                       // if no WDOGCLK/WDOGCLKEN edge has yet occurred.
+371                       assign count_read = load_req_w ? wdog_load : reg_count;
+372                     
+373                     //------------------------------------------------------------------------------
+374                     // Interrupt clear
+375                     //------------------------------------------------------------------------------
+376                     // carry_msb can be valid for multiple clock cycles, and may not have cleared
+377                     //  until after an interrupt clear has been asserted, allowing the interrupt
+378                     //  to be entered again. The interrupt clear is extended to ensure that it
+379                     //  remains valid until the interrupt is actually cleared in the WDOGCLK
+380                     //  domain. A toggle based handshake is used in case PCLK is removed before
+381                     //  the interrupt clear operation is complete.
+382                     
+383                       // Decode IntClr transaction
+384                       assign int_clr_en = ((~int_clr_w) &                  // No pending IntClr operation
+385                                          PWRITE & frc_sel & (~PENABLE) & (~wdog_lock) &
+386                                          (PADDR == `ARM_WDOGCLEARA)) ? 1'b1 :
+387                                          1'b0;
+388                     
+389                     
+390                       // IntClr high toggles int_clr_tog_p on next PCLK
+391                       always @(negedge PRESETn or posedge PCLK)
+392                       begin : p_int_clr_tog_p_seq
+393        1/1              if (~PRESETn)
+394        1/1                int_clr_tog_p <= 1'b0;
+395                         else
+396        1/1                if (int_clr_en)
+397        1/1                  int_clr_tog_p <= (~int_clr_tog_p);
+                        MISSING_ELSE
+398                       end
+399                     
+400                       // Register int_clr_tog_p into WDOGCLK domain
+401                       always @(negedge WDOGRESn or posedge WDOGCLK)
+402                       begin : p_int_clr_tog_w_seq
+403        1/1              if (~WDOGRESn)
+404        1/1                int_clr_tog_w <= 1'b0;
+405                         else
+406        1/1                if (WDOGCLKEN)
+407        1/1                  int_clr_tog_w <= int_clr_tog_p;
+                   ==>  MISSING_ELSE
+408                       end
+409                     
+410                       // int_clr_pulse is high on PCLK edge, low on WDOGCLK edge
+411                       assign int_clr_pulse = int_clr_tog_p ^ int_clr_tog_w;
+412                     
+413                       // int_clr_w is used to clear the interrupt. It is asserted when the APB IntClr
+414                       //  transaction is detected and de-asserted when the counter is no longer zero
+415                       //  (to prevent multiple interrupts from one counter event).
+416                       assign int_clr_w = (int_clr_pulse ? 1'b1 : // IntClr transaction sampled into
+417                                                              //  WDOGCLK domain
+418                     
+419                                         (~carry_msb) ? 1'b0 :   // Counter no longer zero
+420                     
+421                                         int_clr_reg_w);
+422                     
+423                       // Register int_clr_w to hold it until counter is non-zero.
+424                       always @(negedge WDOGRESn or posedge WDOGCLK)
+425                       begin : p_int_clr_reg_seq
+426        1/1              if (~WDOGRESn)
+427        1/1                int_clr_reg_w <= 1'b0;
+428                         else
+429        1/1                if (WDOGCLKEN)
+430        1/1                  int_clr_reg_w <= int_clr_w;
+                   ==>  MISSING_ELSE
+431                       end
+432                     
+433                     //------------------------------------------------------------------------------
+434                     // Interrupt generation
+435                     //------------------------------------------------------------------------------
+436                     
+437                       // The interrupt is generated (HIGH) when the counter reaches zero.
+438                       // The interrupt is cleared (LOW) when the WdogIntClr address is written to.
+439                       assign nxt_wdog_ris = (carry_msb | wdog_ris) & (~int_clr_w);
+440                     
+441                       // Register and hold interrupt until cleared.  WDOGCLK is used to ensure that
+442                       //  an interrupt is still generated even if PCLK is disabled.
+443                       always @ (negedge WDOGRESn or posedge WDOGCLK)
+444                         begin : p_int_seq
+445        1/1                if (~WDOGRESn)
+446        1/1                  wdog_ris <= 1'b0;
+447                           else
+448        1/1                  if (WDOGCLKEN)
+449        1/1                    wdog_ris <= nxt_wdog_ris;
+                   ==>  MISSING_ELSE
+450                         end
+451                     
+452                       // Factor int_clr_w into version of raw interrupt status which is read
+453                       // back from the RIS register so that a read from RIS or MIS will
+454                       // show the cleared value immediately
+455                       assign read_wdog_ris = wdog_ris & (~int_clr_w);
+456                     
+457                       // Gate raw interrupt with enable bit
+458                       assign wdog_mis = read_wdog_ris & wdog_int_en;
+459                     
+460                       // Drive output with internal signal
+461                       assign WDOGINT = wdog_mis;
+462                     
+463                     //----------------------------------------------------------------------------
+464                     // Reset generation
+465                     //----------------------------------------------------------------------------
+466                     
+467                       // The reset output is activated when the counter reaches zero and the
+468                       //  interrupt output is active, indicating that the counter has previously
+469                       //  reached zero but not been serviced.
+470                       assign nxt_wdog_res = ((~wdog_res_en) ? 1'b0 :            // Watchdog reset disabled
+471                     
+472                                            (wdog_ris & carry_msb) ? 1'b1 : // Raw IRQ asserted and
+473                                                                           // Counter is zero
+474                     
+475                                            i_wdog_res);
+476                     
+477                       // WdogRes register
+478                       always @ (negedge WDOGRESn or posedge WDOGCLK)
+479                         begin : p_res_seq
+480        1/1                if (~WDOGRESn)
+481        1/1                  i_wdog_res <= 1'b0;
+482                           else
+483        1/1                  if (WDOGCLKEN)
+484        1/1                    i_wdog_res <= nxt_wdog_res;
+                   ==>  MISSING_ELSE
+485                         end
+486                     
+487                       // Drive reset output
+488                       assign WDOGRES = i_wdog_res;
+489                     
+490                     //------------------------------------------------------------------------------
+491                     // Output data generation
+492                     //------------------------------------------------------------------------------
+493                     // Zero data is used as padding for other register reads
+494                     
+495                       always @ (PWRITE or frc_sel or PADDR or wdog_load or count_read or
+496                                 wdog_control or read_wdog_ris or wdog_mis)
+497                         begin : p_frc_data_comb
+498                     
+499        1/1                frc_data = {32{1'b0}}; // Drive zeros by default
+500                     
+501        1/1                if ((~PWRITE) & frc_sel)
+502        1/1                  case (PADDR)
+503                               `ARM_WDOGLOADA :
+504                                 // wdog_load address
+505        1/1                      frc_data = wdog_load;
+506                     
+507                               `ARM_WDOGVALUEA :
+508                                 // WdogValue address
+509        0/1     ==>              frc_data = count_read;
+510                     
+511                               `ARM_WDOGCONTROLA :
+512                                 // wdog_control address
+513        1/1                      frc_data[1:0] = wdog_control[1:0];
+514                     
+515                               `ARM_WDOGINTRAWA :
+516                                 // wdog_ris address
+517        0/1     ==>              frc_data[0] = read_wdog_ris;
+518                     
+519                               `ARM_WDOGINTA :
+520                                 // wdog_mis address
+521        1/1                      frc_data[0] = wdog_mis;
+522                     
+523                               default:
+524        0/1     ==>              frc_data = {32{1'b0}};
+525                     
+526                             endcase
+527                           else
+528        1/1                  frc_data = {32{1'b0}};
+
+-------------------------------------------------------------------------------
+Cond Coverage for Module : cmsdk_apb_watchdog_frc
+
+               Total   Covered  Percent
+Conditions         28       26    92.86
+Logical            28       26    92.86
+Non-Logical         0        0
+Event               0        0
+
+ LINE       150
+ EXPRESSION ((PADDR == 3'b010) ? ((((PWRITE & frc_sel) & (~PENABLE)) & (~wdog_lock))) : 1'b0)
+             --------1--------
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       188
+ EXPRESSION ((PADDR == 3'b0) ? ((((PWRITE & frc_sel) & (~PENABLE)) & (~wdog_lock))) : 1'b0)
+             -------1-------
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       284
+ EXPRESSION (((((load_req_w | carry_msb) | wdog_int_en_rise) | int_clr_w)) ? wdog_load[31:16] : reg_count[31:16])
+             ------------------------------1------------------------------
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       297
+ EXPRESSION ((((wdog_int_en & (~count_stop)) | load_req_w)) ? ({nxt_carry_1, nxt_carry_0}) : reg_carry)
+             -----------------------1----------------------
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       323
+ EXPRESSION (((((load_req_w | carry_msb) | wdog_int_en_rise) | int_clr_w)) ? wdog_load : ({nxt_count_high, nxt_count_low}))
+             ------------------------------1------------------------------
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       332
+ EXPRESSION ((((wdog_int_en & (~count_stop)) | load_req_w)) ? count_mux1 : reg_count)
+             -----------------------1----------------------
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       339
+ EXPRESSION (i_wdog_res ? 1'b1 : (load_req_w ? 1'b0 : count_stop_reg))
+             -----1----
+
+-1- Status
+ 0  Covered
+ 1  Not Covered
+
+ LINE       339
+ SUB-EXPRESSION (load_req_w ? 1'b0 : count_stop_reg)
+                 -----1----
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       371
+ EXPRESSION (load_req_w ? wdog_load : reg_count)
+             -----1----
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       384
+ EXPRESSION ((((((((~int_clr_w) & PWRITE) & frc_sel) & (~PENABLE)) & (~wdog_lock)) & (PADDR == 3'b011))) ? 1'b1 : 1'b0)
+             ---------------------------------------------1---------------------------------------------
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       416
+ EXPRESSION (int_clr_pulse ? 1'b1 : (((~carry_msb)) ? 1'b0 : int_clr_reg_w))
+             ------1------
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       416
+ SUB-EXPRESSION (((~carry_msb)) ? 1'b0 : int_clr_reg_w)
+                 -------1------
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       470
+ EXPRESSION (((~wdog_res_en)) ? 1'b0 : (((wdog_ris & carry_msb)) ? 1'b1 : i_wdog_res))
+             --------1-------
+
+-1- Status
+ 0  Covered
+ 1  Covered
+
+ LINE       470
+ SUB-EXPRESSION (((wdog_ris & carry_msb)) ? 1'b1 : i_wdog_res)
+                 ------------1-----------
+
+-1- Status
+ 0  Covered
+ 1  Not Covered
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : cmsdk_apb_watchdog_frc
+                Total Covered Percent 
+Totals          53    32      60.38   
+Total Bits      640   418     65.31   
+Total Bits 0->1 320   145     45.31   
+Total Bits 1->0 320   273     85.31   
+
+                              
+Ports          14  9   64.29  
+Port Bits      156 101 64.74  
+Port Bits 0->1 78  51  65.38  
+Port Bits 1->0 78  50  64.10  
+
+                                
+Signals          39  23  58.97  
+Signal Bits      484 317 65.50  
+Signal Bits 0->1 242 94  38.84  
+Signal Bits 1->0 242 223 92.15  
+
+Port Details
+               Toggle Toggle 1->0 Toggle 0->1 Direction 
+PCLK           Yes    Yes         Yes         INPUT     
+PRESETn        Yes    Yes         Yes         INPUT     
+PENABLE        Yes    Yes         Yes         INPUT     
+PADDR[2]       No     No          Yes         INPUT     
+PADDR[4:3]     Yes    Yes         Yes         INPUT     
+PWRITE         Yes    Yes         Yes         INPUT     
+PWDATA[7:0]    Yes    Yes         Yes         INPUT     
+PWDATA[31:8]   No     No          No          INPUT     
+frc_sel        Yes    Yes         Yes         INPUT     
+wdog_lock      No     No          No          INPUT     
+WDOGCLK        Yes    Yes         Yes         INPUT     
+WDOGCLKEN      No     No          No          INPUT     
+WDOGRESn       Yes    Yes         Yes         INPUT     
+WDOGINT        Yes    Yes         Yes         OUTPUT    
+WDOGRES        No     No          No          OUTPUT    
+frc_data[31:0] Yes    Yes         Yes         OUTPUT    
+
+Signal Details
+                     Toggle Toggle 1->0 Toggle 0->1 
+wdog_ctrl_en         Yes    Yes         Yes         
+wdog_control[1:0]    No     No          Yes         
+load_en              Yes    Yes         Yes         
+load_en_reg          Yes    Yes         Yes         
+wdog_load[7:0]       No     No          No          
+wdog_load[31:8]      No     Yes         No          
+load_tog_en          Yes    Yes         Yes         
+load_req_tog_p       No     No          Yes         
+load_req_tog_w       No     No          Yes         
+load_req_w           Yes    Yes         Yes         
+count_stop           No     No          No          
+count_stop_reg       No     No          No          
+nxt_count_low[15:0]  Yes    Yes         Yes         
+nxt_count_high[15:0] Yes    Yes         Yes         
+nxt_carry_0          Yes    Yes         Yes         
+nxt_carry_1          Yes    Yes         Yes         
+nxt_carry_mux[1:0]   Yes    Yes         Yes         
+reg_carry[1:0]       Yes    Yes         Yes         
+carry_msb            Yes    Yes         Yes         
+count_mux1[7:0]      Yes    Yes         Yes         
+count_mux1[31:8]     No     Yes         No          
+count_mux2[7:0]      Yes    Yes         Yes         
+count_mux2[31:8]     No     Yes         No          
+reg_count[7:0]       Yes    Yes         Yes         
+reg_count[31:8]      No     Yes         No          
+count_read[7:0]      Yes    Yes         Yes         
+count_read[31:8]     No     Yes         No          
+high_count[15:0]     No     Yes         No          
+wdog_int_en          No     No          Yes         
+wdog_int_en_reg      No     No          Yes         
+wdog_int_en_rise     Yes    Yes         Yes         
+wdog_res_en          No     No          Yes         
+i_wdog_res           No     No          No          
+nxt_wdog_res         No     No          No          
+int_clr_en           Yes    Yes         Yes         
+int_clr_tog_p        Yes    Yes         Yes         
+int_clr_tog_w        Yes    Yes         Yes         
+int_clr_pulse        Yes    Yes         Yes         
+int_clr_w            Yes    Yes         Yes         
+int_clr_reg_w        Yes    Yes         Yes         
+nxt_wdog_ris         Yes    Yes         Yes         
+wdog_ris             Yes    Yes         Yes         
+read_wdog_ris        Yes    Yes         Yes         
+wdog_mis             Yes    Yes         Yes         
+
+
+-------------------------------------------------------------------------------
+Branch Coverage for Module : cmsdk_apb_watchdog_frc
+         Line No. Total Covered Percent 
+Branches          81    66      81.48   
+TERNARY  150      2     2       100.00  
+TERNARY  188      2     2       100.00  
+TERNARY  284      2     2       100.00  
+TERNARY  297      2     2       100.00  
+TERNARY  323      2     2       100.00  
+TERNARY  332      2     2       100.00  
+TERNARY  339      3     2       66.67   
+TERNARY  371      2     2       100.00  
+TERNARY  384      2     2       100.00  
+TERNARY  416      3     3       100.00  
+TERNARY  470      3     2       66.67   
+IF       155      3     3       100.00  
+IF       172      3     2       66.67   
+IF       194      2     2       100.00  
+IF       203      3     3       100.00  
+IF       224      3     3       100.00  
+IF       234      3     2       66.67   
+IF       263      4     3       75.00   
+IF       277      2     2       100.00  
+IF       289      2     2       100.00  
+IF       306      3     2       66.67   
+IF       347      3     2       66.67   
+IF       360      3     2       66.67   
+IF       393      3     3       100.00  
+IF       403      3     2       66.67   
+IF       426      3     2       66.67   
+IF       445      3     2       66.67   
+IF       480      3     2       66.67   
+IF       501      7     4       57.14   
+
+
+150          assign wdog_ctrl_en = (PADDR == `ARM_WDOGCONTROLA) ?
+                                                                -1-  
+                                                                ==>  
+                                                                ==>  
+
+Branches:
+
+-1- Status  
+1   Covered 
+0   Covered 
+
+
+188          assign load_en = (PADDR == `ARM_WDOGLOADA) ?
+                                                        -1-  
+                                                        ==>  
+                                                        ==>  
+
+Branches:
+
+-1- Status  
+1   Covered 
+0   Covered 
+
+
+284          assign high_count = (load_req_w | carry_msb | wdog_int_en_rise | int_clr_w) ?
+                                                                                         -1-  
+                                                                                         ==>  
+                                                                                         ==>  
+
+Branches:
+
+-1- Status  
+1   Covered 
+0   Covered 
+
+
+297          assign nxt_carry_mux = ((wdog_int_en & (~count_stop)) |
+                                                                    
+298                                load_req_w) ? {nxt_carry_1, nxt_carry_0} :
+                                               -1-  
+                                               ==>  
+                                               ==>  
+
+Branches:
+
+-1- Status  
+1   Covered 
+0   Covered 
+
+
+323          assign count_mux1 = (load_req_w |            // New value written
+                                                                              
+324                              carry_msb |              // Count reaches zero
+                                                                               
+325                              wdog_int_en_rise |         // IRQ output enabled
+                                                                                 
+326                              int_clr_w) ? wdog_load :   // IRQ output cleared
+                                            -1-  
+                                            ==>  
+                                            ==>  
+
+Branches:
+
+-1- Status  
+1   Covered 
+0   Covered 
+
+
+332          assign count_mux2 = ((wdog_int_en & (~count_stop)) |
+                                                                 
+333                              load_req_w) ? count_mux1 :
+                                             -1-  
+                                             ==>  
+                                             ==>  
+
+Branches:
+
+-1- Status  
+1   Covered 
+0   Covered 
+
+
+339          assign count_stop = (i_wdog_res ? 1'b1 :
+                                             -1-  
+                                             ==>  
+340        
+           
+341                              load_req_w ? 1'b0 :
+                                            -2-  
+                                            ==>  
+                                            ==>  
+
+Branches:
+
+-1- -2- Status      
+1   -   Not Covered 
+0   1   Covered     
+0   0   Covered     
+
+
+371          assign count_read = load_req_w ? wdog_load : reg_count;
+                                            -1-  
+                                            ==>  
+                                            ==>  
+
+Branches:
+
+-1- Status  
+1   Covered 
+0   Covered 
+
+
+384          assign int_clr_en = ((~int_clr_w) &                  // No pending IntClr operation
+                                                                                                
+385                             PWRITE & frc_sel & (~PENABLE) & (~wdog_lock) &
+                                                                              
+386                             (PADDR == `ARM_WDOGCLEARA)) ? 1'b1 :
+                                                            -1-  
+                                                            ==>  
+                                                            ==>  
+
+Branches:
+
+-1- Status  
+1   Covered 
+0   Covered 
+
+
+416          assign int_clr_w = (int_clr_pulse ? 1'b1 : // IntClr transaction sampled into
+                                               -1-  
+                                               ==>  
+417                                                 //  WDOGCLK domain
+                                                                      
+418        
+           
+419                            (~carry_msb) ? 1'b0 :   // Counter no longer zero
+                                            -2-  
+                                            ==>  
+                                            ==>  
+
+Branches:
+
+-1- -2- Status  
+1   -   Covered 
+0   1   Covered 
+0   0   Covered 
+
+
+470          assign nxt_wdog_res = ((~wdog_res_en) ? 1'b0 :            // Watchdog reset disabled
+                                                   -1-  
+                                                   ==>  
+471        
+           
+472                               (wdog_ris & carry_msb) ? 1'b1 : // Raw IRQ asserted and
+                                                         -2-  
+                                                         ==>  
+                                                         ==>  
+
+Branches:
+
+-1- -2- Status      
+1   -   Covered     
+0   1   Not Covered 
+0   0   Covered     
+
+
+155              if (~PRESETn)
+                 -1-  
+156                wdog_control[1:0] <= 2'b00;
+                   ==>
+157              else
+158                if (wdog_ctrl_en)
+                   -2-  
+159                  wdog_control[1:0] <= PWDATA[1:0];
+                     ==>
+                     MISSING_ELSE
+                     ==>
+
+Branches:
+
+-1- -2- Status  
+1   -   Covered 
+0   1   Covered 
+0   0   Covered 
+
+
+172              if (~WDOGRESn)
+                 -1-  
+173                wdog_int_en_reg <= 1'b0;
+                   ==>
+174              else
+175                if (WDOGCLKEN)
+                   -2-  
+176                  wdog_int_en_reg <= wdog_int_en;
+                     ==>
+                     MISSING_ELSE
+                     ==>
+
+Branches:
+
+-1- -2- Status      
+1   -   Covered     
+0   1   Covered     
+0   0   Not Covered 
+
+
+194            if (~PRESETn)
+               -1-  
+195              load_en_reg <= 1'b0;
+                 ==>
+196            else
+197              load_en_reg <= load_en;
+                 ==>
+
+Branches:
+
+-1- Status  
+1   Covered 
+0   Covered 
+
+
+203              if (~PRESETn)
+                 -1-  
+204                wdog_load <= {32{1'b1}};
+                   ==>
+205              else
+206                if (load_en)
+                   -2-  
+207                  wdog_load <= PWDATA;
+                     ==>
+                     MISSING_ELSE
+                     ==>
+
+Branches:
+
+-1- -2- Status  
+1   -   Covered 
+0   1   Covered 
+0   0   Covered 
+
+
+224              if (~PRESETn)
+                 -1-  
+225                load_req_tog_p <= 1'b0;
+                   ==>
+226              else
+227                if (load_tog_en)
+                   -2-  
+228                  load_req_tog_p <= (~load_req_tog_p);
+                     ==>
+                     MISSING_ELSE
+                     ==>
+
+Branches:
+
+-1- -2- Status  
+1   -   Covered 
+0   1   Covered 
+0   0   Covered 
+
+
+234            if (~WDOGRESn)
+               -1-  
+235              load_req_tog_w <= 1'b0;
+                 ==>
+236            else
+237              if (WDOGCLKEN)
+                 -2-  
+238                load_req_tog_w <= load_req_tog_p;
+                   ==>
+                   MISSING_ELSE
+                   ==>
+
+Branches:
+
+-1- -2- Status      
+1   -   Covered     
+0   1   Covered     
+0   0   Not Covered 
+
+
+263              if (load_req_w | carry_msb | wdog_int_en_rise | int_clr_w)
+                 -1-  
+264                if (wdog_load[15:0] == 16'h0000)
+                   -2-  
+265                  nxt_carry_0 = 1'b1;
+                     ==>
+266                else
+267                  nxt_carry_0 = 1'b0;
+                     ==>
+268              else if (reg_count[15:0] == 16'h0001)
+                      -3-  
+269                nxt_carry_0 = 1'b1;
+                   ==>
+270              else
+271                nxt_carry_0 = 1'b0;
+                   ==>
+
+Branches:
+
+-1- -2- -3- Status      
+1   1   -   Not Covered 
+1   0   -   Covered     
+0   -   1   Covered     
+0   -   0   Covered     
+
+
+277              if (reg_carry[0])
+                 -1-  
+278                nxt_count_high[15:0] = (reg_count[31:16] - 1'b1);
+                   ==>
+279              else
+280                nxt_count_high[15:0] = reg_count[31:16];
+                   ==>
+
+Branches:
+
+-1- Status  
+1   Covered 
+0   Covered 
+
+
+289              if ((high_count == 16'h0000) & nxt_carry_0 & (~carry_msb))
+                 -1-  
+290                nxt_carry_1 = 1'b1;
+                   ==>
+291              else
+292                nxt_carry_1 = 1'b0;
+                   ==>
+
+Branches:
+
+-1- Status  
+1   Covered 
+0   Covered 
+
+
+306            if (~WDOGRESn)
+               -1-  
+307              reg_carry <= 2'b00;
+                 ==>
+308            else
+309              if (WDOGCLKEN)
+                 -2-  
+310                reg_carry <= nxt_carry_mux;
+                   ==>
+                   MISSING_ELSE
+                   ==>
+
+Branches:
+
+-1- -2- Status      
+1   -   Covered     
+0   1   Covered     
+0   0   Not Covered 
+
+
+347              if (~WDOGRESn)
+                 -1-  
+348                count_stop_reg <= 1'b0;
+                   ==>
+349              else
+350                if (WDOGCLKEN)
+                   -2-  
+351                  count_stop_reg <= count_stop;
+                     ==>
+                     MISSING_ELSE
+                     ==>
+
+Branches:
+
+-1- -2- Status      
+1   -   Covered     
+0   1   Covered     
+0   0   Not Covered 
+
+
+360              if (~WDOGRESn)
+                 -1-  
+361                reg_count <= {32{1'b1}};
+                   ==>
+362              else
+363                if (WDOGCLKEN)
+                   -2-  
+364                  reg_count <= count_mux2;
+                     ==>
+                     MISSING_ELSE
+                     ==>
+
+Branches:
+
+-1- -2- Status      
+1   -   Covered     
+0   1   Covered     
+0   0   Not Covered 
+
+
+393            if (~PRESETn)
+               -1-  
+394              int_clr_tog_p <= 1'b0;
+                 ==>
+395            else
+396              if (int_clr_en)
+                 -2-  
+397                int_clr_tog_p <= (~int_clr_tog_p);
+                   ==>
+                   MISSING_ELSE
+                   ==>
+
+Branches:
+
+-1- -2- Status  
+1   -   Covered 
+0   1   Covered 
+0   0   Covered 
+
+
+403            if (~WDOGRESn)
+               -1-  
+404              int_clr_tog_w <= 1'b0;
+                 ==>
+405            else
+406              if (WDOGCLKEN)
+                 -2-  
+407                int_clr_tog_w <= int_clr_tog_p;
+                   ==>
+                   MISSING_ELSE
+                   ==>
+
+Branches:
+
+-1- -2- Status      
+1   -   Covered     
+0   1   Covered     
+0   0   Not Covered 
+
+
+426            if (~WDOGRESn)
+               -1-  
+427              int_clr_reg_w <= 1'b0;
+                 ==>
+428            else
+429              if (WDOGCLKEN)
+                 -2-  
+430                int_clr_reg_w <= int_clr_w;
+                   ==>
+                   MISSING_ELSE
+                   ==>
+
+Branches:
+
+-1- -2- Status      
+1   -   Covered     
+0   1   Covered     
+0   0   Not Covered 
+
+
+445              if (~WDOGRESn)
+                 -1-  
+446                wdog_ris <= 1'b0;
+                   ==>
+447              else
+448                if (WDOGCLKEN)
+                   -2-  
+449                  wdog_ris <= nxt_wdog_ris;
+                     ==>
+                     MISSING_ELSE
+                     ==>
+
+Branches:
+
+-1- -2- Status      
+1   -   Covered     
+0   1   Covered     
+0   0   Not Covered 
+
+
+480              if (~WDOGRESn)
+                 -1-  
+481                i_wdog_res <= 1'b0;
+                   ==>
+482              else
+483                if (WDOGCLKEN)
+                   -2-  
+484                  i_wdog_res <= nxt_wdog_res;
+                     ==>
+                     MISSING_ELSE
+                     ==>
+
+Branches:
+
+-1- -2- Status      
+1   -   Covered     
+0   1   Covered     
+0   0   Not Covered 
+
+
+501              if ((~PWRITE) & frc_sel)
+                 -1-  
+502                case (PADDR)
+                   -2-  
+503                  `ARM_WDOGLOADA :
+504                    // wdog_load address
+505                    frc_data = wdog_load;
+                       ==>
+506        
+507                  `ARM_WDOGVALUEA :
+508                    // WdogValue address
+509                    frc_data = count_read;
+                       ==>
+510        
+511                  `ARM_WDOGCONTROLA :
+512                    // wdog_control address
+513                    frc_data[1:0] = wdog_control[1:0];
+                       ==>
+514        
+515                  `ARM_WDOGINTRAWA :
+516                    // wdog_ris address
+517                    frc_data[0] = read_wdog_ris;
+                       ==>
+518        
+519                  `ARM_WDOGINTA :
+520                    // wdog_mis address
+521                    frc_data[0] = wdog_mis;
+                       ==>
+522        
+523                  default:
+524                    frc_data = {32{1'b0}};
+                       ==>
+525        
+526                endcase
+527              else
+528                frc_data = {32{1'b0}};
+                   ==>
+
+Branches:
+
+-1- -2-     Status      
+1   3'b000  Covered     
+1   3'b001  Not Covered 
+1   3'b010  Covered     
+1   3'b100  Not Covered 
+1   3'b101  Covered     
+1   default Not Covered 
+0   -       Covered     
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : rkv_watchdog_tb.dut.u_apb_watchdog_frc
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 83.65  94.94  92.86  65.31 --      81.48 --     
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 83.65  94.94  92.86  65.31 --      81.48 --     
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME                   
+ 83.65  94.94  92.86  65.31 --      81.48 --     cmsdk_apb_watchdog_frc 
+
+
+Parent : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME 
+ 60.54  59.46  57.14  73.28 --      52.27 --     dut  
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : rkv_watchdog_tb
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+100.00 100.00 --     100.00 --     --     --     
+
+Source File(s) : 
+
+/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../tb/rkv_watchdog_tb.sv
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME            
+100.00 100.00 --     100.00 --     --     --     rkv_watchdog_tb 
+
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Module : rkv_watchdog_tb
+
+             Line No.   Total   Covered  Percent
+TOTAL                       20       20   100.00
+INITIAL            43        6        6   100.00
+INITIAL            50        9        9   100.00
+INITIAL            60        5        5   100.00
+
+43                        fork
+44         3/3              forever #5ns  apb_clk <= !apb_clk; // 100MHz
+45         3/3              forever #25ns wdg_clk <= !wdg_clk; // 20MHz
+46                        join
+47                      end
+48                      
+49                      initial begin : rstn_gen
+50         2/2            #2ns;
+51         1/1            apb_rstn <= 1;
+52         2/2            #20ns;
+53         1/1            apb_rstn <= 0;
+54         2/2            #20ns;
+55         1/1            apb_rstn <= 1;
+56                      end
+57                      assign wdg_rstn = apb_rstn;
+58                      
+59                      initial begin : vif_assign
+60         1/1            uvm_config_db#(virtual apb_if)::set(uvm_root::get(), "uvm_test_top.env.apb_mst", "vif", apb_if_inst);
+61         1/1            uvm_config_db#(virtual rkv_watchdog_if)::set(uvm_root::get(), "uvm_test_top", "vif", wdg_if_inst);
+62         1/1            uvm_config_db#(virtual rkv_watchdog_if)::set(uvm_root::get(), "uvm_test_top.env", "vif", wdg_if_inst);
+63         1/1            uvm_config_db#(virtual rkv_watchdog_if)::set(uvm_root::get(), "uvm_test_top.env.virt_sqr", "vif", wdg_if_inst);
+64         1/1            run_test("");
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : rkv_watchdog_tb
+                Total Covered Percent 
+Totals          4     4       100.00  
+Total Bits      8     8       100.00  
+Total Bits 0->1 4     4       100.00  
+Total Bits 1->0 4     4       100.00  
+
+                            
+Signals          4 4 100.00 
+Signal Bits      8 8 100.00 
+Signal Bits 0->1 4 4 100.00 
+Signal Bits 1->0 4 4 100.00 
+
+Signal Details
+         Toggle Toggle 1->0 Toggle 0->1 
+apb_clk  Yes    Yes         Yes         
+apb_rstn Yes    Yes         Yes         
+wdg_clk  Yes    Yes         Yes         
+wdg_rstn Yes    Yes         Yes         
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : rkv_watchdog_tb
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+100.00 100.00 --     100.00 --     --     --     
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 73.03  87.07  80.95  64.74 --      70.87  61.54 
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME            
+100.00 100.00 --     100.00 --     --     --     rkv_watchdog_tb 
+
+
+Parent : 
+
+none
+----------------
+
+
+Subtrees :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME        
+ 64.41 100.00 --      46.12 --      50.00  61.54 apb_if_inst 
+ 76.05  83.62  80.95  68.42 --      71.20 --     dut         
+ 50.00 --     --      50.00 --     --     --     wdg_if_inst 
+
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.

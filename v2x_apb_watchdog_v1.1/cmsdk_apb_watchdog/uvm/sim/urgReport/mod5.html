@@ -1,0 +1,2191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: cmsdk_apb_watchdog_frc</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_cmsdk_apb_watchdog_frc'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_cmsdk_apb_watchdog_frc')">cmsdk_apb_watchdog_frc</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s8 cl rt"> 83.65</td>
+<td class="s9 cl rt"><a href="mod5.html#Line" > 94.94</a></td>
+<td class="s9 cl rt"><a href="mod5.html#Cond" > 92.86</a></td>
+<td class="s6 cl rt"><a href="mod5.html#Toggle" > 65.31</a></td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"><a href="mod5.html#Branch" > 81.48</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../../verilog/cmsdk_apb_watchdog_frc.v')">/home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../../verilog/cmsdk_apb_watchdog_frc.v</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod5.html#inst_tag_5"  onclick="showContent('inst_tag_5')">rkv_watchdog_tb.dut.u_apb_watchdog_frc</a></td>
+<td class="s8 cl rt"> 83.65</td>
+<td class="s9 cl rt"><a href="mod5.html#Line" > 94.94</a></td>
+<td class="s9 cl rt"><a href="mod5.html#Cond" > 92.86</a></td>
+<td class="s6 cl rt"><a href="mod5.html#Toggle" > 65.31</a></td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"><a href="mod5.html#Branch" > 81.48</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_cmsdk_apb_watchdog_frc'>
+<hr>
+<a name="inst_tag_5"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_5" >rkv_watchdog_tb.dut.u_apb_watchdog_frc</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s8 cl rt"> 83.65</td>
+<td class="s9 cl rt"><a href="mod5.html#Line" > 94.94</a></td>
+<td class="s9 cl rt"><a href="mod5.html#Cond" > 92.86</a></td>
+<td class="s6 cl rt"><a href="mod5.html#Toggle" > 65.31</a></td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"><a href="mod5.html#Branch" > 81.48</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s8 cl rt"> 83.65</td>
+<td class="s9 cl rt"> 94.94</td>
+<td class="s9 cl rt"> 92.86</td>
+<td class="s6 cl rt"> 65.31</td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"> 81.48</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s6 cl rt"> 60.54</td>
+<td class="s5 cl rt"> 59.46</td>
+<td class="s5 cl rt"> 57.14</td>
+<td class="s7 cl rt"> 73.28</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 52.27</td>
+<td class="wht cl rt"></td>
+<td><a href="mod10.html#inst_tag_10" >dut</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td colspan=8>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_cmsdk_apb_watchdog_frc'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod5.html" >cmsdk_apb_watchdog_frc</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>79</td><td>75</td><td>94.94</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>155</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>172</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>194</td><td>3</td><td>3</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>203</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>224</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>234</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>256</td><td>1</td><td>1</td><td>100.00</td></tr>
+<tr class="s8"><td class="lf">ALWAYS</td><td>263</td><td>7</td><td>6</td><td>85.71</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>277</td><td>3</td><td>3</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>289</td><td>3</td><td>3</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>306</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>347</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>360</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>393</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>403</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>426</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>445</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>480</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s7"><td class="lf">ALWAYS</td><td>499</td><td>10</td><td>7</td><td>70.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+154                         begin : p_ctrl_seq
+155        1/1                if (~PRESETn)
+156        1/1                  wdog_control[1:0] &lt;= 2'b00;
+157                           else
+158        1/1                  if (wdog_ctrl_en)
+159        1/1                    wdog_control[1:0] &lt;= PWDATA[1:0];
+                        MISSING_ELSE
+160                         end
+161                     
+162                       assign wdog_res_en = wdog_control[1];
+163                       assign wdog_int_en = wdog_control[0];
+164                     
+165                       // The counter (in the WDOGCLK domain) needs to be reset to wdog_load
+166                       // when the interrupt is re-enabled.  wdog_int_en_rise will assert for
+167                       // one WDOGCLK cycle after a rising edge on wdog_int_en and is
+168                       // factored into the counter reset
+169                     
+170                       always @ (negedge WDOGRESn or posedge WDOGCLK)
+171                         begin : p_wdog_int_en_reg_seq
+172        1/1                if (~WDOGRESn)
+173        1/1                  wdog_int_en_reg &lt;= 1'b0;
+174                           else
+175        1/1                  if (WDOGCLKEN)
+176        1/1                    wdog_int_en_reg &lt;= wdog_int_en;
+                   <font color = "red">==>  MISSING_ELSE</font>
+177                         end
+178                     
+179                       assign wdog_int_en_rise = wdog_int_en &amp; (~wdog_int_en_reg);
+180                     
+181                     //------------------------------------------------------------------------------
+182                     // wdog_load Register
+183                     //------------------------------------------------------------------------------
+184                     // wdog_load value for Watchdog - when this register is written to,
+185                     // the counter will be loaded with this value before carrying on counting.
+186                     
+187                       // Decode a Watchdog Load write transaction
+188                       assign load_en = (PADDR == `ARM_WDOGLOADA) ?
+189                                        (PWRITE &amp; frc_sel &amp; (~PENABLE) &amp; (~wdog_lock)) : 1'b0;
+190                     
+191                       // Register load_en so it is aligned with the data in the Load register
+192                       always @(negedge PRESETn or posedge PCLK)
+193                       begin : p_load_en_seq
+194        1/1              if (~PRESETn)
+195        1/1                load_en_reg &lt;= 1'b0;
+196                         else
+197        1/1                load_en_reg &lt;= load_en;
+198                       end
+199                     
+200                       // wdog_load register implementation
+201                       always @ (negedge PRESETn or posedge PCLK)
+202                         begin : p_load_seq
+203        1/1                if (~PRESETn)
+204        1/1                  wdog_load &lt;= {32{1'b1}};
+205                           else
+206        1/1                  if (load_en)
+207        1/1                    wdog_load &lt;= PWDATA;
+                        MISSING_ELSE
+208                         end
+209                     
+210                     //------------------------------------------------------------------------------
+211                     // Load enable register
+212                     //------------------------------------------------------------------------------
+213                     // The load_en pulse needs to be sampled into the WDOGCLK domain even if PCLK
+214                     // is subsequently disabled.
+215                     
+216                       // load_req_tog_p is toggled if a new load request is received and there are no
+217                       //  pending load requests. This prevents multiple toggles before the next
+218                       //  WDOGCLK edge.
+219                       assign load_tog_en = load_en_reg &amp; (~load_req_w); // New load request and none pending
+220                     
+221                       // load_tog_en high toggles LoadReqTog on next PCLK
+222                       always @ (negedge PRESETn or posedge PCLK)
+223                         begin : p_load_req_tog_p_seq
+224        1/1                if (~PRESETn)
+225        1/1                  load_req_tog_p &lt;= 1'b0;
+226                           else
+227        1/1                  if (load_tog_en)
+228        1/1                    load_req_tog_p &lt;= (~load_req_tog_p);
+                        MISSING_ELSE
+229                         end
+230                     
+231                       // Register LoadReqTog into WDOGCLK domain
+232                       always @(negedge WDOGRESn or posedge WDOGCLK)
+233                       begin : p_load_req_tog_w_seq
+234        1/1              if (~WDOGRESn)
+235        1/1                load_req_tog_w &lt;= 1'b0;
+236                         else
+237        1/1                if (WDOGCLKEN)
+238        1/1                  load_req_tog_w &lt;= load_req_tog_p;
+                   <font color = "red">==>  MISSING_ELSE</font>
+239                       end
+240                     
+241                       // load_req_w goes high on the PCLK edge after load_tog_en and low on the next
+242                       //  valid WDOGCLK edge
+243                       assign load_req_w = load_req_tog_p ^ load_req_tog_w;
+244                     
+245                     //------------------------------------------------------------------------------
+246                     // 32-bit count down with load.
+247                     //------------------------------------------------------------------------------
+248                     // nxt_count is set to Count when reg_carry = 0 so that loads also change the
+249                     //  value of nxt_count.
+250                     // 32 bit counter is implemented as two 16 bit counters to improve FPGA
+251                     //  implementation.
+252                     
+253                       // Halfword 0, bits 15:0
+254                       always @ (reg_count)
+255                         begin : p_dec0comb
+256        1/1                nxt_count_low[15:0] = (reg_count[15:0] - 1'b1);
+257                         end
+258                     
+259                       always @ (load_req_w or carry_msb or wdog_load or wdog_int_en_rise or
+260                                 int_clr_w or reg_count)
+261                         begin : p_nxt_carry_0_comb
+262                           // Select the value source to be evaluated for the lower half-word
+263        1/1                if (load_req_w | carry_msb | wdog_int_en_rise | int_clr_w)
+264        1/1                  if (wdog_load[15:0] == 16'h0000)
+265        <font color = "red">0/1     ==>            nxt_carry_0 = 1'b1;</font>
+266                             else
+267        1/1                    nxt_carry_0 = 1'b0;
+268        1/1                else if (reg_count[15:0] == 16'h0001)
+269        1/1                  nxt_carry_0 = 1'b1;
+270                           else
+271        1/1                  nxt_carry_0 = 1'b0;
+272                         end
+273                     
+274                       // Halfword 1, bits 31:16
+275                       always @ (reg_count or reg_carry)
+276                         begin : p_dec1comb
+277        1/1                if (reg_carry[0])
+278        1/1                  nxt_count_high[15:0] = (reg_count[31:16] - 1'b1);
+279                           else
+280        1/1                  nxt_count_high[15:0] = reg_count[31:16];
+281                         end
+282                     
+283                     // Select the value source to be evaluated for the upper half-word
+284                       assign high_count = (load_req_w | carry_msb | wdog_int_en_rise | int_clr_w) ?
+285                                           wdog_load[31:16] : reg_count[31:16];
+286                     
+287                       always @ (high_count or nxt_carry_0 or carry_msb)
+288                         begin : p_nxt_carry_1_comb
+289        1/1                if ((high_count == 16'h0000) &amp; nxt_carry_0 &amp; (~carry_msb))
+290        1/1                  nxt_carry_1 = 1'b1;
+291                           else
+292        1/1                  nxt_carry_1 = 1'b0;
+293                         end
+294                     
+295                       // Only change reg_carry when counter is enabled (as per setting of
+296                       // count_mux2 below)
+297                       assign nxt_carry_mux = ((wdog_int_en &amp; (~count_stop)) |
+298                                             load_req_w) ? {nxt_carry_1, nxt_carry_0} :
+299                                            reg_carry;
+300                     
+301                       // Registered carry bits to improve timing, enabled by the same
+302                       //  terms as the reg_count register
+303                     
+304                       always @ (negedge WDOGRESn or posedge WDOGCLK)
+305                       begin : p_reg_carry_seq
+306        1/1              if (~WDOGRESn)
+307        1/1                reg_carry &lt;= 2'b00;
+308                         else
+309        1/1                if (WDOGCLKEN)
+310        1/1                  reg_carry &lt;= nxt_carry_mux;
+                   <font color = "red">==>  MISSING_ELSE</font>
+311                       end
+312                     
+313                     
+314                       // The most significant reg_carry bit changes when in 16 or 32-bit counter modes.
+315                       assign carry_msb = reg_carry[1];
+316                     
+317                     //------------------------------------------------------------------------------
+318                     // Counter register
+319                     //------------------------------------------------------------------------------
+320                     // Reloads from Load when carry_msb is set.
+321                     
+322                       // Load the counter with the value from wdog_load when:
+323                       assign count_mux1 = (load_req_w |            // New value written
+324                                           carry_msb |              // Count reaches zero
+325                                           wdog_int_en_rise |         // IRQ output enabled
+326                                           int_clr_w) ? wdog_load :   // IRQ output cleared
+327                                           {nxt_count_high, nxt_count_low}; // Otherwise decrement the counter
+328                     
+329                       // The counter only changes on a valid WDOGCLKEN, when either:
+330                       //   1. The watchdog is enabled, and the counter is not stopped.
+331                       //   2. A new value is loaded.
+332                       assign count_mux2 = ((wdog_int_en &amp; (~count_stop)) |
+333                                           load_req_w) ? count_mux1 :
+334                     
+335                                          reg_count;
+336                     
+337                       // The counter needs to be disabled after the Watchdog has generated a reset.
+338                       // It is re-enabled when a new value is written to the Load register.
+339                       assign count_stop = (i_wdog_res ? 1'b1 :
+340                     
+341                                           load_req_w ? 1'b0 :
+342                     
+343                                           count_stop_reg);
+344                     
+345                       always @ (negedge WDOGRESn or posedge WDOGCLK)
+346                         begin : p_count_stop_seq
+347        1/1                if (~WDOGRESn)
+348        1/1                  count_stop_reg &lt;= 1'b0;
+349                           else
+350        1/1                  if (WDOGCLKEN)
+351        1/1                    count_stop_reg &lt;= count_stop;
+                   <font color = "red">==>  MISSING_ELSE</font>
+352                         end
+353                     
+354                       // Counter registers using rising edge of WDOGCLK.
+355                       // WDOGCLKEN is used to enable the counter.
+356                       // Reset sets all outputs HIGH to avoid interrupt generation at
+357                       //  start.
+358                       always @ (negedge WDOGRESn or posedge WDOGCLK)
+359                         begin : p_count_seq
+360        1/1                if (~WDOGRESn)
+361        1/1                  reg_count &lt;= {32{1'b1}};
+362                           else
+363        1/1                  if (WDOGCLKEN)
+364        1/1                    reg_count &lt;= count_mux2;
+                   <font color = "red">==>  MISSING_ELSE</font>
+365                         end
+366                     
+367                       // count_read is set to the value of wdog_load so that when this
+368                       // register is written to, and then immediately followed by a read
+369                       // from the Count register, the newly loaded value is read back even
+370                       // if no WDOGCLK/WDOGCLKEN edge has yet occurred.
+371                       assign count_read = load_req_w ? wdog_load : reg_count;
+372                     
+373                     //------------------------------------------------------------------------------
+374                     // Interrupt clear
+375                     //------------------------------------------------------------------------------
+376                     // carry_msb can be valid for multiple clock cycles, and may not have cleared
+377                     //  until after an interrupt clear has been asserted, allowing the interrupt
+378                     //  to be entered again. The interrupt clear is extended to ensure that it
+379                     //  remains valid until the interrupt is actually cleared in the WDOGCLK
+380                     //  domain. A toggle based handshake is used in case PCLK is removed before
+381                     //  the interrupt clear operation is complete.
+382                     
+383                       // Decode IntClr transaction
+384                       assign int_clr_en = ((~int_clr_w) &amp;                  // No pending IntClr operation
+385                                          PWRITE &amp; frc_sel &amp; (~PENABLE) &amp; (~wdog_lock) &amp;
+386                                          (PADDR == `ARM_WDOGCLEARA)) ? 1'b1 :
+387                                          1'b0;
+388                     
+389                     
+390                       // IntClr high toggles int_clr_tog_p on next PCLK
+391                       always @(negedge PRESETn or posedge PCLK)
+392                       begin : p_int_clr_tog_p_seq
+393        1/1              if (~PRESETn)
+394        1/1                int_clr_tog_p &lt;= 1'b0;
+395                         else
+396        1/1                if (int_clr_en)
+397        1/1                  int_clr_tog_p &lt;= (~int_clr_tog_p);
+                        MISSING_ELSE
+398                       end
+399                     
+400                       // Register int_clr_tog_p into WDOGCLK domain
+401                       always @(negedge WDOGRESn or posedge WDOGCLK)
+402                       begin : p_int_clr_tog_w_seq
+403        1/1              if (~WDOGRESn)
+404        1/1                int_clr_tog_w &lt;= 1'b0;
+405                         else
+406        1/1                if (WDOGCLKEN)
+407        1/1                  int_clr_tog_w &lt;= int_clr_tog_p;
+                   <font color = "red">==>  MISSING_ELSE</font>
+408                       end
+409                     
+410                       // int_clr_pulse is high on PCLK edge, low on WDOGCLK edge
+411                       assign int_clr_pulse = int_clr_tog_p ^ int_clr_tog_w;
+412                     
+413                       // int_clr_w is used to clear the interrupt. It is asserted when the APB IntClr
+414                       //  transaction is detected and de-asserted when the counter is no longer zero
+415                       //  (to prevent multiple interrupts from one counter event).
+416                       assign int_clr_w = (int_clr_pulse ? 1'b1 : // IntClr transaction sampled into
+417                                                              //  WDOGCLK domain
+418                     
+419                                         (~carry_msb) ? 1'b0 :   // Counter no longer zero
+420                     
+421                                         int_clr_reg_w);
+422                     
+423                       // Register int_clr_w to hold it until counter is non-zero.
+424                       always @(negedge WDOGRESn or posedge WDOGCLK)
+425                       begin : p_int_clr_reg_seq
+426        1/1              if (~WDOGRESn)
+427        1/1                int_clr_reg_w &lt;= 1'b0;
+428                         else
+429        1/1                if (WDOGCLKEN)
+430        1/1                  int_clr_reg_w &lt;= int_clr_w;
+                   <font color = "red">==>  MISSING_ELSE</font>
+431                       end
+432                     
+433                     //------------------------------------------------------------------------------
+434                     // Interrupt generation
+435                     //------------------------------------------------------------------------------
+436                     
+437                       // The interrupt is generated (HIGH) when the counter reaches zero.
+438                       // The interrupt is cleared (LOW) when the WdogIntClr address is written to.
+439                       assign nxt_wdog_ris = (carry_msb | wdog_ris) &amp; (~int_clr_w);
+440                     
+441                       // Register and hold interrupt until cleared.  WDOGCLK is used to ensure that
+442                       //  an interrupt is still generated even if PCLK is disabled.
+443                       always @ (negedge WDOGRESn or posedge WDOGCLK)
+444                         begin : p_int_seq
+445        1/1                if (~WDOGRESn)
+446        1/1                  wdog_ris &lt;= 1'b0;
+447                           else
+448        1/1                  if (WDOGCLKEN)
+449        1/1                    wdog_ris &lt;= nxt_wdog_ris;
+                   <font color = "red">==>  MISSING_ELSE</font>
+450                         end
+451                     
+452                       // Factor int_clr_w into version of raw interrupt status which is read
+453                       // back from the RIS register so that a read from RIS or MIS will
+454                       // show the cleared value immediately
+455                       assign read_wdog_ris = wdog_ris &amp; (~int_clr_w);
+456                     
+457                       // Gate raw interrupt with enable bit
+458                       assign wdog_mis = read_wdog_ris &amp; wdog_int_en;
+459                     
+460                       // Drive output with internal signal
+461                       assign WDOGINT = wdog_mis;
+462                     
+463                     //----------------------------------------------------------------------------
+464                     // Reset generation
+465                     //----------------------------------------------------------------------------
+466                     
+467                       // The reset output is activated when the counter reaches zero and the
+468                       //  interrupt output is active, indicating that the counter has previously
+469                       //  reached zero but not been serviced.
+470                       assign nxt_wdog_res = ((~wdog_res_en) ? 1'b0 :            // Watchdog reset disabled
+471                     
+472                                            (wdog_ris &amp; carry_msb) ? 1'b1 : // Raw IRQ asserted and
+473                                                                           // Counter is zero
+474                     
+475                                            i_wdog_res);
+476                     
+477                       // WdogRes register
+478                       always @ (negedge WDOGRESn or posedge WDOGCLK)
+479                         begin : p_res_seq
+480        1/1                if (~WDOGRESn)
+481        1/1                  i_wdog_res &lt;= 1'b0;
+482                           else
+483        1/1                  if (WDOGCLKEN)
+484        1/1                    i_wdog_res &lt;= nxt_wdog_res;
+                   <font color = "red">==>  MISSING_ELSE</font>
+485                         end
+486                     
+487                       // Drive reset output
+488                       assign WDOGRES = i_wdog_res;
+489                     
+490                     //------------------------------------------------------------------------------
+491                     // Output data generation
+492                     //------------------------------------------------------------------------------
+493                     // Zero data is used as padding for other register reads
+494                     
+495                       always @ (PWRITE or frc_sel or PADDR or wdog_load or count_read or
+496                                 wdog_control or read_wdog_ris or wdog_mis)
+497                         begin : p_frc_data_comb
+498                     
+499        1/1                frc_data = {32{1'b0}}; // Drive zeros by default
+500                     
+501        1/1                if ((~PWRITE) &amp; frc_sel)
+502        1/1                  case (PADDR)
+503                               `ARM_WDOGLOADA :
+504                                 // wdog_load address
+505        1/1                      frc_data = wdog_load;
+506                     
+507                               `ARM_WDOGVALUEA :
+508                                 // WdogValue address
+509        <font color = "red">0/1     ==>              frc_data = count_read;</font>
+510                     
+511                               `ARM_WDOGCONTROLA :
+512                                 // wdog_control address
+513        1/1                      frc_data[1:0] = wdog_control[1:0];
+514                     
+515                               `ARM_WDOGINTRAWA :
+516                                 // wdog_ris address
+517        <font color = "red">0/1     ==>              frc_data[0] = read_wdog_ris;</font>
+518                     
+519                               `ARM_WDOGINTA :
+520                                 // wdog_mis address
+521        1/1                      frc_data[0] = wdog_mis;
+522                     
+523                               default:
+524        <font color = "red">0/1     ==>              frc_data = {32{1'b0}};</font>
+525                     
+526                             endcase
+527                           else
+528        1/1                  frc_data = {32{1'b0}};
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod5.html" >cmsdk_apb_watchdog_frc</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">Conditions</td><td>28</td><td>26</td><td>92.86</td></tr>
+<tr class="s9"><td class="lf">Logical</td><td>28</td><td>26</td><td>92.86</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       150
+ EXPRESSION ((PADDR == 3'b010) ? ((((PWRITE &amp; frc_sel) &amp; (~PENABLE)) &amp; (~wdog_lock))) : 1'b0)
+             --------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       188
+ EXPRESSION ((PADDR == 3'b0) ? ((((PWRITE &amp; frc_sel) &amp; (~PENABLE)) &amp; (~wdog_lock))) : 1'b0)
+             -------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       284
+ EXPRESSION (((((load_req_w | carry_msb) | wdog_int_en_rise) | int_clr_w)) ? wdog_load[31:16] : reg_count[31:16])
+             ------------------------------1------------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       297
+ EXPRESSION ((((wdog_int_en &amp; (~count_stop)) | load_req_w)) ? ({nxt_carry_1, nxt_carry_0}) : reg_carry)
+             -----------------------1----------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       323
+ EXPRESSION (((((load_req_w | carry_msb) | wdog_int_en_rise) | int_clr_w)) ? wdog_load : ({nxt_count_high, nxt_count_low}))
+             ------------------------------1------------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       332
+ EXPRESSION ((((wdog_int_en &amp; (~count_stop)) | load_req_w)) ? count_mux1 : reg_count)
+             -----------------------1----------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       339
+ EXPRESSION (i_wdog_res ? 1'b1 : (load_req_w ? 1'b0 : count_stop_reg))
+             -----1----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       339
+ SUB-EXPRESSION (load_req_w ? 1'b0 : count_stop_reg)
+                 -----1----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       371
+ EXPRESSION (load_req_w ? wdog_load : reg_count)
+             -----1----
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       384
+ EXPRESSION ((((((((~int_clr_w) &amp; PWRITE) &amp; frc_sel) &amp; (~PENABLE)) &amp; (~wdog_lock)) &amp; (PADDR == 3'b011))) ? 1'b1 : 1'b0)
+             ---------------------------------------------1---------------------------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       416
+ EXPRESSION (int_clr_pulse ? 1'b1 : (((~carry_msb)) ? 1'b0 : int_clr_reg_w))
+             ------1------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       416
+ SUB-EXPRESSION (((~carry_msb)) ? 1'b0 : int_clr_reg_w)
+                 -------1------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       470
+ EXPRESSION (((~wdog_res_en)) ? 1'b0 : (((wdog_ris &amp; carry_msb)) ? 1'b1 : i_wdog_res))
+             --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       470
+ SUB-EXPRESSION (((wdog_ris &amp; carry_msb)) ? 1'b1 : i_wdog_res)
+                 ------------1-----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td class="lf">Not Covered</td></tr>
+</table>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod5.html" >cmsdk_apb_watchdog_frc</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s6">
+<td>Totals</td>
+<td class="rt">53</td>
+<td class="rt">32</td>
+<td class="rt">60.38 </td>
+</tr><tr class="s6">
+<td>Total Bits</td>
+<td class="rt">640</td>
+<td class="rt">418</td>
+<td class="rt">65.31 </td>
+</tr><tr class="s4">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">320</td>
+<td class="rt">145</td>
+<td class="rt">45.31 </td>
+</tr><tr class="s8">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">320</td>
+<td class="rt">273</td>
+<td class="rt">85.31 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s6">
+<td>Ports</td>
+<td class="rt">14</td>
+<td class="rt">9</td>
+<td class="rt">64.29 </td>
+</tr><tr class="s6">
+<td>Port Bits</td>
+<td class="rt">156</td>
+<td class="rt">101</td>
+<td class="rt">64.74 </td>
+</tr><tr class="s6">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">78</td>
+<td class="rt">51</td>
+<td class="rt">65.38 </td>
+</tr><tr class="s6">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">78</td>
+<td class="rt">50</td>
+<td class="rt">64.10 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s5">
+<td>Signals</td>
+<td class="rt">39</td>
+<td class="rt">23</td>
+<td class="rt">58.97 </td>
+</tr><tr class="s6">
+<td>Signal Bits</td>
+<td class="rt">484</td>
+<td class="rt">317</td>
+<td class="rt">65.50 </td>
+</tr><tr class="s3">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">242</td>
+<td class="rt">94</td>
+<td class="rt">38.84 </td>
+</tr><tr class="s9">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">242</td>
+<td class="rt">223</td>
+<td class="rt">92.15 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>PCLK</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PRESETn</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PENABLE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PADDR[2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PADDR[4:3]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PWRITE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PWDATA[7:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PWDATA[31:8]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>frc_sel</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>wdog_lock</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>WDOGCLK</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>WDOGCLKEN</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>WDOGRESn</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>WDOGINT</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>WDOGRES</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>frc_data[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>wdog_ctrl_en</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wdog_control[1:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>load_en</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>load_en_reg</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wdog_load[7:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>wdog_load[31:8]</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>load_tog_en</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>load_req_tog_p</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>load_req_tog_w</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>load_req_w</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>count_stop</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>count_stop_reg</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nxt_count_low[15:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>nxt_count_high[15:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>nxt_carry_0</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>nxt_carry_1</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>nxt_carry_mux[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>reg_carry[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>carry_msb</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>count_mux1[7:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>count_mux1[31:8]</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>count_mux2[7:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>count_mux2[31:8]</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>reg_count[7:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>reg_count[31:8]</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>count_read[7:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>count_read[31:8]</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>high_count[15:0]</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>wdog_int_en</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wdog_int_en_reg</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wdog_int_en_rise</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wdog_res_en</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>i_wdog_res</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>nxt_wdog_res</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>int_clr_en</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>int_clr_tog_p</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>int_clr_tog_w</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>int_clr_pulse</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>int_clr_w</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>int_clr_reg_w</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>nxt_wdog_ris</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wdog_ris</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>read_wdog_ris</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>wdog_mis</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="Branch"></a>
+Branch Coverage for Module : <a href="mod5.html" >cmsdk_apb_watchdog_frc</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s8">
+<td>Branches</td>
+<td></td>
+<td class="rt">81</td>
+<td class="rt">66</td>
+<td class="rt">81.48 </td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">150</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">188</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">284</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">297</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">323</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">332</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s6">
+<td>TERNARY</td>
+<td class="rt">339</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">371</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">384</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">416</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s6">
+<td>TERNARY</td>
+<td class="rt">470</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">155</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s6">
+<td>IF</td>
+<td class="rt">172</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">194</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">203</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">224</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s6">
+<td>IF</td>
+<td class="rt">234</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s7">
+<td>IF</td>
+<td class="rt">263</td>
+<td class="rt">4</td>
+<td class="rt">3</td>
+<td class="rt">75.00 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">277</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">289</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s6">
+<td>IF</td>
+<td class="rt">306</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s6">
+<td>IF</td>
+<td class="rt">347</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s6">
+<td>IF</td>
+<td class="rt">360</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">393</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s6">
+<td>IF</td>
+<td class="rt">403</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s6">
+<td>IF</td>
+<td class="rt">426</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s6">
+<td>IF</td>
+<td class="rt">445</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s6">
+<td>IF</td>
+<td class="rt">480</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">501</td>
+<td class="rt">7</td>
+<td class="rt">4</td>
+<td class="rt">57.14 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+150          assign wdog_ctrl_en = (PADDR == `ARM_WDOGCONTROLA) ?
+                                                                <font color = "green">-1-</font>  
+                                                                <font color = "green">==></font>  
+                                                                <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+188          assign load_en = (PADDR == `ARM_WDOGLOADA) ?
+                                                        <font color = "green">-1-</font>  
+                                                        <font color = "green">==></font>  
+                                                        <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+284          assign high_count = (load_req_w | carry_msb | wdog_int_en_rise | int_clr_w) ?
+                                                                                         <font color = "green">-1-</font>  
+                                                                                         <font color = "green">==></font>  
+                                                                                         <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+297          assign nxt_carry_mux = ((wdog_int_en & (~count_stop)) |
+                                                                    
+298                                load_req_w) ? {nxt_carry_1, nxt_carry_0} :
+                                               <font color = "green">-1-</font>  
+                                               <font color = "green">==></font>  
+                                               <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+323          assign count_mux1 = (load_req_w |            // New value written
+                                                                              
+324                              carry_msb |              // Count reaches zero
+                                                                               
+325                              wdog_int_en_rise |         // IRQ output enabled
+                                                                                 
+326                              int_clr_w) ? wdog_load :   // IRQ output cleared
+                                            <font color = "green">-1-</font>  
+                                            <font color = "green">==></font>  
+                                            <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+332          assign count_mux2 = ((wdog_int_en & (~count_stop)) |
+                                                                 
+333                              load_req_w) ? count_mux1 :
+                                             <font color = "green">-1-</font>  
+                                             <font color = "green">==></font>  
+                                             <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+339          assign count_stop = (i_wdog_res ? 1'b1 :
+                                             <font color = "red">-1-</font>  
+                                             <font color = "red">==></font>  
+340        
+           
+341                              load_req_w ? 1'b0 :
+                                            <font color = "green">-2-</font>  
+                                            <font color = "green">==></font>  
+                                            <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+371          assign count_read = load_req_w ? wdog_load : reg_count;
+                                            <font color = "green">-1-</font>  
+                                            <font color = "green">==></font>  
+                                            <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+384          assign int_clr_en = ((~int_clr_w) &                  // No pending IntClr operation
+                                                                                                
+385                             PWRITE & frc_sel & (~PENABLE) & (~wdog_lock) &
+                                                                              
+386                             (PADDR == `ARM_WDOGCLEARA)) ? 1'b1 :
+                                                            <font color = "green">-1-</font>  
+                                                            <font color = "green">==></font>  
+                                                            <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+416          assign int_clr_w = (int_clr_pulse ? 1'b1 : // IntClr transaction sampled into
+                                               <font color = "green">-1-</font>  
+                                               <font color = "green">==></font>  
+417                                                 //  WDOGCLK domain
+                                                                      
+418        
+           
+419                            (~carry_msb) ? 1'b0 :   // Counter no longer zero
+                                            <font color = "green">-2-</font>  
+                                            <font color = "green">==></font>  
+                                            <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+470          assign nxt_wdog_res = ((~wdog_res_en) ? 1'b0 :            // Watchdog reset disabled
+                                                   <font color = "green">-1-</font>  
+                                                   <font color = "green">==></font>  
+471        
+           
+472                               (wdog_ris & carry_msb) ? 1'b1 : // Raw IRQ asserted and
+                                                         <font color = "red">-2-</font>  
+                                                         <font color = "red">==></font>  
+                                                         <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+155              if (~PRESETn)
+                 <font color = "green">-1-</font>  
+156                wdog_control[1:0] <= 2'b00;
+           <font color = "green">        ==></font>
+157              else
+158                if (wdog_ctrl_en)
+                   <font color = "green">-2-</font>  
+159                  wdog_control[1:0] <= PWDATA[1:0];
+           <font color = "green">          ==></font>
+                     MISSING_ELSE
+           <font color = "green">          ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+172              if (~WDOGRESn)
+                 <font color = "green">-1-</font>  
+173                wdog_int_en_reg <= 1'b0;
+           <font color = "green">        ==></font>
+174              else
+175                if (WDOGCLKEN)
+                   <font color = "red">-2-</font>  
+176                  wdog_int_en_reg <= wdog_int_en;
+           <font color = "green">          ==></font>
+                     MISSING_ELSE
+           <font color = "red">          ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Not Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+194            if (~PRESETn)
+               <font color = "green">-1-</font>  
+195              load_en_reg <= 1'b0;
+           <font color = "green">      ==></font>
+196            else
+197              load_en_reg <= load_en;
+           <font color = "green">      ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+203              if (~PRESETn)
+                 <font color = "green">-1-</font>  
+204                wdog_load <= {32{1'b1}};
+           <font color = "green">        ==></font>
+205              else
+206                if (load_en)
+                   <font color = "green">-2-</font>  
+207                  wdog_load <= PWDATA;
+           <font color = "green">          ==></font>
+                     MISSING_ELSE
+           <font color = "green">          ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+224              if (~PRESETn)
+                 <font color = "green">-1-</font>  
+225                load_req_tog_p <= 1'b0;
+           <font color = "green">        ==></font>
+226              else
+227                if (load_tog_en)
+                   <font color = "green">-2-</font>  
+228                  load_req_tog_p <= (~load_req_tog_p);
+           <font color = "green">          ==></font>
+                     MISSING_ELSE
+           <font color = "green">          ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+234            if (~WDOGRESn)
+               <font color = "green">-1-</font>  
+235              load_req_tog_w <= 1'b0;
+           <font color = "green">      ==></font>
+236            else
+237              if (WDOGCLKEN)
+                 <font color = "red">-2-</font>  
+238                load_req_tog_w <= load_req_tog_p;
+           <font color = "green">        ==></font>
+                   MISSING_ELSE
+           <font color = "red">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Not Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+263              if (load_req_w | carry_msb | wdog_int_en_rise | int_clr_w)
+                 <font color = "green">-1-</font>  
+264                if (wdog_load[15:0] == 16'h0000)
+                   <font color = "red">-2-</font>  
+265                  nxt_carry_0 = 1'b1;
+           <font color = "red">          ==></font>
+266                else
+267                  nxt_carry_0 = 1'b0;
+           <font color = "green">          ==></font>
+268              else if (reg_count[15:0] == 16'h0001)
+                      <font color = "green">-3-</font>  
+269                nxt_carry_0 = 1'b1;
+           <font color = "green">        ==></font>
+270              else
+271                nxt_carry_0 = 1'b0;
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+277              if (reg_carry[0])
+                 <font color = "green">-1-</font>  
+278                nxt_count_high[15:0] = (reg_count[31:16] - 1'b1);
+           <font color = "green">        ==></font>
+279              else
+280                nxt_count_high[15:0] = reg_count[31:16];
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+289              if ((high_count == 16'h0000) & nxt_carry_0 & (~carry_msb))
+                 <font color = "green">-1-</font>  
+290                nxt_carry_1 = 1'b1;
+           <font color = "green">        ==></font>
+291              else
+292                nxt_carry_1 = 1'b0;
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+306            if (~WDOGRESn)
+               <font color = "green">-1-</font>  
+307              reg_carry <= 2'b00;
+           <font color = "green">      ==></font>
+308            else
+309              if (WDOGCLKEN)
+                 <font color = "red">-2-</font>  
+310                reg_carry <= nxt_carry_mux;
+           <font color = "green">        ==></font>
+                   MISSING_ELSE
+           <font color = "red">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Not Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+347              if (~WDOGRESn)
+                 <font color = "green">-1-</font>  
+348                count_stop_reg <= 1'b0;
+           <font color = "green">        ==></font>
+349              else
+350                if (WDOGCLKEN)
+                   <font color = "red">-2-</font>  
+351                  count_stop_reg <= count_stop;
+           <font color = "green">          ==></font>
+                     MISSING_ELSE
+           <font color = "red">          ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Not Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+360              if (~WDOGRESn)
+                 <font color = "green">-1-</font>  
+361                reg_count <= {32{1'b1}};
+           <font color = "green">        ==></font>
+362              else
+363                if (WDOGCLKEN)
+                   <font color = "red">-2-</font>  
+364                  reg_count <= count_mux2;
+           <font color = "green">          ==></font>
+                     MISSING_ELSE
+           <font color = "red">          ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Not Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+393            if (~PRESETn)
+               <font color = "green">-1-</font>  
+394              int_clr_tog_p <= 1'b0;
+           <font color = "green">      ==></font>
+395            else
+396              if (int_clr_en)
+                 <font color = "green">-2-</font>  
+397                int_clr_tog_p <= (~int_clr_tog_p);
+           <font color = "green">        ==></font>
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+403            if (~WDOGRESn)
+               <font color = "green">-1-</font>  
+404              int_clr_tog_w <= 1'b0;
+           <font color = "green">      ==></font>
+405            else
+406              if (WDOGCLKEN)
+                 <font color = "red">-2-</font>  
+407                int_clr_tog_w <= int_clr_tog_p;
+           <font color = "green">        ==></font>
+                   MISSING_ELSE
+           <font color = "red">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Not Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+426            if (~WDOGRESn)
+               <font color = "green">-1-</font>  
+427              int_clr_reg_w <= 1'b0;
+           <font color = "green">      ==></font>
+428            else
+429              if (WDOGCLKEN)
+                 <font color = "red">-2-</font>  
+430                int_clr_reg_w <= int_clr_w;
+           <font color = "green">        ==></font>
+                   MISSING_ELSE
+           <font color = "red">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Not Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+445              if (~WDOGRESn)
+                 <font color = "green">-1-</font>  
+446                wdog_ris <= 1'b0;
+           <font color = "green">        ==></font>
+447              else
+448                if (WDOGCLKEN)
+                   <font color = "red">-2-</font>  
+449                  wdog_ris <= nxt_wdog_ris;
+           <font color = "green">          ==></font>
+                     MISSING_ELSE
+           <font color = "red">          ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Not Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+480              if (~WDOGRESn)
+                 <font color = "green">-1-</font>  
+481                i_wdog_res <= 1'b0;
+           <font color = "green">        ==></font>
+482              else
+483                if (WDOGCLKEN)
+                   <font color = "red">-2-</font>  
+484                  i_wdog_res <= nxt_wdog_res;
+           <font color = "green">          ==></font>
+                     MISSING_ELSE
+           <font color = "red">          ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Not Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+501              if ((~PWRITE) & frc_sel)
+                 <font color = "green">-1-</font>  
+502                case (PADDR)
+                   <font color = "red">-2-</font>  
+503                  `ARM_WDOGLOADA :
+504                    // wdog_load address
+505                    frc_data = wdog_load;
+           <font color = "green">            ==></font>
+506        
+507                  `ARM_WDOGVALUEA :
+508                    // WdogValue address
+509                    frc_data = count_read;
+           <font color = "red">            ==></font>
+510        
+511                  `ARM_WDOGCONTROLA :
+512                    // wdog_control address
+513                    frc_data[1:0] = wdog_control[1:0];
+           <font color = "green">            ==></font>
+514        
+515                  `ARM_WDOGINTRAWA :
+516                    // wdog_ris address
+517                    frc_data[0] = read_wdog_ris;
+           <font color = "red">            ==></font>
+518        
+519                  `ARM_WDOGINTA :
+520                    // wdog_mis address
+521                    frc_data[0] = wdog_mis;
+           <font color = "green">            ==></font>
+522        
+523                  default:
+524                    frc_data = {32{1'b0}};
+           <font color = "red">            ==></font>
+525        
+526                endcase
+527              else
+528                frc_data = {32{1'b0}};
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center>3'b000 </td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>1</td>
+<td align=center>3'b001 </td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center>3'b010 </td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>1</td>
+<td align=center>3'b100 </td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center>3'b101 </td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>1</td>
+<td align=center>default</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_5">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+  <ul name="tag_cmsdk_apb_watchdog_frc">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

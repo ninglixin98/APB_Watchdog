@@ -1,0 +1,43 @@
+Testbench Group List
+
+Total Groups Coverage Summary 
+SCORE  INST SCORE WEIGHT 
+ 50.98  50.98     1      
+
+
+Total groups in report: 32
+-------------------------------------------------------------------------------
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                                               
+  0.00   0.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPERIPHID7_reg::value_cg                      
+  0.00   0.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPERIPHID6_reg::value_cg                      
+  0.00   0.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPERIPHID5_reg::value_cg                      
+  0.00   0.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPCELLID3_reg::value_cg                       
+  0.00   0.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPCELLID2_reg::value_cg                       
+  0.00   0.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPCELLID0_reg::value_cg                       
+  0.00   0.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPCELLID1_reg::value_cg                       
+  1.56   1.56    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGLOAD_reg::value_cg                           
+  1.56   1.56    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGVALUE_reg::value_cg                          
+  1.56   1.56    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPERIPHID0_reg::value_cg                      
+  6.25   6.25    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPERIPHID3_reg::value_cg                      
+  6.25   6.25    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPERIPHID1_reg::value_cg                      
+  6.25   6.25    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPERIPHID4_reg::value_cg                      
+ 22.92  22.92    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGPERIPHID2_reg::value_cg                      
+ 33.33 --        1      100    1        0            64           64                    rkv_watchdog_tb.apb_if_inst::cg_apb_trans_timing_group             
+ 50.00  50.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGRIS_reg::value_cg                            
+ 51.56  51.56    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGLOCK_reg::value_cg                           
+ 75.00  75.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGITOP_reg::value_cg                           
+ 75.00  75.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGCONTROL_reg::value_cg                        
+100.00 --        1      100    1        0            64           64                    rkv_watchdog_tb.apb_if_inst::cg_apb_command                        
+100.00 --        1      100    1        0            64           64                    rkv_watchdog_tb.apb_if_inst::cg_apb_write_read_order_group         
+100.00 100.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGITCR_reg::value_cg                           
+100.00 --        1      100    1        0            64           64                    rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t7_lock_unlock_cg      
+100.00 --        1      100    1        0            64           64                    rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t1_overall_control_cg  
+100.00 --        1      100    1        0            64           64                    rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t1_overall_control_cg  
+100.00 --        1      100    1        0            64           64                    rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t6_integration_test_cg 
+100.00 --        1      100    1        0            64           64                    rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t2_load_reload_cg      
+100.00 --        1      100    1        0            64           64                    rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t3_intr_clr_cg         
+100.00 100.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGMIS_reg::value_cg                            
+100.00 100.00    1      100    1        1            64           64                    rkv_watchdog_pkg::WDOGINTCLR_reg::value_cg                         
+100.00 --        1      100    1        0            64           64                    rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t4_regacc_cg           
+100.00 --        1      100    1        0            64           64                    rkv_watchdog_pkg::rkv_watchdog_cov::rkv_wdg_t5_integration_cg      
+

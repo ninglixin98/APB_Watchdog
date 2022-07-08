@@ -1,0 +1,20 @@
+Tests
+
+Total Coverage Summary 
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT GROUP  
+ 56.77  27.27  80.95  64.14 --      55.74  61.54  50.98 
+
+
+Total tests in report: 9
+-------------------------------------------------------------------------------
+Data from the following tests was used to generate this report
+out/cov/rkv_watchdog_countdown_test_100       
+out/cov/rkv_watchdog_countdown_test_1         
+out/cov/rkv_watchdog_resen_test_1             
+out/cov/rkv_watchdog_countdown_disable_test_1 
+out/cov/rkv_watchdog_integration_test_1       
+out/cov/rkv_watchdog_lock_test_1              
+out/cov/rkv_watchdog_regacc_test_1            
+out/cov/rkv_watchdog_illegal_apbacc_test_1    
+out/cov/rkv_watchdog_reload_test_1            
+

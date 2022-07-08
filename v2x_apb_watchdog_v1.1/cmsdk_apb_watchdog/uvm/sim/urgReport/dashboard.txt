@@ -1,0 +1,35 @@
+Dashboard
+
+Date: Fri Jun  3 16:45:10 2022
+
+User: verifier
+
+Version: O-2018.09-SP2
+Command line: urg -format both -full64 -dir out/cov.vdb
+Number of tests: 9
+
+-------------------------------------------------------------------------------
+Total Coverage Summary 
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT GROUP  
+ 56.77  27.27  80.95  64.14 --      55.74  61.54  50.98 
+
+
+-------------------------------------------------------------------------------
+Hierarchical coverage data for top-level instances 
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME                               
+ 73.03  87.07  80.95  64.74 --      70.87  61.54 rkv_watchdog_tb                    
+ 30.91  31.82 --     --     --      30.00 --     uvm_custom_install_recording       
+  8.26   5.21 --       0.00 --      19.57 --     uvm_custom_install_verdi_recording 
+
+
+-------------------------------------------------------------------------------
+Total Module Definition Coverage Summary 
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 55.62  27.27  80.95  64.14 --      55.74  50.00 
+
+
+-------------------------------------------------------------------------------
+Total Groups Coverage Summary 
+SCORE  INST SCORE WEIGHT 
+ 50.98  50.98     1      
+
