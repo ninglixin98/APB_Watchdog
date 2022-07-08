@@ -1,0 +1,1566 @@
+global coverage_group 0 apb_pkg::apb_master_monitor::apb_master_cov_trans __coverage_apb_master_monitor.apb_master_cov_trans unused_apb_master_monitor_apb_master_cov_trans_loop_label apb_pkg 0 1 0 0 0  ( 0 
+)
+ 1 4
+ 110 /home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../vip_lib/apb_pkg/apb_master_monitor.svh
+ 109 /home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../vip_lib/apb_pkg/apb_slave_monitor.svh
+ 95 /home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../reg/rkv_watchdog_reg.sv
+ 97 /home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/../vip_lib/apb_pkg/apb_if.sv
+ 54 0 0 0 1 0 0 0 0  1
+0
+26 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+0
+0
+0
+64
+0
+ 0
+
+0
+0
+0
+0
+end_coverage_group
+global coverage_group 0 apb_pkg::apb_slave_monitor::apb_slave_cov_trans __coverage_apb_slave_monitor.apb_slave_cov_trans unused_apb_slave_monitor_apb_slave_cov_trans_loop_label apb_pkg 0 1 0 0 0  ( 0 
+)
+ 0 53 1 0 0 1 0 0 0 0  1
+0
+26 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+0
+0
+0
+64
+0
+ 0
+
+0
+0
+0
+0
+end_coverage_group
+global coverage_group 0 rkv_watchdog_pkg::WDOGLOAD_reg::value_cg __coverage_WDOGLOAD_reg.value_cg unused_WDOGLOAD_reg_value_cg_loop_label rkv_watchdog_pkg 0 1 0 0 0  ( 0 
+)
+ 0 6 2 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 57 WDOGLOAD_reg::rkv_watchdog_pkg_WDOGLOAD_reg_value_cg_fn_0
+0
+0
+0
+64
+0
+ 0
+
+1
+0
+0
+0
+ 7 LOADVAL 8 2 0 0 0 55 WDOGLOAD_reg::rkv_watchdog_pkg_WDOGLOAD_reg_value_cg_fn 55 WDOGLOAD_reg::rkv_watchdog_pkg_WDOGLOAD_reg_value_cg_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 32 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
+global coverage_group 0 rkv_watchdog_pkg::WDOGVALUE_reg::value_cg __coverage_WDOGVALUE_reg.value_cg unused_WDOGVALUE_reg_value_cg_loop_label rkv_watchdog_pkg 0 1 0 0 0  ( 0 
+)
+ 0 41 2 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 59 WDOGVALUE_reg::rkv_watchdog_pkg_WDOGVALUE_reg_value_cg_fn_0
+0
+0
+0
+64
+0
+ 0
+
+1
+0
+0
+0
+ 6 CURVAL 43 2 0 0 0 57 WDOGVALUE_reg::rkv_watchdog_pkg_WDOGVALUE_reg_value_cg_fn 57 WDOGVALUE_reg::rkv_watchdog_pkg_WDOGVALUE_reg_value_cg_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 32 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
+global coverage_group 0 rkv_watchdog_pkg::WDOGCONTROL_reg::value_cg __coverage_WDOGCONTROL_reg.value_cg unused_WDOGCONTROL_reg_value_cg_loop_label rkv_watchdog_pkg 0 1 0 0 0  ( 0 
+)
+ 0 77 2 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 63 WDOGCONTROL_reg::rkv_watchdog_pkg_WDOGCONTROL_reg_value_cg_fn_1
+0
+0
+0
+64
+0
+ 0
+
+2
+0
+0
+0
+ 5 RESEN 79 2 0 0 0 61 WDOGCONTROL_reg::rkv_watchdog_pkg_WDOGCONTROL_reg_value_cg_fn 61 WDOGCONTROL_reg::rkv_watchdog_pkg_WDOGCONTROL_reg_value_cg_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 5 INTEN 80 2 0 0 0 63 WDOGCONTROL_reg::rkv_watchdog_pkg_WDOGCONTROL_reg_value_cg_fn_0 63 WDOGCONTROL_reg::rkv_watchdog_pkg_WDOGCONTROL_reg_value_cg_fn_0 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
+global coverage_group 0 rkv_watchdog_pkg::WDOGINTCLR_reg::value_cg __coverage_WDOGINTCLR_reg.value_cg unused_WDOGINTCLR_reg_value_cg_loop_label rkv_watchdog_pkg 0 1 0 0 0  ( 0 
+)
+ 0 115 2 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 61 WDOGINTCLR_reg::rkv_watchdog_pkg_WDOGINTCLR_reg_value_cg_fn_0
+0
+0
+0
+64
+0
+ 0
+
+1
+0
+0
+0
+ 6 INTCLR 117 2 0 0 0 59 WDOGINTCLR_reg::rkv_watchdog_pkg_WDOGINTCLR_reg_value_cg_fn 59 WDOGINTCLR_reg::rkv_watchdog_pkg_WDOGINTCLR_reg_value_cg_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
+global coverage_group 0 rkv_watchdog_pkg::WDOGRIS_reg::value_cg __coverage_WDOGRIS_reg.value_cg unused_WDOGRIS_reg_value_cg_loop_label rkv_watchdog_pkg 0 1 0 0 0  ( 0 
+)
+ 0 150 2 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 55 WDOGRIS_reg::rkv_watchdog_pkg_WDOGRIS_reg_value_cg_fn_0
+0
+0
+0
+64
+0
+ 0
+
+1
+0
+0
+0
+ 6 RAWINT 152 2 0 0 0 53 WDOGRIS_reg::rkv_watchdog_pkg_WDOGRIS_reg_value_cg_fn 53 WDOGRIS_reg::rkv_watchdog_pkg_WDOGRIS_reg_value_cg_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
+global coverage_group 0 rkv_watchdog_pkg::WDOGMIS_reg::value_cg __coverage_WDOGMIS_reg.value_cg unused_WDOGMIS_reg_value_cg_loop_label rkv_watchdog_pkg 0 1 0 0 0  ( 0 
+)
+ 0 185 2 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 55 WDOGMIS_reg::rkv_watchdog_pkg_WDOGMIS_reg_value_cg_fn_0
+0
+0
+0
+64
+0
+ 0
+
+1
+0
+0
+0
+ 3 INT 187 2 0 0 0 53 WDOGMIS_reg::rkv_watchdog_pkg_WDOGMIS_reg_value_cg_fn 53 WDOGMIS_reg::rkv_watchdog_pkg_WDOGMIS_reg_value_cg_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
+global coverage_group 0 rkv_watchdog_pkg::WDOGLOCK_reg::value_cg __coverage_WDOGLOCK_reg.value_cg unused_WDOGLOCK_reg_value_cg_loop_label rkv_watchdog_pkg 0 1 0 0 0  ( 0 
+)
+ 0 221 2 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 57 WDOGLOCK_reg::rkv_watchdog_pkg_WDOGLOCK_reg_value_cg_fn_1
+0
+0
+0
+64
+0
+ 0
+
+2
+0
+0
+0
+ 4 WREN 223 2 0 0 0 55 WDOGLOCK_reg::rkv_watchdog_pkg_WDOGLOCK_reg_value_cg_fn 55 WDOGLOCK_reg::rkv_watchdog_pkg_WDOGLOCK_reg_value_cg_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 31 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 5 WRACC 224 2 0 0 0 57 WDOGLOCK_reg::rkv_watchdog_pkg_WDOGLOCK_reg_value_cg_fn_0 57 WDOGLOCK_reg::rkv_watchdog_pkg_WDOGLOCK_reg_value_cg_fn_0 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
+global coverage_group 0 rkv_watchdog_pkg::WDOGITCR_reg::value_cg __coverage_WDOGITCR_reg.value_cg unused_WDOGITCR_reg_value_cg_loop_label rkv_watchdog_pkg 0 1 0 0 0  ( 0 
+)
+ 0 259 2 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 57 WDOGITCR_reg::rkv_watchdog_pkg_WDOGITCR_reg_value_cg_fn_0
+0
+0
+0
+64
+0
+ 0
+
+1
+0
+0
+0
+ 4 ITME 261 2 0 0 0 55 WDOGITCR_reg::rkv_watchdog_pkg_WDOGITCR_reg_value_cg_fn 55 WDOGITCR_reg::rkv_watchdog_pkg_WDOGITCR_reg_value_cg_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
+global coverage_group 0 rkv_watchdog_pkg::WDOGITOP_reg::value_cg __coverage_WDOGITOP_reg.value_cg unused_WDOGITOP_reg_value_cg_loop_label rkv_watchdog_pkg 0 1 0 0 0  ( 0 
+)
+ 0 295 2 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 57 WDOGITOP_reg::rkv_watchdog_pkg_WDOGITOP_reg_value_cg_fn_1
+0
+0
+0
+64
+0
+ 0
+
+2
+0
+0
+0
+ 7 WDOGINT 297 2 0 0 0 55 WDOGITOP_reg::rkv_watchdog_pkg_WDOGITOP_reg_value_cg_fn 55 WDOGITOP_reg::rkv_watchdog_pkg_WDOGITOP_reg_value_cg_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 7 WDOGRES 298 2 0 0 0 57 WDOGITOP_reg::rkv_watchdog_pkg_WDOGITOP_reg_value_cg_fn_0 57 WDOGITOP_reg::rkv_watchdog_pkg_WDOGITOP_reg_value_cg_fn_0 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
+global coverage_group 0 rkv_watchdog_pkg::WDOGPERIPHID4_reg::value_cg __coverage_WDOGPERIPHID4_reg.value_cg unused_WDOGPERIPHID4_reg_value_cg_loop_label rkv_watchdog_pkg 0 1 0 0 0  ( 0 
+)
+ 0 334 2 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 67 WDOGPERIPHID4_reg::rkv_watchdog_pkg_WDOGPERIPHID4_reg_value_cg_fn_1
+0
+0
+0
+64
+0
+ 0
+
+2
+0
+0
+0
+ 6 BLKCNT 336 2 0 0 0 65 WDOGPERIPHID4_reg::rkv_watchdog_pkg_WDOGPERIPHID4_reg_value_cg_fn 65 WDOGPERIPHID4_reg::rkv_watchdog_pkg_WDOGPERIPHID4_reg_value_cg_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 4 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 5 CCODE 337 2 0 0 0 67 WDOGPERIPHID4_reg::rkv_watchdog_pkg_WDOGPERIPHID4_reg_value_cg_fn_0 67 WDOGPERIPHID4_reg::rkv_watchdog_pkg_WDOGPERIPHID4_reg_value_cg_fn_0 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 4 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
+global coverage_group 0 rkv_watchdog_pkg::WDOGPERIPHID5_reg::value_cg __coverage_WDOGPERIPHID5_reg.value_cg unused_WDOGPERIPHID5_reg_value_cg_loop_label rkv_watchdog_pkg 0 1 0 0 0  ( 0 
+)
+ 0 372 2 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 67 WDOGPERIPHID5_reg::rkv_watchdog_pkg_WDOGPERIPHID5_reg_value_cg_fn_0
+0
+0
+0
+64
+0
+ 0
+
+1
+0
+0
+0
+ 4 PID5 374 2 0 0 0 65 WDOGPERIPHID5_reg::rkv_watchdog_pkg_WDOGPERIPHID5_reg_value_cg_fn 65 WDOGPERIPHID5_reg::rkv_watchdog_pkg_WDOGPERIPHID5_reg_value_cg_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 8 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
+global coverage_group 0 rkv_watchdog_pkg::WDOGPERIPHID6_reg::value_cg __coverage_WDOGPERIPHID6_reg.value_cg unused_WDOGPERIPHID6_reg_value_cg_loop_label rkv_watchdog_pkg 0 1 0 0 0  ( 0 
+)
+ 0 407 2 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 67 WDOGPERIPHID6_reg::rkv_watchdog_pkg_WDOGPERIPHID6_reg_value_cg_fn_0
+0
+0
+0
+64
+0
+ 0
+
+1
+0
+0
+0
+ 4 PID6 409 2 0 0 0 65 WDOGPERIPHID6_reg::rkv_watchdog_pkg_WDOGPERIPHID6_reg_value_cg_fn 65 WDOGPERIPHID6_reg::rkv_watchdog_pkg_WDOGPERIPHID6_reg_value_cg_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 8 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
+global coverage_group 0 rkv_watchdog_pkg::WDOGPERIPHID7_reg::value_cg __coverage_WDOGPERIPHID7_reg.value_cg unused_WDOGPERIPHID7_reg_value_cg_loop_label rkv_watchdog_pkg 0 1 0 0 0  ( 0 
+)
+ 0 442 2 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 67 WDOGPERIPHID7_reg::rkv_watchdog_pkg_WDOGPERIPHID7_reg_value_cg_fn_0
+0
+0
+0
+64
+0
+ 0
+
+1
+0
+0
+0
+ 4 PID7 444 2 0 0 0 65 WDOGPERIPHID7_reg::rkv_watchdog_pkg_WDOGPERIPHID7_reg_value_cg_fn 65 WDOGPERIPHID7_reg::rkv_watchdog_pkg_WDOGPERIPHID7_reg_value_cg_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 8 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
+global coverage_group 0 rkv_watchdog_pkg::WDOGPERIPHID0_reg::value_cg __coverage_WDOGPERIPHID0_reg.value_cg unused_WDOGPERIPHID0_reg_value_cg_loop_label rkv_watchdog_pkg 0 1 0 0 0  ( 0 
+)
+ 0 477 2 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 67 WDOGPERIPHID0_reg::rkv_watchdog_pkg_WDOGPERIPHID0_reg_value_cg_fn_0
+0
+0
+0
+64
+0
+ 0
+
+1
+0
+0
+0
+ 6 NUMBER 479 2 0 0 0 65 WDOGPERIPHID0_reg::rkv_watchdog_pkg_WDOGPERIPHID0_reg_value_cg_fn 65 WDOGPERIPHID0_reg::rkv_watchdog_pkg_WDOGPERIPHID0_reg_value_cg_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 8 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
+global coverage_group 0 rkv_watchdog_pkg::WDOGPERIPHID1_reg::value_cg __coverage_WDOGPERIPHID1_reg.value_cg unused_WDOGPERIPHID1_reg_value_cg_loop_label rkv_watchdog_pkg 0 1 0 0 0  ( 0 
+)
+ 0 513 2 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 67 WDOGPERIPHID1_reg::rkv_watchdog_pkg_WDOGPERIPHID1_reg_value_cg_fn_1
+0
+0
+0
+64
+0
+ 0
+
+2
+0
+0
+0
+ 2 ID 515 2 0 0 0 65 WDOGPERIPHID1_reg::rkv_watchdog_pkg_WDOGPERIPHID1_reg_value_cg_fn 65 WDOGPERIPHID1_reg::rkv_watchdog_pkg_WDOGPERIPHID1_reg_value_cg_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 4 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 6 NUMBER 516 2 0 0 0 67 WDOGPERIPHID1_reg::rkv_watchdog_pkg_WDOGPERIPHID1_reg_value_cg_fn_0 67 WDOGPERIPHID1_reg::rkv_watchdog_pkg_WDOGPERIPHID1_reg_value_cg_fn_0 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 4 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
+global coverage_group 0 rkv_watchdog_pkg::WDOGPERIPHID2_reg::value_cg __coverage_WDOGPERIPHID2_reg.value_cg unused_WDOGPERIPHID2_reg_value_cg_loop_label rkv_watchdog_pkg 0 1 0 0 0  ( 0 
+)
+ 0 553 2 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 67 WDOGPERIPHID2_reg::rkv_watchdog_pkg_WDOGPERIPHID2_reg_value_cg_fn_2
+0
+0
+0
+64
+0
+ 0
+
+3
+0
+0
+0
+ 8 REVISION 555 2 0 0 0 65 WDOGPERIPHID2_reg::rkv_watchdog_pkg_WDOGPERIPHID2_reg_value_cg_fn 65 WDOGPERIPHID2_reg::rkv_watchdog_pkg_WDOGPERIPHID2_reg_value_cg_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 4 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 5 JEDEC 556 2 0 0 0 67 WDOGPERIPHID2_reg::rkv_watchdog_pkg_WDOGPERIPHID2_reg_value_cg_fn_0 67 WDOGPERIPHID2_reg::rkv_watchdog_pkg_WDOGPERIPHID2_reg_value_cg_fn_0 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 2 ID 557 2 0 0 0 67 WDOGPERIPHID2_reg::rkv_watchdog_pkg_WDOGPERIPHID2_reg_value_cg_fn_1 67 WDOGPERIPHID2_reg::rkv_watchdog_pkg_WDOGPERIPHID2_reg_value_cg_fn_1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 3 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
+global coverage_group 0 rkv_watchdog_pkg::WDOGPERIPHID3_reg::value_cg __coverage_WDOGPERIPHID3_reg.value_cg unused_WDOGPERIPHID3_reg_value_cg_loop_label rkv_watchdog_pkg 0 1 0 0 0  ( 0 
+)
+ 0 595 2 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 67 WDOGPERIPHID3_reg::rkv_watchdog_pkg_WDOGPERIPHID3_reg_value_cg_fn_1
+0
+0
+0
+64
+0
+ 0
+
+2
+0
+0
+0
+ 6 ECONUM 597 2 0 0 0 65 WDOGPERIPHID3_reg::rkv_watchdog_pkg_WDOGPERIPHID3_reg_value_cg_fn 65 WDOGPERIPHID3_reg::rkv_watchdog_pkg_WDOGPERIPHID3_reg_value_cg_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 4 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 7 CUSTNUM 598 2 0 0 0 67 WDOGPERIPHID3_reg::rkv_watchdog_pkg_WDOGPERIPHID3_reg_value_cg_fn_0 67 WDOGPERIPHID3_reg::rkv_watchdog_pkg_WDOGPERIPHID3_reg_value_cg_fn_0 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 4 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
+global coverage_group 0 rkv_watchdog_pkg::WDOGPCELLID0_reg::value_cg __coverage_WDOGPCELLID0_reg.value_cg unused_WDOGPCELLID0_reg_value_cg_loop_label rkv_watchdog_pkg 0 1 0 0 0  ( 0 
+)
+ 0 633 2 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 65 WDOGPCELLID0_reg::rkv_watchdog_pkg_WDOGPCELLID0_reg_value_cg_fn_0
+0
+0
+0
+64
+0
+ 0
+
+1
+0
+0
+0
+ 4 CID0 635 2 0 0 0 63 WDOGPCELLID0_reg::rkv_watchdog_pkg_WDOGPCELLID0_reg_value_cg_fn 63 WDOGPCELLID0_reg::rkv_watchdog_pkg_WDOGPCELLID0_reg_value_cg_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 8 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
+global coverage_group 0 rkv_watchdog_pkg::WDOGPCELLID1_reg::value_cg __coverage_WDOGPCELLID1_reg.value_cg unused_WDOGPCELLID1_reg_value_cg_loop_label rkv_watchdog_pkg 0 1 0 0 0  ( 0 
+)
+ 0 668 2 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 65 WDOGPCELLID1_reg::rkv_watchdog_pkg_WDOGPCELLID1_reg_value_cg_fn_0
+0
+0
+0
+64
+0
+ 0
+
+1
+0
+0
+0
+ 4 CID1 670 2 0 0 0 63 WDOGPCELLID1_reg::rkv_watchdog_pkg_WDOGPCELLID1_reg_value_cg_fn 63 WDOGPCELLID1_reg::rkv_watchdog_pkg_WDOGPCELLID1_reg_value_cg_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 8 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
+global coverage_group 0 rkv_watchdog_pkg::WDOGPCELLID2_reg::value_cg __coverage_WDOGPCELLID2_reg.value_cg unused_WDOGPCELLID2_reg_value_cg_loop_label rkv_watchdog_pkg 0 1 0 0 0  ( 0 
+)
+ 0 703 2 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 65 WDOGPCELLID2_reg::rkv_watchdog_pkg_WDOGPCELLID2_reg_value_cg_fn_0
+0
+0
+0
+64
+0
+ 0
+
+1
+0
+0
+0
+ 4 CID2 705 2 0 0 0 63 WDOGPCELLID2_reg::rkv_watchdog_pkg_WDOGPCELLID2_reg_value_cg_fn 63 WDOGPCELLID2_reg::rkv_watchdog_pkg_WDOGPCELLID2_reg_value_cg_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 8 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
+global coverage_group 0 rkv_watchdog_pkg::WDOGPCELLID3_reg::value_cg __coverage_WDOGPCELLID3_reg.value_cg unused_WDOGPCELLID3_reg_value_cg_loop_label rkv_watchdog_pkg 0 1 0 0 0  ( 0 
+)
+ 0 738 2 0 0 1 0 0 0 0  1
+0
+0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 65 WDOGPCELLID3_reg::rkv_watchdog_pkg_WDOGPCELLID3_reg_value_cg_fn_0
+0
+0
+0
+64
+0
+ 0
+
+1
+0
+0
+0
+ 4 CID3 740 2 0 0 0 63 WDOGPCELLID3_reg::rkv_watchdog_pkg_WDOGPCELLID3_reg_value_cg_fn 63 WDOGPCELLID3_reg::rkv_watchdog_pkg_WDOGPCELLID3_reg_value_cg_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 8 0 0 1 0 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+end_coverage_group
+global coverage_group 0 apb_if::cg_apb_command __coverage_cg_apb_command unused_cg_apb_command_loop_label apb_if 0 1 0 0 0  ( 0 
+)
+ 0 47 3 0 0 0 0 0 0 0  1
+0
+26 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+0
+0
+0
+64
+0
+ 0
+
+2
+0
+1
+0
+ 6 pwrite 48 3 0 0 0 40 cg_apb_command::apb_if_cg_apb_command_fn 40 cg_apb_command::apb_if_cg_apb_command_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 1 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 42 cg_apb_command::apb_if_cg_apb_command_fn_2
+ 0
+ 0
+ 0
+ 0
+ 0
+ 2 1 1 0 0 1 1 5 write 50 3 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 42 cg_apb_command::apb_if_cg_apb_command_fn_0 0 0 0 0 0 0 0
+ 1 1 0 0 1 1 4 read 51 3 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 42 cg_apb_command::apb_if_cg_apb_command_fn_1 0 0 0 0 0 0 0
+
+ 4 psel 54 3 0 0 0 42 cg_apb_command::apb_if_cg_apb_command_fn_3 42 cg_apb_command::apb_if_cg_apb_command_fn_3 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 1 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 42 cg_apb_command::apb_if_cg_apb_command_fn_2
+ 0
+ 0
+ 0
+ 0
+ 0
+ 2 1 1 0 0 1 1 3 sel 56 3 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 42 cg_apb_command::apb_if_cg_apb_command_fn_0 0 0 0 0 0 0 0
+ 1 1 0 0 1 1 5 unsel 57 3 0 1 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 42 cg_apb_command::apb_if_cg_apb_command_fn_1 0 0 0 0 0 0 0
+
+ 3 cmd 0 59 3 0 0 0 2 0 1 -1 0 0 0
+ 0
+ 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 3 1 1 0 0 -1 0 0 1 1 9 cmd_write 60 3 1 0 1 3 1 0 1 1 3 sel 0 0 0 0 0 1 0 0 1 5 write 0 0 0 0 0 0 0 0 0 0 0 0
+ 1 1 0 0 -1 0 0 1 1 8 cmd_read 61 3 1 0 1 3 1 0 1 1 3 sel 0 0 0 0 0 1 0 0 1 4 read 0 0 0 0 0 0 0 0 0 0 0 0
+ 1 1 0 0 -1 0 0 1 1 8 cmd_idle 62 3 1 0 1 1 1 0 1 1 5 unsel 0 0 0 0 0 0 0 0 0 0
+
+end_coverage_group
+global coverage_group 0 apb_if::cg_apb_trans_timing_group __coverage_cg_apb_trans_timing_group unused_cg_apb_trans_timing_group_loop_label apb_if 0 0 0 0 0  ( 0 
+)
+ 0 67 3 0 0 0 0 0 0 0  1
+0
+26 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+0
+0
+0
+64
+0
+ 0
+
+2
+0
+0
+0
+ 4 psel 68 3 0 0 0 62 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn 62 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 1 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 6 1 4 0 0 1 1 6 single 69 3 0 4 0 -1 0 0 0 0 0 0 1 4 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 7 burst_2 70 3 0 4 0 -1 0 0 0 0 0 0 1 3 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_2 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 7 burst_4 71 3 0 4 0 -1 0 0 0 0 0 0 1 3 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_3 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 7 burst_8 72 3 0 4 0 -1 0 0 0 0 0 0 1 3 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_4 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 8 burst_16 73 3 0 4 0 -1 0 0 0 0 0 0 1 3 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_5 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 8 burst_32 74 3 0 4 0 -1 0 0 0 0 0 0 1 3 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_6 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+
+ 7 penable 76 3 0 0 0 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_7 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_7 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 1 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 2 1 4 0 0 1 1 6 single 77 3 0 4 0 -1 0 0 0 0 0 0 1 4 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_8 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_9 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 5 burst 78 3 0 4 0 -1 0 0 0 0 0 0 1 4 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 64 cg_apb_trans_timing_group::apb_if_cg_apb_trans_timing_group_fn_1 0 0 0 0 0 0 0
+
+end_coverage_group
+global coverage_group 0 apb_if::cg_apb_write_read_order_group __coverage_cg_apb_write_read_order_group unused_cg_apb_write_read_order_group_loop_label apb_if 0 0 0 0 0  ( 0 
+)
+ 0 83 3 0 0 0 0 0 0 0  1
+0
+26 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+0
+0
+0
+64
+0
+ 0
+
+1
+0
+0
+0
+ 16 write_read_order 84 3 0 0 0 70 cg_apb_write_read_order_group::apb_if_cg_apb_write_read_order_group_fn 70 cg_apb_write_read_order_group::apb_if_cg_apb_write_read_order_group_fn 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 0 2 1 0 0 0 0 1 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 0
+ 4 1 4 0 0 1 1 11 write_write 85 3 0 4 0 -1 0 0 0 0 0 0 1 2 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 72 cg_apb_write_read_order_group::apb_if_cg_apb_write_read_order_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 72 cg_apb_write_read_order_group::apb_if_cg_apb_write_read_order_group_fn_0 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 10 write_read 86 3 0 4 0 -1 0 0 0 0 0 0 1 2 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 72 cg_apb_write_read_order_group::apb_if_cg_apb_write_read_order_group_fn_0 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 72 cg_apb_write_read_order_group::apb_if_cg_apb_write_read_order_group_fn_1 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 10 read_write 87 3 0 4 0 -1 0 0 0 0 0 0 1 2 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 72 cg_apb_write_read_order_group::apb_if_cg_apb_write_read_order_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 72 cg_apb_write_read_order_group::apb_if_cg_apb_write_read_order_group_fn_0 0 0 0 0 0 0 0
+ 1 4 0 0 1 1 9 read_read 88 3 0 4 0 -1 0 0 0 0 0 0 1 2 0 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 72 cg_apb_write_read_order_group::apb_if_cg_apb_write_read_order_group_fn_1 0 0 0 0 0 0 0
+ 1 0 0 -1 0 4 0 0 0 0 0 0 0 0 0 0 -1 0 0 -1 0 0 1 1 1 72 cg_apb_write_read_order_group::apb_if_cg_apb_write_read_order_group_fn_1 0 0 0 0 0 0 0
+
+end_coverage_group
