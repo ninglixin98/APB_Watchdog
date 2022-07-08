@@ -1,0 +1,4 @@
+DPI_STUB_OBJS += ./../rkv_watchdog_tb.simv.daidir/vc_hdrs.o
+./../rkv_watchdog_tb.simv.daidir/vc_hdrs.o: ./../rkv_watchdog_tb.simv.daidir/vc_hdrs.c
+	@$(CC) -I/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/include  -pipe -DVCSMX -DUVM_DPI_DO_TYPE_CHECK -fPIC    -I/opt/synopsys/vcs/vcs-mx/O-2018.09-SP2/include  -fPIC -c -o ./../rkv_watchdog_tb.simv.daidir/vc_hdrs.o ./../rkv_watchdog_tb.simv.daidir/vc_hdrs.c
+	@strip -g ./../rkv_watchdog_tb.simv.daidir/vc_hdrs.o

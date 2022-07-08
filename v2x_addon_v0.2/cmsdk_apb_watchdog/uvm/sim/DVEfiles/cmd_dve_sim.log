@@ -1,0 +1,45 @@
+set ucliGUI::state
+set ucliGUI::state
+ucliCore::getToolPID
+synopsys::env hasTB
+trigger_hier_stack_context_switch 0
+synopsys::xml set_array_limit <data limit="50" />
+synopsys::xml set_depth_limit <data limit="100" />
+synopsys::xml set_string_limit <data limit="1000" />
+synopsys::xml set_only_active_frame <data value="1" />
+synopsys::xml set_variable_frame_id <data value="1" />
+synUtils::setDVEInitPhase 1
+synopsys::dump -type VPD -file /home/verifier/project/rkv_labs/v2x_addon/cmsdk_apb_watchdog/uvm/sim/inter.vpd -locking
+synopsys::dump -autoflush on -fid VPD0
+set ::dve_fid VPD0
+synUtils::setDVEInitPhase 0
+ucliCore::getToolPID
+synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpomYXpT
+synUtils::sendTool -active {_icl_start_rpc -version "O-2018.09-SP2_Full64" -sync_file /tmp/vcs_dve_rpc.verifier.87527}
+synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.verifier.87527}
+config endofsim noexit
+config onfail enable all
+config syscaddplainmembers
+config syscaddsourcenames
+config syscaddstructtypes
+synopsys::listing -disable
+if {[info command guiIsActive]==""} {   run } else {    echo "GUI mode"   dump -add / -depth 0   do ./rkv_watchdog_debug_wave.do }
+set _wave_session_group_1 Group1
+if {[gui_sg_is_group -name "$_wave_session_group_1"]} {     set _wave_session_group_1 [gui_sg_generate_new_name] }
+set Group1 "$_wave_session_group_1"
+synopsys::dump -add {rkv_watchdog_tb.apb_if_inst rkv_watchdog_tb.watchdog_if_inst } -aggregates  -fid VPD0
+set _wave_session_group_2 Group2
+if {[gui_sg_is_group -name "$_wave_session_group_2"]} {     set _wave_session_group_2 [gui_sg_generate_new_name] }
+set Group2 "$_wave_session_group_2"
+if {![info exists useOldWindow]} {  	set useOldWindow true }
+if {$useOldWindow && [string first "Wave" [gui_get_current_window -view]]==0} {  	set Wave.1 [gui_get_current_window -view]  } else { 	set Wave.1 [lindex [gui_get_window_ids -type Wave] 0] if {[string first "Wave" ${Wave.1}]!=0} { gui_open_window Wave set Wave.1 [ gui_get_current_window -view ] } }
+set groupExD [gui_get_pref_value -category Wave -key exclusiveSG]
+set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
+set origGroupCreationState [gui_list_create_group_when_add -wave]
+if {$origGroupCreationState} { 	gui_list_create_group_when_add -wave -enable }
+if { $groupExD } {  gui_msg_report -code DVWW028 }
+if [catch {gui_sim_terminate}] {gui_sim_terminate -kill}
+synopsys::finish
+set ucliGUI::state
+set ucliGUI::state
+ucli_exit
